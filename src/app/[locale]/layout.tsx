@@ -1,11 +1,12 @@
-import { NextIntlClientProvider } from "next-intl";
-import { useMessages } from "next-intl";
-import { notFound } from "next/navigation";
-import { routing } from "@/i18n/routing";
+import "./globals.css";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { useMessages } from "next-intl";
+
+import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
 const geistSans = localFont({
