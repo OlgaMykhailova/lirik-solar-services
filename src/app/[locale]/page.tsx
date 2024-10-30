@@ -10,11 +10,13 @@ import Services from "@/components/home/services/Services";
 import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
+import MainButton from "@/components/shared/buttons/MainButton";
 
 export default function Home() {
   return (
     <div>
       <Hero />
+      <MainButton />
       <About />
       <Services />
       <Stations />
