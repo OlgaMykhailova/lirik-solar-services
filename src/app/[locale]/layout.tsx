@@ -6,6 +6,8 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { useMessages } from "next-intl";
 
+import Footer from "@/components/shared/footer/Footer";
+import Header from "@/components/shared/header/Header";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
@@ -39,7 +41,7 @@ export default function LocaleLayout({
   const messages = useMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
@@ -47,7 +49,9 @@ export default function LocaleLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
