@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Benefits() {
-  return <div>Benefits</div>;
+  return <section>Benefits</section>;
 }
