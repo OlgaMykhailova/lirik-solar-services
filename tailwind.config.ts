@@ -29,6 +29,8 @@ const config: Config = {
         inputStoke: "#C8C8C8",
         inputError: "#FF3838",
         inputErrorLight: "#FFAFAF",
+        facebook: "#1877F2",
+        youtube: "#FF0000",
       },
       fontSize: {
         xs: ["14px", { lineHeight: "20px", fontWeight: "400" }],
@@ -39,6 +41,12 @@ const config: Config = {
         mdb: ["24px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
+      },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "100px",
+        },
       },
     },
   },
