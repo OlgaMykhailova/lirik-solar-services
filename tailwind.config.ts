@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        gogh: ["var(--font-gogh)"],
+        manrope: ["var(--font-manrope)"],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
