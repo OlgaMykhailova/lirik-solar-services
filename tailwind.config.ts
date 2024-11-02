@@ -12,6 +12,10 @@ const config: Config = {
         gogh: ["var(--font-gogh)"],
         manrope: ["var(--font-manrope)"],
       },
+      screens: {
+        tab: "768px",
+        laptop: "1280px",
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
