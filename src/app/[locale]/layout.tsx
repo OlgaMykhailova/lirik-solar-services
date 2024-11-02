@@ -50,7 +50,7 @@ export default function LocaleLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${gogh.variable} ${manrope.className} antialiased font-manrope`}
+        className={`${gogh.variable} ${manrope.className} antialiased text-base`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
