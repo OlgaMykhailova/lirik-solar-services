@@ -29,6 +29,8 @@ const config: Config = {
         inputStoke: "#C8C8C8",
         inputError: "#FF3838",
         inputErrorLight: "#FFAFAF",
+        facebook: "#1877F2",
+        youtube: "#FF0000",
       },
       fontSize: {
         xs: ["14px", { lineHeight: "20px", fontWeight: "400" }],

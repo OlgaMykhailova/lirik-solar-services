@@ -1,8 +1,9 @@
 import Image from "next/image";
 import React from "react";
 
-import Container from "../Container";
+import Container from "../container/Container";
 import FooterInfo from "./FooterInfo";
+import SocialLinksList from "./SocialLinksList";
 
 export default function Footer() {
   return (
@@ -15,6 +16,7 @@ export default function Footer() {
         className="absolute left-[calc((100%-473px)/2)] bottom-3"
       />
       <Container>
+        <SocialLinksList />
         <FooterInfo />
       </Container>
     </footer>
