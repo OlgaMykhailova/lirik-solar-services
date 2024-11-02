@@ -8,9 +8,9 @@ import { NextIntlClientProvider } from "next-intl";
 import { useMessages } from "next-intl";
 
 import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
-import OrderPopUp from "@/components/shared/cookies/OrderPopUp";
 import Footer from "@/components/shared/footer/Footer";
 import Header from "@/components/shared/header/Header";
+import OrderPopUp from "@/components/shared/pop-up/OrderPopUp";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
@@ -50,7 +50,7 @@ export default function LocaleLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${gogh.variable} ${manrope.className} antialiased text-base`}
+        className={`${gogh.variable} ${manrope.className} flex min-h-screen flex-col antialiased text-base`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />

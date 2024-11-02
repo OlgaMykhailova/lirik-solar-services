@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function CookiesComponent() {
-  return <div>CookiesComponent</div>;
+  return <div className="hidden">CookiesComponent</div>;
 }
