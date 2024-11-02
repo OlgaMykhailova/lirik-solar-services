@@ -1,6 +1,7 @@
 import "./globals.css";
 
 import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
@@ -13,15 +14,16 @@ import Header from "@/components/shared/header/Header";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+const gogh = localFont({
+  weight: "500",
+  src: "./fonts/Gogh-ExtraBold.woff2",
+  variable: "--font-gogh",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+const manrope = Manrope({
+  weight: ["400"],
+  subsets: ["latin", "cyrillic"],
+  variable: "--font-manrope",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +50,7 @@ export default function LocaleLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gogh.variable} ${manrope.className} antialiased text-base`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
