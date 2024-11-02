@@ -16,7 +16,7 @@ import { Locale } from "@/types/locale";
 
 const gogh = localFont({
   weight: "500",
-  src: "./fonts/Gogh-ExtraBold.woff2",
+  src: "../../fonts/Gogh-ExtraBold.woff2",
   variable: "--font-gogh",
 });
 
