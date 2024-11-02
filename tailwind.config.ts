@@ -40,6 +40,12 @@ const config: Config = {
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
       },
+      container: {
+        center: true,
+        padding: {
+          DEFAULT: "100px",
+        },
+      },
     },
   },
   plugins: [],
