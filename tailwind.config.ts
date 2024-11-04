@@ -23,6 +23,7 @@ const config: Config = {
         blueMedium: "#C1DDF8",
         blueLight: "#8EC6F0",
         backgroundLight: "#D7E8F8",
+        grey: "rgba(8, 63, 126, 0.1)",
         black: "#040E2F",
         white: "#FFFEFA",
         inputLabel: "#05304B",
@@ -47,7 +48,7 @@ const config: Config = {
         center: true,
         padding: {
           DEFAULT: "16px",
-          md: "32px",
+          md: "36px",
           xl: "100px",
         },
       },

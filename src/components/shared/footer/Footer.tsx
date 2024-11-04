@@ -7,7 +7,7 @@ import SocialLinksList from "./SocialLinksList";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-4 bg-backgroundLight">
+    <footer className="relative w-full py-4 laptop:mt-[202px] bg-backgroundLight">
       <Image
         src="/images/icons/logo.svg"
         alt="logo"
