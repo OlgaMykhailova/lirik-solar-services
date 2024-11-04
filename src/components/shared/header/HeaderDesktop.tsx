@@ -3,9 +3,11 @@ import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 import { Link } from "@/i18n/routing";
+import { Locale } from "@/types/locale";
 
 import SecondaryButton from "../buttons/SecondaryButton";
 import Container from "../container/Container";
+import LocaleSwitcher from "./LocaleSwitcher";
 import MenuList from "./MenuList";
 
 export default function HeaderDesktop() {
@@ -13,7 +15,7 @@ export default function HeaderDesktop() {
   const locale = useLocale();
 
   return (
-    <header>
+    <header className="fixed z-10 w-full bg-backgroundLight bg-opacity-40">
       <Container className="flex justify-between items-center h-[72px]">
         <Link href="/" locale={locale} className="outline-none">
           <Image
@@ -24,6 +26,7 @@ export default function HeaderDesktop() {
             className="size-[57px]"
           />
         </Link>
+        <LocaleSwitcher locale={locale as Locale} />
         <MenuList />
         <SecondaryButton>{t("contacts")}</SecondaryButton>
       </Container>
