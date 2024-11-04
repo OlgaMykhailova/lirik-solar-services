@@ -1,4 +1,14 @@
 {
+  "about": { "title": "Про компанію" },
+  "services": { "title": "Наші послуги" },
+  "stations": { "title": "Сонячні електростанції" },
+  "ess": { "title": "Системи зберігання енергії" },
+  "benefits": { "title": "Переваги роботи з Lirik Solar" },
+  "manufactures": { "title": "Виробники продукції" },
+  "projects": { "title": "Наші реалізовані проєкти" },
+  "stages": { "title": "Кроки до сонячної енергії з Lirik Solar" },
+  "reviews": { "title": "Відгуки клієнтів" },
+  "writeUs": { "title": "Залиште заявку на безкоштовну консультацію" },
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"

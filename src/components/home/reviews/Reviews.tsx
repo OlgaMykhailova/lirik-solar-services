@@ -1,5 +1,12 @@
+import { useTranslations } from "next-intl";
 import React from "react";
+import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 export default function Reviews() {
-  return <section>Reviews</section>;
+  const t = useTranslations("reviews");
+  return (
+    <section>
+      <SectionTitle>{t("title")}</SectionTitle>
+    </section>
+  );
 }
