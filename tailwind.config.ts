@@ -20,13 +20,14 @@ const config: Config = {
         yellow: "#FDBD00",
         yellowDark: "#FFA600",
         blue: "#0B70BC",
+        blueMedium: "#C1DDF8",
         blueLight: "#8EC6F0",
         backgroundLight: "#D7E8F8",
         black: "#040E2F",
         white: "#FFFEFA",
         inputLabel: "#05304B",
         inputText: "#51626F",
-        inputStoke: "#C8C8C8",
+        inputStroke: "#C8C8C8",
         inputError: "#FF3838",
         inputErrorLight: "#FFAFAF",
         facebook: "#1877F2",
@@ -49,6 +50,19 @@ const config: Config = {
           md: "32px",
           xl: "100px",
         },
+      },
+      keyframes: {
+        rotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        rotation: "rotate 1600ms linear infinite",
       },
     },
   },
