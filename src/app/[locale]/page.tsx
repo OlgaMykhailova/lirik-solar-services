@@ -10,22 +10,25 @@ import Services from "@/components/home/services/Services";
 import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
+import Container from "@/components/shared/container/Container";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <About />
-      <Services />
-      <Stations />
-      <Ess />
-      <Benefits />
-      <Manufactures />
-      <Stages />
-      <Reviews />
-      <Projects />
-      <WriteUs />
-      <Contacts />
+      <Container>
+        <About />
+        <Services />
+        <Stations />
+        <Ess />
+        <Benefits />
+        <Manufactures />
+        <Stages />
+        <Reviews />
+        <Projects />
+        <WriteUs />
+        <Contacts />
+      </Container>
     </div>
   );
 }
