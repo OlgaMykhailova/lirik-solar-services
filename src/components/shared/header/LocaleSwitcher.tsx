@@ -3,9 +3,6 @@
 import { routing, usePathname, useRouter } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
-const activeStyle = "text-blue";
-const inactiveStyle = "text-inputStroke";
-
 export default function LocaleSwitcher({ locale }: { locale: Locale }) {
   const locales = routing.locales;
   const pathName = usePathname();
@@ -25,7 +22,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
           <button
             onClick={() => handleLocaleChange(curLocale)}
             className={`font-gogh text-baseb outline-none ${
-              curLocale === locale ? activeStyle : inactiveStyle
+              curLocale === locale ? "text-blue" : "text-inputStroke"
             }`}
           >
             {curLocale === "uk" ? "ua" : curLocale}

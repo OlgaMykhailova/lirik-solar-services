@@ -14,7 +14,7 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`tab:pb-[100px] laptop:pb-[150px] ${className}`}
+      className={`tab:pb-[100px] laptop:pb-[150px] scroll-mt-[72px] ${className}`}
     >
       {children}
     </section>
