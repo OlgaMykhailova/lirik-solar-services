@@ -1,4 +1,13 @@
 {
+  "header": {
+    "menu": {
+      "about": "Про компанію",
+      "services": "Послуги",
+      "stations": "Сонячні електростанції",
+      "ess": "ESS",
+      "products": "Товари"
+    }
+  },
   "about": { "title": "Про компанію" },
   "services": { "title": "Наші послуги" },
   "stations": { "title": "Сонячні електростанції" },
@@ -12,5 +21,8 @@
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"
+  },
+  "buttons": {
+    "contacts": "Контакти"
   }
 }

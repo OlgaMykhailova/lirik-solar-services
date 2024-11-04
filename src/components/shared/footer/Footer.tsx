@@ -11,8 +11,8 @@ export default function Footer() {
       <Image
         src="/images/icons/logo.svg"
         alt="logo"
-        width="473"
-        height="473"
+        width="0"
+        height="0"
         className="absolute left-[calc((100%-243px)/2)] tab:left-[calc((100%-300px)/2)] laptop:left-[calc((100%-473px)/2)] top-[calc(-243px/2)] 
         tab:top-[calc(-300px/2)] laptop:top-[calc(-473px/2)] size-[243px] tab:size-[300px] laptop:size-[473px]"
       />

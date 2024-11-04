@@ -13,7 +13,7 @@ import Container from "@/components/shared/container/Container";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pt-[72px]">
       <Hero />
       <Container>
         <About />

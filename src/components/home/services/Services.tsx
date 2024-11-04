@@ -7,7 +7,7 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 export default function Services() {
   const t = useTranslations("services");
   return (
-    <Section>
+    <Section id="services">
       <SectionTitle>{t("title")}</SectionTitle>
     </Section>
   );

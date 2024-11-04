@@ -1,5 +1,11 @@
 import React from "react";
 
+import HeaderDesktop from "./HeaderDesktop";
+
 export default function Header() {
-  return <header>Header</header>;
+  return (
+    <>
+      <HeaderDesktop />
+    </>
+  );
 }
