@@ -7,8 +7,10 @@ export default function FooterInfo() {
   const t = useTranslations("footer");
   const locale = useLocale();
   return (
-    <div className="flex justify-between py-6 border-t-[1px] border-white">
-      <p>{t("rights")}</p>
+    <div
+      className="flex flex-col items-center gap-y-6 pt-6 tab:justify-between tab:flex-row-reverse tab:py-6 tab:text-base border-t-[1px]
+     border-white"
+    >
       <Link
         href="/policy"
         locale={locale}
@@ -16,6 +18,7 @@ export default function FooterInfo() {
       >
         {t("policy")}
       </Link>
+      <p>{t("rights")}</p>
     </div>
   );
 }
