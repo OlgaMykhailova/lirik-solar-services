@@ -45,7 +45,9 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "100px",
+          DEFAULT: "16px",
+          md: "32px",
+          xl: "100px",
         },
       },
     },
