@@ -50,6 +50,19 @@ const config: Config = {
           xl: "100px",
         },
       },
+      keyframes: {
+        rotate: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
+        },
+      },
+      animation: {
+        rotation: "rotate 1600ms linear infinite",
+      },
     },
   },
   plugins: [],
