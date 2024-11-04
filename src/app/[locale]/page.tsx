@@ -10,13 +10,13 @@ import Services from "@/components/home/services/Services";
 import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
-import MainButton from "@/components/shared/buttons/MainButton";
+import SecondaryButton from "@/components/shared/buttons/SecondaryButton";
 
 export default function Home() {
   return (
     <div>
+      <SecondaryButton>Мережі немає</SecondaryButton>
       <Hero />
-      <MainButton />
       <About />
       <Services />
       <Stations />
