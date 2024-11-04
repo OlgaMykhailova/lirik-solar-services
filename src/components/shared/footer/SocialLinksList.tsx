@@ -32,7 +32,7 @@ export default function SocialLinksList() {
   ];
 
   return (
-    <ul className="flex justify-end gap-4 py-8 mb-9 text-blue">
+    <ul className="flex laptop:justify-end gap-4 py-8 mb-9 text-blue">
       {socialLinksList.map((social, idx) => (
         <SocialLinkItem key={idx} social={social} />
       ))}
