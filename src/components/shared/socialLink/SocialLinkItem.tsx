@@ -2,12 +2,16 @@ import React from "react";
 
 interface SocialLinkItemProps {
   social: { name: string; icon: React.JSX.Element; url: string };
+  className: string;
 }
 
-export default function SocialLinkItem({ social }: SocialLinkItemProps) {
+export default function SocialLinkItem({
+  social,
+  className = "",
+}: SocialLinkItemProps) {
   const { name, icon, url } = social;
   return (
-    <li>
+    <li className={className}>
       <a
         href={url}
         target="_blank"
