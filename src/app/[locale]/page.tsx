@@ -9,13 +9,15 @@ import Services from "@/components/home/services/Services";
 import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
+import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
 import Container from "@/components/shared/container/Container";
 
 export default function Home() {
   return (
-    <div>
+    <div className="pt-[72px]">
       <Hero />
-      <Container>
+      <Container className="relative">
+        <SunspotBgImages />
         <About />
         <Services />
         <Stations />
