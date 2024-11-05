@@ -3,7 +3,7 @@ import React from "react";
 
 export default function SunspotBgImages() {
   return (
-    <div className="absolute top-0 left-0 w-full h-full">
+    <div className="absolute top-0 left-0 z-[-10] w-full h-full">
       <Image
         src="/images/bgImages/sunspotPC.svg"
         alt="sunspot"

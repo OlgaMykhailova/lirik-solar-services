@@ -40,6 +40,7 @@ const config: Config = {
         smb: ["16px", { lineHeight: "22px", fontWeight: "500" }],
         base: ["18px", { lineHeight: "25px", fontWeight: "400" }],
         baseb: ["18px", { lineHeight: "25px", fontWeight: "500" }],
+        xmdb: ["22px", { lineHeight: "30px", fontWeight: "500" }],
         mdb: ["24px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
