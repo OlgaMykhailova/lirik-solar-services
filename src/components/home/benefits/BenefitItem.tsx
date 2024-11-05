@@ -7,6 +7,7 @@ interface BenefitItemProps {
 
 export default function BenefitItem({ benefit }: BenefitItemProps) {
   const { title, description, icon } = benefit;
+
   return (
     <li className="laptop:flex laptop:justify-between laptop:items-center">
       <h3 className="mb-4 laptop:mb-0 font-gogh text-baseb tab:text-xmdb laptop:text-mdb">
