@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-export default function SunspotBg() {
+export default function SunspotBgImages() {
   return (
     <div className="absolute w-full h-full">
       <Image
