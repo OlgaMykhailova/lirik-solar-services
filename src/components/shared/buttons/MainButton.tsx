@@ -21,7 +21,7 @@ export default function MainButton({
       disabled={disabled}
       onClick={onClick}
       className={`group relative flex items-center gap-3 h-14 px-4 font-gogh text-baseb text-black before:content-[''] before:absolute 
-        before:-z-10 before:top-0 before:left-0 before:rounded-full before:size-14 before:bg-yellow disabled:before:bg-backgroundLight 
+        before:-z-10 before:top-0 before:left-0 before:rounded-full before:size-full laptop:before:size-14 before:bg-yellow disabled:before:bg-backgroundLight 
         transition before:duration-300 before:ease-out-quart before:will-change-transform enabled:hover:before:w-full 
         enabled:focus-visible:before:w-full enabled:focus-visible:before:bg-yellowDark enabled:active:before:bg-yellowDark
         enabled:active:scale-95 ${

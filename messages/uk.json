@@ -6,7 +6,30 @@
       "partTwo": "Ми працюємо як з приватними клієнтами, так і з бізнесом, пропонуючи енергоефективні та екологічні рішення для будь-яких потреб."
     }
   },
-  "services": { "title": "Наші послуги" },
+  "services": {
+    "title": "Наші послуги",
+    "description": {
+      "partOne": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
+      "partTwo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "partThree": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+    },
+    "projecting": {
+      "title": "Проєктування сонячних електростанцій",
+      "description": "Наші експерти розроблять індивідуальний проект для вашого об'єкту з урахуванням усіх особливостей та потреб."
+    },
+    "installation": {
+      "title": "Монтаж та встановлення",
+      "description": "Професійна установка сонячних панелей та інверторів з гарантією якості та тривалого терміну служби."
+    },
+    "maintenance": {
+      "title": "Операційна підтримка та обслуговування",
+      "description": "Ми забезпечимо технічну підтримку та регулярне обслуговування вашої сонячної системи, щоб вона працювала максимально ефективно."
+    },
+    "integration": {
+      "title": "Інтеграція систем зберігання енергії",
+      "description": "Максимізуйте ефективність своєї електростанції завдяки системам зберігання енергії, що забезпечують автономність і стабільне електропостачання."
+    }
+  },
   "stations": { "title": "Сонячні електростанції" },
   "ess": { "title": "Системи зберігання енергії" },
   "benefits": {
@@ -54,5 +77,9 @@
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"
+  },
+  "buttons": {
+    "startPath": "Почати свій шлях",
+    "startProject": "Розпочати проєкт"
   }
 }
