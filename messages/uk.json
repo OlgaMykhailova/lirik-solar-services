@@ -54,5 +54,8 @@
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"
+  },
+  "buttons": {
+    "startProject": "Розпочати проєкт"
   }
 }
