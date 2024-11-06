@@ -20,7 +20,7 @@ export default function StageItem({ stage }: StageItemProps) {
       <h3 className="laptop:h-16 mb-2 font-gogh text-xmdb laptop:text-mdb text-center">
         {title}
       </h3>
-      <p>{description}</p>
+      <p className="text-center">{description}</p>
     </li>
   );
 }
