@@ -53,6 +53,12 @@ const config: Config = {
           xl: "100px",
         },
       },
+      boxShadow: {
+        base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
+      },
+      backgroundImage: {
+        sky: "url('/images/bgImages/skyBgImage.webp')",
+      },
       keyframes: {
         rotate: {
           "0%": {
