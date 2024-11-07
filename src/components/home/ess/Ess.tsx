@@ -7,7 +7,7 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 export default function Ess() {
   const t = useTranslations("ess");
   return (
-    <Section id="ess">
+    <Section>
       <SectionTitle>{t("title")}</SectionTitle>
     </Section>
   );

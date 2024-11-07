@@ -1,5 +1,6 @@
 import About from "@/components/home/about/About";
 import Benefits from "@/components/home/benefits/Benefits";
+import Contacts from "@/components/home/contacts/Contacts";
 import Ess from "@/components/home/ess/Ess";
 import Hero from "@/components/home/hero/Hero";
 import Manufactures from "@/components/home/manufactures/Manufactures";
@@ -28,6 +29,7 @@ export default function Home() {
         <Reviews />
         <Projects />
         <WriteUs />
+        <Contacts />
       </Container>
     </div>
   );

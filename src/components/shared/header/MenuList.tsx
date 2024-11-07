@@ -9,9 +9,9 @@ export default function MenuList() {
   const menuList = [
     { title: t("about"), id: "#about" },
     { title: t("services"), id: "#services" },
-    { title: t("stations"), id: "#stations" },
-    { title: t("ess"), id: "#ess" },
     { title: t("products"), id: "#products" },
+    { title: t("order"), id: "#order" },
+    { title: t("contacts"), id: "#contacts" },
   ];
 
   return (

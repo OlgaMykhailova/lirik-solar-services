@@ -15,7 +15,7 @@ export default function HeaderDesktop() {
   const locale = useLocale();
 
   return (
-    <header className="fixed z-10 w-full bg-backgroundLight bg-opacity-40">
+    <header className="fixed z-30 w-full bg-backgroundLight bg-opacity-40">
       <Container className="flex justify-between items-center h-[72px]">
         <Link href="/" locale={locale} className="outline-none">
           <Image

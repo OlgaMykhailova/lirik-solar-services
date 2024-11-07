@@ -4,10 +4,10 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-export default function WriteUs() {
-  const t = useTranslations("writeUs");
+export default function Contacts() {
+  const t = useTranslations("contacts");
   return (
-    <Section id="order">
+    <Section id="contacts">
       <SectionTitle>{t("title")}</SectionTitle>
     </Section>
   );
