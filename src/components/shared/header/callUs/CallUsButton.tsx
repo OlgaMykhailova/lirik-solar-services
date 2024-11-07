@@ -2,15 +2,20 @@ import React from "react";
 
 import { phoneThird } from "@/constants/constants";
 
-import SecondaryButton from "../buttons/SecondaryButton";
-import IconPhone from "../icons/IconPhone";
+import SecondaryButton from "../../buttons/SecondaryButton";
+import IconPhone from "../../icons/IconPhone";
 
-export default function CallUsButton() {
+interface CallUsButtonProps {
+  className?: string;
+}
+
+export default function CallUsButton({ className = "" }: CallUsButtonProps) {
   return (
     <a
       href={`tel:+${phoneThird.replace(/\D/g, "")}`}
       target="_blank"
       rel="noopener noreferrer nofollow"
+      className={className}
     >
       <SecondaryButton className="gap-3">
         <>

@@ -15,10 +15,12 @@ export default function MenuList() {
   ];
 
   return (
-    <ul className="flex gap-8">
-      {menuList.map((menuItem, idx) => (
-        <MenuLinkItem key={idx} menuItem={menuItem} />
-      ))}
-    </ul>
+    <nav>
+      <ul className="flex flex-col gap-8 laptop:flex-row">
+        {menuList.map((menuItem, idx) => (
+          <MenuLinkItem key={idx} menuItem={menuItem} />
+        ))}
+      </ul>
+    </nav>
   );
 }

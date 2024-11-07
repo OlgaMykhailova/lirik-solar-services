@@ -4,10 +4,10 @@ import React from "react";
 import { Locale } from "@/types/locale";
 
 import Container from "../container/Container";
-import CallUsButton from "./CallUsButton";
+import CallUsButton from "./callUs/CallUsButton";
 import LocaleSwitcher from "./LocaleSwitcher";
 import LogoLink from "./LogoLink";
-import MenuList from "./MenuList";
+import MenuList from "./menuList/MenuList";
 
 export default function HeaderDesktop() {
   const locale = useLocale();
