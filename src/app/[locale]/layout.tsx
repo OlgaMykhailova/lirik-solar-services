@@ -7,6 +7,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { useMessages } from "next-intl";
 
+import { ScrollToTopButton } from "@/components/shared/buttons/ScrollToTopButton";
 import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
 import Footer from "@/components/shared/footer/Footer";
 import Header from "@/components/shared/header/Header";
@@ -15,8 +16,12 @@ import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
 const gogh = localFont({
-  weight: "500",
-  src: "../../fonts/Gogh-ExtraBold.woff2",
+  src: [
+    {
+      weight: "500",
+      path: "../../fonts/Gogh-Medium.woff2",
+    },
+  ],
   variable: "--font-gogh",
 });
 
@@ -50,12 +55,13 @@ export default function LocaleLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body
-        className={`${gogh.variable} ${manrope.className} flex min-h-screen flex-col antialiased text-sm`}
+        className={`${gogh.variable} ${manrope.className} flex min-h-screen flex-col antialiased text-sm laptop:text-base`}
       >
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />
+          <ScrollToTopButton />
           <CookiesComponent />
           <OrderPopUp />
         </NextIntlClientProvider>

@@ -40,6 +40,7 @@ const config: Config = {
         smb: ["16px", { lineHeight: "22px", fontWeight: "500" }],
         base: ["18px", { lineHeight: "25px", fontWeight: "400" }],
         baseb: ["18px", { lineHeight: "25px", fontWeight: "500" }],
+        xmdb: ["22px", { lineHeight: "30px", fontWeight: "500" }],
         mdb: ["24px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
@@ -51,6 +52,14 @@ const config: Config = {
           md: "36px",
           xl: "100px",
         },
+      },
+      boxShadow: {
+        base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
+      },
+      backgroundImage: {
+        sky: "url('/images/bgImages/skyBgImage.webp')",
+        blueGradient:
+          "radial-gradient(50% 50% at 50% 50%, #C1DDF8 0%, rgba(193, 221, 248, 0) 100%)",
       },
       keyframes: {
         rotate: {
