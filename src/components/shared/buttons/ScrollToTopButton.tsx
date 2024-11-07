@@ -45,7 +45,7 @@ export const ScrollToTopButton = () => {
           alt="double arrow"
           width="0"
           height="0"
-          className="size-7 tab:size-10 transition duration-300 ease-out-quart will-change-transform translate-y-0 group-hover:-translate-y-1
+          className="size-7 tab:size-10 transition duration-300 ease-out-quart will-change-transform translate-y-0 laptop:group-hover:-translate-y-1
           group-focus-visible:-translate-y-1 group-active:-translate-y-1"
         />
       </button>
