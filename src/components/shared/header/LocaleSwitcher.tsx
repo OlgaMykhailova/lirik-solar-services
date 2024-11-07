@@ -22,7 +22,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
           <button
             onClick={() => handleLocaleChange(curLocale)}
             className={`font-gogh text-baseb outline-none ${
-              curLocale === locale ? "text-blue" : "text-inputStroke"
+              curLocale === locale ? "text-blue" : "text-white"
             }`}
           >
             {curLocale === "uk" ? "ua" : curLocale}

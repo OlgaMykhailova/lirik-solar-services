@@ -18,8 +18,8 @@ export default function MenuLinkItem({ menuItem }: MenuLinkItemProps) {
       <Link
         href={locale === "uk" ? `/${id}` : `/${locale}${id}`}
         locale={locale}
-        className="font-gogh text-baseb text-blue transition duration-300 ease-out active:text-blueLight focus-visible:text-blueLight
-         laptop:hover:text-blueLight outline-none"
+        className="font-gogh text-baseb text-white transition duration-300 ease-out active:text-blue focus-visible:text-blue
+         laptop:hover:text-blue outline-none"
       >
         {title}
       </Link>

@@ -58,6 +58,8 @@ const config: Config = {
       },
       backgroundImage: {
         sky: "url('/images/bgImages/skyBgImage.webp')",
+        headerGradient:
+          "linear-gradient(270.01deg, #83B6E3 0%, #84B8E4 11.64%, #82B6E3 25.31%, #84B7E3 37.78%, #87B8E4 50.6%, #82B5E1 77.04%, #76ADDB 99.87%)",
         blueGradient:
           "radial-gradient(50% 50% at 50% 50%, #C1DDF8 0%, rgba(193, 221, 248, 0) 100%)",
       },
