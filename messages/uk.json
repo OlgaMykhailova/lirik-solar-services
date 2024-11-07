@@ -1,4 +1,13 @@
 {
+  "header": {
+    "menu": {
+      "about": "Про компанію",
+      "services": "Послуги",
+      "products": "Товари",
+      "order": "Замовити",
+      "contacts": "Контакти"
+    }
+  },
   "about": {
     "title": "Про компанію",
     "description": {
@@ -74,6 +83,7 @@
   },
   "reviews": { "title": "Відгуки клієнтів" },
   "writeUs": { "title": "Залиште заявку на безкоштовну консультацію" },
+  "contacts": { "title": "Контакти" },
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"

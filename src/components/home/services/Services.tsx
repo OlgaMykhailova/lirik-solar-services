@@ -12,7 +12,7 @@ export default function Services() {
   const t = useTranslations();
 
   return (
-    <Section>
+    <Section id="services">
       <SectionTitle>{t("services.title")}</SectionTitle>
       <div className="laptop:hidden">
         <ServicesDescription />

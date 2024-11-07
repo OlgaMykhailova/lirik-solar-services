@@ -7,7 +7,7 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 export default function Manufactures() {
   const t = useTranslations("manufactures");
   return (
-    <Section>
+    <Section id="products">
       <SectionTitle>{t("title")}</SectionTitle>
     </Section>
   );

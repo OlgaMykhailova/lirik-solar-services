@@ -1,5 +1,5 @@
 export interface ButtonProps {
-  children: string;
+  children: string | React.JSX.Element;
   ariaLabel?: string;
   className?: string;
   type?: "submit" | "button";
