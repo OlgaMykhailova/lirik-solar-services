@@ -3,7 +3,11 @@ import React from "react";
 
 import MenuLinkItem from "./MenuLinkItem";
 
-export default function MenuList() {
+interface MenuListProps {
+  closeMenu?: () => void;
+}
+
+export default function MenuList({ closeMenu }: MenuListProps) {
   const t = useTranslations("header.menu");
 
   const menuList = [
@@ -18,7 +22,7 @@ export default function MenuList() {
     <nav>
       <ul className="flex flex-col gap-8 laptop:flex-row">
         {menuList.map((menuItem, idx) => (
-          <MenuLinkItem key={idx} menuItem={menuItem} />
+          <MenuLinkItem key={idx} menuItem={menuItem} closeMenu={closeMenu} />
         ))}
       </ul>
     </nav>

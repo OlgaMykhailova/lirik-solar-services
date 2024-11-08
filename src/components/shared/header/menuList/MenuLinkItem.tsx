@@ -7,9 +7,13 @@ interface MenuLinkItemProps {
     title: string;
     id: string;
   };
+  closeMenu: (() => void) | undefined;
 }
 
-export default function MenuLinkItem({ menuItem }: MenuLinkItemProps) {
+export default function MenuLinkItem({
+  menuItem,
+  closeMenu,
+}: MenuLinkItemProps) {
   const locale = useLocale();
   const { title, id } = menuItem;
   console.log(Link);
@@ -20,6 +24,7 @@ export default function MenuLinkItem({ menuItem }: MenuLinkItemProps) {
         locale={locale}
         className="font-gogh text-baseb text-white transition duration-300 ease-out active:text-blue focus-visible:text-blue
          laptop:hover:text-blue outline-none"
+        onClick={closeMenu}
       >
         {title}
       </Link>

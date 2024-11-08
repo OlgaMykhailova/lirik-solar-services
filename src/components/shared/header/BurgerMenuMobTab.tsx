@@ -11,7 +11,7 @@ import MenuList from "./menuList/MenuList";
 
 interface BurgerMenuMobTabProps {
   isHeaderMenuOpened: boolean;
-  closeMenu?: () => void;
+  closeMenu: () => void;
 }
 
 export default function BurgerMenuMobTab({
@@ -31,8 +31,8 @@ export default function BurgerMenuMobTab({
           <BurgerMenuButtonClose toggleHeaderMenuOpen={closeMenu} />
         </div>
         <div className="flex flex-col items-center gap-y-16">
-          <MenuList />
-          <CallUsButton />
+          <MenuList closeMenu={closeMenu} />
+          <CallUsButton closeMenu={closeMenu} />
         </div>
       </Container>
     </div>
