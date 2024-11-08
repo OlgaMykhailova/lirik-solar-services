@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+import Backdrop from "../backdrop.tsx/Backdrop";
 import Container from "../container/Container";
 import BurgerMenuButtonOpen from "./BurgerMenuButtonOpen";
 import CallUsButton from "./callUs/CallUsButton";
@@ -29,6 +30,10 @@ export default function HeaderMobTab() {
           />
         </div>
       </Container>
+      <Backdrop
+        isVisible={isHeaderMenuOpened}
+        onClick={() => setIsHeaderMenuOpened(false)}
+      />
     </header>
   );
 }

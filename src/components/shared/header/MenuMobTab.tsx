@@ -10,7 +10,7 @@ import LocaleSwitcher from "./LocaleSwitcher";
 import MenuList from "./menuList/MenuList";
 
 interface MenuMobTabProps {
-  isHeaderMenuOpened?: boolean;
+  isHeaderMenuOpened: boolean;
   closeMenu?: () => void;
 }
 
@@ -22,8 +22,8 @@ export default function MenuMobTab({
   return (
     <div
       className={`${
-        isHeaderMenuOpened ? "translate-x-0" : "translate-x-full"
-      } absolute top-0 right-0 w-[100vw] h-[100dvh] bg-headerGradient transition-transform duration-[600ms]`}
+        isHeaderMenuOpened ? "translate-x-0 no-doc-scroll" : "translate-x-full"
+      } absolute top-0 right-0 z-50 w-[100vw] h-[100dvh] tab:min-w-[360px] tab:h-[666px] tab:w-[40%] bg-headerGradient transition-transform duration-[600ms]`}
     >
       <Container>
         <div className="flex justify-between items-center h-[72px] mb-8">
