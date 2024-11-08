@@ -7,9 +7,13 @@ import IconPhone from "../../icons/IconPhone";
 
 interface CallUsButtonProps {
   className?: string;
+  closeMenu?: (() => void) | undefined;
 }
 
-export default function CallUsButton({ className = "" }: CallUsButtonProps) {
+export default function CallUsButton({
+  className = "",
+  closeMenu,
+}: CallUsButtonProps) {
   return (
     <a
       href={`tel:+38${phoneThird.replace(/\D/g, "")}`}
@@ -17,7 +21,7 @@ export default function CallUsButton({ className = "" }: CallUsButtonProps) {
       rel="noopener noreferrer nofollow"
       className={className}
     >
-      <SecondaryButton className="gap-3">
+      <SecondaryButton className="gap-3" onClick={closeMenu}>
         <>
           <IconPhone className="text-yellow" />
           {phoneThird}
