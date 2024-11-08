@@ -5,7 +5,7 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-import ContactsList from "./contactsList/ContactsList";
+import ContactsList1 from "./contactsList/ContactsList";
 
 export default function Contacts() {
   const t = useTranslations("contacts");
@@ -13,7 +13,7 @@ export default function Contacts() {
     <Section id="contacts">
       <SectionTitle>{t("title")}</SectionTitle>
       <div className="flex flex-col gap-y-8 tab:flex-row justify-between">
-        <ContactsList />
+        <ContactsList1 />
         <Image
           src="/images/map.webp"
           alt="map"

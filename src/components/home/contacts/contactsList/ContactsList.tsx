@@ -5,7 +5,7 @@ import Email from "./Email";
 import Messengers from "./messengers/Messengers";
 import Phones from "./phones/Phones";
 
-export default function ContactsList() {
+export default function ContactsList1() {
   return (
     <ul className="flex flex-col gap-6">
       <Email />
