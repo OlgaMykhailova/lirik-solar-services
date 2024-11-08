@@ -4,11 +4,11 @@ import { useState } from "react";
 
 import Backdrop from "../backdrop.tsx/Backdrop";
 import Container from "../container/Container";
-import BurgerMenuButtonOpen from "./BurgerMenuButtonOpen";
+import BurgerMenuButtonOpen from "./burgerMenuButtons/BurgerMenuButtonOpen";
+import BurgerMenuMobTab from "./BurgerMenuMobTab";
 import CallUsButton from "./callUs/CallUsButton";
 import CallUsLinkMob from "./callUs/CallUsLinkMob";
 import LogoLink from "./LogoLink";
-import MenuMobTab from "./MenuMobTab";
 
 export default function HeaderMobTab() {
   const [isHeaderMenuOpened, setIsHeaderMenuOpened] = useState(false);
@@ -24,7 +24,7 @@ export default function HeaderMobTab() {
             isHeaderMenuOpened={isHeaderMenuOpened}
             openMenu={() => setIsHeaderMenuOpened(true)}
           />
-          <MenuMobTab
+          <BurgerMenuMobTab
             isHeaderMenuOpened={isHeaderMenuOpened}
             closeMenu={() => setIsHeaderMenuOpened(false)}
           />

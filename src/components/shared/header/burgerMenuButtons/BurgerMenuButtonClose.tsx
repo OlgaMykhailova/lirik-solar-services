@@ -1,4 +1,4 @@
-import IconClose from "../icons/IconClose";
+import IconClose from "../../icons/IconClose";
 
 interface BurgerMenuButtonCloseProps {
   toggleHeaderMenuOpen?: () => void;

@@ -4,20 +4,20 @@ import React from "react";
 import { Locale } from "@/types/locale";
 
 import Container from "../container/Container";
-import BurgerMenuButtonClose from "./BurgerMenuButtonClose";
+import BurgerMenuButtonClose from "./burgerMenuButtons/BurgerMenuButtonClose";
 import CallUsButton from "./callUs/CallUsButton";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MenuList from "./menuList/MenuList";
 
-interface MenuMobTabProps {
+interface BurgerMenuMobTabProps {
   isHeaderMenuOpened: boolean;
   closeMenu?: () => void;
 }
 
-export default function MenuMobTab({
+export default function BurgerMenuMobTab({
   closeMenu,
   isHeaderMenuOpened,
-}: MenuMobTabProps) {
+}: BurgerMenuMobTabProps) {
   const locale = useLocale();
   return (
     <div

@@ -1,4 +1,4 @@
-import IconBurgerMenu from "../icons/IconBurger";
+import IconBurgerMenu from "../../icons/IconBurger";
 
 interface BurgerMenuButtonOpenProps {
   isHeaderMenuOpened?: boolean;
