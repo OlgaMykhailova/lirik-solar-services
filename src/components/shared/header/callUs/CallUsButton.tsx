@@ -1,6 +1,6 @@
 import React from "react";
 
-import { phoneThird } from "@/constants/constants";
+import { PHONE_THIRD } from "@/constants/constants";
 
 import SecondaryButton from "../../buttons/SecondaryButton";
 import IconPhone from "../../icons/IconPhone";
@@ -16,7 +16,7 @@ export default function CallUsButton({
 }: CallUsButtonProps) {
   return (
     <a
-      href={`tel:+38${phoneThird.replace(/\D/g, "")}`}
+      href={`tel:+38${PHONE_THIRD.replace(/\D/g, "")}`}
       target="_blank"
       rel="noopener noreferrer nofollow"
       className={className}
@@ -24,7 +24,7 @@ export default function CallUsButton({
       <SecondaryButton className="gap-3" onClick={closeMenu}>
         <>
           <IconPhone className="text-yellow" />
-          {phoneThird}
+          {PHONE_THIRD}
         </>
       </SecondaryButton>
     </a>

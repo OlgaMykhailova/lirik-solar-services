@@ -33,6 +33,9 @@ const config: Config = {
         inputErrorLight: "#FFAFAF",
         facebook: "#1877F2",
         youtube: "#FF0000",
+        telegram: "#229ED9",
+        viber: "#7458FA",
+        whatsapp: "#60D66A",
       },
       fontSize: {
         xs: ["14px", { lineHeight: "20px", fontWeight: "400" }],
