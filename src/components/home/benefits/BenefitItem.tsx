@@ -1,6 +1,7 @@
-import SubTitle from "@/components/shared/titles/SubTitle";
 import Image from "next/image";
 import React from "react";
+
+import SubTitle from "@/components/shared/titles/SubTitle";
 
 interface BenefitItemProps {
   benefit: { title: string; description: string; icon: string };

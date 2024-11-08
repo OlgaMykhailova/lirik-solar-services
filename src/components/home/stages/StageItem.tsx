@@ -1,4 +1,3 @@
-import SubTitle from "@/components/shared/titles/SubTitle";
 import Image from "next/image";
 
 interface StageItemProps {

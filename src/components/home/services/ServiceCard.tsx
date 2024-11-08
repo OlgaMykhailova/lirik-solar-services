@@ -1,5 +1,6 @@
-import SubTitle from "@/components/shared/titles/SubTitle";
 import React from "react";
+
+import SubTitle from "@/components/shared/titles/SubTitle";
 
 interface ServiceCardProps {
   service: { title: string; description: string };
