@@ -83,7 +83,23 @@
   },
   "reviews": { "title": "Відгуки клієнтів" },
   "writeUs": { "title": "Залиште заявку на безкоштовну консультацію" },
-  "contacts": { "title": "Контакти" },
+  "contacts": {
+    "title": "Контакти",
+    "email": { "title": "Email" },
+    "address": {
+      "title": "Адреса",
+      "description": "м. Київ, вул. Вікентія Хвойки 18/14",
+      "route": "Прокласти маршрут"
+    },
+    "phones": {
+      "title": "Теофони",
+      "shedule": {
+        "working": "пн-пт з 09:00 по 17:00",
+        "weekends": "сб, нд — вихідний"
+      }
+    },
+    "messengers": { "title": "Напишіть нам" }
+  },
   "footer": {
     "rights": "© 2024 Lirik Solar. Всі права захищені",
     "policy": "Політика конфіденційності"
