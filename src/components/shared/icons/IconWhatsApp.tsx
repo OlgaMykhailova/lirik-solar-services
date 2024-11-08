@@ -9,7 +9,8 @@ export default function IconWhatsApp({ className }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="icon whatsapp"
-      className={className}
+      className={`outline-none laptop:group-hover:text-whatsapp group-focus-visible:text-whatsapp group-active:text-whatsapp 
+        transition duration-300 ease-out ${className}`}
     >
       <rect width="40" height="40" rx="20" fill="currentColor" />
       <path

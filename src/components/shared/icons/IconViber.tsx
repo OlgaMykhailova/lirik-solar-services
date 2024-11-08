@@ -9,7 +9,8 @@ export default function IconViber({ className }: IconProps) {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="icon viber"
-      className={className}
+      className={`outline-none laptop:group-hover:text-viber group-focus-visible:text-viber group-active:text-viber 
+        transition duration-300 ease-out ${className}`}
     >
       <rect width="40" height="40" rx="20" fill="currentColor" />
       <g clip-path="url(#clip0_323_14671)">

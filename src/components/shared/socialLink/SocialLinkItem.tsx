@@ -2,7 +2,7 @@ import React from "react";
 
 interface SocialLinkItemProps {
   social: { name: string; icon: React.JSX.Element; url: string };
-  className: string;
+  className?: string;
 }
 
 export default function SocialLinkItem({

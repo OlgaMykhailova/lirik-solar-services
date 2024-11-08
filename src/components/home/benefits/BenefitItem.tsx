@@ -1,3 +1,4 @@
+import SubTitle from "@/components/shared/titles/SubTitle";
 import Image from "next/image";
 import React from "react";
 
@@ -10,9 +11,7 @@ export default function BenefitItem({ benefit }: BenefitItemProps) {
 
   return (
     <li className="laptop:flex laptop:justify-between laptop:items-center">
-      <h3 className="mb-4 laptop:mb-0 font-gogh text-baseb tab:text-xmdb laptop:text-mdb">
-        {title}
-      </h3>
+      <SubTitle className="mb-4 laptop:mb-0">{title}</SubTitle>
       <div className="flex items-center gap-6 tab:gap-10 laptop:w-[56%]">
         <Image
           src={`/images/icons/${icon}.svg`}
