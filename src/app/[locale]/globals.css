@@ -7,6 +7,15 @@
   --black: #040e2f;
 }
 
+:root:has(.no-doc-scroll) {
+  overflow: hidden;
+  @media screen and (min-width: 768px) {
+    position: fixed;
+    overflow-y: scroll;
+    width: 100%;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
   }
