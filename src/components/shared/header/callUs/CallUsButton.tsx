@@ -12,7 +12,7 @@ interface CallUsButtonProps {
 export default function CallUsButton({ className = "" }: CallUsButtonProps) {
   return (
     <a
-      href={`tel:+${phoneThird.replace(/\D/g, "")}`}
+      href={`tel:+38${phoneThird.replace(/\D/g, "")}`}
       target="_blank"
       rel="noopener noreferrer nofollow"
       className={className}
