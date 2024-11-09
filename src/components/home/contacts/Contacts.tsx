@@ -19,7 +19,7 @@ export default function Contacts() {
           alt="map"
           width="528"
           height="501"
-          className="w-full h-auto max-w-[528px] tab:w-[46%] object-cover object-center"
+          className="w-full h-auto aspect-[528/501] max-w-[630px] tab:w-[46%] tab:h-[501px] laptop:min-w-[528px] pc:min-w-[490px] object-cover object-center"
         />
       </div>
     </Section>

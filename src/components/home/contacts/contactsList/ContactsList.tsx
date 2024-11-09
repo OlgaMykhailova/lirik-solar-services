@@ -7,7 +7,7 @@ import Phones from "./phones/Phones";
 
 export default function ContactsList() {
   return (
-    <ul className="flex flex-col gap-6">
+    <ul className="flex flex-col gap-6 pc:flex-row pc:flex-wrap">
       <Email />
       <Address />
       <Phones />

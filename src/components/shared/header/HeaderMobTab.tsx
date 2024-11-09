@@ -3,8 +3,9 @@
 import { useState } from "react";
 
 import Backdrop from "../backdrop.tsx/Backdrop";
+import IconButton from "../buttons/IconButton";
 import Container from "../container/Container";
-import BurgerMenuButtonOpen from "./burgerMenuButtons/BurgerMenuButtonOpen";
+import IconBurgerMenu from "../icons/IconBurger";
 import BurgerMenuMobTab from "./BurgerMenuMobTab";
 import CallUsButton from "./callUs/CallUsButton";
 import CallUsLinkMob from "./callUs/CallUsLinkMob";
@@ -20,10 +21,9 @@ export default function HeaderMobTab() {
         <div className="flex items-center justify-between min-w-[208px] w-[39%]">
           <CallUsButton className="hidden tab:block" />
           <CallUsLinkMob />
-          <BurgerMenuButtonOpen
-            isHeaderMenuOpened={isHeaderMenuOpened}
-            openMenu={() => setIsHeaderMenuOpened(true)}
-          />
+          <IconButton handleClick={() => setIsHeaderMenuOpened(true)}>
+            {<IconBurgerMenu />}
+          </IconButton>
           <BurgerMenuMobTab
             isHeaderMenuOpened={isHeaderMenuOpened}
             closeMenu={() => setIsHeaderMenuOpened(false)}

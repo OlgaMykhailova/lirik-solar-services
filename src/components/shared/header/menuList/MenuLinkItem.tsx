@@ -16,7 +16,7 @@ export default function MenuLinkItem({
 }: MenuLinkItemProps) {
   const locale = useLocale();
   const { title, id } = menuItem;
-  console.log(Link);
+
   return (
     <li className="text-center">
       <Link

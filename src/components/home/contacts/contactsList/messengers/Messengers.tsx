@@ -10,7 +10,7 @@ export default function Messengers() {
   const t = useTranslations("contacts");
 
   return (
-    <li className="flex items-start gap-3">
+    <li className="flex items-start gap-3 pc:w-[48%]">
       <Image
         src="/images/icons/messenger.svg"
         alt="messenger icon"

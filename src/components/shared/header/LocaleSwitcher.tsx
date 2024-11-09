@@ -21,7 +21,7 @@ export default function LocaleSwitcher({ locale }: { locale: Locale }) {
         <li key={curLocale}>
           <button
             onClick={() => handleLocaleChange(curLocale)}
-            className={`font-gogh text-baseb outline-none ${
+            className={`font-gogh text-baseb outline-none laptop:hover:text-blue focus-visible:text-blue active:text-blue transition duration-300 ease-out ${
               curLocale === locale ? "text-blue" : "text-white"
             }`}
           >
