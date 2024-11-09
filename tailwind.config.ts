@@ -50,7 +50,7 @@ const config: Config = {
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         lg: ["36px", { lineHeight: "50px", fontWeight: "400" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
-        xlbb: ["48px", { lineHeight: "66px", fontWeight: "800" }],
+        xlbb: ["48px", { lineHeight: "48px", fontWeight: "800" }],
         xxlb: ["56px", { lineHeight: "77px", fontWeight: "500" }],
         xxl: ["64px", { lineHeight: "77px", fontWeight: "400" }],
         xxxl: ["72px", { lineHeight: "99px", fontWeight: "400" }],
