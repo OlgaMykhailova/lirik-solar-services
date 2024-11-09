@@ -1,5 +1,5 @@
-import React from "react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 import MainButton from "@/components/shared/buttons/MainButton";
 import Container from "@/components/shared/container/Container";
