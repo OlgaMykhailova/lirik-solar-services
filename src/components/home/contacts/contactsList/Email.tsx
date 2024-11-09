@@ -8,7 +8,7 @@ import { EMAIL } from "@/constants/constants";
 export default function Email() {
   const t = useTranslations("contacts");
   return (
-    <li className="flex items-start gap-3">
+    <li className="flex items-start gap-3 pc:w-[48%]">
       <Image
         src="/images/icons/email.svg"
         alt="email icon"

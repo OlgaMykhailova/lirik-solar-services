@@ -15,6 +15,7 @@ const config: Config = {
       screens: {
         tab: "768px",
         laptop: "1280px",
+        pc: "1440px",
       },
       colors: {
         yellow: "#FDBD00",

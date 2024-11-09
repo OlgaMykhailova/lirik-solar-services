@@ -11,7 +11,7 @@ export default function Phones() {
   const t = useTranslations("contacts");
 
   return (
-    <li className="flex items-start gap-3">
+    <li className="flex items-start gap-3 pc:w-[48%]">
       <Image
         src="/images/icons/phone.svg"
         alt="phone icon"
