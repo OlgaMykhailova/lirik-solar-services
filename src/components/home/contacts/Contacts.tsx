@@ -1,12 +1,9 @@
 import Image from "next/image";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React from "react";
 
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
-
-import ContactsList from "./contactsList/ContactsList";
 
 import ContactsList from "./contactsList/ContactsList";
 
