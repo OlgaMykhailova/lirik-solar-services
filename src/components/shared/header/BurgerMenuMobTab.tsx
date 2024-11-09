@@ -3,8 +3,9 @@ import React from "react";
 
 import { Locale } from "@/types/locale";
 
+import IconButton from "../buttons/IconButton";
 import Container from "../container/Container";
-import BurgerMenuButtonClose from "./burgerMenuButtons/BurgerMenuButtonClose";
+import IconClose from "../icons/IconClose";
 import CallUsButton from "./callUs/CallUsButton";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MenuList from "./menuList/MenuList";
@@ -28,7 +29,7 @@ export default function BurgerMenuMobTab({
       <Container>
         <div className="flex justify-between items-center h-[72px] mb-8">
           <LocaleSwitcher locale={locale as Locale} />
-          <BurgerMenuButtonClose toggleHeaderMenuOpen={closeMenu} />
+          <IconButton handleClick={closeMenu}>{<IconClose />}</IconButton>
         </div>
         <div className="flex flex-col items-center gap-y-16">
           <MenuList closeMenu={closeMenu} />
