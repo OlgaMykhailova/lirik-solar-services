@@ -1,5 +1,6 @@
 import React from "react";
 import { useTranslations } from "next-intl";
+
 import MainButton from "@/components/shared/buttons/MainButton";
 import Container from "@/components/shared/container/Container";
 

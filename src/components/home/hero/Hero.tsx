@@ -1,7 +1,6 @@
-import React from "react";
-
 import Image from "next/image";
 import HeroInfo from "./HeroInfo";
+import React from "react";
 
 export default function Hero() {
   return (
