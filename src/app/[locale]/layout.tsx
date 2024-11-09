@@ -18,8 +18,16 @@ import { Locale } from "@/types/locale";
 const gogh = localFont({
   src: [
     {
+      weight: "400",
+      path: "../../fonts/Gogh-Regular.woff2",
+    },
+    {
       weight: "500",
       path: "../../fonts/Gogh-Medium.woff2",
+    },
+    {
+      weight: "800",
+      path: "../../fonts/Gogh-ExtraBold.woff2",
     },
   ],
   variable: "--font-gogh",
