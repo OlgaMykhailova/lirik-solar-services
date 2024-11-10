@@ -6,6 +6,7 @@ import { Locale } from "@/types/locale";
 import IconButton from "../buttons/IconButton";
 import Container from "../container/Container";
 import IconClose from "../icons/IconClose";
+import SocialLinksList from "../socialLinks/SocialLinksList";
 import CallUsButton from "./callUs/CallUsButton";
 import LocaleSwitcher from "./LocaleSwitcher";
 import MenuList from "./menuList/MenuList";
@@ -32,9 +33,10 @@ export default function BurgerMenuMobTab({
           <LocaleSwitcher locale={locale as Locale} />
           <IconButton handleClick={closeMenu}>{<IconClose />}</IconButton>
         </div>
-        <div className="flex flex-col items-center gap-y-16 py-8">
+        <div className="flex flex-col items-center gap-10 pt-7 pb-[85px]">
           <MenuList closeMenu={closeMenu} />
-          <CallUsButton closeMenu={closeMenu} />
+          <CallUsButton closeMenu={closeMenu} className="mt-6" />
+          <SocialLinksList />
         </div>
       </Container>
     </div>

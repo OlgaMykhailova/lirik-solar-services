@@ -22,7 +22,7 @@ export default function MenuLinkItem({
       <Link
         href={locale === "uk" ? `/${id}` : `/${locale}${id}`}
         locale={locale}
-        className="font-gogh text-baseb text-white transition duration-300 ease-out active:text-blue focus-visible:text-blue
+        className="font-gogh text-mdb laptop:text-baseb text-white transition duration-300 ease-out active:text-blue focus-visible:text-blue
          laptop:hover:text-blue outline-none"
         onClick={closeMenu}
       >

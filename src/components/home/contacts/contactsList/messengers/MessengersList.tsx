@@ -3,7 +3,7 @@ import React from "react";
 import IconTelegram from "@/components/shared/icons/IconTelegram";
 import IconViber from "@/components/shared/icons/IconViber";
 import IconWhatsApp from "@/components/shared/icons/IconWhatsApp";
-import SocialLinkItem from "@/components/shared/socialLink/SocialLinkItem";
+import SocialLinkItem from "@/components/shared/socialLinks/SocialLinkItem";
 import {
   TELEGRAM_LINK,
   VIBER_LINK_DESKTOP,

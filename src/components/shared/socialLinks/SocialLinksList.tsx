@@ -4,9 +4,15 @@ import IconFacebook from "../icons/IconFacebook";
 import IconInstagram from "../icons/IconInstagram";
 import IconTiktok from "../icons/IconTiktok";
 import IconYoutube from "../icons/IconYoutube";
-import SocialLinkItem from "../socialLink/SocialLinkItem";
+import SocialLinkItem from "./SocialLinkItem";
 
-export default function SocialLinksList() {
+interface SocialLinksListProps {
+  className?: string;
+}
+
+export default function SocialLinksList({
+  className = "",
+}: SocialLinksListProps) {
   const socialLinksList = [
     {
       name: "facebook",
@@ -32,7 +38,9 @@ export default function SocialLinksList() {
   ];
 
   return (
-    <ul className="flex justify-center tab:justify-between laptop:justify-end gap-4 pt-[127px] pb-6 tab:py-8 tab:mb-9 text-blue">
+    <ul
+      className={`flex justify-center tab:justify-between laptop:justify-end gap-4 text-blue ${className}`}
+    >
       {socialLinksList.map((social, idx) => (
         <SocialLinkItem
           key={idx}
