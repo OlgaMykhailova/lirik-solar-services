@@ -18,7 +18,7 @@ export default function Services() {
         <ServicesDescription />
       </div>
       <ServicesList />
-      <MainButton className="mt-8 laptop:mt-12">
+      <MainButton className="mt-10 laptop:mt-12">
         {t("buttons.startPath")}
       </MainButton>
     </Section>
