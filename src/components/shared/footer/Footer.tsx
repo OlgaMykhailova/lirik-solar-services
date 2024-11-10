@@ -2,8 +2,8 @@ import Image from "next/image";
 import React from "react";
 
 import Container from "../container/Container";
+import SocialLinksList from "../socialLinks/SocialLinksList";
 import FooterInfo from "./FooterInfo";
-import SocialLinksList from "./SocialLinksList";
 
 export default function Footer() {
   return (
@@ -17,7 +17,7 @@ export default function Footer() {
         tab:top-[calc(-300px/2)] laptop:top-[calc(-473px/2)] size-[243px] tab:size-[300px] laptop:size-[473px]"
       />
       <Container>
-        <SocialLinksList />
+        <SocialLinksList className="pt-[127px] pb-6 tab:py-8 tab:mb-9" />
         <FooterInfo />
       </Container>
     </footer>
