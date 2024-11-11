@@ -16,3 +16,25 @@ export const VIBER_LINK_DESKTOP = "viber://chat?number=380731250015";
 
 export const WHATSAPP_LINK =
   "https://api.whatsapp.com/send/?phone=380731250015";
+
+export const PHONE_NUMBER_MASK = [
+  "+",
+  "3",
+  "8",
+  " ",
+  "(",
+  "0",
+  /[0-9]/,
+  /\d/,
+  ")",
+  " ",
+  /\d/,
+  /\d/,
+  /\d/,
+  "-",
+  /\d/,
+  /\d/,
+  "-",
+  /\d/,
+  /\d/,
+];
