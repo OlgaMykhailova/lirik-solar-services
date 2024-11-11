@@ -4,7 +4,7 @@ import * as yup from "yup";
 import { emailRegex, nameRegex, phoneRegex } from "./regex";
 
 export const WriteUsValidation = () => {
-  const t = useTranslations("Errors");
+  const t = useTranslations("forms.errors");
 
   const writeUsFormValidationSchema = yup.object().shape({
     name: yup
@@ -17,12 +17,11 @@ export const WriteUsValidation = () => {
       .string()
       .matches(emailRegex, t("wrongEmail"))
       .required(t("required")),
-    phone: yup.string().matches(phoneRegex, t("wrongPhone")),
-    message: yup
+    phone: yup
       .string()
-      .min(3, t("messageMinMaxSymbols"))
-      .max(200, t("messageMinMaxSymbols"))
+      .matches(phoneRegex, t("wrongPhone"))
       .required(t("required")),
+    message: yup.string().max(200, t("messageMinMaxSymbols")),
   });
 
   return writeUsFormValidationSchema;

@@ -39,6 +39,7 @@ const config: Config = {
         whatsapp: "#60D66A",
       },
       fontSize: {
+        xxs: ["12px", { lineHeight: "17px", fontWeight: "400" }],
         xs: ["14px", { lineHeight: "20px", fontWeight: "400" }],
         sm: ["16px", { lineHeight: "22px", fontWeight: "400" }],
         smb: ["16px", { lineHeight: "22px", fontWeight: "500" }],

@@ -4,6 +4,7 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
+import ClientApplication from "./ClientApplication";
 import WriteUsInfo from "./WriteUsInfo";
 
 export default function WriteUs() {
@@ -12,7 +13,10 @@ export default function WriteUs() {
   return (
     <Section id="order">
       <SectionTitle>{t("title")}</SectionTitle>
-      <WriteUsInfo />
+      <div className="laptop:flex flex-row justify-between">
+        <WriteUsInfo />
+        <ClientApplication />
+      </div>
     </Section>
   );
 }
