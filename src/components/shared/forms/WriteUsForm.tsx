@@ -224,6 +224,7 @@ export default function WriteUsForm({
           <MainButton
             type="submit"
             disabled={!(dirty && isValid) || isLoading}
+            isLoading={isLoading}
             className="mt-6 mr-auto"
           >
             {t("buttons.sendMessage")}

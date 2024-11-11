@@ -34,7 +34,7 @@ export default function MainButton({
       ) : (
         <IconArrow
           className="text-blue transition duration-300 ease-out will-change-transform -translate-x-1 group-enabled:group-hover:translate-x-0 
-      group-disabled:text-backgroundLight"
+      laptop:group-disabled:text-backgroundLight"
         />
       )}
     </button>

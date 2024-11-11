@@ -6,7 +6,7 @@ export default function WriteUsInfo() {
   const t = useTranslations("writeUs");
 
   return (
-    <div className="flex flex-col gap-y-16 tab:w-[64%] laptop:w-[49%]">
+    <div className="flex flex-col justify-between tab:w-[64%] laptop:w-[49%]">
       <div>
         <p>{t("description.partOne")}</p>
         <p>{t("description.partTwo")}</p>
