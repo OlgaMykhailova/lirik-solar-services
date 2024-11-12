@@ -29,7 +29,7 @@ export default function CookiesComponent() {
 
   return (
     <div
-      className={`fixed z-20 left-0 bottom-0 flex items-center justify-center w-full max-h-[300px] tablet:max-h-[168px] laptop:max-h-[155px]
+      className={`fixed z-[60] left-0 bottom-0 flex items-center justify-center w-full max-h-[300px] tablet:max-h-[168px] laptop:max-h-[155px]
        py-10 px-4 tab:px-9 laptop:px-[100px] bg-backgroundLight ${
          isAccepted ? "translate-y-[101%]" : "translate-y-0"
        } 

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-import Backdrop from "../backdrop.tsx/Backdrop";
+import Backdrop from "../backdrop/Backdrop";
 import IconButton from "../buttons/IconButton";
 import Container from "../container/Container";
 import IconBurgerMenu from "../icons/IconBurger";
