@@ -89,7 +89,7 @@ export default function WriteUsForm({
       validationSchema={validationSchema}
     >
       {({ errors, touched, dirty, isValid }) => (
-        <Form className="flex flex-col gap-y-4 w-full h-full p-12 rounded-[24px] bg-white shadow-base">
+        <Form className="flex flex-col gap-y-4 w-full h-full tab:p-12 rounded-[24px] tab:bg-white tab:shadow-base">
           <label className={labelStyles}>
             <p>
               {t("forms.name")} <span className="text-inputError">*</span>
