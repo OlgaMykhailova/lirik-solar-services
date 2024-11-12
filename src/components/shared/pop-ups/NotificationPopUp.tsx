@@ -2,9 +2,9 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { Dispatch, SetStateAction } from "react";
 
-import PhoneItem from "@/components/home/contacts/contactsList/phones/phonesList/PhoneItem";
 import { PHONE_THIRD } from "@/constants/constants";
 
+import NotificationBgImages from "../backgrounds/NotificationBgImages";
 import IconButton from "../buttons/IconButton";
 import IconClose from "../icons/IconClose";
 
@@ -27,11 +27,12 @@ export default function NotificationPopUp({
     <div
       className={`${
         isNotificationShown ? "opacity-100 visible" : "opacity-0 invisible"
-      } fixed top-0 left-0 z-50 flex flex-col gap-4 w-[312px] tab:w-[496px] px-6 py-[30px] bg-white rounded-[16px]`}
+      } fixed top-0 left-0 z-50 overflow-hidden flex flex-col gap-4 w-[312px] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px]`}
     >
-      <div className="absolute top-2 right-2 size-6">
+      {!isError && <NotificationBgImages />}
+      <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
         <IconButton handleClick={() => setIsNotificationShown(false)}>
-          {<IconClose className="size-6 text-black" />}
+          {<IconClose className="size-6 tab:size-10 text-black" />}
         </IconButton>
       </div>
       <h2
@@ -44,7 +45,7 @@ export default function NotificationPopUp({
       >
         {t(`${isError ? "unsuccessful" : "successful"}.title`)}
       </h2>
-      <p>
+      <p className="text-xs tab:text-baseb">
         {t(`${isError ? "unsuccessful" : "successful"}.description`)}
         <a
           href={`tel:+38${PHONE_THIRD.replace(/\D/g, "")}`}
@@ -64,7 +65,7 @@ export default function NotificationPopUp({
         alt="logo"
         width={168}
         height={168}
-        className="mx-auto"
+        className="mx-auto tab:size-[227px]"
       />
     </div>
   );
