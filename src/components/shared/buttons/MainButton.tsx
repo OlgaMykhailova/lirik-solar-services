@@ -25,7 +25,7 @@ export default function MainButton({
         transition before:duration-300 before:ease-out-quart before:will-change-transform enabled:hover:before:w-full 
         enabled:focus-visible:before:w-full enabled:focus-visible:before:bg-yellowDark enabled:active:before:bg-yellowDark
         enabled:active:scale-95 ${
-          isLoading ? "disabled:before:bg-yellow before:w-full" : ""
+          isLoading ? "disabled:before:bg-yellow disabled:before:w-full" : ""
         } outline-none ${className}`}
     >
       {children}

@@ -76,7 +76,7 @@ export default function WriteUsForm({
   const labelStyles =
     "relative flex flex-col gap-y-1 w-full text-inputLabel text-xs";
   const fieldStyles =
-    "relative w-full h-full px-3 py-[14px] text-black placeholder-inputText border border-inputStroke rounded-[12px] outline-none text-sm transition duration-300 ease-out";
+    "relative w-full h-full px-3 py-[14px] text-black placeholder-inputText border rounded-[12px] outline-none text-sm transition duration-300 ease-out";
   const fieldWrapperStyles =
     "relative group before:content-[''] before:absolute before:top-0 before:left-0 before:rounded-[12px] before:w-full before:h-full before:blur-[3px] before:transition before:duration-300 before:ease-out ";
   const errorStyles =
@@ -89,7 +89,7 @@ export default function WriteUsForm({
       validationSchema={validationSchema}
     >
       {({ errors, touched, dirty, isValid }) => (
-        <Form className="flex flex-col gap-y-4 h-full p-12 rounded-[24px] bg-white shadow-base">
+        <Form className="flex flex-col gap-y-4 w-full h-full p-12 rounded-[24px] bg-white shadow-base">
           <label className={labelStyles}>
             <p>
               {t("forms.name")} <span className="text-inputError">*</span>
@@ -109,7 +109,7 @@ export default function WriteUsForm({
                 className={`${fieldStyles} ${
                   errors.name && touched.name
                     ? "border-inputErrorLight"
-                    : " focus:border-blueLight "
+                    : "border-inputStroke focus:border-blueLight "
                 }`}
               ></Field>
             </div>
@@ -140,7 +140,7 @@ export default function WriteUsForm({
                 className={`${fieldStyles}  ${
                   errors.phone && touched.phone
                     ? "border-inputErrorLight"
-                    : " focus:border-blueLight "
+                    : "border-inputStroke focus:border-blueLight"
                 }`}
               ></Field>
             </div>
@@ -166,7 +166,11 @@ export default function WriteUsForm({
                 type="email"
                 autoComplete="on"
                 placeholder={t("forms.emailPlaceholder")}
-                className={fieldStyles}
+                className={`${fieldStyles}  ${
+                  errors.email && touched.email
+                    ? "border-inputErrorLight"
+                    : "border-inputStroke focus:border-blueLight"
+                }`}
               ></Field>
             </div>
             <ErrorMessage
@@ -179,7 +183,7 @@ export default function WriteUsForm({
           <label className={labelStyles}>
             {t("forms.comment")}
             <div
-              className={`${fieldWrapperStyles} ${
+              className={`h-[92px] ${fieldWrapperStyles} ${
                 errors.message && touched.message
                   ? "before:bg-inputError"
                   : "before:bg-transparent group-hover:before:bg-blueLight focus-within:before:bg-blueLight"
@@ -192,7 +196,9 @@ export default function WriteUsForm({
                 autoComplete="on"
                 placeholder={t("forms.commentPlaceholder")}
                 className={`min-h-[92px] resize-none ${fieldStyles} ${
-                  errors.message && touched.message ? "text-error-input" : ""
+                  errors.message && touched.message
+                    ? "border-inputErrorLight"
+                    : "border-inputStroke focus:border-blueLight"
                 }`}
               ></Field>
             </div>

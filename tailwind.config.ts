@@ -14,6 +14,7 @@ const config: Config = {
       },
       screens: {
         tab: "768px",
+        tabxl: "1024px",
         laptop: "1280px",
         pc: "1440px",
       },

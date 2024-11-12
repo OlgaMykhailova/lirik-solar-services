@@ -9,7 +9,7 @@ export default function ClientApplication() {
   const [isNotificationShawn, setIsNotificationShawn] = useState(false);
 
   return (
-    <div className="laptop:w-[45.9%]">
+    <div className="tab:w-[74%] tabxl:w-[47%] laptop:w-[42%] mx-auto tabxl:mx-0">
       <WriteUsForm
         setIsError={setIsError}
         setIsNotificationShawn={setIsNotificationShawn}
