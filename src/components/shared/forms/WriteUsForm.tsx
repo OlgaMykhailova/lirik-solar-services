@@ -21,14 +21,14 @@ interface ValuesWriteUsFormType {
 
 interface WriteUsFormProps {
   setIsError: (value: boolean | ((prev: boolean) => boolean)) => void;
-  setIsNotificationShawn: (
+  setIsNotificationShown: (
     value: boolean | ((prev: boolean) => boolean)
   ) => void;
 }
 
 export default function WriteUsForm({
   setIsError,
-  setIsNotificationShawn,
+  setIsNotificationShown,
 }: WriteUsFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const locale = useLocale();
@@ -71,7 +71,7 @@ export default function WriteUsForm({
       return error;
     } finally {
       setIsLoading(false);
-      setIsNotificationShawn(true);
+      setIsNotificationShown(true);
     }
   };
 
