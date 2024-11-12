@@ -4,8 +4,8 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-import ClientApplication from "./ClientApplication";
 import WriteUsInfo from "./WriteUsInfo";
+import WriteUsApplication from "../../shared/forms/formsWithNotifications/WriteUsApplication";
 
 export default function WriteUs() {
   const t = useTranslations("writeUs");
@@ -15,7 +15,7 @@ export default function WriteUs() {
       <SectionTitle>{t("title")}</SectionTitle>
       <div className="flex flex-col gap-y-8 tabxl:flex-row justify-between">
         <WriteUsInfo />
-        <ClientApplication />
+        <WriteUsApplication />
       </div>
     </Section>
   );

@@ -12,6 +12,7 @@ export default function DelayedOrderPopUp() {
 
     return () => clearTimeout(timer);
   }, []);
+
   return (
     <OrderPopUp isPopUpShown={isPopUpShown} setIsPopUpShown={setIsPopUpShown} />
   );
