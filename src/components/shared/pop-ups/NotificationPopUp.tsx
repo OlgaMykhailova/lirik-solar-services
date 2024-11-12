@@ -4,7 +4,7 @@ import React, { Dispatch, SetStateAction } from "react";
 
 import { PHONE_THIRD } from "@/constants/constants";
 
-import Backdrop from "../backdrop.tsx/Backdrop";
+import Backdrop from "../backdrop/Backdrop";
 import NotificationBgImages from "../backgrounds/NotificationBgImages";
 import IconButton from "../buttons/IconButton";
 import IconClose from "../icons/IconClose";
@@ -24,18 +24,23 @@ export default function NotificationPopUp({
 }: NotificationPopUpProps) {
   const t = useTranslations("notifications");
 
+  const closeNotification = () => {
+    setIsNotificationShown(false);
+    setIsError(false);
+  };
+
   return (
     <>
       <div
         className={`${
           isNotificationShown
-            ? "translate-y-1/2 opacity-100 no-doc-scroll"
-            : "translate-y-full opacity-0"
-        } fixed bottom-1/2 left-1/2 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 overflow-hidden flex flex-col gap-4 w-[312px] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px]`}
+            ? "-translate-y-[calc(50vh-50%)] opacity-100 no-doc-scroll"
+            : "translate-y-full opacity-100"
+        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 overflow-hidden flex flex-col gap-4 w-[312px] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px]`}
       >
         {!isError && <NotificationBgImages />}
         <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
-          <IconButton handleClick={() => setIsNotificationShown(false)}>
+          <IconButton handleClick={closeNotification}>
             {<IconClose className="size-6 tab:size-10 text-black" />}
           </IconButton>
         </div>
@@ -72,10 +77,7 @@ export default function NotificationPopUp({
           className="mx-auto tab:size-[227px]"
         />
       </div>
-      <Backdrop
-        isVisible={isNotificationShown}
-        onClick={() => setIsNotificationShown(false)}
-      />
+      <Backdrop isVisible={isNotificationShown} onClick={closeNotification} />
     </>
   );
 }
