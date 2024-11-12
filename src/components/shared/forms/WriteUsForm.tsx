@@ -53,8 +53,9 @@ export default function WriteUsForm({
         `<b>Нова заявка</b>\n` +
         `Ім'я та прізвище: ${values.name.trim()}\n` +
         `Email: ${values.email.toLowerCase().trim()}\n` +
-        `Телефон: ${values.phone.replace(/[^\d+]/g, "")}\n` +
+        `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
         `Повідомлення: ${values.message.trim()}\n`;
+      console.log(data);
 
       await axios({
         method: "post",
