@@ -1,6 +1,7 @@
 "use client";
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
+import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
 import { useState } from "react";
@@ -130,6 +131,13 @@ export default function WriteUsForm({
                   : "before:bg-transparent group-hover:before:bg-blueLight focus-within:before:bg-blueLight"
               }`}
             >
+              <Image
+                src="/images/icons/phonePrefix.svg"
+                alt="phone prefix"
+                width={66}
+                height={22}
+                className="absolute top-1/2 left-3 z-10 transform -translate-y-1/2"
+              />
               <Field
                 as={MaskedInput}
                 mask={PHONE_NUMBER_MASK}
@@ -137,7 +145,7 @@ export default function WriteUsForm({
                 type="text"
                 autoComplete="on"
                 placeholder={t("forms.phonePlaceholder")}
-                className={`${fieldStyles}  ${
+                className={`pl-[80px] ${fieldStyles}  ${
                   errors.phone && touched.phone
                     ? "border-inputErrorLight"
                     : "border-inputStroke focus:border-blueLight"
