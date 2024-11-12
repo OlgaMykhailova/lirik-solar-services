@@ -136,7 +136,7 @@ export default function WriteUsForm({
                 alt="phone prefix"
                 width={66}
                 height={22}
-                className="absolute top-1/2 left-3 z-10 transform -translate-y-1/2"
+                className="absolute top-[15.5px] left-3 z-10"
               />
               <Field
                 as={MaskedInput}
