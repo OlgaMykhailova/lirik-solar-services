@@ -25,7 +25,7 @@ export default function MainButton({
         transition before:duration-300 before:ease-out-quart before:will-change-transform enabled:hover:before:w-full 
         enabled:focus-visible:before:w-full enabled:focus-visible:before:bg-yellowDark enabled:active:before:bg-yellowDark
         enabled:active:scale-95 ${
-          isLoading ? "disabled:before:bg-yellow before:w-full" : ""
+          isLoading ? "disabled:before:bg-yellow disabled:before:w-full" : ""
         } outline-none ${className}`}
     >
       {children}
@@ -34,7 +34,7 @@ export default function MainButton({
       ) : (
         <IconArrow
           className="text-blue transition duration-300 ease-out will-change-transform -translate-x-1 group-enabled:group-hover:translate-x-0 
-      group-disabled:text-backgroundLight"
+      laptop:group-disabled:text-backgroundLight"
         />
       )}
     </button>
