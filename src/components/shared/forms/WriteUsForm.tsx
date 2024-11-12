@@ -226,6 +226,7 @@ export default function WriteUsForm({
               {t("forms.agreement")}
               <Link
                 href={`policy`}
+                target="_blank"
                 locale={locale}
                 className="outline-none border-b text-blue border-blue active:text-blueLight active:border-blueLight 
                 laptop:hover:text-blueLight laptop:focus-visible:text-blueLight laptop:hover:border-blueLight 

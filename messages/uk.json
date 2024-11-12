@@ -119,6 +119,7 @@
   },
   "buttons": {
     "startPath": "Почати свій шлях",
+    "orderService": "Замовити послугу",
     "startProject": "Розпочати проєкт",
     "sendMessage": "Надіслати заявку",
     "acceptCookies": "Прийняти Cookies"

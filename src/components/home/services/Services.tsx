@@ -19,7 +19,7 @@ export default function Services() {
       </div>
       <ServicesList />
       <MainButton className="mt-10 laptop:mt-12">
-        {t("buttons.startPath")}
+        {t("buttons.orderService")}
       </MainButton>
     </Section>
   );
