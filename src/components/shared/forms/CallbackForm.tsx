@@ -6,11 +6,11 @@ import MaskedInput from "react-text-mask";
 
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
 import { CallBackValidation } from "@/schemas/callBackFormValidation";
+import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
 import FormDescription from "./formComponents/FormDescription";
 import SubmitButton from "./formComponents/SubmitButton";
-import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 interface ValuesCallBackFormType {
   name: string;

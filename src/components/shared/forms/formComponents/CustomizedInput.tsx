@@ -1,7 +1,7 @@
 import { ErrorMessage, Field, FormikErrors, FormikTouched } from "formik";
+import Image from "next/image";
 import React from "react";
 import MaskedInput from "react-text-mask";
-import Image from "next/image";
 
 interface Values {
   [fieldName: string]: string;
