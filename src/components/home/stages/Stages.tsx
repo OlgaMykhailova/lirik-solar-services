@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import MainButton from "@/components/shared/buttons/MainButton";
+import OpenPopupButton from "@/components/shared/buttons/OpenPopupButton";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
@@ -13,9 +13,10 @@ export default function Stages() {
     <Section>
       <SectionTitle>{t("stages.title")}</SectionTitle>
       <StagesList />
-      <MainButton className="mt-10 laptop:mt-16">
-        {t("buttons.startProject")}
-      </MainButton>
+      <OpenPopupButton
+        buttonName={t("buttons.startProject")}
+        className="mt-10 laptop:mt-16"
+      />
     </Section>
   );
 }

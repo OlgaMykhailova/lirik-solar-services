@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import MainButton from "@/components/shared/buttons/MainButton";
+import OpenPopupButton from "@/components/shared/buttons/OpenPopupButton";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
@@ -18,9 +18,10 @@ export default function Services() {
         <ServicesDescription />
       </div>
       <ServicesList />
-      <MainButton className="mt-10 laptop:mt-12">
-        {t("buttons.orderService")}
-      </MainButton>
+      <OpenPopupButton
+        buttonName={t("buttons.orderService")}
+        className="mt-10 laptop:mt-12"
+      />
     </Section>
   );
 }

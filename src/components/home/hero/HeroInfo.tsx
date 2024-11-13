@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import MainButton from "@/components/shared/buttons/MainButton";
+import OpenPopupButton from "@/components/shared/buttons/OpenPopupButton";
 import Container from "@/components/shared/container/Container";
 
 export default function HeroInfo() {
@@ -31,7 +31,7 @@ export default function HeroInfo() {
       <h1 className="w-[291px] mt-[84px] mb-6 tab:mb-10 tab:text-base text-white">
         {t("hero.title")}
       </h1>
-      <MainButton>{t("buttons.startPath")}</MainButton>
+      <OpenPopupButton buttonName={t("buttons.startPath")} />
     </Container>
   );
 }

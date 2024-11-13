@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 
+import Backdrop from "../backdrop/Backdrop";
 import OrderPopUp from "../pop-ups/OrderPopUp";
 import MainButton from "./MainButton";
 
@@ -23,6 +24,10 @@ export default function OpenPopupButton({
       <OrderPopUp
         isPopUpShown={isPopUpShown}
         setIsPopUpShown={setIsPopUpShown}
+      />
+      <Backdrop
+        isVisible={isPopUpShown}
+        onClick={() => setIsPopUpShown(false)}
       />
     </>
   );
