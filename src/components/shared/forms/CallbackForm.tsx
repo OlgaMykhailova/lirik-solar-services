@@ -52,7 +52,8 @@ export default function CallBackForm({
       setIsLoading,
       setIsError,
       setIsNotificationShown,
-      data
+      data,
+      setIsPopUpShown
     );
   };
 
