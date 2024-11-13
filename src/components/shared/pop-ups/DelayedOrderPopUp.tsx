@@ -1,6 +1,7 @@
 "use client";
-import React, { useEffect,useState } from "react";
+import React, { useEffect, useState } from "react";
 
+import Backdrop from "../backdrop/Backdrop";
 import OrderPopUp from "./OrderPopUp";
 
 export default function DelayedOrderPopUp() {
@@ -9,12 +10,21 @@ export default function DelayedOrderPopUp() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopUpShown(true);
-    }, 50000);
+    }, 5000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <OrderPopUp isPopUpShown={isPopUpShown} setIsPopUpShown={setIsPopUpShown} />
+    <>
+      <OrderPopUp
+        isPopUpShown={isPopUpShown}
+        setIsPopUpShown={setIsPopUpShown}
+      />
+      <Backdrop
+        isVisible={isPopUpShown}
+        onClick={() => setIsPopUpShown(false)}
+      />
+    </>
   );
 }
