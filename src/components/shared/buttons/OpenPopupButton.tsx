@@ -1,4 +1,5 @@
 "use client";
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 import Backdrop from "../backdrop/Backdrop";
@@ -15,6 +16,7 @@ export default function OpenPopupButton({
   className = "",
 }: OpenPopupButtonProps) {
   const [isPopUpShown, setIsPopUpShown] = useState(false);
+  const t = useTranslations();
 
   return (
     <>
@@ -22,6 +24,8 @@ export default function OpenPopupButton({
         {buttonName}
       </MainButton>
       <OrderPopUp
+        title={t("orderPopUp.title")}
+        description={t("writeUs.description.partTwo")}
         isPopUpShown={isPopUpShown}
         setIsPopUpShown={setIsPopUpShown}
       />

@@ -13,10 +13,7 @@ export const WriteUsValidation = () => {
       .max(30, t("nameMinMaxSymbols"))
       .matches(nameRegex, t("nameAllowedSymbols"))
       .required(t("required")),
-    email: yup
-      .string()
-      .matches(emailRegex, t("wrongEmail"))
-      .required(t("required")),
+    email: yup.string().matches(emailRegex, t("wrongEmail")),
     phone: yup
       .string()
       .matches(phoneRegex, t("wrongPhone"))

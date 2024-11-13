@@ -51,7 +51,7 @@ export default function WriteUsForm({
       setIsLoading(true);
       const data =
         `<b>Нова заявка</b>\n` +
-        `Ім'я та прізвище: ${values.name.trim()}\n` +
+        `Ім'я: ${values.name.trim()}\n` +
         `Email: ${values.email.toLowerCase().trim()}\n` +
         `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
         `Повідомлення: ${values.message.trim()}\n`;
@@ -160,9 +160,7 @@ export default function WriteUsForm({
             ></ErrorMessage>
           </label>
           <label className={labelStyles}>
-            <p>
-              {t("forms.email")} <span className="text-inputError">*</span>
-            </p>
+            <p>{t("forms.email")}</p>
             <div
               className={`${fieldWrapperStyles} ${
                 errors.email && touched.email

@@ -47,7 +47,7 @@ export default function CallBackForm({
       setIsLoading(true);
       const data =
         `<b>Нова заявка</b>\n` +
-        `Ім'я та прізвище: ${values.name.trim()}\n` +
+        `Ім'я: ${values.name.trim()}\n` +
         `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n`;
 
       await axios({
