@@ -4,7 +4,7 @@ import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { Dispatch, SetStateAction,useState } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import MaskedInput from "react-text-mask";
 
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
@@ -154,7 +154,7 @@ export default function CallBackForm({
             ></ErrorMessage>
           </label>
           <div className="text-sm">
-            <div className="flex gap-x-2 w-full mb-1.5">
+            <div className="flex gap-x-2 w-full mb-1.5 text-xs">
               <span className="text-inputError">*</span>
               <p>{t("forms.requiredFields")}</p>
             </div>
