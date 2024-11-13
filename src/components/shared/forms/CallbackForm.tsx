@@ -59,12 +59,12 @@ export default function CallBackForm({
         },
       });
       resetForm();
+      setIsPopUpShown(false);
     } catch (error) {
       setIsError(true);
       return error;
     } finally {
       setIsLoading(false);
-      setIsPopUpShown(false);
       setIsNotificationShown(true);
     }
   };

@@ -5,7 +5,7 @@ import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 import WriteUsInfo from "./WriteUsInfo";
-import WriteUsApplication from "../../shared/forms/formsWithNotifications/WriteUsApplication";
+import WriteUsApplication from "./WriteUsApplication";
 
 export default function WriteUs() {
   const t = useTranslations("writeUs");

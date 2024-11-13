@@ -8,6 +8,7 @@ import Backdrop from "../backdrop/Backdrop";
 import NotificationBgImages from "../backgrounds/NotificationBgImages";
 import IconButton from "../buttons/IconButton";
 import IconClose from "../icons/IconClose";
+import PopUpTitle from "../titles/PopUpTitle";
 
 interface NotificationPopUpProps {
   isNotificationShown: boolean;
@@ -36,8 +37,8 @@ export default function NotificationPopUp({
           isNotificationShown
             ? "-translate-y-[calc(50vh-50%)] opacity-100 no-doc-scroll"
             : "translate-y-full opacity-0"
-        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 overflow-hidden flex flex-col gap-4 
-        w-[312px] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px] shadow-base`}
+        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 flex flex-col gap-4 
+        w-[312px] tab:w-[496px] px-6 py-[30px] overflow-hidden tab:p-12 bg-white rounded-[16px] tab:rounded-[24px] shadow-base`}
       >
         {!isError && <NotificationBgImages />}
         <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
@@ -45,16 +46,9 @@ export default function NotificationPopUp({
             {<IconClose className="size-6 tab:size-10 text-black" />}
           </IconButton>
         </div>
-        <h2
-          data-label={t(`${isError ? "unsuccessful" : "successful"}.title`)}
-          className={`relative laptop:mb-12 text-xmdb tab:text-lgb ${
-            isError ? "text-inputError" : "text-blue"
-          } font-gogh before:content-[attr(data-label)] before:absolute 
-       before:-left-6 laptop:before:-left-7 before:top-4 laptop:before:top-5 before:w-full before:text-grey before:text-xmdb tab:before:text-lgb before:blur-[1px]
-       `}
-        >
+        <PopUpTitle className={`${isError ? "text-inputError" : "text-blue"}`}>
           {t(`${isError ? "unsuccessful" : "successful"}.title`)}
-        </h2>
+        </PopUpTitle>
         <p className="text-xs tab:text-baseb">
           {t(`${isError ? "unsuccessful" : "successful"}.description`)}
           <a
