@@ -5,9 +5,7 @@ import React, { Dispatch, SetStateAction } from "react";
 import { PHONE_THIRD } from "@/constants/constants";
 
 import Backdrop from "../backdrop/Backdrop";
-import NotificationBgImages from "../backgrounds/NotificationBgImages";
-import IconButton from "../buttons/IconButton";
-import IconClose from "../icons/IconClose";
+import Modal from "../modals/Modal";
 import PopUpTitle from "../titles/PopUpTitle";
 
 interface NotificationPopUpProps {
@@ -32,20 +30,11 @@ export default function NotificationPopUp({
 
   return (
     <>
-      <div
-        className={`${
-          isNotificationShown
-            ? "-translate-y-[calc(50vh-50%)] opacity-100 no-doc-scroll"
-            : "translate-y-full opacity-0"
-        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 flex flex-col gap-4 
-        w-[312px] tab:w-[496px] px-6 py-[30px] overflow-hidden tab:p-12 bg-white rounded-[16px] tab:rounded-[24px] shadow-base`}
+      <Modal
+        isPopUpShown={isNotificationShown}
+        setIsPopUpShown={setIsNotificationShown}
+        isError={isError}
       >
-        {!isError && <NotificationBgImages />}
-        <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
-          <IconButton handleClick={closeNotification}>
-            {<IconClose className="size-6 tab:size-10 text-black" />}
-          </IconButton>
-        </div>
         <PopUpTitle className={`${isError ? "text-inputError" : "text-blue"}`}>
           {t(`${isError ? "unsuccessful" : "successful"}.title`)}
         </PopUpTitle>
@@ -71,7 +60,7 @@ export default function NotificationPopUp({
           height={168}
           className="mx-auto tab:size-[227px]"
         />
-      </div>
+      </Modal>
       <Backdrop isVisible={isNotificationShown} onClick={closeNotification} />
     </>
   );

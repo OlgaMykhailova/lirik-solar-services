@@ -1,13 +1,11 @@
 "use client";
 
 import React, { Dispatch, SetStateAction, useState } from "react";
-import IconButton from "../buttons/IconButton";
-import IconClose from "../icons/IconClose";
-import NotificationBgImages from "../backgrounds/NotificationBgImages";
 import CallBackForm from "../forms/CallbackForm";
 import NotificationPopUp from "./NotificationPopUp";
 import { useTranslations } from "next-intl";
 import PopUpTitle from "../titles/PopUpTitle";
+import Modal from "../modals/Modal";
 
 interface OrderPopUpProps {
   isPopUpShown: boolean;
@@ -24,30 +22,17 @@ export default function OrderPopUp({
 
   return (
     <>
-      <div
-        className={`${
-          isPopUpShown
-            ? "-translate-y-[calc(50vh-50%)] opacity-100"
-            : "translate-y-full opacity-100"
-        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 overflow-hidden flex flex-col gap-4 
-         min-w-[312px] max-w-[496px] w-[86.6%] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px] shadow-base`}
-      >
-        <NotificationBgImages />
-        <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
-          <IconButton handleClick={() => setIsPopUpShown(false)}>
-            {<IconClose className="size-6 tab:size-10 text-black" />}
-          </IconButton>
-        </div>
+      <Modal isPopUpShown={isPopUpShown} setIsPopUpShown={setIsPopUpShown}>
         <div className="flex flex-col gap-4">
           <PopUpTitle>{t("orderPopUp.title")}</PopUpTitle>
-          <p className=" mb-2">{t("writeUs.description.partTwo")}</p>
+          <p className="mb-2">{t("writeUs.description.partTwo")}</p>
           <CallBackForm
             setIsError={setIsError}
             setIsNotificationShown={setIsNotificationShown}
             setIsPopUpShown={setIsPopUpShown}
           />
         </div>
-      </div>
+      </Modal>
       <NotificationPopUp
         isNotificationShown={isNotificationShown}
         isError={isError}
