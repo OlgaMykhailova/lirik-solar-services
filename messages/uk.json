@@ -25,9 +25,9 @@
   "services": {
     "title": "Наші послуги",
     "description": {
-      "partOne": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.",
-      "partTwo": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "partThree": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      "partOne": "Уявіть життя, де сонце не просто світить, а живить ваш дім або бізнес енергією, яка не залежить від зовнішніх факторів. Lirik Solar створює саме таку реальність, де кожен промінь працює на вас.",
+      "partTwo": "З нашими рішеннями та послугами ви отримуєте не лише електрику, а й свободу, незалежність і впевненість у майбутньому.",
+      "partThree": "Ваша енергія — це ваш контроль, і ми знаємо, як його досягти."
     },
     "projecting": {
       "title": "Проєктування сонячних електростанцій",
