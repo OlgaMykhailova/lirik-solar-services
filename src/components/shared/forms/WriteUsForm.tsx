@@ -218,7 +218,7 @@ export default function WriteUsForm({
             ></ErrorMessage>
           </label>
           <div className="text-sm">
-            <div className="flex gap-x-2 w-full mb-1.5">
+            <div className="flex gap-x-2 w-full mb-1.5 text-xs">
               <span className="text-inputError">*</span>
               <p>{t("forms.requiredFields")}</p>
             </div>
