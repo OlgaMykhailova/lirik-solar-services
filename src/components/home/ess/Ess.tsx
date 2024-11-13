@@ -9,6 +9,7 @@ export default function Ess() {
   return (
     <Section>
       <SectionTitle>{t("title")}</SectionTitle>
+      <p>{t("description")}</p>
     </Section>
   );
 }

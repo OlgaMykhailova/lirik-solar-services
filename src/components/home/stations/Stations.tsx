@@ -9,6 +9,7 @@ export default function Stations() {
   return (
     <Section>
       <SectionTitle>{t("title")}</SectionTitle>
+      <p>{t("description")}</p>
     </Section>
   );
 }

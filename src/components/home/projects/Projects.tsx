@@ -9,6 +9,7 @@ export default function Projects() {
   return (
     <Section>
       <SectionTitle>{t("title")}</SectionTitle>
+      <p className="tab:w-[64.3%] laptop:w-[48.9%]">{t("description")}</p>
     </Section>
   );
 }
