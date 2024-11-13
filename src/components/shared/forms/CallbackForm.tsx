@@ -4,58 +4,51 @@ import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useState } from "react";
+import { Dispatch, SetStateAction,useState } from "react";
 import MaskedInput from "react-text-mask";
 
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
-import { WriteUsValidation } from "@/schemas/writeUsFormValidation";
+import { CallBackValidation } from "@/schemas/callBackFormValidation";
 
 import MainButton from "../buttons/MainButton";
 
-interface ValuesWriteUsFormType {
+interface ValuesCallBackFormType {
   name: string;
-  email: string;
   phone: string;
-  message: string;
 }
 
-interface WriteUsFormProps {
-  setIsError: (value: boolean | ((prev: boolean) => boolean)) => void;
-  setIsNotificationShown: (
-    value: boolean | ((prev: boolean) => boolean)
-  ) => void;
+interface CallBackFormProps {
+  setIsError: Dispatch<SetStateAction<boolean>>;
+  setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
+  setIsPopUpShown: Dispatch<SetStateAction<boolean>>;
 }
 
-export default function WriteUsForm({
+export default function CallBackForm({
   setIsError,
   setIsNotificationShown,
-}: WriteUsFormProps) {
+  setIsPopUpShown,
+}: CallBackFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const locale = useLocale();
   const t = useTranslations("");
 
   const initialValues = {
     name: "",
-    email: "",
     phone: "",
-    message: "",
   };
 
-  const validationSchema = WriteUsValidation();
+  const validationSchema = CallBackValidation();
 
   const submitForm = async (
-    values: ValuesWriteUsFormType,
-    { resetForm }: FormikHelpers<ValuesWriteUsFormType>
+    values: ValuesCallBackFormType,
+    { resetForm }: FormikHelpers<ValuesCallBackFormType>
   ) => {
     try {
       setIsLoading(true);
       const data =
         `<b>Нова заявка</b>\n` +
         `Ім'я та прізвище: ${values.name.trim()}\n` +
-        `Email: ${values.email.toLowerCase().trim()}\n` +
-        `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
-        `Повідомлення: ${values.message.trim()}\n`;
-      console.log(data);
+        `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n`;
 
       await axios({
         method: "post",
@@ -66,6 +59,7 @@ export default function WriteUsForm({
         },
       });
       resetForm();
+      setIsPopUpShown(false);
     } catch (error) {
       setIsError(true);
       return error;
@@ -91,7 +85,7 @@ export default function WriteUsForm({
       validationSchema={validationSchema}
     >
       {({ errors, touched, dirty, isValid }) => (
-        <Form className="flex flex-col gap-y-4 w-full h-full tab:p-12 rounded-[24px] tab:bg-white tab:shadow-base">
+        <Form className="flex flex-col gap-y-4 w-full h-full rounded-[24px] bg-white">
           <label className={labelStyles}>
             <p>
               {t("forms.name")} <span className="text-inputError">*</span>
@@ -155,64 +149,6 @@ export default function WriteUsForm({
             </div>
             <ErrorMessage
               name="phone"
-              component="p"
-              className={errorStyles}
-            ></ErrorMessage>
-          </label>
-          <label className={labelStyles}>
-            <p>
-              {t("forms.email")} <span className="text-inputError">*</span>
-            </p>
-            <div
-              className={`${fieldWrapperStyles} ${
-                errors.email && touched.email
-                  ? "before:bg-inputError"
-                  : "before:bg-transparent group-hover:before:bg-blueLight focus-within:before:bg-blueLight"
-              }`}
-            >
-              <Field
-                name="email"
-                type="email"
-                autoComplete="on"
-                placeholder={t("forms.emailPlaceholder")}
-                className={`${fieldStyles}  ${
-                  errors.email && touched.email
-                    ? "border-inputErrorLight"
-                    : "border-inputStroke focus:border-blueLight"
-                }`}
-              ></Field>
-            </div>
-            <ErrorMessage
-              name="email"
-              component="p"
-              className={errorStyles}
-            ></ErrorMessage>
-          </label>
-
-          <label className={labelStyles}>
-            {t("forms.comment")}
-            <div
-              className={`h-[92px] ${fieldWrapperStyles} ${
-                errors.message && touched.message
-                  ? "before:bg-inputError"
-                  : "before:bg-transparent group-hover:before:bg-blueLight focus-within:before:bg-blueLight"
-              }`}
-            >
-              <Field
-                as="textarea"
-                name="message"
-                type="text"
-                autoComplete="on"
-                placeholder={t("forms.commentPlaceholder")}
-                className={`min-h-[92px] resize-none ${fieldStyles} ${
-                  errors.message && touched.message
-                    ? "border-inputErrorLight"
-                    : "border-inputStroke focus:border-blueLight"
-                }`}
-              ></Field>
-            </div>
-            <ErrorMessage
-              name="message"
               component="p"
               className={errorStyles}
             ></ErrorMessage>

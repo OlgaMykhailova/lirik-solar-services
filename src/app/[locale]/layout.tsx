@@ -11,7 +11,7 @@ import { ScrollToTopButton } from "@/components/shared/buttons/ScrollToTopButton
 import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
 import Footer from "@/components/shared/footer/Footer";
 import Header from "@/components/shared/header/Header";
-import OrderPopUp from "@/components/shared/pop-ups/OrderPopUp";
+import DelayedOrderPopUp from "@/components/shared/pop-ups/DelayedOrderPopUp";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
@@ -71,7 +71,7 @@ export default function LocaleLayout({
           <Footer />
           <ScrollToTopButton />
           <CookiesComponent />
-          <OrderPopUp />
+          <DelayedOrderPopUp />
         </NextIntlClientProvider>
       </body>
     </html>

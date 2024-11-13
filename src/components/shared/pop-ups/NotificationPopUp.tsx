@@ -5,9 +5,8 @@ import React, { Dispatch, SetStateAction } from "react";
 import { PHONE_THIRD } from "@/constants/constants";
 
 import Backdrop from "../backdrop/Backdrop";
-import NotificationBgImages from "../backgrounds/NotificationBgImages";
-import IconButton from "../buttons/IconButton";
-import IconClose from "../icons/IconClose";
+import Modal from "../modals/Modal";
+import PopUpTitle from "../titles/PopUpTitle";
 
 interface NotificationPopUpProps {
   isNotificationShown: boolean;
@@ -31,30 +30,14 @@ export default function NotificationPopUp({
 
   return (
     <>
-      <div
-        className={`${
-          isNotificationShown
-            ? "-translate-y-[calc(50vh-50%)] opacity-100 no-doc-scroll"
-            : "translate-y-full opacity-100"
-        } fixed left-1/2 bottom-0 transform -translate-x-1/2 transition duration-[1000ms] ease-out z-50 overflow-hidden flex flex-col gap-4 
-        w-[312px] tab:w-[496px] px-6 py-[30px] tab:p-12 bg-white rounded-[16px] tab:rounded-[24px] shadow-base`}
+      <Modal
+        isPopUpShown={isNotificationShown}
+        setIsPopUpShown={setIsNotificationShown}
+        isError={isError}
       >
-        {!isError && <NotificationBgImages />}
-        <div className="absolute top-2 right-2 tab:top-6 tab:right-6">
-          <IconButton handleClick={closeNotification}>
-            {<IconClose className="size-6 tab:size-10 text-black" />}
-          </IconButton>
-        </div>
-        <h2
-          data-label={t(`${isError ? "unsuccessful" : "successful"}.title`)}
-          className={`relative laptop:mb-12 text-xmdb tab:text-lgb ${
-            isError ? "text-inputError" : "text-blue"
-          } font-gogh before:content-[attr(data-label)] before:absolute 
-       before:-left-6 laptop:before:-left-7 before:top-4 laptop:before:top-5 before:w-full before:text-grey before:text-xmdb tab:before:text-lgb before:blur-[1px]
-       `}
-        >
+        <PopUpTitle className={`${isError ? "text-inputError" : "text-blue"}`}>
           {t(`${isError ? "unsuccessful" : "successful"}.title`)}
-        </h2>
+        </PopUpTitle>
         <p className="text-xs tab:text-baseb">
           {t(`${isError ? "unsuccessful" : "successful"}.description`)}
           <a
@@ -77,7 +60,7 @@ export default function NotificationPopUp({
           height={168}
           className="mx-auto tab:size-[227px]"
         />
-      </div>
+      </Modal>
       <Backdrop isVisible={isNotificationShown} onClick={closeNotification} />
     </>
   );

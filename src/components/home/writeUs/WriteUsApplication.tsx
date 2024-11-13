@@ -4,7 +4,7 @@ import { useState } from "react";
 import WriteUsForm from "@/components/shared/forms/WriteUsForm";
 import NotificationPopUp from "@/components/shared/pop-ups/NotificationPopUp";
 
-export default function ClientApplication() {
+export default function WriteUsApplication() {
   const [isError, setIsError] = useState(false);
   const [isNotificationShown, setIsNotificationShown] = useState(false);
 
