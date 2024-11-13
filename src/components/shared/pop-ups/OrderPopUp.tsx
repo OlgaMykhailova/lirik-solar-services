@@ -12,6 +12,7 @@ interface OrderPopUpProps {
   setIsPopUpShown: Dispatch<SetStateAction<boolean>>;
   title?: string;
   description?: string;
+  applicationName: string;
 }
 
 export default function OrderPopUp({
@@ -19,6 +20,7 @@ export default function OrderPopUp({
   setIsPopUpShown,
   title = "",
   description = "",
+  applicationName,
 }: OrderPopUpProps) {
   const [isError, setIsError] = useState(false);
   const [isNotificationShown, setIsNotificationShown] = useState(false);
@@ -33,6 +35,7 @@ export default function OrderPopUp({
             setIsError={setIsError}
             setIsNotificationShown={setIsNotificationShown}
             setIsPopUpShown={setIsPopUpShown}
+            applicationName={applicationName}
           />
         </div>
       </Modal>

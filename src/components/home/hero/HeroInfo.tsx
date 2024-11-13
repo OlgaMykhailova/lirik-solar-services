@@ -31,7 +31,10 @@ export default function HeroInfo() {
       <h1 className="w-[291px] mt-[84px] mb-6 tab:mb-10 tab:text-base text-white">
         {t("hero.title")}
       </h1>
-      <OpenPopupButton buttonName={t("buttons.startPath")} />
+      <OpenPopupButton
+        buttonName={t("buttons.startPath")}
+        applicationName={t("buttons.startPath")}
+      />
     </Container>
   );
 }

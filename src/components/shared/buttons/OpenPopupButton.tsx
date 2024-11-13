@@ -9,11 +9,13 @@ import MainButton from "./MainButton";
 interface OpenPopupButtonProps {
   buttonName: string;
   className?: string;
+  applicationName: string;
 }
 
 export default function OpenPopupButton({
   buttonName,
   className = "",
+  applicationName,
 }: OpenPopupButtonProps) {
   const [isPopUpShown, setIsPopUpShown] = useState(false);
   const t = useTranslations();
@@ -28,6 +30,7 @@ export default function OpenPopupButton({
         description={t("writeUs.description.partTwo")}
         isPopUpShown={isPopUpShown}
         setIsPopUpShown={setIsPopUpShown}
+        applicationName={applicationName}
       />
       <Backdrop
         isVisible={isPopUpShown}

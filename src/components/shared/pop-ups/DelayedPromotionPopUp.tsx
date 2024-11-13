@@ -5,6 +5,8 @@ import React, { useEffect, useState } from "react";
 import Backdrop from "../backdrop/Backdrop";
 import OrderPopUp from "./OrderPopUp";
 
+const APPLICATION_NAME = "Акція -15%";
+
 export default function DelayedPromotionPopUp() {
   const [isPopUpShown, setIsPopUpShown] = useState(false);
   const t = useTranslations();
@@ -24,6 +26,7 @@ export default function DelayedPromotionPopUp() {
         setIsPopUpShown={setIsPopUpShown}
         title={t("promotionPopUp.title")}
         description={t("promotionPopUp.description")}
+        applicationName={APPLICATION_NAME}
       />
       <Backdrop
         isVisible={isPopUpShown}

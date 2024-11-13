@@ -16,6 +16,7 @@ export default function Stages() {
       <OpenPopupButton
         buttonName={t("buttons.startProject")}
         className="mt-10 laptop:mt-16"
+        applicationName={t("buttons.startProject")}
       />
     </Section>
   );

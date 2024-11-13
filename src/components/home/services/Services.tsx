@@ -21,6 +21,7 @@ export default function Services() {
       <OpenPopupButton
         buttonName={t("buttons.orderService")}
         className="mt-10 laptop:mt-12"
+        applicationName={t("buttons.orderService")}
       />
     </Section>
   );

@@ -45,7 +45,7 @@ export default function WriteUsForm({
     formikHelpers: FormikHelpers<ValuesWriteUsFormType>
   ) => {
     const data =
-      `<b>Нова заявка</b>\n` +
+      `<b>Заявка "Безкоштовна консультація"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
       `Email: ${values.email.toLowerCase().trim()}\n` +
       `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +

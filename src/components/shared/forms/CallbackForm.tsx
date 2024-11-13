@@ -21,12 +21,14 @@ interface CallBackFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
   setIsPopUpShown: Dispatch<SetStateAction<boolean>>;
+  applicationName: string;
 }
 
 export default function CallBackForm({
   setIsError,
   setIsNotificationShown,
   setIsPopUpShown,
+  applicationName,
 }: CallBackFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations("");
@@ -43,7 +45,7 @@ export default function CallBackForm({
     formikHelpers: FormikHelpers<ValuesCallBackFormType>
   ) => {
     const data =
-      `<b>Нова заявка</b>\n` +
+      `<b>Заявка "${applicationName}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
       `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n`;
 
