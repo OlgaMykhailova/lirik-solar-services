@@ -8,7 +8,7 @@ export default function DelayedOrderPopUp() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsPopUpShown(true);
-    }, 3000);
+    }, 50000);
 
     return () => clearTimeout(timer);
   }, []);
