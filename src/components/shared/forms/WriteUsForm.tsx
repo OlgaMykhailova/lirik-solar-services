@@ -7,9 +7,9 @@ import MaskedInput from "react-text-mask";
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
 import { WriteUsValidation } from "@/schemas/writeUsFormValidation";
 
-import CustomizedInput from "./CustomizedInput";
-import FormDescription from "./FormDescription";
-import SubmitButton from "./SubmitButton";
+import CustomizedInput from "./formComponents/CustomizedInput";
+import FormDescription from "./formComponents/FormDescription";
+import SubmitButton from "./formComponents/SubmitButton";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 interface ValuesWriteUsFormType {
