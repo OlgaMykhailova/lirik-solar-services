@@ -4,8 +4,8 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-import WriteUsInfo from "./WriteUsInfo";
 import WriteUsApplication from "./WriteUsApplication";
+import WriteUsInfo from "./WriteUsInfo";
 
 export default function WriteUs() {
   const t = useTranslations("writeUs");

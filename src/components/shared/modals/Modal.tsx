@@ -1,4 +1,5 @@
-import React, { Dispatch, SetStateAction, ReactNode } from "react";
+import React, { Dispatch, ReactNode,SetStateAction } from "react";
+
 import ModalBgImages from "../backgrounds/ModalBgImages";
 import IconButton from "../buttons/IconButton";
 import IconClose from "../icons/IconClose";

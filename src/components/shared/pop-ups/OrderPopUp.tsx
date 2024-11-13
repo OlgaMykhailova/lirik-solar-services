@@ -1,11 +1,12 @@
 "use client";
 
-import React, { Dispatch, SetStateAction, useState } from "react";
-import CallBackForm from "../forms/CallbackForm";
-import NotificationPopUp from "./NotificationPopUp";
 import { useTranslations } from "next-intl";
-import PopUpTitle from "../titles/PopUpTitle";
+import React, { Dispatch, SetStateAction, useState } from "react";
+
+import CallBackForm from "../forms/CallbackForm";
 import Modal from "../modals/Modal";
+import PopUpTitle from "../titles/PopUpTitle";
+import NotificationPopUp from "./NotificationPopUp";
 
 interface OrderPopUpProps {
   isPopUpShown: boolean;

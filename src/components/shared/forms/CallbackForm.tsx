@@ -4,7 +4,7 @@ import { ErrorMessage, Field, Form, Formik, FormikHelpers } from "formik";
 import Image from "next/image";
 import Link from "next/link";
 import { useLocale, useTranslations } from "next-intl";
-import { useState, Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction,useState } from "react";
 import MaskedInput from "react-text-mask";
 
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
