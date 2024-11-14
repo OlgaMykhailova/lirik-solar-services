@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
-import WithGridButton from "./WithGridButton";
+
 import NoGridButton from "./NoGridButton";
+import WithGridButton from "./WithGridButton";
 
 interface GridButtonsProps {
   isGrid: boolean;

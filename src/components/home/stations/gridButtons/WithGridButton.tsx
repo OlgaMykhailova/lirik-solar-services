@@ -1,5 +1,5 @@
-import React, { Dispatch, SetStateAction } from "react";
 import { useTranslations } from "next-intl";
+import React, { Dispatch, SetStateAction } from "react";
 
 interface WithGridButtonProps {
   isGrid: boolean;

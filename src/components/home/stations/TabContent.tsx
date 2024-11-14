@@ -1,12 +1,12 @@
 "use client";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 
 import { TabMenuItem } from "@/types/tabMenuItem";
 
-import SolarStationItem from "./SolarStationItem";
-import ImageLegend from "./imageLegend/ImageLegend";
 import GridButtons from "./gridButtons/GridButtons";
+import ImageLegend from "./imageLegend/ImageLegend";
+import SolarStationItem from "./SolarStationItem";
 
 interface TabContentProps {
   activeTabData: TabMenuItem | undefined;

@@ -1,5 +1,5 @@
-import React from "react";
 import { useTranslations } from "next-intl";
+import React from "react";
 
 export default function ElectricityPanels() {
   const t = useTranslations("stations");
