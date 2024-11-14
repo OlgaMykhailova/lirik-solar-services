@@ -13,7 +13,7 @@ export default function PopUpTitle({
     <h2
       data-label={children}
       className={`relative text-xmdb tab:text-lgb font-gogh before:content-[attr(data-label)] before:absolute 
-before:-left-6 laptop:before:-left-7 before:top-4 laptop:before:top-5 before:w-full before:text-grey before:text-xmdb tab:before:text-lgb
+before:-left-4 tab:before:-left-7 before:top-4 tab:before:top-5 before:w-full before:text-grey before:text-xmdb tab:before:text-lgb
  before:blur-[1px] ${className}`}
     >
       {children}
