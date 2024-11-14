@@ -19,9 +19,10 @@ export default function TabMenu({
         <button
           key={tab.id}
           onClick={() => setActiveTab(tab.id)}
-          className={`px-[15px] tab:px-10 laptop:px-6 py-[6px] tab:py-2 text-sm tab:text-md rounded-[24px] transition duration-300 ease-out ${
-            activeTab === tab.id ? "bg-blueLight" : "bg-transparent"
-          }`}
+          className={`px-[15px] tab:px-10 laptop:px-6 py-[6px] tab:py-2 text-sm tab:text-md rounded-[24px] transition duration-300 ease-out
+            outline-none ${
+              activeTab === tab.id ? "bg-blueLight" : "bg-transparent"
+            }`}
         >
           {tab.label}
         </button>

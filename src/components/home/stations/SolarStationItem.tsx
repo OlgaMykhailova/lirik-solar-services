@@ -12,7 +12,7 @@ export default function SolarStationItem({
   description,
 }: SolarStationItemProps) {
   return (
-    <div className="tab:w-[81.5%] laptop:w-[48.1%]">
+    <div>
       <SubTitle className="mb-2">{title}</SubTitle>
       <p>{description}</p>
     </div>
