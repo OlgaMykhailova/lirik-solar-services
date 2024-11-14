@@ -9,7 +9,7 @@ import { CallBackValidation } from "@/schemas/callBackFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
-import FormDescription from "./formComponents/FormDescription";
+import FormDescription from "./FormDescription";
 import SubmitButton from "./formComponents/SubmitButton";
 
 interface ValuesCallBackFormType {
