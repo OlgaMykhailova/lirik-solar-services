@@ -16,7 +16,7 @@ export default function TabContent({ activeTabData }: TabContentProps) {
   const [isGrid, setIsGrid] = useState(true);
 
   return (
-    <div className="laptop:flex justify-between pt-6">
+    <div className="flex flex-col gap-y-8 laptop:flex-row justify-between pt-6">
       <div className="flex flex-col gap-16 tab:w-[81.5%] laptop:w-[45.1%]">
         {activeTabData && (
           <SolarStationItem
@@ -30,7 +30,7 @@ export default function TabContent({ activeTabData }: TabContentProps) {
           className="hidden laptop:flex"
         />
       </div>
-      <div className="relative w-full laptop:w-[51.1%] h-auto mt-8 laptop:order-3">
+      <div className="relative w-full laptop:w-[51.1%] h-auto">
         <Image
           src="/images/building.svg"
           alt=""

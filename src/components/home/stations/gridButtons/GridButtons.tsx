@@ -9,9 +9,13 @@ interface GridButtonsProps {
   className: string;
 }
 
-export default function GridButtons({ isGrid, setIsGrid, className="" }: GridButtonsProps) {
+export default function GridButtons({
+  isGrid,
+  setIsGrid,
+  className = "",
+}: GridButtonsProps) {
   return (
-    <div className={`flex flex-col gap-y-6 pl-10 tab:pl-14 mt-8 ${className}`}>
+    <div className={`flex justify-between max-w-[350px] ${className}`}>
       <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
       <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
     </div>

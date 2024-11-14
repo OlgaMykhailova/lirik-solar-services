@@ -12,8 +12,8 @@ export default function NoGridButton({ isGrid, setIsGrid }: NoGridButtonProps) {
   return (
     <button
       onClick={() => setIsGrid(false)}
-      className={`w-[154px] px-4 py-3 rounded-[60px] border border-blueLight outline-none text-base text-left transition duration-300 ease-out ${
-        isGrid ? "bg-transparent" : "bg-backgroundLight"
+      className={`w-[154px] h-11 tab:h-12 px-4 rounded-[60px] border border-backgroundLight outline-none text-sm tab:text-base text-left transition duration-300 ease-out ${
+        isGrid ? "bg-white text-inputText" : "bg-backgroundLight text-black"
       }`}
     >
       {t("noElectricity")}

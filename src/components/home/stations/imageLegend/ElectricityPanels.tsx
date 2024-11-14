@@ -6,8 +6,8 @@ export default function ElectricityPanels() {
 
   return (
     <p className="flex items-center">
-      <span className="inline-block size-4 mr-2 bg-yellowDark rounded-full text-sm"></span>
-      <span>{t("electricityPanels")}</span>
+      <span className="inline-block size-4 mr-2 bg-yellowDark rounded-full"></span>
+      <span className="text-xs tab:text-sm">{t("electricityPanels")}</span>
     </p>
   );
 }
