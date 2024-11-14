@@ -1,11 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import SolarStationItem from "./SolarStationItem";
+import React, { useState } from "react";
+
 import StationsDescription from "./StationsDescription";
-import TabMenu from "./TabMenu";
 import TabContent from "./TabContent";
+import TabMenu from "./TabMenu";
 
 export default function SolarPowerTabs() {
   const [activeTab, setActiveTab] = useState("grid");

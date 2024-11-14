@@ -1,5 +1,7 @@
 import React from "react";
+
 import { TabMenuItem } from "@/types/tabMenuItem";
+
 import SolarStationItem from "./SolarStationItem";
 
 interface TabContentProps {

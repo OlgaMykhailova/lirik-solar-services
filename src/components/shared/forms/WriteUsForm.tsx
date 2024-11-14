@@ -9,8 +9,8 @@ import { WriteUsValidation } from "@/schemas/writeUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
-import FormDescription from "./FormDescription";
 import SubmitButton from "./formComponents/SubmitButton";
+import FormDescription from "./FormDescription";
 
 interface ValuesWriteUsFormType {
   name: string;

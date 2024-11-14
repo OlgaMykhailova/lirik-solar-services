@@ -1,4 +1,5 @@
 import React from "react";
+
 import SubTitle from "@/components/shared/titles/SubTitle";
 
 interface SolarStationItemProps {
