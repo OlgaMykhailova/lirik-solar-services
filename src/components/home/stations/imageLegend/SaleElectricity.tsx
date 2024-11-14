@@ -6,8 +6,8 @@ export default function SaleElectricity() {
 
   return (
     <p className="flex items-center">
-      <span className="inline-block size-4 mr-2 bg-inputText rounded-full text-sm"></span>
-      <span>{t("saleElectricity")}</span>
+      <span className="inline-block size-4 mr-2 bg-inputText rounded-full"></span>
+      <span className="text-xs tab:text-sm">{t("saleElectricity")}</span>
     </p>
   );
 }
