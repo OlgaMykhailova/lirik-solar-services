@@ -5,24 +5,23 @@
   padding-bottom: 40px;
   @media screen and (min-width: 768px) {
     width: 528px;
-    height: 352px;
+    height: 397px;
+    padding-bottom: 45px;
   }
   margin-left: auto;
   margin-right: auto;
 }
 
 .swiper-slide {
-  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 148px !important;
   height: calc((100% - 16px) / 2) !important;
   border-radius: 16px;
+  background-color: var(--white);
   @media screen and (min-width: 768px) {
     width: 160px !important;
     height: 160px !important;
   }
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
