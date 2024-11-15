@@ -2,11 +2,11 @@ import { useTranslations } from "next-intl";
 import React from "react";
 
 import MainButton from "@/components/shared/buttons/MainButton";
+import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 import { PRODUCTS_LINK } from "@/constants/constants";
 
 import ManufacturesInfo from "./ManufacturesInfo";
-import Container from "@/components/shared/container/Container";
 import ManufacturesSlider from "./ManufacturesSlider";
 
 export default function Manufactures() {

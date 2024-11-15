@@ -1,15 +1,14 @@
 "use client";
 
-import React from "react";
-import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/grid";
 import "swiper/css/pagination";
 import "./styles.css";
 
-import { Grid, Pagination, Autoplay } from "swiper/modules";
+import Image from "next/image";
+import React from "react";
+import { Autoplay,Grid, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 const manufacturesList = [
   "ABB",
