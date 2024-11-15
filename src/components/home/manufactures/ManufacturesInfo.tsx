@@ -7,7 +7,7 @@ export default function ManufacturesInfo() {
   const t = useTranslations("manufactures");
 
   return (
-    <div className="laptop:w-[48.9%]">
+    <div>
       <SubTitle className="mb-2 laptop:mb-6 text-blue">
         {t("subtitle")}
       </SubTitle>

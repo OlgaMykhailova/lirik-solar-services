@@ -56,10 +56,11 @@ export default function ManufacturesSlider() {
           },
         }}
         pagination={{
+          dynamicBullets: true,
           clickable: true,
         }}
-        autoplay
-        loop
+        autoplay={true}
+        loop={true}
         modules={[Grid, Pagination, Autoplay]}
         className="mySwiper"
       >

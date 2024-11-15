@@ -25,3 +25,11 @@
     height: 160px !important;
   }
 }
+
+/* .swiper-pagination-bullet {
+  background-color: var(--yellow);
+} */
+
+.swiper-pagination-bullet-active {
+  background-color: var(--yellow);
+}

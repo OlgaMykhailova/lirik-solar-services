@@ -21,7 +21,12 @@ export default function Manufactures() {
         >
           <SectionTitle>{t("manufactures.title")}</SectionTitle>
           <div className="flex flex-col laptop:flex-row gap-y-6">
-            <ManufacturesInfo />
+            <div className="flex flex-col justify-between laptop:w-[48.9%]">
+              <ManufacturesInfo />
+              <MainButton className="hidden laptop:flex mb-[45px] mr-auto">
+                {t("buttons.goToProducts")}
+              </MainButton>
+            </div>
             <ManufacturesSlider />
             <a
               href={PRODUCTS_LINK}
@@ -29,7 +34,9 @@ export default function Manufactures() {
               rel="noopener"
               className="inline-block mt-2 tab:mt-0 outline-none"
             >
-              <MainButton>{t("buttons.goToProducts")}</MainButton>
+              <MainButton className="laptop:hidden">
+                {t("buttons.goToProducts")}
+              </MainButton>
             </a>
           </div>
         </section>
