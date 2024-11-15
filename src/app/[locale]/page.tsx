@@ -25,9 +25,9 @@ export default function Home() {
         <Ess />
         <Benefits />
         <Manufactures />
+        <Projects />
         <Stages />
         <Reviews />
-        <Projects />
         <WriteUs />
         <Contacts />
       </Container>
