@@ -1,0 +1,28 @@
+.swiper {
+  width: 312px;
+  aspect-ratio: 1;
+  height: calc(100% + 40px);
+  padding-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    width: 528px;
+    height: 352px;
+  }
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-color: var(--white);
+  width: 148px !important;
+  height: calc((100% - 16px) / 2) !important;
+  border-radius: 16px;
+  @media screen and (min-width: 768px) {
+    width: 160px !important;
+    height: 160px !important;
+  }
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
