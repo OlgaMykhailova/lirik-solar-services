@@ -10,34 +10,9 @@ import React from "react";
 import { Autoplay, Grid, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const manufacturesList = [
-  "ABB",
-  "BYD",
-  "Canadian-Solar",
-  "Chisage-ESS",
-  "DEYE",
-  "Dyness",
-  "Felicity-ESS",
-  "FOX ESS",
-  "Fronius",
-  "GOODWE",
-  "Growatt",
-  "GSL-ENERGY",
-  "Huawei",
-  "JA Solar",
-  "Jinko Solar",
-  "KBE",
-  "Longi-solar",
-  "Pylontech",
-  "Risen",
-  "SMA",
-  "SOFAR",
-  "Solaredge",
-  "SOLAX-Prosolax",
-  "Solis",
-];
+const reviewsList = [{}];
 
-export default function ManufacturesSlider() {
+export default function ReviewsSlider() {
   return (
     <Swiper
       grid={{
@@ -62,7 +37,7 @@ export default function ManufacturesSlider() {
       modules={[Grid, Pagination, Autoplay]}
       className="mySwiper"
     >
-      {manufacturesList.map((image, idx) => (
+      {reviewsList.map((image, idx) => (
         <SwiperSlide key={idx}>
           <Image
             src={`/images/manufactures/${image}.webp`}
