@@ -26,10 +26,28 @@
   }
 }
 
-/* .swiper-pagination-bullet {
-  background-color: var(--yellow);
-} */
+.swiper-pagination-bullet {
+  background-color: var(--white);
+  scale: 1.5;
+  opacity: 1;
+}
 
 .swiper-pagination-bullet-active {
   background-color: var(--yellow);
+}
+
+.swiper-pagination::before {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  @media screen and (min-width: 1280px) {
+    top: 8px;
+    left: 6px;
+  }
+  z-index: -10;
+  content: "";
+  display: block;
+  width: calc(100% - 12px);
+  height: 1px;
+  background-color: var(--white);
 }
