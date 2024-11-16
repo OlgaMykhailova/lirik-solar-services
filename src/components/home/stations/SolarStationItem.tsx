@@ -14,7 +14,9 @@ export default function SolarStationItem({
   return (
     <div>
       <SubTitle className="mb-2">{title}</SubTitle>
-      <p className="h-[132px] max-w-[312px] tab:max-w-none">{description}</p>
+      <p className="h-[132px] tab:h-[66px] laptop:h-[100px] max-w-[312px] tab:max-w-none">
+        {description}
+      </p>
     </div>
   );
 }
