@@ -26,7 +26,7 @@ export default function ReviewsSlider() {
       name: t("second.name"),
       role: t("second.role"),
       reviewText: t("second.reviewText"),
-      photo: "Sergiy",
+      photo: "Tetiana",
     },
     {
       name: t("third.name"),
@@ -38,7 +38,25 @@ export default function ReviewsSlider() {
       name: t("fourth.name"),
       role: t("fourth.role"),
       reviewText: t("fourth.reviewText"),
+      photo: "Iryna",
+    },
+    {
+      name: t("fifth.name"),
+      role: t("fifth.role"),
+      reviewText: t("fifth.reviewText"),
       photo: "Vasyl",
+    },
+    {
+      name: t("sixth.name"),
+      role: t("sixth.role"),
+      reviewText: t("sixth.reviewText"),
+      photo: "Sergiy",
+    },
+    {
+      name: t("seventh.name"),
+      role: t("seventh.role"),
+      reviewText: t("seventh.reviewText"),
+      photo: "Maria",
     },
   ];
 
@@ -76,31 +94,37 @@ export default function ReviewsSlider() {
     >
       {reviewsList.map(({ name, role, reviewText, photo }, idx) => (
         <SwiperSlide key={idx} className="reviewsSlider">
-          <Image
-            src={`/images/reviews/${photo}.webp`}
-            alt={name}
-            width="400"
-            height="400"
-            className="size-[72px] rounded-[16px]"
-          />
-          <p className="mt-3 mb-1 font-gogh text-smb">{name}</p>
-          <p className="text-xs text-inputText">{role}</p>
-          <div className="mt-auto">
+          <div
+            className={`flex flex-col items-center w-full h-full p-4 tab:p-6 rounded-[18px] tab:rounded-[24px] bg-cover ${
+              idx % 2 === 0 ? "bg-whiteDark" : "bg-sky"
+            }`}
+          >
+            <Image
+              src={`/images/reviews/${photo}.webp`}
+              alt={name}
+              width="400"
+              height="400"
+              className="size-[72px] rounded-[16px]"
+            />
+            <p className="mt-3 mb-1 font-gogh text-smb">{name}</p>
+            <p className="text-xs text-inputText">{role}</p>
+            <div className="mt-auto">
+              <Image
+                src={`/images/icons/quote.svg`}
+                alt="quote"
+                width="32"
+                height="32"
+              />
+              <p className="text-xs mt-auto">{reviewText}</p>
+            </div>
             <Image
               src={`/images/icons/quote.svg`}
               alt="quote"
               width="32"
               height="32"
+              className="ml-auto rotate-180"
             />
-            <p className="text-xs mt-auto">{reviewText}</p>
           </div>
-          <Image
-            src={`/images/icons/quote.svg`}
-            alt="quote"
-            width="32"
-            height="32"
-            className="ml-auto rotate-180"
-          />
         </SwiperSlide>
       ))}
     </Swiper>
