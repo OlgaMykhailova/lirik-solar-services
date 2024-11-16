@@ -15,7 +15,9 @@ export default function GridButtons({
   className = "",
 }: GridButtonsProps) {
   return (
-    <div className={`flex justify-between max-w-[350px] ${className}`}>
+    <div
+      className={`flex laptop:flex-col gap-y-6 justify-between max-w-[350px] ${className}`}
+    >
       <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
       <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
     </div>
