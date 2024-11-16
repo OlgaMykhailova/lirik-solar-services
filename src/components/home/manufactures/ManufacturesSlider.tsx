@@ -7,7 +7,7 @@ import "./styles.css";
 
 import Image from "next/image";
 import React from "react";
-import { Autoplay,Grid, Pagination } from "swiper/modules";
+import { Autoplay, Grid, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const manufacturesList = [
@@ -39,42 +39,40 @@ const manufacturesList = [
 
 export default function ManufacturesSlider() {
   return (
-    <>
-      <Swiper
-        grid={{
-          rows: 2,
-        }}
-        breakpoints={{
-          360: {
-            slidesPerView: 2,
-            spaceBetween: 16,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 24,
-          },
-        }}
-        pagination={{
-          dynamicBullets: true,
-          clickable: true,
-        }}
-        autoplay={true}
-        loop={true}
-        modules={[Grid, Pagination, Autoplay]}
-        className="mySwiper"
-      >
-        {manufacturesList.map((image, idx) => (
-          <SwiperSlide key={idx}>
-            <Image
-              src={`/images/manufactures/${image}.webp`}
-              alt={image}
-              width="531"
-              height="531"
-              className="size-full rounded-[16px]"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </>
+    <Swiper
+      grid={{
+        rows: 2,
+      }}
+      breakpoints={{
+        360: {
+          slidesPerView: 2,
+          spaceBetween: 16,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 24,
+        },
+      }}
+      pagination={{
+        dynamicBullets: true,
+        clickable: true,
+      }}
+      autoplay={true}
+      loop={true}
+      modules={[Grid, Pagination, Autoplay]}
+      className="manufacturesSlider"
+    >
+      {manufacturesList.map((image, idx) => (
+        <SwiperSlide key={idx} className="manufacturesSlider">
+          <Image
+            src={`/images/manufactures/${image}.webp`}
+            alt={image}
+            width="531"
+            height="531"
+            className="size-full rounded-[16px]"
+          />
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 }

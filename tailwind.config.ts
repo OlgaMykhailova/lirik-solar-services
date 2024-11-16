@@ -28,6 +28,7 @@ const config: Config = {
         grey: "rgba(8, 63, 126, 0.1)",
         black: "#040E2F",
         white: "#FFFEFA",
+        whiteDark: "#f6f6f4",
         inputLabel: "#05304B",
         inputText: "#51626F",
         inputStroke: "#C8C8C8",
