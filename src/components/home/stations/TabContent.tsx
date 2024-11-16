@@ -4,10 +4,10 @@ import React, { useState } from "react";
 
 import { TabMenuItem } from "@/types/tabMenuItem";
 
+import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
 import GridButtons from "./gridButtons/GridButtons";
 import ImageLegend from "./imageLegend/ImageLegend";
 import SolarStationItem from "./SolarStationItem";
-import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
 
 interface TabContentProps {
   activeTabData: TabMenuItem | undefined;
