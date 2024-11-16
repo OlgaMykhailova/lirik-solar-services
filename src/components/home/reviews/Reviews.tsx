@@ -3,6 +3,7 @@ import React from "react";
 
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
+
 import ReviewsSlider from "./ReviewsSlider";
 
 export default function Reviews() {

@@ -7,10 +7,10 @@ import "swiper/css/navigation";
 import "../manufactures/styles.css";
 
 import Image from "next/image";
-import React from "react";
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useTranslations } from "next-intl";
+import React from "react";
+import { EffectCoverflow, Navigation,Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function ReviewsSlider() {
   const t = useTranslations("reviews.reviews");
