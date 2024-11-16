@@ -60,10 +60,10 @@ export default function ManufacturesSlider() {
       autoplay={true}
       loop={true}
       modules={[Grid, Pagination, Autoplay]}
-      className="mySwiper"
+      className="manufacturesSlider"
     >
       {manufacturesList.map((image, idx) => (
-        <SwiperSlide key={idx}>
+        <SwiperSlide key={idx} className="manufacturesSlider">
           <Image
             src={`/images/manufactures/${image}.webp`}
             alt={image}

@@ -1,50 +1,105 @@
 "use client";
 
 import "swiper/css";
-import "swiper/css/grid";
+import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import "./styles.css";
+import "swiper/css/navigation";
+import "../manufactures/styles.css";
 
 import Image from "next/image";
 import React from "react";
-import { Autoplay, Grid, Pagination } from "swiper/modules";
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-const reviewsList = [{ name: "", reviewText: "", photo: "" }];
+import { useTranslations } from "next-intl";
 
 export default function ReviewsSlider() {
+  const t = useTranslations("reviews.reviews");
+
+  const reviewsList = [
+    {
+      name: t("first.name"),
+      role: t("first.role"),
+      reviewText: t("first.reviewText"),
+      photo: "Oleksandr",
+    },
+    {
+      name: t("second.name"),
+      role: t("second.role"),
+      reviewText: t("second.reviewText"),
+      photo: "Sergiy",
+    },
+    {
+      name: t("third.name"),
+      role: t("third.role"),
+      reviewText: t("third.reviewText"),
+      photo: "Andriy",
+    },
+    {
+      name: t("fourth.name"),
+      role: t("fourth.role"),
+      reviewText: t("fourth.reviewText"),
+      photo: "Vasyl",
+    },
+  ];
+
   return (
     <Swiper
-      grid={{
-        rows: 2,
-      }}
+      centeredSlides={true}
       breakpoints={{
         360: {
-          slidesPerView: 2,
+          slidesPerView: 1,
           spaceBetween: 16,
         },
         768: {
-          slidesPerView: 3,
-          spaceBetween: 24,
+          slidesPerView: 2.15,
+          spaceBetween: 16,
         },
       }}
       pagination={{
         dynamicBullets: true,
         clickable: true,
       }}
-      autoplay={true}
+      navigation={false}
       loop={true}
-      modules={[Grid, Pagination, Autoplay]}
-      className="mySwiper"
+      speed={1000}
+      modules={[EffectCoverflow, Pagination, Navigation]}
+      effect={"coverflow"}
+      coverflowEffect={{
+        rotate: 0,
+        scale: 0.6,
+        stretch: 48,
+        depth: 100,
+        modifier: 1,
+        slideShadows: false,
+      }}
+      className="reviewsSlider"
     >
-      {reviewsList.map((review, idx) => (
-        <SwiperSlide key={idx}>
+      {reviewsList.map(({ name, role, reviewText, photo }, idx) => (
+        <SwiperSlide key={idx} className="reviewsSlider">
           <Image
-            src={`/images/manufactures/${review.photo}.webp`}
-            alt={review.name}
-            width="531"
-            height="531"
-            className="size-full rounded-[16px]"
+            src={`/images/reviews/${photo}.webp`}
+            alt={name}
+            width="400"
+            height="400"
+            className="size-[72px] rounded-[16px]"
+          />
+          <p className="mt-3 mb-1 font-gogh text-smb">{name}</p>
+          <p className="text-xs text-inputText">{role}</p>
+          <div className="mt-auto">
+            <Image
+              src={`/images/icons/quote.svg`}
+              alt="quote"
+              width="32"
+              height="32"
+            />
+            <p className="text-xs mt-auto">{reviewText}</p>
+          </div>
+          <Image
+            src={`/images/icons/quote.svg`}
+            alt="quote"
+            width="32"
+            height="32"
+            className="ml-auto rotate-180"
           />
         </SwiperSlide>
       ))}
