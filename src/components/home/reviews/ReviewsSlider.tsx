@@ -10,7 +10,7 @@ import React from "react";
 import { Autoplay, Grid, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-const reviewsList = [{}];
+const reviewsList = [{ name: "", reviewText: "", photo: "" }];
 
 export default function ReviewsSlider() {
   return (
@@ -37,11 +37,11 @@ export default function ReviewsSlider() {
       modules={[Grid, Pagination, Autoplay]}
       className="mySwiper"
     >
-      {reviewsList.map((image, idx) => (
+      {reviewsList.map((review, idx) => (
         <SwiperSlide key={idx}>
           <Image
-            src={`/images/manufactures/${image}.webp`}
-            alt={image}
+            src={`/images/manufactures/${review.photo}.webp`}
+            alt={review.name}
             width="531"
             height="531"
             className="size-full rounded-[16px]"
