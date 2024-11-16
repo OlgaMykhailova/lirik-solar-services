@@ -1,15 +1,15 @@
 "use client";
 
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-import StationsDescription from "./StationsDescription";
-import Image from "next/image";
-import TabMenu from "./TabMenu";
 import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
 import GridButtons from "./gridButtons/GridButtons";
 import ImageLegend from "./imageLegend/ImageLegend";
 import SolarStationItem from "./SolarStationItem";
+import StationsDescription from "./StationsDescription";
+import TabMenu from "./TabMenu";
 
 export default function SolarPowerTabs() {
   const [activeTab, setActiveTab] = useState("grid");

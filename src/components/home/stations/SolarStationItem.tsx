@@ -1,6 +1,7 @@
 import React, { Dispatch, SetStateAction } from "react";
 
 import SubTitle from "@/components/shared/titles/SubTitle";
+
 import GridButtons from "./gridButtons/GridButtons";
 
 interface SolarStationItemProps {
