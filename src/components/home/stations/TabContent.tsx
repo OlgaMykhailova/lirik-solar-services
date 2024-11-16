@@ -7,6 +7,7 @@ import { TabMenuItem } from "@/types/tabMenuItem";
 import GridButtons from "./gridButtons/GridButtons";
 import ImageLegend from "./imageLegend/ImageLegend";
 import SolarStationItem from "./SolarStationItem";
+import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
 
 interface TabContentProps {
   activeTabData: TabMenuItem | undefined;
@@ -16,7 +17,7 @@ export default function TabContent({ activeTabData }: TabContentProps) {
   const [isGrid, setIsGrid] = useState(true);
 
   return (
-    <div className="flex flex-col gap-y-8 laptop:flex-row justify-between pt-6">
+    <div className="flex flex-col gap-y-6 laptop:flex-row justify-between pt-6">
       <div className="flex flex-col gap-16 tab:w-[81.5%] laptop:w-[45.1%]">
         {activeTabData && (
           <SolarStationItem
@@ -38,6 +39,7 @@ export default function TabContent({ activeTabData }: TabContentProps) {
           height={398}
           className="w-full h-full"
         />
+        <GridWIthElectricity className="absolute top-0 left-0 w-full h-auto" />
         <ImageLegend
           activeTab={activeTabData?.id}
           className="flex flex-col gap-1 tab:absolute bottom-0 right-0 laptop:bottom-[-20px] laptop:right-[-20px]"

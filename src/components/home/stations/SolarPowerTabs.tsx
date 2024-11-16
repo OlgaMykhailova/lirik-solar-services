@@ -36,7 +36,7 @@ export default function SolarPowerTabs() {
 
   return (
     <div>
-      <div className="flex flex-col laptop:flex-row items-start gap-y-8 pb-2 laptop:pb-6 laptop:border-b border-blueLight">
+      <div className="flex flex-col laptop:flex-row items-start gap-y-6 laptop:pb-6 laptop:border-b border-blueLight">
         <StationsDescription />
         <TabMenu
           tabs={tabs}
