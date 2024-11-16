@@ -42,7 +42,7 @@ export default function TabContent({ activeTabData }: TabContentProps) {
         <GridWIthElectricity className="absolute top-0 left-0 w-full h-auto" />
         <ImageLegend
           activeTab={activeTabData?.id}
-          className="flex flex-col gap-1 tab:absolute bottom-0 right-0 laptop:bottom-[-20px] laptop:right-[-20px]"
+          className="flex flex-col gap-1 absolute bottom-[-12px] right-0 laptop:bottom-[-20px] laptop:right-[-20px]"
         />
       </div>
       <GridButtons
