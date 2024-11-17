@@ -15,7 +15,7 @@ export default function WithGridButton({
   return (
     <button
       onClick={() => setIsGrid(true)}
-      className={`w-[154px] h-11 tab:h-12 px-4 rounded-[60px] border border-backgroundLight outline-none text-sm tab:text-base 
+      className={`w-[158px] h-11 tab:h-12 px-4 rounded-[60px] border border-backgroundLight outline-none text-sm tab:text-base 
         text-center tab:text-left transition duration-300 ease-out ${
           isGrid ? "bg-backgroundLight text-black" : "bg-white text-inputText"
         }`}
