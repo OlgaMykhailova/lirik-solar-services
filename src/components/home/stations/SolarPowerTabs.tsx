@@ -71,7 +71,7 @@ export default function SolarPowerTabs() {
           <GridWIthElectricity className="absolute top-0 left-0 w-full h-auto" />
           <ImageLegend
             activeTab={activeTabData?.id}
-            className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-9 right-0 tab:bottom-0 tab:right-0"
+            className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-9 right-0 tab:bottom-0 tab:right-0 min-w-[220px] min-h-[55px] tab:min-w-[290px] tab:min-h-[74px]"
           />
         </div>
         <GridButtons
