@@ -9,7 +9,7 @@ import "../manufactures/styles.css";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React from "react";
-import { EffectCoverflow, Navigation,Pagination } from "swiper/modules";
+import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 export default function ReviewsSlider() {
@@ -83,7 +83,7 @@ export default function ReviewsSlider() {
         dynamicBullets: true,
         clickable: true,
       }}
-      navigation={false}
+      navigation={true}
       loop={true}
       speed={1000}
       modules={[EffectCoverflow, Pagination, Navigation]}
