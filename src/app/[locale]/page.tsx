@@ -11,13 +11,12 @@ import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
 import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
-import Container from "@/components/shared/container/Container";
 
 export default function Home() {
   return (
     <div className="pt-[72px]">
       <Hero />
-      <Container className="relative">
+      <div className="relative">
         <SunspotBgImages />
         <About />
         <Services />
@@ -30,7 +29,7 @@ export default function Home() {
         <Reviews />
         <WriteUs />
         <Contacts />
-      </Container>
+      </div>
     </div>
   );
 }
