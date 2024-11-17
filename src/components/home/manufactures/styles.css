@@ -1,4 +1,4 @@
-/* coomon slider styles */
+/* common slider styles */
 
 .swiper-pagination-bullet {
   background-color: var(--backgroundBlue);
@@ -30,6 +30,74 @@
   width: calc(100% - 12px);
   height: 1px;
   background-color: var(--backgroundBlue);
+}
+
+.swiper-button-prev {
+  transform: translateY(178px) translateX(55px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(178px) translateX(260px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    transform: translateY(240px) translateX(420px);
+  }
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  transition: border-color 300ms ease-out, background-color 300ms ease-out,
+    transform 300ms ease-out;
+  outline: none;
+}
+
+.swiper-button-next {
+  transform: translateY(178px) translateX(-55px);
+
+  @media screen and (min-width: 768px) {
+    transform: translateY(178px) translateX(-260px);
+  }
+
+  @media screen and (min-width: 1280px) {
+    transform: translateY(240px) translateX(-420px);
+  }
+  width: 52px !important;
+  height: 52px !important;
+  border-radius: 100%;
+  border: 1px solid var(--black);
+  transition: border-color, background-color 300ms ease-out;
+  outline: none;
+}
+
+.swiper-button-next::after {
+  content: "" !important;
+  display: flex;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/images/icons/arrow.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev::after {
+  content: "" !important;
+  display: flex;
+  width: 100% !important;
+  height: 100% !important;
+  background-image: url("/images/icons/arrow.svg");
+  transform: rotate(-180deg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-prev:focus-visible,
+.swiper-button-prev:active,
+.swiper-button-next:active,
+.swiper-button-next:hover,
+.swiper-button-next:focus-visible {
+  background-color: var(--backgroundBlue);
+  border: 1px solid var(--backgroundBlue);
 }
 
 /* styles for manufactures slider */
