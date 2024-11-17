@@ -20,7 +20,7 @@ export default function SolarStationItem({
   return (
     <div className="laptop:flex flex-col justify-between h-full">
       <SubTitle className="mb-2">{title}</SubTitle>
-      <p className="h-[132px] tab:h-[66px] laptop:h-[100px] max-w-[312px] tab:max-w-none laptop:w-[448px]">
+      <p className="h-[132px] tab:min-h-[66px] laptop:min-h-[100px] max-w-[312px] tab:max-w-none laptop:w-[448px]">
         {description}
       </p>
       <GridButtons

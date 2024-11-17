@@ -13,12 +13,12 @@ export default function Manufactures() {
   const t = useTranslations("");
 
   return (
-    <div className="w-screen relative left-1/2 right-1/2 -mx-[50vw] bg-backgroundLight">
-      <Container>
-        <section
-          id="products"
-          className="pl-4 tab:pl-8 laptop:pl-0 py-8 tab:py-16 scroll-mt-[72px]"
-        >
+    <div className="w-full relative bg-backgroundLight">
+      <section
+        id="products"
+        className="pl-4 tab:pl-8 laptop:pl-0 py-8 tab:py-16 scroll-mt-[72px]"
+      >
+        <Container>
           <SectionTitle>{t("manufactures.title")}</SectionTitle>
           <div className="flex flex-col laptop:flex-row gap-y-6">
             <div className="flex flex-col justify-between laptop:w-[48.9%]">
@@ -39,8 +39,8 @@ export default function Manufactures() {
               </MainButton>
             </a>
           </div>
-        </section>
-      </Container>
+        </Container>
+      </section>
     </div>
   );
 }

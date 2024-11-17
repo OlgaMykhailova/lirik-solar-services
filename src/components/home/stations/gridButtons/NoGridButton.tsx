@@ -12,7 +12,7 @@ export default function NoGridButton({ isGrid, setIsGrid }: NoGridButtonProps) {
   return (
     <button
       onClick={() => setIsGrid(false)}
-      className={`w-[154px] h-11 tab:h-12 px-4 rounded-[60px] border border-backgroundLight outline-none text-sm tab:text-base 
+      className={`w-[158px] h-11 tab:h-12 px-4 rounded-[60px] border border-backgroundLight outline-none text-sm tab:text-base 
         text-center tab:text-left transition duration-300 ease-out ${
           isGrid ? "bg-white text-inputText" : "bg-backgroundLight text-black"
         }`}
