@@ -46,8 +46,7 @@
   height: 52px !important;
   border-radius: 100%;
   border: 1px solid var(--black);
-  transition: border-color 300ms ease-out, background-color 300ms ease-out,
-    transform 300ms ease-out;
+  transition: border-color 500ms ease-out, background-color 500ms ease-out;
   outline: none;
 }
 
@@ -65,7 +64,7 @@
   height: 52px !important;
   border-radius: 100%;
   border: 1px solid var(--black);
-  transition: border-color, background-color 300ms ease-out;
+  transition: border-color 500ms ease-out, background-color 500ms ease-out;
   outline: none;
 }
 
@@ -97,7 +96,7 @@
 .swiper-button-next:hover,
 .swiper-button-next:focus-visible {
   background-color: var(--backgroundBlue);
-  border: 1px solid var(--backgroundBlue);
+  border-color: var(--backgroundBlue);
 }
 
 /* styles for manufactures slider */
@@ -158,10 +157,18 @@
 .swiper-slide.reviewsSlider {
   height: 350px !important;
   max-width: 350px !important;
+  border-radius: 18px;
+  background-color: var(--darkWhite);
   @media screen and (min-width: 768px) {
     max-width: none !important;
+    border-radius: 24px;
   }
   @media screen and (min-width: 1280px) {
     height: 475px !important;
   }
+}
+
+.swiper-slide-active.reviewsSlider {
+  background-image: url("/images/bgImages/skyBgImage.webp");
+  background-size: cover;
 }

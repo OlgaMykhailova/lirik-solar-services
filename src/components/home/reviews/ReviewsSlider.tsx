@@ -99,9 +99,7 @@ export default function ReviewsSlider() {
       {reviewsList.map(({ name, role, reviewText, photo }, idx) => (
         <SwiperSlide key={idx} className="reviewsSlider">
           <div
-            className={`flex flex-col items-center w-full h-full p-4 tab:p-6 rounded-[18px] tab:rounded-[24px] bg-cover ${
-              idx % 2 === 0 ? "bg-whiteDark" : "bg-sky"
-            }`}
+            className={`flex flex-col items-center w-full h-full p-4 tab:p-6 rounded-[18px] tab:rounded-[24px] bg-cover `}
           >
             <Image
               src={`/images/reviews/${photo}.webp`}
