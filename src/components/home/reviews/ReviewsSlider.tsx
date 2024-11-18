@@ -10,6 +10,7 @@ import { useTranslations } from "next-intl";
 import React from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import ReviewSliderCard from "./ReviewSliderCard";
 
 export default function ReviewsSlider() {
