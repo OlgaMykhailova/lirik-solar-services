@@ -25,7 +25,9 @@ export default function ReviewSliderCard({ review }: ReviewSliderCardProps) {
         className="size-[72px] laptop:size-[88px]"
       />
       <p className="mt-3 mb-1 font-gogh text-smb laptop:text-baseb">{name}</p>
-      <p className="text-xs laptop:text-sm text-inputText">{role}</p>
+      <p className="text-center text-xs laptop:text-sm text-inputText">
+        {role}
+      </p>
       <div className="mt-auto">
         <Image
           src={`/images/icons/quote.svg`}
