@@ -6,11 +6,12 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../manufactures/styles.css";
 
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import ReviewSliderCard from "./ReviewSliderCard";
 
 export default function ReviewsSlider() {
   const t = useTranslations("reviews.reviews");
@@ -66,7 +67,7 @@ export default function ReviewsSlider() {
       breakpoints={{
         360: {
           slidesPerView: 1,
-          spaceBetween: 16,
+          spaceBetween: 24,
         },
         768: {
           slidesPerView: 2.15,
@@ -74,9 +75,14 @@ export default function ReviewsSlider() {
           coverflowEffect: { scale: 0.6, stretch: 48 },
         },
         1280: {
-          slidesPerView: 2.7,
-          spaceBetween: 16,
-          coverflowEffect: { scale: 0.75, stretch: 24 },
+          slidesPerView: 2.71,
+          spaceBetween: 24,
+          coverflowEffect: { scale: 0.7, stretch: 0 },
+        },
+        1640: {
+          slidesPerView: 4,
+          spaceBetween: 24,
+          coverflowEffect: { scale: 0.8, stretch: 0 },
         },
       }}
       pagination={{
@@ -96,40 +102,9 @@ export default function ReviewsSlider() {
       }}
       className="reviewsSlider"
     >
-      {reviewsList.map(({ name, role, reviewText, photo }, idx) => (
+      {reviewsList.map((review, idx) => (
         <SwiperSlide key={idx} className="reviewsSlider">
-          <div
-            className={`flex flex-col items-center w-full h-full p-4 tab:p-6 rounded-[18px] tab:rounded-[24px] bg-cover `}
-          >
-            <Image
-              src={`/images/reviews/${photo}.webp`}
-              alt={name}
-              width="400"
-              height="400"
-              className="size-[72px] laptop:size-[88px]"
-            />
-            <p className="mt-3 mb-1 font-gogh text-smb laptop:text-baseb">
-              {name}
-            </p>
-            <p className="text-xs laptop:text-sm text-inputText">{role}</p>
-            <div className="mt-auto">
-              <Image
-                src={`/images/icons/quote.svg`}
-                alt="quote"
-                width="32"
-                height="32"
-                className="laptop:size-[46px]"
-              />
-              <p className="text-xs laptop:text-base mt-auto">{reviewText}</p>
-            </div>
-            <Image
-              src={`/images/icons/quote.svg`}
-              alt="quote"
-              width="32"
-              height="32"
-              className="laptop:size-[46px] ml-auto rotate-180"
-            />
-          </div>
+          <ReviewSliderCard review={review} />
         </SwiperSlide>
       ))}
     </Swiper>
