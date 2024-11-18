@@ -99,21 +99,8 @@ export default function EssNoElectricity({
         transform="rotate(90 295 243)"
         fill="#FFA600"
       />
-      <rect
-        x="295"
-        y="135"
-        width="2"
-        height="54"
-        transform="rotate(90 295 135)"
-        fill="#FFA600"
-      />
       <path
         d="M258 240.5C259.933 240.5 261.5 242.067 261.5 244C261.5 245.933 259.933 247.5 258 247.5C256.067 247.5 254.5 245.933 254.5 244C254.5 242.067 256.067 240.5 258 240.5Z"
-        fill="#FFA600"
-        stroke="white"
-      />
-      <path
-        d="M240 132.5C241.933 132.5 243.5 134.067 243.5 136C243.5 137.933 241.933 139.5 240 139.5C238.067 139.5 236.5 137.933 236.5 136C236.5 134.067 238.067 132.5 240 132.5Z"
         fill="#FFA600"
         stroke="white"
       />
@@ -123,9 +110,9 @@ export default function EssNoElectricity({
         stroke="white"
       />
       <rect
-        width="1.99998"
-        height="181"
-        transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 296 135)"
+        width="1.99999"
+        height="71"
+        transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 296 245)"
         fill="#FFA600"
       />
       <circle
@@ -140,14 +127,6 @@ export default function EssNoElectricity({
         fill="#0B70BC"
         stroke="white"
       />
-      <circle cx="277" cy="136" r="3" fill="#FFA600" />
-      <circle cx="259" cy="136" r="3" fill="#FFA600" />
-      <circle cx="295" cy="172" r="3" fill="#FFA600" />
-      <circle cx="295" cy="154" r="3" fill="#FFA600" />
-      <circle cx="295" cy="136" r="3" fill="#FFA600" />
-      <circle cx="295" cy="190" r="3" fill="#FFA600" />
-      <circle cx="295" cy="208" r="3" fill="#FFA600" />
-      <circle cx="295" cy="226" r="3" fill="#FFA600" />
       <circle cx="295" cy="244" r="3" fill="#FFA600" />
       <circle cx="277" cy="244" r="3" fill="#FFA600" />
       <circle cx="295" cy="262" r="3" fill="#FFA600" />
