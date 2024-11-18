@@ -99,21 +99,8 @@ export default function EssWIthElectricity({
         transform="rotate(90 295 243)"
         fill="#FFA600"
       />
-      <rect
-        x="295"
-        y="135"
-        width="2"
-        height="54"
-        transform="rotate(90 295 135)"
-        fill="#FFA600"
-      />
       <path
         d="M258 240.5C259.933 240.5 261.5 242.067 261.5 244C261.5 245.933 259.933 247.5 258 247.5C256.067 247.5 254.5 245.933 254.5 244C254.5 242.067 256.067 240.5 258 240.5Z"
-        fill="#FFA600"
-        stroke="white"
-      />
-      <path
-        d="M240 132.5C241.933 132.5 243.5 134.067 243.5 136C243.5 137.933 241.933 139.5 240 139.5C238.067 139.5 236.5 137.933 236.5 136C236.5 134.067 238.067 132.5 240 132.5Z"
         fill="#FFA600"
         stroke="white"
       />
@@ -123,9 +110,9 @@ export default function EssWIthElectricity({
         stroke="white"
       />
       <rect
-        width="1.99998"
-        height="182"
-        transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 296 135)"
+        width="1.99999"
+        height="74"
+        transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 296 243)"
         fill="#FFA600"
       />
       <circle
