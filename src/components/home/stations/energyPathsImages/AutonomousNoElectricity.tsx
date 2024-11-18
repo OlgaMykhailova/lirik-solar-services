@@ -40,7 +40,7 @@ export default function AutonomousNoElectricity({
         x="368"
         y="281"
         width="2"
-        height="18"
+        height="18.7891"
         transform="rotate(-180 368 281)"
         fill="#0B70BC"
       />
@@ -131,6 +131,13 @@ export default function AutonomousNoElectricity({
         fill="#FFA600"
       />
       <circle
+        cx="277"
+        cy="262"
+        r="3"
+        transform="rotate(180 277 262)"
+        fill="#0B70BC"
+      />
+      <circle
         cx="295"
         cy="262"
         r="3"
@@ -141,6 +148,118 @@ export default function AutonomousNoElectricity({
         d="M441.5 118C441.5 119.933 439.933 121.5 438 121.5C436.067 121.5 434.5 119.933 434.5 118C434.5 116.067 436.067 114.5 438 114.5C439.933 114.5 441.5 116.067 441.5 118Z"
         fill="#0B70BC"
         stroke="white"
+      />
+      <circle
+        cx="277"
+        cy="280"
+        r="3"
+        transform="rotate(180 277 280)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="277"
+        cy="298"
+        r="3"
+        transform="rotate(180 277 298)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="259"
+        cy="308"
+        r="3"
+        transform="rotate(180 259 308)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="241"
+        cy="317"
+        r="3"
+        transform="rotate(180 241 317)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="223"
+        cy="326"
+        r="3"
+        transform="rotate(180 223 326)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="205"
+        cy="336"
+        r="3"
+        transform="rotate(180 205 336)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="187"
+        cy="345"
+        r="3"
+        transform="rotate(180 187 345)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="169"
+        cy="354"
+        r="3"
+        transform="rotate(180 169 354)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="133"
+        cy="373"
+        r="3"
+        transform="rotate(180 133 373)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="151"
+        cy="364"
+        r="3"
+        transform="rotate(180 151 364)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="116"
+        cy="364"
+        r="3"
+        transform="rotate(180 116 364)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="98"
+        cy="355"
+        r="3"
+        transform="rotate(180 98 355)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="80"
+        cy="345"
+        r="3"
+        transform="rotate(180 80 345)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="98"
+        cy="336"
+        r="3"
+        transform="rotate(180 98 336)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="116"
+        cy="326"
+        r="3"
+        transform="rotate(180 116 326)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="134"
+        cy="317"
+        r="3"
+        transform="rotate(180 134 317)"
+        fill="#0B70BC"
       />
       <circle cx="277" cy="136" r="3" fill="#FFA600" />
       <circle cx="259" cy="136" r="3" fill="#FFA600" />
