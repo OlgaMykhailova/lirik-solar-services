@@ -70,13 +70,18 @@ export default function ReviewsSlider() {
         },
         768: {
           slidesPerView: 2.15,
-          spaceBetween: 24,
+          spaceBetween: 16,
           coverflowEffect: { scale: 0.6, stretch: 48 },
         },
         1280: {
+          slidesPerView: 2.71,
+          spaceBetween: 24,
+          coverflowEffect: { scale: 0.7, stretch: 0 },
+        },
+        1640: {
           slidesPerView: 4,
           spaceBetween: 24,
-          coverflowEffect: { scale: 0.8, stretch: 24 },
+          coverflowEffect: { scale: 0.8, stretch: 0 },
         },
       }}
       pagination={{
@@ -106,26 +111,28 @@ export default function ReviewsSlider() {
               alt={name}
               width="400"
               height="400"
-              className="size-[72px] pc:size-[88px]"
+              className="size-[72px] laptop:size-[88px]"
             />
-            <p className="mt-3 mb-1 font-gogh text-smb pc:text-baseb">{name}</p>
-            <p className="text-xs pc:text-sm text-inputText">{role}</p>
+            <p className="mt-3 mb-1 font-gogh text-smb laptop:text-baseb">
+              {name}
+            </p>
+            <p className="text-xs laptop:text-sm text-inputText">{role}</p>
             <div className="mt-auto">
               <Image
                 src={`/images/icons/quote.svg`}
                 alt="quote"
                 width="32"
                 height="32"
-                className="pc:size-[46px]"
+                className="laptop:size-[46px]"
               />
-              <p className="text-xs pc:text-base mt-auto">{reviewText}</p>
+              <p className="text-xs laptop:text-base mt-auto">{reviewText}</p>
             </div>
             <Image
               src={`/images/icons/quote.svg`}
               alt="quote"
               width="32"
               height="32"
-              className="pc:size-[46px] ml-auto rotate-180"
+              className="laptop:size-[46px] ml-auto rotate-180"
             />
           </div>
         </SwiperSlide>

@@ -138,38 +138,45 @@
 /* styles for reviews slider */
 
 .swiper.reviewsSlider {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
   padding-bottom: 66px !important;
   max-width: 350px !important;
   @media screen and (min-width: 768px) {
     min-width: 669px !important;
     max-width: 792px !important;
-    width: 100% !important;
     height: 100% !important;
   }
   @media screen and (min-width: 1280px) {
     min-width: 1080px !important;
-    max-width: 1120px !important;
+    max-width: 1080px !important;
     margin-top: 16px;
   }
-  @media screen and (min-width: 1440px) {
-    min-width: 1080px !important;
-    max-width: 1580px !important;
-    margin-top: 16px;
+  @media screen and (min-width: 1640px) {
+    min-width: 1440px !important;
+    max-width: 1440px !important;
   }
 }
 
 .swiper-slide.reviewsSlider {
-  height: 350px !important;
   min-width: 304px !important;
   max-width: 350px !important;
+  height: 350px !important;
   border-radius: 18px;
   background-color: var(--darkWhite);
   @media screen and (min-width: 768px) {
-    min-width: 260px !important;
     max-width: 380px !important;
     border-radius: 24px;
   }
-  @media screen and (min-width: 1440px) {
+  @media screen and (min-width: 1280px) {
+    min-width: 384px !important;
+    max-width: 404px !important;
+    height: 475px !important;
+  }
+  @media screen and (min-width: 1640px) {
+    min-width: 264px !important;
+    max-width: 384px !important;
     height: 475px !important;
   }
 }
