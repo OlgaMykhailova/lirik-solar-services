@@ -25,7 +25,7 @@ export default function EssStation({ isGrid, setIsGrid }: EssStationProps) {
         />
         <ImageLegend
           activeTab="ess"
-          className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-8 right-0 tab:bottom-0 tab:right-0 max-w-[200px] min-h-[55px] tab:min-w-[290px] tab:min-h-[74px]"
+          className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-11 right-0 tab:bottom-0 tab:right-0 max-w-[230px] min-h-[55px] tab:min-w-[290px] tab:min-h-[74px]"
         />
         <div className="absolute top-0 left-0 w-full h-full">
           {isGrid ? <EssWIthElectricity /> : <EssNoElectricity />}

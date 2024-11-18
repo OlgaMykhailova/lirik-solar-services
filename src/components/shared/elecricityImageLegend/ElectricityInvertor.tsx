@@ -5,8 +5,8 @@ export default function ElectricityInvertor() {
   const t = useTranslations("stations");
 
   return (
-    <p className="flex items-center">
-      <span className="inline-block size-3 mr-2 bg-yellowDark rounded-full"></span>
+    <p className="flex items-center gap-2">
+      <span className="inline-block size-3 bg-yellowDark rounded-full"></span>
       <span className="text-xxs tab:text-sm">{t("electricityInvertor")}</span>
     </p>
   );
