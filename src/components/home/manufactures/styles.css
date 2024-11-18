@@ -33,7 +33,7 @@
 }
 
 .swiper-button-prev {
-  top: calc(100% - 30px) !important;
+  top: calc(100% - 31px) !important;
   left: calc(50% - 56px - 56px) !important;
   width: 52px !important;
   height: 52px !important;
@@ -55,7 +55,7 @@
 }
 
 .swiper-button-next {
-  top: calc(100% - 30px) !important;
+  top: calc(100% - 31px) !important;
   right: calc(50% - 56px - 56px) !important;
   width: 52px !important;
   height: 52px !important;
