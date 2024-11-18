@@ -4,7 +4,7 @@ interface GridWIthElectricityProps {
   className?: string;
 }
 
-export default function GridWIthElectricity({
+export default function HybridNoElectricity({
   className = "",
 }: GridWIthElectricityProps) {
   return (
@@ -28,13 +28,6 @@ export default function GridWIthElectricity({
         transform="matrix(0.467502 0.883992 0.883992 -0.467502 24 343.675)"
         fill="#FFA600"
       />
-      <circle
-        cx="295"
-        cy="253"
-        r="3"
-        transform="rotate(180 295 253)"
-        fill="#51626F"
-      />
       <rect
         x="278"
         y="298"
@@ -47,7 +40,7 @@ export default function GridWIthElectricity({
         x="368"
         y="253"
         width="2.00001"
-        height="127"
+        height="128"
         transform="rotate(-180 368 253)"
         fill="#51626F"
       />
@@ -55,7 +48,7 @@ export default function GridWIthElectricity({
         x="368"
         y="281"
         width="2"
-        height="17"
+        height="18.7891"
         transform="rotate(-180 368 281)"
         fill="#0B70BC"
       />
@@ -98,24 +91,24 @@ export default function GridWIthElectricity({
       <rect
         width="2"
         height="181.618"
-        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 295.907 317.058)"
+        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 295.907 317.059)"
         fill="#FFA600"
       />
       <rect
         width="2"
         height="121.863"
-        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.165 402.294)"
+        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.165 402.295)"
         fill="#FFA600"
       />
       <rect
-        x="367"
+        x="368"
         y="252"
         width="2"
-        height="110"
-        transform="rotate(90 367 252)"
+        height="111"
+        transform="rotate(90 368 252)"
         fill="#51626F"
       />
-      <rect x="456" y="119" width="2" height="163" fill="#0B70BC" />
+      <rect x="456" y="117" width="2" height="164" fill="#0B70BC" />
       <rect
         x="368"
         y="261"
@@ -166,97 +159,6 @@ export default function GridWIthElectricity({
         fill="#51626F"
         stroke="white"
       />
-      <circle
-        cx="313"
-        cy="253"
-        r="3"
-        transform="rotate(180 313 253)"
-        fill="#51626F"
-      />
-      <circle
-        cx="277"
-        cy="253"
-        r="3"
-        transform="rotate(180 277 253)"
-        fill="#51626F"
-      />
-      <circle
-        cx="331"
-        cy="253"
-        r="3"
-        transform="rotate(180 331 253)"
-        fill="#51626F"
-      />
-      <circle
-        cx="349"
-        cy="253"
-        r="3"
-        transform="rotate(180 349 253)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="253"
-        r="3"
-        transform="rotate(180 367 253)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="217"
-        r="3"
-        transform="rotate(180 367 217)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="235"
-        r="3"
-        transform="rotate(180 367 235)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="199"
-        r="3"
-        transform="rotate(180 367 199)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="181"
-        r="3"
-        transform="rotate(180 367 181)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="163"
-        r="3"
-        transform="rotate(180 367 163)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="145"
-        r="3"
-        transform="rotate(180 367 145)"
-        fill="#51626F"
-      />
-      <circle
-        cx="367"
-        cy="126"
-        r="3"
-        transform="rotate(180 367 126)"
-        fill="#51626F"
-      />
-      <circle
-        cx="385"
-        cy="126"
-        r="3"
-        transform="rotate(180 385 126)"
-        fill="#51626F"
-      />
       <path
         d="M400.5 126C400.5 124.067 402.067 122.5 404 122.5C405.933 122.5 407.5 124.067 407.5 126C407.5 127.933 405.933 129.5 404 129.5C402.067 129.5 400.5 127.933 400.5 126Z"
         fill="#51626F"
@@ -270,143 +172,10 @@ export default function GridWIthElectricity({
         fill="#0B70BC"
       />
       <circle
-        cx="313"
-        cy="262"
-        r="3"
-        transform="rotate(180 313 262)"
-        fill="#0B70BC"
-      />
-      <circle
         cx="295"
         cy="262"
         r="3"
         transform="rotate(180 295 262)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="331"
-        cy="262"
-        r="3"
-        transform="rotate(180 331 262)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="349"
-        cy="262"
-        r="3"
-        transform="rotate(180 349 262)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="367"
-        cy="262"
-        r="3"
-        transform="rotate(180 367 262)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="367"
-        cy="280"
-        r="3"
-        transform="rotate(180 367 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="385"
-        cy="280"
-        r="3"
-        transform="rotate(180 385 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="403"
-        cy="280"
-        r="3"
-        transform="rotate(180 403 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="421"
-        cy="280"
-        r="3"
-        transform="rotate(180 421 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="439"
-        cy="280"
-        r="3"
-        transform="rotate(180 439 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="280"
-        r="3"
-        transform="rotate(180 457 280)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="262"
-        r="3"
-        transform="rotate(180 457 262)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="244"
-        r="3"
-        transform="rotate(180 457 244)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="226"
-        r="3"
-        transform="rotate(180 457 226)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="208"
-        r="3"
-        transform="rotate(180 457 208)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="190"
-        r="3"
-        transform="rotate(180 457 190)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="172"
-        r="3"
-        transform="rotate(180 457 172)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="154"
-        r="3"
-        transform="rotate(180 457 154)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="136"
-        r="3"
-        transform="rotate(180 457 136)"
-        fill="#0B70BC"
-      />
-      <circle
-        cx="457"
-        cy="118"
-        r="3"
-        transform="rotate(180 457 118)"
         fill="#0B70BC"
       />
       <path
@@ -587,6 +356,34 @@ export default function GridWIthElectricity({
         fill="#FFA600"
       />
       <circle cx="133" cy="401" r="3" fill="#FFA600" />
+      <rect
+        x="241.662"
+        y="316.135"
+        width="2.00001"
+        height="29.7787"
+        transform="rotate(120.547 241.662 316.135)"
+        fill="#0B70BC"
+      />
+      <path
+        d="M218.5 302C218.5 303.933 216.933 305.5 215 305.5C213.067 305.5 211.5 303.933 211.5 302C211.5 300.067 213.067 298.5 215 298.5C216.933 298.5 218.5 300.067 218.5 302Z"
+        fill="#0B70BC"
+        stroke="white"
+      />
+      <rect
+        x="278.192"
+        y="324.721"
+        width="2.00001"
+        height="64.4046"
+        transform="rotate(119.654 278.192 324.721)"
+        fill="#FFA600"
+      />
+      <circle cx="259" cy="315" r="3" fill="#FFA600" />
+      <circle cx="241" cy="304" r="3" fill="#FFA600" />
+      <path
+        d="M225.5 293C225.5 294.933 223.933 296.5 222 296.5C220.067 296.5 218.5 294.933 218.5 293C218.5 291.067 220.067 289.5 222 289.5C223.933 289.5 225.5 291.067 225.5 293Z"
+        fill="#FFA600"
+        stroke="white"
+      />
     </svg>
   );
 }
