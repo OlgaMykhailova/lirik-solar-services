@@ -6,7 +6,7 @@ import WithGridButton from "./WithGridButton";
 interface GridButtonsProps {
   isGrid: boolean;
   setIsGrid: Dispatch<SetStateAction<boolean>>;
-  className: string;
+  className?: string;
 }
 
 export default function GridButtons({

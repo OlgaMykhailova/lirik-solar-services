@@ -2,7 +2,7 @@ import React, { Dispatch, SetStateAction } from "react";
 
 import SubTitle from "@/components/shared/titles/SubTitle";
 
-import GridButtons from "./gridButtons/GridButtons";
+import GridButtons from "../../shared/buttons/gridButtons/GridButtons";
 
 interface SolarStationItemProps {
   title: string;

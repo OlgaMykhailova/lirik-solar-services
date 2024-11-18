@@ -69,7 +69,8 @@
     "electricityGrid": "Електроенергія від мережі",
     "electricityPanels": "Електроенергія від панелей",
     "electricityPanelsBatteries": "Електроенергія від панелей та АКБ",
-    "saleElectricity": "Продаж електроенергії в мережу"
+    "saleElectricity": "Продаж електроенергії в мережу",
+    "electricityInvertor": "Електроенергія від інвертора та АКБ"
   },
   "ess": {
     "title": "Системи зберігання енергії",
