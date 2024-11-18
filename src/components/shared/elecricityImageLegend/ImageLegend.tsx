@@ -1,6 +1,7 @@
 import React from "react";
 
 import ElectricityGrid from "./ElectricityGrid";
+import ElectricityInvertor from "./ElectricityInvertor";
 import ElectricityPanels from "./ElectricityPanels";
 import ElectricityPanelsBatteries from "./ElectricityPanelsBatteries";
 import SaleElectricity from "./SaleElectricity";
@@ -36,6 +37,13 @@ export default function ImageLegend({
           <ElectricityGrid />
           <ElectricityPanelsBatteries />
           <SaleElectricity />
+        </div>
+      );
+    case "ess":
+      return (
+        <div className={className}>
+          <ElectricityGrid />
+          <ElectricityInvertor />
         </div>
       );
   }

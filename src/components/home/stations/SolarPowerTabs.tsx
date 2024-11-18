@@ -7,14 +7,14 @@ import React, { useState } from "react";
 import { TabType } from "@/types/tab";
 import { TabMenuItem } from "@/types/tabMenuItem";
 
+import GridButtons from "../../shared/buttons/gridButtons/GridButtons";
+import ImageLegend from "../../shared/elecricityImageLegend/ImageLegend";
 import AutonomousNoElectricity from "./energyPathsImages/AutonomousNoElectricity";
 import AutonomousWIthElectricity from "./energyPathsImages/AutonomousWithElectricity";
 import GridNoElectricity from "./energyPathsImages/GridNoElectricity";
 import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
 import HybridNoElectricity from "./energyPathsImages/HybridNoElectricity";
 import HybridWIthElectricity from "./energyPathsImages/HybridWithElectricity";
-import GridButtons from "./gridButtons/GridButtons";
-import ImageLegend from "./imageLegend/ImageLegend";
 import SolarStationItem from "./SolarStationItem";
 import StationsDescription from "./StationsDescription";
 import TabMenu from "./TabMenu";
@@ -94,7 +94,7 @@ export default function SolarPowerTabs() {
             src={`/images/buildings/building${
               activeTab === "grid" ? "Grid" : "Autonomous"
             }.svg`}
-            alt=""
+            alt="building"
             width={472}
             height={398}
             className="w-full h-full"
