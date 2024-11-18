@@ -19,7 +19,7 @@ export default function SolarStationItem({
 }: SolarStationItemProps) {
   return (
     <div className="laptop:flex flex-col justify-between h-full">
-      <SubTitle className="mb-2">{title}</SubTitle>
+      <SubTitle className="h-[50px] tab:h-auto mb-2">{title}</SubTitle>
       <p className="h-[132px] tab:min-h-[66px] laptop:min-h-[100px] max-w-[312px] tab:max-w-none laptop:w-[448px]">
         {description}
       </p>

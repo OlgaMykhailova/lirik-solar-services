@@ -13,6 +13,7 @@ const config: Config = {
         manrope: ["var(--font-manrope)"],
       },
       screens: {
+        mob: "395px",
         tab: "768px",
         tabxl: "1024px",
         laptop: "1280px",
