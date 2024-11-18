@@ -1,11 +1,12 @@
 import React, { Dispatch, SetStateAction } from "react";
 
 import { TabMenuItem } from "@/types/tabMenuItem";
+import { TabType } from "@/types/tab";
 
 interface TabMenuProps {
   tabs: TabMenuItem[];
-  setActiveTab: Dispatch<SetStateAction<string>>;
-  activeTab: string;
+  setActiveTab: Dispatch<SetStateAction<TabType>>;
+  activeTab: TabType;
 }
 
 export default function TabMenu({

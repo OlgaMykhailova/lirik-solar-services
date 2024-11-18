@@ -1,5 +1,7 @@
+import { TabType } from "./tab";
+
 export interface TabMenuItem {
-  id: string;
+  id: TabType;
   label: string;
   title: string;
   description: string;

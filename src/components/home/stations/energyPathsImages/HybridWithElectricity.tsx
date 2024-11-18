@@ -4,7 +4,7 @@ interface GridWIthElectricityProps {
   className?: string;
 }
 
-export default function GridWIthElectricity({
+export default function HybridWIthElectricity({
   className = "",
 }: GridWIthElectricityProps) {
   return (
@@ -98,13 +98,13 @@ export default function GridWIthElectricity({
       <rect
         width="2"
         height="181.618"
-        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 295.907 317.058)"
+        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 295.907 317.059)"
         fill="#FFA600"
       />
       <rect
         width="2"
         height="121.863"
-        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.165 402.294)"
+        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.165 402.295)"
         fill="#FFA600"
       />
       <rect
@@ -587,6 +587,34 @@ export default function GridWIthElectricity({
         fill="#FFA600"
       />
       <circle cx="133" cy="401" r="3" fill="#FFA600" />
+      <rect
+        x="241.662"
+        y="316.135"
+        width="2.00001"
+        height="29.7787"
+        transform="rotate(120.547 241.662 316.135)"
+        fill="#0B70BC"
+      />
+      <path
+        d="M218.5 302C218.5 303.933 216.933 305.5 215 305.5C213.067 305.5 211.5 303.933 211.5 302C211.5 300.067 213.067 298.5 215 298.5C216.933 298.5 218.5 300.067 218.5 302Z"
+        fill="#0B70BC"
+        stroke="white"
+      />
+      <rect
+        x="278.192"
+        y="324.721"
+        width="2.00001"
+        height="64.4046"
+        transform="rotate(119.654 278.192 324.721)"
+        fill="#FFA600"
+      />
+      <circle cx="259" cy="315" r="3" fill="#FFA600" />
+      <circle cx="241" cy="304" r="3" fill="#FFA600" />
+      <path
+        d="M225.5 293C225.5 294.933 223.933 296.5 222 296.5C220.067 296.5 218.5 294.933 218.5 293C218.5 291.067 220.067 289.5 222 289.5C223.933 289.5 225.5 291.067 225.5 293Z"
+        fill="#FFA600"
+        stroke="white"
+      />
     </svg>
   );
 }

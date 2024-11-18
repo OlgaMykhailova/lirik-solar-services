@@ -4,7 +4,15 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
+import { TabType } from "@/types/tab";
+import { TabMenuItem } from "@/types/tabMenuItem";
+
+import AutonomousNoElectricity from "./energyPathsImages/AutonomousNoElectricity";
+import AutonomousWIthElectricity from "./energyPathsImages/AutonomousWithElectricity";
+import GridNoElectricity from "./energyPathsImages/GridNoElectricity";
 import GridWIthElectricity from "./energyPathsImages/GridWIthElectricity";
+import HybridNoElectricity from "./energyPathsImages/HybridNoElectricity";
+import HybridWIthElectricity from "./energyPathsImages/HybridWithElectricity";
 import GridButtons from "./gridButtons/GridButtons";
 import ImageLegend from "./imageLegend/ImageLegend";
 import SolarStationItem from "./SolarStationItem";
@@ -12,11 +20,11 @@ import StationsDescription from "./StationsDescription";
 import TabMenu from "./TabMenu";
 
 export default function SolarPowerTabs() {
-  const [activeTab, setActiveTab] = useState("grid");
+  const [activeTab, setActiveTab] = useState<TabType>("grid");
   const [isGrid, setIsGrid] = useState(true);
   const t = useTranslations("stations.tabs");
 
-  const tabs = [
+  const tabs: TabMenuItem[] = [
     {
       id: "grid",
       label: t("grid.name"),
@@ -38,6 +46,27 @@ export default function SolarPowerTabs() {
   ];
 
   const activeTabData = tabs.find((tab) => tab.id === activeTab);
+
+  const electricityMap = {
+    grid: {
+      true: <GridWIthElectricity />,
+      false: <GridNoElectricity />,
+    },
+    autonomous: {
+      true: <AutonomousWIthElectricity />,
+      false: <AutonomousNoElectricity />,
+    },
+    hybrid: {
+      true: <HybridWIthElectricity />,
+      false: <HybridNoElectricity />,
+    },
+  };
+
+  const renderElectricityComponent = () => (
+    <div className="absolute top-0 left-0 w-full h-full">
+      {electricityMap[activeTab]?.[isGrid.toString() as "true" | "false"]}
+    </div>
+  );
 
   return (
     <div>
@@ -62,13 +91,15 @@ export default function SolarPowerTabs() {
         </div>
         <div className="relative w-full h-auto laptop:min-w-[604px] laptop:w-[55%]">
           <Image
-            src="/images/building.svg"
+            src={`/images/buildings/building${
+              activeTab === "grid" ? "Grid" : "Autonomous"
+            }.svg`}
             alt=""
             width={472}
             height={398}
             className="w-full h-full"
           />
-          <GridWIthElectricity className="absolute top-0 left-0 w-full h-auto" />
+          {renderElectricityComponent()}
           <ImageLegend
             activeTab={activeTabData?.id}
             className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-9 right-0 tab:bottom-0 tab:right-0 min-w-[220px] min-h-[55px] tab:min-w-[290px] tab:min-h-[74px]"
