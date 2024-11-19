@@ -1,7 +1,7 @@
-import SectionTitle from "@/components/shared/titles/SectionTitle";
-import React from "react";
 import { useTranslations } from "next-intl";
-import Container from "@/components/shared/container/Container";
+import React from "react";
+
+import ScrollIndicator from "@/components/policy/ScrollIndicator";
 import Section1 from "@/components/policy/Section1";
 import Section2 from "@/components/policy/Section2";
 import Section3 from "@/components/policy/Section3";
@@ -9,7 +9,8 @@ import Section4 from "@/components/policy/Section4";
 import Section5 from "@/components/policy/Section5";
 import Section6 from "@/components/policy/Section6";
 import Section7 from "@/components/policy/Section7";
-import ScrollIndicator from "@/components/policy/ScrollIndicator";
+import Container from "@/components/shared/container/Container";
+import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 export default function Policy() {
   const t = useTranslations("policyPage");

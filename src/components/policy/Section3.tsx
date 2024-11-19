@@ -1,5 +1,6 @@
-import React from "react";
 import { useTranslations } from "next-intl";
+import React from "react";
+
 import SubTitle from "../shared/titles/SubTitle";
 
 export default function Section3() {
