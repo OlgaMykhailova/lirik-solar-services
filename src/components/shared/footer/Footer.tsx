@@ -7,7 +7,7 @@ import FooterInfo from "./FooterInfo";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-4 mt-[65px] tab:mt-[125px] laptop:mt-[202px] bg-backgroundLight">
+    <footer className="relative w-full py-4 bg-backgroundLight">
       <Image
         src="/images/icons/logo.svg"
         alt="logo"

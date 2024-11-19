@@ -9,13 +9,20 @@ import Section4 from "@/components/policy/Section4";
 import Section5 from "@/components/policy/Section5";
 import Section6 from "@/components/policy/Section6";
 import Section7 from "@/components/policy/Section7";
+import ScrollIndicator from "@/components/policy/ScrollIndicator";
 
 export default function Policy() {
   const t = useTranslations("policyPage");
   return (
-    <div className="pt-[112px] tab:pt-[120px] laptop:pt-[136px] pb-[81px] tab:pb-[94px] laptop:pb-[103px]">
+    <div
+      data-container="policy"
+      className="relative h-full pt-[112px] tab:pt-[120px] laptop:pt-[136px] pl-4 tab:pl-6 laptop:pl-0 pb-[146px] tab:pb-[219px] laptop:pb-[305px]"
+    >
+      <ScrollIndicator />
       <Container>
-        <SectionTitle>{t("title")}</SectionTitle>
+        <SectionTitle className="text-xxmdb tab:text-lgb">
+          {t("title")}
+        </SectionTitle>
         <p className="laptop:w-[57.4%] mb-8 laptop:mb-12">{t("description")}</p>
         <ul className="flex flex-col gap-y-8 tab:gap-y-10">
           <Section1 />
