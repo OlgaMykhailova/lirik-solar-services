@@ -20,7 +20,7 @@ export default function SubmitButton({
       type="submit"
       disabled={!(dirty && isValid) || isLoading}
       isLoading={isLoading}
-      className="mt-6 mr-auto"
+      className="mt-4 tab:mt-6 mr-auto"
     >
       {t("buttons.sendMessage")}
     </MainButton>
