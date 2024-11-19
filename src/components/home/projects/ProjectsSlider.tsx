@@ -5,8 +5,8 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "../manufactures/styles.css";
-import Image from "next/image";
 
+import Image from "next/image";
 import React from "react";
 import { EffectCoverflow, Navigation, Pagination } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
