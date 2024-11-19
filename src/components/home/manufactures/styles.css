@@ -185,3 +185,27 @@
   background-image: url("/images/bgImages/skyBgImage.webp");
   background-size: cover;
 }
+
+/* styles for projects slider */
+
+.swiper.projectsSlider {
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-bottom: 84px !important;
+  max-width: 350px !important;
+  @media screen and (min-width: 768px) {
+    min-width: 669px !important;
+    max-width: 792px !important;
+    height: 100% !important;
+  }
+  @media screen and (min-width: 1280px) {
+    min-width: 1080px !important;
+    max-width: 1080px !important;
+    padding-bottom: 92px !important;
+  }
+  @media screen and (min-width: 1640px) {
+    min-width: 1440px !important;
+    max-width: 1440px !important;
+  }
+}
