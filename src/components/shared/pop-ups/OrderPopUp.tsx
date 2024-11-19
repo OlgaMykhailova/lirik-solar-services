@@ -28,7 +28,7 @@ export default function OrderPopUp({
   return (
     <>
       <Modal isPopUpShown={isPopUpShown} setIsPopUpShown={setIsPopUpShown}>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-3">
           <PopUpTitle>{title}</PopUpTitle>
           <p className="mb-2">{description}</p>
           <CallBackForm
