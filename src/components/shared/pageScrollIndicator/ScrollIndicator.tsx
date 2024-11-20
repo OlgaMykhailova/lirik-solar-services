@@ -18,6 +18,7 @@ export default function ScrollIndicator({
 
   const updateSectionAfterStyles = useCallback(() => {
     const titles = document.querySelectorAll<HTMLElement>("[data-label]");
+    const buttons = document.querySelectorAll<HTMLElement>("[data-button]");
     const yellowElement = yellowRef.current;
 
     if (!yellowElement) {
@@ -26,6 +27,19 @@ export default function ScrollIndicator({
 
     const yellowRect = yellowElement.getBoundingClientRect();
     const yellowMiddle = yellowRect.top + yellowRect.height / 2;
+
+    buttons.forEach((button) => {
+      const rect = button.getBoundingClientRect();
+      const sectionMiddle = rect.top + rect.height / 2;
+
+      const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
+
+      if (isAligned || indicatorTop < 0.05) {
+        button.style.setProperty("--div-opacity", "100");
+      } else {
+        button.style.setProperty("--div-opacity", "0");
+      }
+    });
 
     titles.forEach((title) => {
       const rect = title.getBoundingClientRect();
@@ -74,13 +88,13 @@ export default function ScrollIndicator({
         lastScrollY.current = scrollPosition;
       }
     }
-  }, [indicatorTop, isReachedEnd]); // useCallback ensures this function is memoized
+  }, [indicatorTop, isReachedEnd]);
 
   useEffect(() => {
     const throttledHandleScroll = throttle(() => {
       updatePosition();
       updateSectionAfterStyles();
-    }, 100); // Викликається кожні 100 мс
+    }, 100);
 
     window.addEventListener("scroll", throttledHandleScroll);
     throttledHandleScroll();
@@ -88,7 +102,7 @@ export default function ScrollIndicator({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, [updatePosition, updateSectionAfterStyles]); // Використовуємо updatePosition з useCallback
+  }, [updatePosition, updateSectionAfterStyles]);
 
   return (
     <div

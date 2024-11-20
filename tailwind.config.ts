@@ -85,6 +85,8 @@ const config: Config = {
           "linear-gradient(180deg, rgba(255, 232, 165, 0.2) 0%, #FDBD00 100%)",
         yellowGradientUp:
           "linear-gradient(#FDBD00 0%, rgba(255, 232, 165, 0.2) 100%)",
+          yellowGradientRight:
+          "linear-gradient(90deg, #FDBD00 0%, rgba(255, 232, 165, 0.2) 100%)",
       },
       keyframes: {
         rotate: {
