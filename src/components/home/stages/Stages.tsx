@@ -11,7 +11,7 @@ export default function Stages() {
   const t = useTranslations();
   return (
     <Section>
-      <SectionTitle>{t("stages.title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("stages.title")}</SectionTitle>
       <StagesList />
       <OpenPopupButton
         buttonName={t("buttons.startProject")}

@@ -13,7 +13,9 @@ export default function Services() {
 
   return (
     <Section id="services">
-      <SectionTitle>{t("services.title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">
+        {t("services.title")}
+      </SectionTitle>
       <div className="laptop:hidden">
         <ServicesDescription />
       </div>

@@ -11,24 +11,28 @@ import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
 import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
+import ScrollIndicator from "@/components/shared/pageScrollIndicator/ScrollIndicator";
 
 export default function Home() {
   return (
     <div className="pt-[72px]">
       <Hero />
       <div className="relative">
-        <SunspotBgImages />
-        <About />
-        <Services />
-        <Stations />
-        <Ess />
-        <Benefits />
-        <Manufactures />
-        <Projects />
-        <Stages />
-        <Reviews />
-        <WriteUs />
-        <Contacts />
+        <ScrollIndicator className="top-[174px] tab:top-[74px] laptop:top-[96px] h-[calc(100%-168px)] tab:h-[calc(100%-64px)] laptop:h-[calc(100%-88px)]" />
+        <div className="relative">
+          <SunspotBgImages />
+          <About />
+          <Services />
+          <Stations />
+          <Ess />
+          <Benefits />
+          <Manufactures />
+          <Projects />
+          <Stages />
+          <Reviews />
+          <WriteUs />
+          <Contacts />
+        </div>
       </div>
     </div>
   );

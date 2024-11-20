@@ -4,10 +4,12 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
+import GridButtons from "@/components/shared/buttons/gridButtons/GridButtons";
+import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
+import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 import { TabType } from "@/types/tab";
 import { TabMenuItem } from "@/types/tabMenuItem";
 
-import GridButtons from "../../shared/buttons/gridButtons/GridButtons";
 import ImageLegend from "../../shared/elecricityImageLegend/ImageLegend";
 import AutonomousNoElectricity from "./energyPathsImages/AutonomousNoElectricity";
 import AutonomousWIthElectricity from "./energyPathsImages/AutonomousWithElectricity";
@@ -105,10 +107,15 @@ export default function SolarPowerTabs() {
             className="flex flex-col gap-[2px] tab:gap-1 absolute -bottom-9 right-0 tab:bottom-0 tab:right-0 min-w-[220px] min-h-[55px] tab:min-w-[290px] tab:min-h-[74px]"
           />
         </div>
+
+        <div className="tab:hidden flex justify-between max-w-[350px] mt-8 tab:mt-0">
+          <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
+          <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
+        </div>
         <GridButtons
           isGrid={isGrid}
           setIsGrid={setIsGrid}
-          className="laptop:hidden mt-8 tab:mt-0"
+          className="hidden tab:flex laptop:hidden"
         />
       </div>
     </div>
