@@ -45,13 +45,11 @@ export default function ScrollIndicator() {
     };
 
     window.addEventListener("scroll", updatePosition);
-    window.addEventListener("resize", updatePosition);
 
     updatePosition();
 
     return () => {
       window.removeEventListener("scroll", updatePosition);
-      window.removeEventListener("resize", updatePosition);
     };
   }, []);
 
