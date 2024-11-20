@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useEffect, useRef, useState } from "react";
 
 export default function ScrollIndicator() {
@@ -11,47 +10,57 @@ export default function ScrollIndicator() {
   const lastScrollY = useRef(0);
 
   useEffect(() => {
+    let ticking = false;
+
     const updatePosition = () => {
-      const parentElement = parentRef.current;
-      const yellowElement = yellowRef.current;
+      if (ticking) return;
+      ticking = true;
 
-      if (parentElement && yellowElement) {
-        const parentTopOffset =
-          parseInt(window.getComputedStyle(parentElement).top, 10) || 0;
+      requestAnimationFrame(() => {
+        const parentElement = parentRef.current;
+        const yellowElement = yellowRef.current;
 
-        const parentHeight = parentElement.clientHeight;
-        const yellowHeight = yellowElement.offsetHeight;
+        if (parentElement && yellowElement) {
+          const parentTopOffset =
+            parseInt(window.getComputedStyle(parentElement).top, 10) || 0;
+          const parentHeight = parentElement.clientHeight;
+          const yellowHeight = yellowElement.offsetHeight;
+          const scrollPosition = window.scrollY;
+          const parentOffsetTop =
+            parentElement.getBoundingClientRect().top + window.scrollY;
 
-        const scrollPosition = window.scrollY;
+          const minTop = 0;
+          const maxTop = parentHeight - yellowHeight;
 
-        const parentOffsetTop =
-          parentElement.getBoundingClientRect().top + window.scrollY;
+          const relativeScroll =
+            scrollPosition - (parentOffsetTop - parentTopOffset);
+          const newTop = Math.min(Math.max(relativeScroll, minTop), maxTop);
 
-        const minTop = 0;
-        const maxTop = parentHeight - yellowHeight;
+          if (newTop !== indicatorTop) {
+            setIndicatorTop(newTop);
+          }
 
-        const relativeScroll =
-          scrollPosition - (parentOffsetTop - parentTopOffset);
+          if (newTop >= maxTop !== isReachedEnd) {
+            setIsReachedEnd(newTop >= maxTop);
+          }
 
-        const newTop = Math.min(Math.max(relativeScroll, minTop), maxTop);
+          if (scrollPosition !== lastScrollY.current) {
+            setIsScrollingDown(scrollPosition > lastScrollY.current);
+            lastScrollY.current = scrollPosition;
+          }
 
-        setIndicatorTop(newTop);
-
-        setIsReachedEnd(newTop < maxTop ? false : true);
-
-        setIsScrollingDown(scrollPosition > lastScrollY.current);
-        lastScrollY.current = scrollPosition;
-      }
+          ticking = false;
+        }
+      });
     };
 
     window.addEventListener("scroll", updatePosition);
-
     updatePosition();
 
     return () => {
       window.removeEventListener("scroll", updatePosition);
     };
-  }, []);
+  }, [indicatorTop, isReachedEnd]);
 
   return (
     <div
@@ -64,7 +73,7 @@ export default function ScrollIndicator() {
     >
       <div
         ref={yellowRef}
-        className={`absolute left-0 w-[3px] h-[450px] transition duration-[1500ms] ease-out ${
+        className={`absolute left-0 w-[3px] h-[450px] transition duration-[1200ms] ease-out ${
           isScrollingDown ? "bg-yellowGradientDown" : "bg-yellowGradientUp"
         }`}
         style={{ transform: `translateY(${indicatorTop}px)` }}
