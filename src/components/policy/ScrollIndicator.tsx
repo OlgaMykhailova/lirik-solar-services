@@ -44,7 +44,7 @@ export default function ScrollIndicator() {
 
         setIndicatorTop(newTop);
 
-        setIsReachedEnd(newTop < maxTop ? false : true);
+        setIsReachedEnd(newTop <= maxTop ? false : true);
 
         setIsScrollingDown(scrollPosition >= lastScrollY.current);
         lastScrollY.current = scrollPosition;
