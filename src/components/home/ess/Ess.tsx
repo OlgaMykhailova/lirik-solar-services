@@ -11,7 +11,7 @@ export default function Ess() {
 
   return (
     <Section>
-      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <EssInfo />
     </Section>
   );

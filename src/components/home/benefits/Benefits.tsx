@@ -10,7 +10,7 @@ export default function Benefits() {
   const t = useTranslations("benefits");
   return (
     <Section>
-      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <BenefitsList />
     </Section>
   );

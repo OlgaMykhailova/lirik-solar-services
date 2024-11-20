@@ -10,7 +10,7 @@ export default function Stations() {
   const t = useTranslations("stations");
   return (
     <Section>
-      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <SolarPowerTabs />
     </Section>
   );

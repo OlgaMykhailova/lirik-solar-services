@@ -19,7 +19,9 @@ export default function Manufactures() {
         className="pl-4 tab:pl-8 laptop:pl-0 py-8 tab:py-16 scroll-mt-[72px]"
       >
         <Container>
-          <SectionTitle>{t("manufactures.title")}</SectionTitle>
+          <SectionTitle className="after:top-[10px]">
+            {t("manufactures.title")}
+          </SectionTitle>
           <div className="flex flex-col laptop:flex-row gap-y-6">
             <div className="flex flex-col justify-between laptop:w-[48.9%]">
               <ManufacturesInfo />

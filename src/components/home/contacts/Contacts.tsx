@@ -15,7 +15,7 @@ export default function Contacts() {
       className="pl-4 tab:pl-8 laptop:pl-0 pb-[146px] tab:pb-[219px] laptop:pb-[305px] scroll-mt-[72px]"
     >
       <Container>
-        <SectionTitle>{t("title")}</SectionTitle>
+        <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
         <div className="flex flex-col gap-y-8 tab:flex-row justify-between">
           <ContactsList />
           <Map />

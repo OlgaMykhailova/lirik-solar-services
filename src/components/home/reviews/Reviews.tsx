@@ -10,7 +10,7 @@ export default function Reviews() {
   const t = useTranslations("reviews");
   return (
     <Section>
-      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <ReviewsSlider />
     </Section>
   );

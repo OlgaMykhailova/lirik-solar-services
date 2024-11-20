@@ -12,7 +12,7 @@ export default function WriteUs() {
 
   return (
     <Section id="order">
-      <SectionTitle>{t("title")}</SectionTitle>
+      <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <div className="flex flex-col gap-y-8 tabxl:flex-row justify-between">
         <WriteUsInfo />
         <WriteUsApplication />
