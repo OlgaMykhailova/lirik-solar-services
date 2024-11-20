@@ -81,8 +81,10 @@ const config: Config = {
           "radial-gradient(50% 50% at 50% 50%, #C1DDF8 0%, rgba(193, 221, 248, 0) 100%)",
         whiteGradient:
           "radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, rgba(255, 255, 255, 0) 100%)",
-        yellowGradient:
+        yellowGradientDown:
           "linear-gradient(180deg, rgba(255, 232, 165, 0.2) 0%, #FDBD00 100%)",
+        yellowGradientUp:
+          "linear-gradient(#FDBD00 0%, rgba(255, 232, 165, 0.2) 100%)",
       },
       keyframes: {
         rotate: {

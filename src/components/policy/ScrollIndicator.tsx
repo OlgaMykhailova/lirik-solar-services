@@ -5,8 +5,10 @@ import React, { useEffect, useRef, useState } from "react";
 export default function ScrollIndicator() {
   const [indicatorTop, setIndicatorTop] = useState(0); // Позиція жовтого елемента в пікселях
   const [isReachedEnd, setIsReachedEnd] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState<boolean | null>(null);
   const parentRef = useRef<HTMLDivElement | null>(null);
   const yellowRef = useRef<HTMLDivElement | null>(null);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const updatePosition = () => {
@@ -44,6 +46,9 @@ export default function ScrollIndicator() {
 
         setIsReachedEnd(newTop < maxTop ? false : true);
 
+        setIsScrollingDown(scrollPosition > lastScrollY.current);
+        lastScrollY.current = scrollPosition;
+
         console.log(newTop);
         console.log(scrollPosition);
       }
@@ -72,9 +77,9 @@ export default function ScrollIndicator() {
     >
       <div
         ref={yellowRef}
-        className={`absolute left-0 w-[3px] h-[450px] bg-yellowGradient transition duration-[1500ms] ease-out ${
+        className={`absolute left-0 w-[3px] h-[450px] transition duration-[1500ms] ease-out ${
           isReachedEnd ? "opacity-0" : "opacity-100"
-        }`}
+        } ${isScrollingDown ? "bg-yellowGradientDown" : "bg-yellowGradientUp"}`}
         style={{ transform: `translateY(${indicatorTop}px)` }}
       ></div>
     </div>
