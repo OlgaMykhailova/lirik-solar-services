@@ -7,6 +7,7 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 export default function About() {
   const t = useTranslations("about");
+
   return (
     <div>
       <div
