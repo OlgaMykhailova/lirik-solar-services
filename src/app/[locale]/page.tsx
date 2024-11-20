@@ -18,7 +18,7 @@ export default function Home() {
     <div className="pt-[72px]">
       <Hero />
       <div className="relative">
-        <ScrollIndicator className="top-[174px] tab:top-[74px] laptop:top-[94px]" />
+        <ScrollIndicator className="top-[174px] tab:top-[74px] laptop:top-[96px] h-[calc(100%-168px)] tab:h-[calc(100%-64px)] laptop:h-[calc(100%-88px)]" />
         <div className="relative">
           <SunspotBgImages />
           <About />

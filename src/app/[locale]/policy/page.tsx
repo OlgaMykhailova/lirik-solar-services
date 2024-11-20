@@ -16,7 +16,7 @@ export default function Policy() {
   const t = useTranslations("policyPage");
   return (
     <div className="relative h-full pt-[112px] tab:pt-[120px] laptop:pt-[136px] pl-4 tab:pl-6 laptop:pl-0 pb-[146px] tab:pb-[219px] laptop:pb-[305px]">
-      <ScrollIndicator className="top-[118px] tab:top-[130px] laptop:top-[154px]" />
+      <ScrollIndicator className="top-[118px] tab:top-[130px] laptop:top-[154px] h-[calc(100%-112px)] tab:h-[calc(100%-122px)] laptop:h-[calc(100%-148px)]" />
       <Container>
         <SectionTitle className="text-xxmdb tab:text-lgb">
           {t("title")}
