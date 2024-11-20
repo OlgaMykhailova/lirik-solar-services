@@ -5,6 +5,7 @@ import SubTitle from "../shared/titles/SubTitle";
 
 export default function Section1() {
   const t = useTranslations("policyPage.section1");
+
   return (
     <li className="flex flex-col gap-y-4 tab:gap-y-6 laptop:flex-row justify-between">
       <SubTitle className="laptop:w-[25.5%]">{t("title")}</SubTitle>
