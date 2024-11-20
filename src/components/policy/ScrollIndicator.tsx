@@ -46,7 +46,7 @@ export default function ScrollIndicator() {
 
         setIsReachedEnd(newTop < maxTop ? false : true);
 
-        setIsScrollingDown(scrollPosition > lastScrollY.current);
+        setIsScrollingDown(scrollPosition >= lastScrollY.current);
         lastScrollY.current = scrollPosition;
 
         console.log(newTop);
