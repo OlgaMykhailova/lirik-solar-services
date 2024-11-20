@@ -16,52 +16,39 @@ export default function ScrollIndicator() {
       const yellowElement = yellowRef.current;
 
       if (parentElement && yellowElement) {
-        // Отримуємо top батьківського елемента залежно від розміру екрана
         const parentTopOffset =
           parseInt(window.getComputedStyle(parentElement).top, 10) || 0;
 
-        // Отримуємо висоту батьківського елемента та жовтого елемента
         const parentHeight = parentElement.clientHeight;
         const yellowHeight = yellowElement.offsetHeight;
 
-        // Поточна позиція прокрутки сторінки
         const scrollPosition = window.scrollY;
 
-        // Відстань від початку сторінки до верхнього краю батьківського елемента
         const parentOffsetTop =
           parentElement.getBoundingClientRect().top + window.scrollY;
 
-        // Мінімальна та максимальна позиція жовтого елемента
         const minTop = 0;
         const maxTop = parentHeight - yellowHeight;
 
-        // Відносна прокрутка всередині батьківського елемента
         const relativeScroll =
           scrollPosition - (parentOffsetTop - parentTopOffset);
 
-        // Обмеження прокрутки в межах контейнера
         const newTop = Math.min(Math.max(relativeScroll, minTop), maxTop);
 
         setIndicatorTop(newTop);
 
-        setIsReachedEnd(newTop <= maxTop ? false : true);
+        setIsReachedEnd(newTop < maxTop ? false : true);
 
-        setIsScrollingDown(scrollPosition >= lastScrollY.current);
+        setIsScrollingDown(scrollPosition > lastScrollY.current);
         lastScrollY.current = scrollPosition;
-
-        console.log(newTop);
-        console.log(scrollPosition);
       }
     };
 
-    // Додаємо обробники подій
     window.addEventListener("scroll", updatePosition);
     window.addEventListener("resize", updatePosition);
 
-    // Оновлюємо позицію при завантаженні компонента
     updatePosition();
 
-    // Очищення обробників подій при розмонтаженні компонента
     return () => {
       window.removeEventListener("scroll", updatePosition);
       window.removeEventListener("resize", updatePosition);
