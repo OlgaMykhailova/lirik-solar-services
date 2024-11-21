@@ -18,7 +18,7 @@ export default function SolarStationItem({
   setIsGrid,
 }: SolarStationItemProps) {
   return (
-    <div className="laptop:flex flex-col gap-y-[15.5%] h-full">
+    <div className="laptop:flex flex-col gap-y-[32px] h-full">
       <div>
         <SubTitle className="h-[50px] tab:h-auto mb-2 laptop:mb-6">
           {title}
