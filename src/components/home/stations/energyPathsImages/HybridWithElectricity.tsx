@@ -16,16 +16,27 @@ export default function HybridWIthElectricity({
       xmlns="http://www.w3.org/2000/svg"
       className={`w-full h-full ${className}`}
     >
-      <rect
-        width="2"
-        height="82.4461"
-        transform="matrix(0.464901 0.885363 0.885363 -0.464901 78 345.61)"
+      <circle
+        cx="259"
+        cy="262"
+        r="3"
+        transform="rotate(180 259 262)"
         fill="#0B70BC"
       />
-      <rect
-        width="2"
-        height="99.8391"
-        transform="matrix(0.467502 0.883992 0.883992 -0.467502 24 343.675)"
+      <circle
+        cx="259"
+        cy="253"
+        r="3"
+        transform="rotate(180 259 253)"
+        fill="#51626F"
+      />
+      <circle cx="259" cy="244" r="3" fill="#FFA600" />
+      <path
+        d="M77.1406 344.551L79.3047 345.66L150.925 308.052L149.995 306.281L77.1406 344.551Z"
+        fill="#0B70BC"
+      />
+      <path
+        d="M22.1247 344.668L24.316 345.77L114.813 297.911L113.878 296.143L22.1247 344.668Z"
         fill="#FFA600"
       />
       <circle
@@ -37,17 +48,17 @@ export default function HybridWIthElectricity({
       />
       <rect
         x="278"
-        y="298"
+        y="299"
         width="2"
-        height="34"
-        transform="rotate(-180 278 298)"
+        height="36"
+        transform="rotate(-180 278 299)"
         fill="#0B70BC"
       />
       <rect
         x="368"
         y="253"
         width="2.00001"
-        height="127"
+        height="128"
         transform="rotate(-180 368 253)"
         fill="#51626F"
       />
@@ -55,7 +66,7 @@ export default function HybridWIthElectricity({
         x="368"
         y="281"
         width="2"
-        height="17"
+        height="19"
         transform="rotate(-180 368 281)"
         fill="#0B70BC"
       />
@@ -71,51 +82,51 @@ export default function HybridWIthElectricity({
         x="438"
         y="119"
         width="2"
-        height="19"
+        height="20"
         transform="rotate(-90 438 119)"
         fill="#0B70BC"
       />
       <rect
-        x="367"
+        x="366"
         y="127"
         width="2"
-        height="36"
-        transform="rotate(-90 367 127)"
+        height="37"
+        transform="rotate(-90 366 127)"
         fill="#51626F"
       />
       <rect
         width="2"
-        height="165.314"
-        transform="matrix(-0.462106 -0.886825 -0.886825 0.462106 278.528 298.773)"
+        height="162.933"
+        transform="matrix(-0.462106 -0.886825 -0.886825 0.462106 278.015 299.042)"
         fill="#0B70BC"
       />
       <rect
         width="2"
-        height="61.5051"
-        transform="matrix(0.461351 -0.887218 -0.887218 -0.461351 132.794 373.947)"
+        height="61.0139"
+        transform="matrix(0.461351 -0.887218 -0.887218 -0.461351 133.53 374.33)"
         fill="#0B70BC"
       />
       <rect
         width="2"
-        height="181.618"
-        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 295.907 317.059)"
+        height="184.776"
+        transform="matrix(-0.4614 -0.887192 -0.887192 0.4614 296.016 317.003)"
         fill="#FFA600"
       />
       <rect
         width="2"
-        height="121.863"
-        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.165 402.295)"
+        height="122.755"
+        transform="matrix(0.46406 -0.885804 -0.885804 -0.46406 132.095 402.258)"
         fill="#FFA600"
       />
       <rect
-        x="367"
+        x="368"
         y="252"
         width="2"
-        height="110"
-        transform="rotate(90 367 252)"
+        height="111"
+        transform="rotate(90 368 252)"
         fill="#51626F"
       />
-      <rect x="456" y="119" width="2" height="163" fill="#0B70BC" />
+      <rect x="456" y="119" width="2" height="162" fill="#0B70BC" />
       <rect
         x="368"
         y="261"
@@ -146,18 +157,13 @@ export default function HybridWIthElectricity({
         stroke="white"
       />
       <path
-        d="M240 132.5C241.933 132.5 243.5 134.067 243.5 136C243.5 137.933 241.933 139.5 240 139.5C238.067 139.5 236.5 137.933 236.5 136C236.5 134.067 238.067 132.5 240 132.5Z"
-        fill="#FFA600"
-        stroke="white"
-      />
-      <path
         d="M261.5 262C261.5 263.933 259.933 265.5 258 265.5C256.067 265.5 254.5 263.933 254.5 262C254.5 260.067 256.067 258.5 258 258.5C259.933 258.5 261.5 260.067 261.5 262Z"
         fill="#0B70BC"
         stroke="white"
       />
       <rect
         width="1.99998"
-        height="181"
+        height="182"
         transform="matrix(-1 -8.74228e-08 -8.74228e-08 1 296 135)"
         fill="#FFA600"
       />
@@ -257,10 +263,24 @@ export default function HybridWIthElectricity({
         transform="rotate(180 385 126)"
         fill="#51626F"
       />
+      <circle
+        cx="403"
+        cy="126"
+        r="3"
+        transform="rotate(180 403 126)"
+        fill="#51626F"
+      />
       <path
         d="M400.5 126C400.5 124.067 402.067 122.5 404 122.5C405.933 122.5 407.5 124.067 407.5 126C407.5 127.933 405.933 129.5 404 129.5C402.067 129.5 400.5 127.933 400.5 126Z"
         fill="#51626F"
         stroke="white"
+      />
+      <circle
+        cx="277"
+        cy="262"
+        r="3"
+        transform="rotate(180 277 262)"
+        fill="#0B70BC"
       />
       <circle
         cx="277"
@@ -409,6 +429,13 @@ export default function HybridWIthElectricity({
         transform="rotate(180 457 118)"
         fill="#0B70BC"
       />
+      <circle
+        cx="439"
+        cy="118"
+        r="3"
+        transform="rotate(180 439 118)"
+        fill="#0B70BC"
+      />
       <path
         d="M441.5 118C441.5 119.933 439.933 121.5 438 121.5C436.067 121.5 434.5 119.933 434.5 118C434.5 116.067 436.067 114.5 438 114.5C439.933 114.5 441.5 116.067 441.5 118Z"
         fill="#0B70BC"
@@ -430,100 +457,121 @@ export default function HybridWIthElectricity({
       />
       <circle
         cx="259"
-        cy="308"
+        cy="307.37"
         r="3"
-        transform="rotate(180 259 308)"
+        transform="rotate(180 259 307.37)"
         fill="#0B70BC"
       />
       <circle
         cx="241"
-        cy="317"
+        cy="316.74"
         r="3"
-        transform="rotate(180 241 317)"
+        transform="rotate(180 241 316.74)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="241"
+        cy="316.74"
+        r="3"
+        transform="rotate(180 241 316.74)"
         fill="#0B70BC"
       />
       <circle
         cx="223"
-        cy="326"
+        cy="306"
         r="3"
-        transform="rotate(180 223 326)"
+        transform="rotate(180 223 306)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="223"
+        cy="326.11"
+        r="3"
+        transform="rotate(180 223 326.11)"
         fill="#0B70BC"
       />
       <circle
         cx="205"
-        cy="336"
+        cy="335.48"
         r="3"
-        transform="rotate(180 205 336)"
+        transform="rotate(180 205 335.48)"
         fill="#0B70BC"
       />
       <circle
         cx="187"
-        cy="345"
+        cy="344.85"
         r="3"
-        transform="rotate(180 187 345)"
+        transform="rotate(180 187 344.85)"
         fill="#0B70BC"
       />
       <circle
         cx="169"
-        cy="354"
+        cy="354.22"
         r="3"
-        transform="rotate(180 169 354)"
+        transform="rotate(180 169 354.22)"
         fill="#0B70BC"
       />
       <circle
         cx="133"
-        cy="373"
+        cy="372.96"
         r="3"
-        transform="rotate(180 133 373)"
+        transform="rotate(180 133 372.96)"
         fill="#0B70BC"
       />
       <circle
         cx="151"
-        cy="364"
+        cy="363.59"
         r="3"
-        transform="rotate(180 151 364)"
+        transform="rotate(180 151 363.59)"
         fill="#0B70BC"
       />
       <circle
-        cx="116"
-        cy="364"
+        cx="115"
+        cy="363"
         r="3"
-        transform="rotate(180 116 364)"
+        transform="rotate(180 115 363)"
         fill="#0B70BC"
       />
       <circle
-        cx="98"
-        cy="355"
+        cx="97"
+        cy="354"
         r="3"
-        transform="rotate(180 98 355)"
+        transform="rotate(180 97 354)"
         fill="#0B70BC"
       />
       <circle
-        cx="80"
+        cx="79"
         cy="345"
         r="3"
-        transform="rotate(180 80 345)"
+        transform="rotate(180 79 345)"
         fill="#0B70BC"
       />
       <circle
-        cx="98"
-        cy="336"
+        cx="97"
+        cy="335"
         r="3"
-        transform="rotate(180 98 336)"
+        transform="rotate(180 97 335)"
         fill="#0B70BC"
       />
       <circle
-        cx="116"
-        cy="326"
+        cx="115"
+        cy="325"
         r="3"
-        transform="rotate(180 116 326)"
+        transform="rotate(180 115 325)"
         fill="#0B70BC"
       />
       <circle
-        cx="134"
-        cy="317"
+        cx="133"
+        cy="316"
         r="3"
-        transform="rotate(180 134 317)"
+        transform="rotate(180 133 316)"
+        fill="#0B70BC"
+      />
+      <circle
+        cx="151"
+        cy="307"
+        r="3"
+        transform="rotate(180 151 307)"
         fill="#0B70BC"
       />
       <circle cx="277" cy="136" r="3" fill="#FFA600" />
@@ -535,15 +583,15 @@ export default function HybridWIthElectricity({
       <circle cx="295" cy="208" r="3" fill="#FFA600" />
       <circle cx="295" cy="226" r="3" fill="#FFA600" />
       <circle cx="295" cy="244" r="3" fill="#FFA600" />
+      <circle cx="295" cy="244" r="3" fill="#FFA600" />
       <circle cx="277" cy="244" r="3" fill="#FFA600" />
       <circle cx="295" cy="262" r="3" fill="#FFA600" />
       <circle cx="295" cy="280" r="3" fill="#FFA600" />
       <circle cx="295" cy="298" r="3" fill="#FFA600" />
       <circle cx="295" cy="316" r="3" fill="#FFA600" />
-      <circle cx="277" cy="326" r="3" fill="#FFA600" />
       <circle cx="259" cy="335" r="3" fill="#FFA600" />
       <circle cx="241" cy="344" r="3" fill="#FFA600" />
-      <circle cx="223" cy="353" r="3" fill="#FFA600" />
+      <circle cx="223" cy="354" r="3" fill="#FFA600" />
       <circle cx="205" cy="363" r="3" fill="#FFA600" />
       <circle cx="187" cy="373" r="3" fill="#FFA600" />
       <circle cx="169" cy="382" r="3" fill="#FFA600" />
@@ -553,10 +601,10 @@ export default function HybridWIthElectricity({
       <circle cx="79" cy="373" r="3" fill="#FFA600" />
       <circle cx="61" cy="364" r="3" fill="#FFA600" />
       <circle cx="43" cy="354" r="3" fill="#FFA600" />
-      <circle cx="25" cy="345" r="3" fill="#FFA600" />
+      <circle cx="25" cy="344" r="3" fill="#FFA600" />
       <circle cx="43" cy="335" r="3" fill="#FFA600" />
       <path
-        d="M156.5 307C156.5 308.933 154.933 310.5 153 310.5C151.067 310.5 149.5 308.933 149.5 307C149.5 305.067 151.067 303.5 153 303.5C154.933 303.5 156.5 305.067 156.5 307Z"
+        d="M154.5 307C154.5 308.933 152.933 310.5 151 310.5C149.067 310.5 147.5 308.933 147.5 307C147.5 305.067 149.067 303.5 151 303.5C152.933 303.5 154.5 305.067 154.5 307Z"
         fill="#0B70BC"
         stroke="white"
       />
@@ -572,6 +620,20 @@ export default function HybridWIthElectricity({
         cy="306"
         r="3"
         transform="rotate(180 97 306)"
+        fill="#FFA600"
+      />
+      <circle
+        cx="115"
+        cy="296"
+        r="3"
+        transform="rotate(180 115 296)"
+        fill="#FFA600"
+      />
+      <circle
+        cx="115"
+        cy="296"
+        r="3"
+        transform="rotate(180 115 296)"
         fill="#FFA600"
       />
       <path
@@ -591,12 +653,12 @@ export default function HybridWIthElectricity({
         x="241.662"
         y="316.135"
         width="2.00001"
-        height="29.7787"
+        height="22.7342"
         transform="rotate(120.547 241.662 316.135)"
         fill="#0B70BC"
       />
       <path
-        d="M218.5 302C218.5 303.933 216.933 305.5 215 305.5C213.067 305.5 211.5 303.933 211.5 302C211.5 300.067 213.067 298.5 215 298.5C216.933 298.5 218.5 300.067 218.5 302Z"
+        d="M225.5 306C225.5 307.933 223.933 309.5 222 309.5C220.067 309.5 218.5 307.933 218.5 306C218.5 304.067 220.067 302.5 222 302.5C223.933 302.5 225.5 304.067 225.5 306Z"
         fill="#0B70BC"
         stroke="white"
       />
@@ -610,11 +672,20 @@ export default function HybridWIthElectricity({
       />
       <circle cx="259" cy="315" r="3" fill="#FFA600" />
       <circle cx="241" cy="304" r="3" fill="#FFA600" />
+      <circle cx="223" cy="294" r="3" fill="#FFA600" />
       <path
-        d="M225.5 293C225.5 294.933 223.933 296.5 222 296.5C220.067 296.5 218.5 294.933 218.5 293C218.5 291.067 220.067 289.5 222 289.5C223.933 289.5 225.5 291.067 225.5 293Z"
+        d="M225.5 294C225.5 295.933 223.933 297.5 222 297.5C220.067 297.5 218.5 295.933 218.5 294C218.5 292.067 220.067 290.5 222 290.5C223.933 290.5 225.5 292.067 225.5 294Z"
         fill="#FFA600"
         stroke="white"
       />
+      <circle cx="241" cy="136" r="3" fill="#FFA600" />
+      <path
+        d="M240 132.5C241.933 132.5 243.5 134.067 243.5 136C243.5 137.933 241.933 139.5 240 139.5C238.067 139.5 236.5 137.933 236.5 136C236.5 134.067 238.067 132.5 240 132.5Z"
+        fill="#FFA600"
+        stroke="white"
+      />
+      <circle cx="277" cy="326" r="3" fill="#FFA600" />
+      <circle cx="277" cy="326" r="3" fill="#FFA600" />
     </svg>
   );
 }
