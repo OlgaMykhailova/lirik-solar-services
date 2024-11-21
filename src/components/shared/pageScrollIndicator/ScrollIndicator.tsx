@@ -34,7 +34,7 @@ export default function ScrollIndicator({
 
       const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
 
-      if (isAligned || indicatorTop < 0.05) {
+      if (isAligned) {
         button.style.setProperty("--div-opacity", "100");
       } else {
         button.style.setProperty("--div-opacity", "0");
