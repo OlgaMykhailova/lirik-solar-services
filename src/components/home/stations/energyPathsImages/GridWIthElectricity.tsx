@@ -25,6 +25,7 @@ export default function GridWIthElectricity({
         fill="#0B70BC"
       />
       <circle
+        className="animate-circlesRight"
         cx="259"
         cy="253"
         r="3"
@@ -41,6 +42,7 @@ export default function GridWIthElectricity({
         fill="#FFA600"
       />
       <circle
+        className="animate-circlesRight"
         cx="295"
         cy="253"
         r="3"
@@ -174,6 +176,7 @@ export default function GridWIthElectricity({
         stroke="white"
       />
       <circle
+        className="animate-circlesRight"
         cx="313"
         cy="253"
         r="3"
@@ -181,6 +184,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesRight"
         cx="277"
         cy="253"
         r="3"
@@ -188,6 +192,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesRight"
         cx="331"
         cy="253"
         r="3"
@@ -195,6 +200,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesRight"
         cx="349"
         cy="253"
         r="3"
@@ -202,6 +208,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="253"
         r="3"
@@ -209,6 +216,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="217"
         r="3"
@@ -216,6 +224,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="235"
         r="3"
@@ -223,6 +232,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="199"
         r="3"
@@ -230,6 +240,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="181"
         r="3"
@@ -237,6 +248,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="163"
         r="3"
@@ -244,6 +256,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesUp"
         cx="367"
         cy="145"
         r="3"
@@ -251,6 +264,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesRight"
         cx="367"
         cy="126"
         r="3"
@@ -258,6 +272,7 @@ export default function GridWIthElectricity({
         fill="#51626F"
       />
       <circle
+        className="animate-circlesRight"
         cx="385"
         cy="126"
         r="3"
@@ -600,50 +615,247 @@ export default function GridWIthElectricity({
         transform="rotate(180 151 307)"
         fill="#0B70BC"
       />
-      <circle cx="277" cy="136" r="3" fill="#FFA600" />
-      <circle cx="259" cy="136" r="3" fill="#FFA600" />
-      <circle cx="295" cy="172" r="3" fill="#FFA600" />
-      <circle cx="295" cy="154" r="3" fill="#FFA600" />
-      <circle cx="295" cy="136" r="3" fill="#FFA600" />
-      <circle cx="295" cy="190" r="3" fill="#FFA600" />
-      <circle cx="295" cy="208" r="3" fill="#FFA600" />
-      <circle cx="295" cy="226" r="3" fill="#FFA600" />
-      <circle cx="295" cy="244" r="3" fill="#FFA600" />
-      <circle cx="295" cy="244" r="3" fill="#FFA600" />
-      <circle cx="277" cy="244" r="3" fill="#FFA600" />
-      <circle cx="295" cy="262" r="3" fill="#FFA600" />
-      <circle cx="295" cy="280" r="3" fill="#FFA600" />
-      <circle cx="295" cy="298" r="3" fill="#FFA600" />
-      <circle cx="295" cy="316" r="3" fill="#FFA600" />
-      <circle cx="259" cy="335" r="3" fill="#FFA600" />
-      <circle cx="241" cy="344" r="3" fill="#FFA600" />
-      <circle cx="223" cy="353" r="3" fill="#FFA600" />
-      <circle cx="205" cy="363" r="3" fill="#FFA600" />
-      <circle cx="187" cy="373" r="3" fill="#FFA600" />
-      <circle cx="169" cy="382" r="3" fill="#FFA600" />
-      <circle cx="151" cy="392" r="3" fill="#FFA600" />
-      <circle cx="115" cy="393" r="3" fill="#FFA600" />
-      <circle cx="97" cy="383" r="3" fill="#FFA600" />
-      <circle cx="79" cy="373" r="3" fill="#FFA600" />
-      <circle cx="61" cy="364" r="3" fill="#FFA600" />
-      <circle cx="43" cy="354" r="3" fill="#FFA600" />
-      <circle cx="25" cy="344" r="3" fill="#FFA600" />
-      <circle cx="43" cy="335" r="3" fill="#FFA600" />
+      <circle
+        className="animate-circlesRight"
+        cx="277"
+        cy="136"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRight"
+        cx="259"
+        cy="136"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="172"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="154"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="136"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="190"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="208"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="226"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeft"
+        cx="295"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRight"
+        cx="259"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRight"
+        cx="277"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeft"
+        cx="277"
+        cy="244"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="262"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="280"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesDown"
+        cx="295"
+        cy="298"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="295"
+        cy="316"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="259"
+        cy="334.74"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="241"
+        cy="344.11"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="223"
+        cy="353.48"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="205"
+        cy="362.85"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="187"
+        cy="372.22"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="169"
+        cy="381.59"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="151"
+        cy="390.96"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="115"
+        cy="391.93"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="97"
+        cy="382.56"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="79"
+        cy="373.19"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="61"
+        cy="363.82"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="43"
+        cy="354"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRightUp"
+        cx="25"
+        cy="344"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRightUp"
+        cx="43"
+        cy="334.63"
+        r="3"
+        fill="#FFA600"
+      />
       <path
         d="M154.5 307C154.5 308.933 152.933 310.5 151 310.5C149.067 310.5 147.5 308.933 147.5 307C147.5 305.067 149.067 303.5 151 303.5C152.933 303.5 154.5 305.067 154.5 307Z"
         fill="#0B70BC"
         stroke="white"
       />
       <circle
+        className="animate-circlesRightUp"
         cx="79"
-        cy="316"
+        cy="315.89"
         r="3"
         transform="rotate(180 79 316)"
         fill="#FFA600"
       />
       <circle
+        className="animate-circlesRightUp"
         cx="97"
-        cy="306"
+        cy="306.52"
         r="3"
         transform="rotate(180 97 306)"
         fill="#FFA600"
@@ -668,20 +880,39 @@ export default function GridWIthElectricity({
         stroke="white"
       />
       <circle
+        className="animate-circlesRightUp"
         cx="61"
-        cy="325"
+        cy="325.26"
         r="3"
         transform="rotate(180 61 325)"
         fill="#FFA600"
       />
-      <circle cx="133" cy="401" r="3" fill="#FFA600" />
-      <circle cx="241" cy="136" r="3" fill="#FFA600" />
+      <circle
+        className="animate-circlesLeftUp"
+        cx="133"
+        cy="401.3"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRight"
+        cx="241"
+        cy="136"
+        r="3"
+        fill="#FFA600"
+      />
       <path
         d="M240 132.5C241.933 132.5 243.5 134.067 243.5 136C243.5 137.933 241.933 139.5 240 139.5C238.067 139.5 236.5 137.933 236.5 136C236.5 134.067 238.067 132.5 240 132.5Z"
         fill="#FFA600"
         stroke="white"
       />
-      <circle cx="277" cy="326" r="3" fill="#FFA600" />
+      <circle
+        className="animate-circlesLeftDown"
+        cx="277"
+        cy="325.37"
+        r="3"
+        fill="#FFA600"
+      />
     </svg>
   );
 }
