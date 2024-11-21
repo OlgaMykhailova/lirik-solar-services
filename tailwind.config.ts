@@ -97,18 +97,81 @@ const config: Config = {
             transform: "rotate(360deg)",
           },
         },
-        trsx40: {
+        moveLeft: {
           "0%": {
             transform: "translateZ(0)",
           },
           "100%": {
-            transform: "translateX(40px)",
+            transform: "translateX(-18px)",
+          },
+        },
+        moveRight: {
+          "0%": {
+            transform: "translateZ(0)",
+          },
+          "100%": {
+            transform: "translateX(18px)",
+          },
+        },
+        moveUp: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(-18px)",
+          },
+        },
+        moveDown: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(18px)",
+          },
+        },
+        moveLeftDown: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(9.37px) translateX(-18px)",
+          },
+        },
+        moveLeftUp: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(-9.37px) translateX(-18px)",
+          },
+        },
+        moveRightUp: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(-9.37px) translateX(18px)",
+          },
+        },
+        moveRightDown: {
+          "0%": {
+            transform: "translateX(0)",
+          },
+          "100%": {
+            transform: "translateY(9.37px) translateX(18px)",
           },
         },
       },
       animation: {
         rotation: "rotate 1600ms linear infinite",
-        circles: "trsx40 1s linear infinite both",
+        circlesRight: "moveRight 1s linear infinite both",
+        circlesUp: "moveUp 1s linear infinite both",
+        circlesLeft: "moveLeft 1s linear infinite both",
+        circlesDown: "moveDown 1s linear infinite both",
+        circlesLeftDown: "moveLeftDown 1s linear infinite both",
+        circlesLeftUp: "moveLeftUp 1s linear infinite both",
+        circlesRightUp: "moveRightUp 1s linear infinite both",
+        circlesRightDown: "moveRightDown 1s linear infinite both",
       },
     },
   },
