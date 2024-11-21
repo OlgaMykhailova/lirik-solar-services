@@ -16,7 +16,7 @@ export default function GridButtons({
 }: GridButtonsProps) {
   return (
     <div>
-      <div className={`flex-col gap-y-6 justify-between mt-auto ${className}`}>
+      <div className={`flex-col gap-y-6 justify-between ${className}`}>
         <div
           data-label="with grid"
           className="relative ml-20 before:content-[''] before:absolute before:top-1/2 before:left-[-110px] laptop:before:left-[-106px] 
