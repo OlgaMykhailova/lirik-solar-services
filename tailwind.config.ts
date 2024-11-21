@@ -85,7 +85,7 @@ const config: Config = {
           "linear-gradient(180deg, rgba(255, 232, 165, 0.2) 0%, #FDBD00 100%)",
         yellowGradientUp:
           "linear-gradient(#FDBD00 0%, rgba(255, 232, 165, 0.2) 100%)",
-          yellowGradientRight:
+        yellowGradientRight:
           "linear-gradient(90deg, #FDBD00 0%, rgba(255, 232, 165, 0.2) 100%)",
       },
       keyframes: {
@@ -97,9 +97,18 @@ const config: Config = {
             transform: "rotate(360deg)",
           },
         },
+        trsx40: {
+          "0%": {
+            transform: "translateZ(0)",
+          },
+          "100%": {
+            transform: "translateX(40px)",
+          },
+        },
       },
       animation: {
         rotation: "rotate 1600ms linear infinite",
+        circles: "trsx40 1s linear infinite both",
       },
     },
   },
