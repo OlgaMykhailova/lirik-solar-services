@@ -128,13 +128,6 @@ export default function EssNoElectricity({
         fill="#FFA600"
       />
       <circle
-        cx="295"
-        cy="262"
-        r="3"
-        transform="rotate(180 295 262)"
-        fill="#0B70BC"
-      />
-      <circle
         cx="439"
         cy="118"
         r="3"
