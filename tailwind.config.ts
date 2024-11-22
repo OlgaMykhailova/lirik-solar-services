@@ -72,6 +72,9 @@ const config: Config = {
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
       },
+      transitionTimingFunction: {
+        gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",
+      },
       backgroundImage: {
         sky: "url('/images/bgImages/skyBgImage.webp')",
         skyLight: "url('/images/bgImages/skyLightBgImage.webp')",
