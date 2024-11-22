@@ -484,6 +484,13 @@ export default function AutonomousWIthElectricity({
       />
       <circle
         className="animate-circlesRight"
+        cx="241"
+        cy="136"
+        r="3"
+        fill="#FFA600"
+      />
+      <circle
+        className="animate-circlesRight"
         cx="259"
         cy="136"
         r="3"
