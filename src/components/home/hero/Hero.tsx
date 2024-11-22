@@ -13,8 +13,8 @@ export default function Hero() {
         width="1478"
         height="951"
         priority
-        className="absolute z-10 -bottom-2 -right-[8.8%] min-w-[334px] tab:min-w-[593px] w-[83%] tab:w-[67%] laptop:w-[57.7%] 
-        laptop:max-w-[1108px] h-auto"
+        className="absolute z-10 left-[26.11%] tab:left-[31%] laptop:left-[47%] -bottom-2 min-w-[449px] object-cover object-left tab:min-w-[593px] w-[83%] tab:w-[67%] laptop:w-[57.7%] 
+        laptop:max-w-[1030px] h-auto"
       />
     </section>
   );
