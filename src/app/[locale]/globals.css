@@ -19,9 +19,8 @@
   :root {
   }
 }
-
+html,
 body {
-  width: 100%;
   overflow-x: hidden;
   color: var(--black);
   background: var(--white);
