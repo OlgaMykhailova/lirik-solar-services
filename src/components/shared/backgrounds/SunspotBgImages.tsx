@@ -12,7 +12,7 @@ export default function SunspotBgImages() {
         if (entry.isIntersecting) {
           setTimeout(() => {
             setIsVisible(true);
-          }, 1800);
+          }, 1000);
         }
       },
       { threshold: 0.5 }
