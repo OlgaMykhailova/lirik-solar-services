@@ -47,7 +47,7 @@ export default function ScrollIndicator({
 
       const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
 
-      if (isAligned || indicatorTop < 0.05) {
+      if (isAligned) {
         title.style.setProperty("--after-color", "var(--yellow)");
       } else {
         title.style.setProperty("--after-color", "var(--blue)");
@@ -94,7 +94,7 @@ export default function ScrollIndicator({
     const throttledHandleScroll = throttle(() => {
       updatePosition();
       updateSectionAfterStyles();
-    }, 100);
+    }, 20);
 
     window.addEventListener("scroll", throttledHandleScroll);
     throttledHandleScroll();
