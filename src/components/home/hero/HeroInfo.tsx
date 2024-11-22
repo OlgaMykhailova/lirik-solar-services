@@ -38,7 +38,7 @@ export default function HeroInfo() {
          transition duration-[1000ms] ease-gentle ${
            isVisible
              ? "opacity-100 translate-x-0"
-             : "opacity-0 translate-x-[-75px] tab:translate-x-[-95px]"
+             : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"
          }`}
         >
           {t("hero.sunny")}
@@ -49,7 +49,7 @@ export default function HeroInfo() {
         before:bg-white before:opacity-30 transition duration-[1000ms] ease-gentle ${
           isVisible
             ? "opacity-100 translate-x-0"
-            : "opacity-0 translate-x-[-75px] tab:translate-x-[-95px]"
+            : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"
         }}`}
         >
           {t("hero.energy")}
