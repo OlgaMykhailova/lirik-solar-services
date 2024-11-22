@@ -53,7 +53,7 @@ export default function ScrollIndicator({
         title.style.setProperty("--after-color", "var(--blue)");
       }
     });
-  }, [indicatorTop]);
+  }, []);
 
   const updatePosition = useCallback(() => {
     const parentElement = parentRef.current;

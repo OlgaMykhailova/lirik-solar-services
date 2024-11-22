@@ -1,6 +1,6 @@
 "use client";
-import Image from "next/image";
 import { throttle } from "lodash";
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 export const ScrollToTopButton = () => {
