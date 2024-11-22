@@ -35,7 +35,7 @@ export default function HeroInfo() {
         <span
           className={`relative z-10 inline-block px-4 tab:px-[38px] laptop:px-[50px] font-gogh text-lg tab:text-xxl laptop:text-xxxl text-blue before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1
          before:left-0 before:rounded-full before:w-full before:h-14 tab:before:h-[88px] laptop:before:h-[98px] before:bg-white before:opacity-30
-         transition duration-[1000ms] ease-gentle ${
+         transition delay-300 duration-[1000ms] ease-gentle ${
            isVisible
              ? "opacity-100 translate-x-0"
              : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"
@@ -46,7 +46,7 @@ export default function HeroInfo() {
         <span
           className={`absolute z-10 left-[172px] tab:left-[356px] laptop:left-[456px] top-[160px] tab:top-[259px] laptop:top-[300px] inline-block px-4 tab:px-[38px] laptop:px-[50px] align-text-top font-gogh text-lg tab:text-xxl laptop:text-xxxl text-blue 
       before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1 before:left-0 before:rounded-full before:w-full before:h-14 tab:before:h-[88px] laptop:before:h-[98px]
-        before:bg-white before:opacity-30 transition duration-[1000ms] ease-gentle ${
+        before:bg-white before:opacity-30 transition delay-300 duration-[1000ms] ease-gentle ${
           isVisible
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"

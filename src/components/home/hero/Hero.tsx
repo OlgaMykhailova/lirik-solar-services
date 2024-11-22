@@ -21,7 +21,7 @@ export default function Hero() {
         height="951"
         priority
         className={`absolute z-10 left-[26.11%] tab:left-[31%] laptop:left-[47%] -bottom-2 min-w-[449px] object-cover object-left tab:min-w-[593px] w-[83%] tab:w-[67%] laptop:w-[57.7%] 
-        laptop:max-w-[1030px] h-auto transition duration-[1000ms] ease-gentle ${
+        laptop:max-w-[1030px] h-auto transition delay-300 duration-[1000ms] ease-gentle ${
           isVisible
             ? "opacity-100  translate-y-0"
             : "opacity-0 translate-y-[75px] tab:translate-y-[95px]"
