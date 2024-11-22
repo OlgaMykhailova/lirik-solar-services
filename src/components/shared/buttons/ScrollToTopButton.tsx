@@ -1,4 +1,5 @@
 "use client";
+import { throttle } from "lodash";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
@@ -6,15 +7,15 @@ export const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const toggleVisible = () => {
+    const toggleVisible = throttle(() => {
       const scrolled = document.documentElement.scrollTop;
-
       if (scrolled > 800) {
         setIsVisible(true);
-      } else if (scrolled <= 800) {
+      } else {
         setIsVisible(false);
       }
-    };
+    }, 20);
+
     window.addEventListener("scroll", toggleVisible);
     return () => {
       window.removeEventListener("scroll", toggleVisible);
