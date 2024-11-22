@@ -12,7 +12,7 @@ export default function About() {
   return (
     <Section
       id="about"
-      className="relative pt-[162px] tab:pt-[64px] laptop:pt-[80px]"
+      className="relative pt-[162px] tab:pt-[64px] laptop:pt-[80px] overflow-x-clip"
     >
       <AnimatedSun />
       <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
