@@ -33,7 +33,7 @@ export default function MainButton({
         <IconLoader className="animate-rotation" />
       ) : (
         <IconArrow
-          className="text-blue group-disabled:text-backgroundLight transition duration-300 ease-out will-change-transform -translate-x-1 group-enabled:group-hover:translate-x-0 
+          className="text-blue group-disabled:text-blueLight transition duration-300 ease-out will-change-transform -translate-x-1 group-enabled:group-hover:translate-x-0 
       laptop:group-disabled:text-backgroundLight"
         />
       )}

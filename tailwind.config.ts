@@ -74,6 +74,7 @@ const config: Config = {
       },
       transitionTimingFunction: {
         gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",
+        slow: "cubic-bezier(0.4, 0.0, 0.2, 1)",
       },
       backgroundImage: {
         sky: "url('/images/bgImages/skyBgImage.webp')",
