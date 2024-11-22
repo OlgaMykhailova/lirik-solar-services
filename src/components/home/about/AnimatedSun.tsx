@@ -44,7 +44,7 @@ export default function AnimatedSun() {
       transition duration-1000 delay-[800ms] ease-out ${
         isVisible
           ? "translate-x-0 rotate-0"
-          : "translate-x-[110%] rotate-[62deg]"
+          : "translate-x-[120%] rotate-[62deg]"
       }`}
     >
       <Image
