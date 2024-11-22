@@ -1,9 +1,43 @@
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function SunspotBgImages() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            setIsVisible(true);
+          }, 1800);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    const element = document.getElementById("about");
+
+    if (element) {
+      observer.observe(element);
+    }
+
+    return () => {
+      if (element) {
+        observer.unobserve(element);
+      }
+    };
+  }, []);
+
   return (
-    <div className="absolute top-0 left-0 z-[-10] w-full h-full">
+    <div
+      id="sunspot"
+      className={`absolute top-0 left-0 z-[-10] w-full h-full ${
+        isVisible ? "opacity-100" : "opacity-0"
+      } transition duration-1000 ease-out`}
+    >
       <Image
         src="/images/bgImages/sunspotPC.svg"
         alt="sunspot"
