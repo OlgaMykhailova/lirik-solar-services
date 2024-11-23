@@ -72,11 +72,17 @@ const config: Config = {
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
       },
+      transitionTimingFunction: {
+        gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",
+        slow: "cubic-bezier(0.4, 0.0, 0.2, 1)",
+      },
       backgroundImage: {
         sky: "url('/images/bgImages/skyBgImage.webp')",
         skyLight: "url('/images/bgImages/skyLightBgImage.webp')",
         headerGradient:
-          "linear-gradient(270.01deg, #83B6E3 0%, #84B8E4 11.64%, #82B6E3 25.31%, #84B7E3 37.78%, #87B8E4 50.6%, #82B5E1 77.04%, #76ADDB 99.87%)",
+          "linear-gradient(270deg, #89BBE6 0%, #87B8E4 37.71%, #89BAE4 64.25%, #80B3DF 89.91%, #79B0DC 100%)",
+        heroGradient:
+          "linear-gradient(244.95deg, rgba(255, 255, 255, 0) 29.01%, rgba(11, 103, 179, 0.4) 89.92%), linear-gradient(0deg, rgba(255, 255, 255, 0) 71.87%, rgba(11, 103, 178, 0.4) 100%), linear-gradient(0deg, #8FC0EB, #8FC0EB)",
         blueGradient:
           "radial-gradient(50% 50% at 50% 50%, #C1DDF8 0%, rgba(193, 221, 248, 0) 100%)",
         whiteGradient:

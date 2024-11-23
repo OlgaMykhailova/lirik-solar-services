@@ -8,7 +8,7 @@ export default function ModalBgImages() {
       alt="sunspot"
       width="395"
       height="411"
-      className="block absolute top-0 right-0 w-full h-auto overflow-hidden"
+      className="block absolute top-0 right-0 w-[90%] h-auto overflow-hidden"
     />
   );
 }
