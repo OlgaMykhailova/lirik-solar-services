@@ -9,7 +9,7 @@ import { useOnScreen } from "@/hooks/useOnScreen";
 export default function HeroInfo() {
   const t = useTranslations();
 
-  const isVisible = useOnScreen("hero");
+  const { isVisible } = useOnScreen("hero");
 
   return (
     <div>

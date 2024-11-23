@@ -30,7 +30,7 @@ export default function SolarStationItem({
       <GridButtons
         isGrid={isGrid}
         setIsGrid={setIsGrid}
-        className="hidden laptop:flex"
+        className="hidden tab:flex"
       />
     </div>
   );

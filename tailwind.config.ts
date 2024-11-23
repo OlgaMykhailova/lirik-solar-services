@@ -24,6 +24,7 @@ const config: Config = {
         blue: "#0B70BC",
         blueMedium: "#C1DDF8",
         blueLight: "#8EC6F0",
+        blueHeader: "#8FC0EB",
         backgroundLight: "#D7E8F8",
         grey: "rgba(8, 63, 126, 0.1)",
         black: "#040E2F",
