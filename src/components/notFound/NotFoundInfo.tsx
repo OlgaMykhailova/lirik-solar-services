@@ -16,7 +16,9 @@ export default function NotFoundInfo() {
       <h1 className="mb-4 laptop:mb-10 font-gogh text-lgbb tab:text-xlbb laptop:text-xxlbb">
         {t("notFoundPage.title").toUpperCase()}
       </h1>
-      <p className="mb-8 text-center">{t("notFoundPage.description")}</p>
+      <p className="mb-8 text-center tab:max-w-[50%]">
+        {t("notFoundPage.description")}
+      </p>
       <Link href="/" locale={locale} className="outline-none">
         <SecondaryButton>{t("buttons.goToHome")}</SecondaryButton>
       </Link>
