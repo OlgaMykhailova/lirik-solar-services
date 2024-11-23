@@ -53,10 +53,13 @@ const config: Config = {
         mdb: ["24px", { lineHeight: "32px", fontWeight: "500" }],
         xxmdb: ["28px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
+        lgbb: ["32px", { lineHeight: "40px", fontWeight: "800" }],
         lg: ["36px", { lineHeight: "50px", fontWeight: "400" }],
+        largeb: ["40px", { lineHeight: "56px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
         xlbb: ["48px", { lineHeight: "48px", fontWeight: "800" }],
         xxlb: ["56px", { lineHeight: "77px", fontWeight: "500" }],
+        xxlbb: ["56px", { lineHeight: "77px", fontWeight: "800" }],
         xxl: ["64px", { lineHeight: "77px", fontWeight: "400" }],
         xxxl: ["72px", { lineHeight: "99px", fontWeight: "400" }],
         xxxlb: ["72px", { lineHeight: "99px", fontWeight: "800" }],
@@ -81,9 +84,9 @@ const config: Config = {
         sky: "url('/images/bgImages/skyBgImage.webp')",
         skyLight: "url('/images/bgImages/skyLightBgImage.webp')",
         headerGradient:
-          "linear-gradient(270deg, #89BBE6 0%, #87B8E4 37.71%, #89BAE4 64.25%, #80B3DF 89.91%, #79B0DC 100%)",
+          "linear-gradient(270deg, #A1D3FF 0%, #91C2EE 47.5%, #7FB6E6 68.23%, #5DA0DA 99.89%)",
         heroGradient:
-          "linear-gradient(244.95deg, rgba(255, 255, 255, 0) 29.01%, rgba(11, 103, 179, 0.4) 89.92%), linear-gradient(0deg, rgba(255, 255, 255, 0) 71.87%, rgba(11, 103, 178, 0.4) 100%), linear-gradient(0deg, #8FC0EB, #8FC0EB)",
+          "linear-gradient(245.5deg, #A2D3FF 2.58%, #8FC0EB 40.53%, #2D82CA 99.13%)",
         blueGradient:
           "radial-gradient(50% 50% at 50% 50%, #C1DDF8 0%, rgba(193, 221, 248, 0) 100%)",
         whiteGradient:
