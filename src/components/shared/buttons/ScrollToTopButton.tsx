@@ -1,27 +1,10 @@
 "use client";
-import { throttle } from "lodash";
+
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import IconDoubleArrow from "../icons/IconDoubleArrow";
+import { useOnScreen } from "@/hooks/useOnScreen";
 
 export const ScrollToTopButton = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const toggleVisible = throttle(() => {
-      const scrolled = document.documentElement.scrollTop;
-      if (scrolled > 800) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    }, 20);
-
-    window.addEventListener("scroll", toggleVisible);
-    return () => {
-      window.removeEventListener("scroll", toggleVisible);
-    };
-  }, []);
+  const { isVisible, hasInitialized } = useOnScreen("scroll", { once: false });
 
   const scrollToTop = () => {
     window.scrollTo({
@@ -29,12 +12,14 @@ export const ScrollToTopButton = () => {
       behavior: "smooth",
     });
   };
+
   return (
     <>
+      <div id="scroll" className="absolute h-[800px] top-0"></div>
       <button
         aria-label="scroll to top button"
         className={`${
-          isVisible ? "block" : "hidden"
+          isVisible || !hasInitialized ? "hidden" : "block"
         } group fixed z-20 bottom-[60px] tab:bottom-[70px] right-1 tab:right-2 laptop:right-12 flex items-center justify-center size-14
                 tab:size-20 rounded-full border-[2px] tab:border-[2px] border-blue transition duration-300 ease-out active:scale-95 
                 before:content-[''] before:absolute before:-z-10 before:top-0 before:left-0 before:rounded-full before:size-full 

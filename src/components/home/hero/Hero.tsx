@@ -6,7 +6,7 @@ import { useOnScreen } from "@/hooks/useOnScreen";
 import HeroInfo from "./HeroInfo";
 
 export default function Hero() {
-  const isVisible = useOnScreen("hero");
+  const { isVisible } = useOnScreen("hero");
 
   return (
     <section
