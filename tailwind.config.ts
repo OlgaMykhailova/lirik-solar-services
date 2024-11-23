@@ -52,6 +52,7 @@ const config: Config = {
         mdb: ["24px", { lineHeight: "32px", fontWeight: "500" }],
         xxmdb: ["28px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
+        lgbb: ["32px", { lineHeight: "40px", fontWeight: "800" }],
         lg: ["36px", { lineHeight: "50px", fontWeight: "400" }],
         largeb: ["40px", { lineHeight: "56px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
