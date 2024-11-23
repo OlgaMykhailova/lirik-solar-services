@@ -1,8 +1,8 @@
 import React from "react";
 
 import Image404 from "./Image404";
-import NotFoundInfo from "./NotFoundInfo";
 import ImagePlugConnection from "./ImagePlugConnection";
+import NotFoundInfo from "./NotFoundInfo";
 
 export default function NotFoundPage() {
   return (

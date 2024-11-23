@@ -1,8 +1,10 @@
-import React from "react";
-import Container from "../shared/container/Container";
-import SecondaryButton from "../shared/buttons/SecondaryButton";
-import { Link } from "@/i18n/routing";
 import { useLocale, useTranslations } from "next-intl";
+import React from "react";
+
+import { Link } from "@/i18n/routing";
+
+import SecondaryButton from "../shared/buttons/SecondaryButton";
+import Container from "../shared/container/Container";
 
 export default function NotFoundInfo() {
   const t = useTranslations();
