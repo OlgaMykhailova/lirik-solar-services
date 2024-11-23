@@ -2,6 +2,7 @@
 import { throttle } from "lodash";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import IconDoubleArrow from "../icons/IconDoubleArrow";
 
 export const ScrollToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -42,11 +43,19 @@ export const ScrollToTopButton = () => {
         onClick={scrollToTop}
       >
         <Image
-          src="/images/icons/doubleArrow.svg"
+          src="/images/icons/doubleArrowMob.svg"
           alt="double arrow"
           width="0"
           height="0"
-          className="size-7 tab:size-10 transition duration-300 ease-out-quart will-change-transform translate-y-0 laptop:group-hover:-translate-y-1
+          className="tab:hidden size-7 transition duration-300 ease-out-quart will-change-transform translate-y-0 laptop:group-hover:-translate-y-1
+          group-focus-visible:-translate-y-1 group-active:-translate-y-1"
+        />
+        <Image
+          src="/images/icons/doubleArrowTab.svg"
+          alt="double arrow"
+          width="0"
+          height="0"
+          className="hidden tab:block size-10 transition duration-300 ease-out-quart will-change-transform translate-y-0 laptop:group-hover:-translate-y-1
           group-focus-visible:-translate-y-1 group-active:-translate-y-1"
         />
       </button>
