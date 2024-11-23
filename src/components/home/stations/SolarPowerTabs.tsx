@@ -112,11 +112,6 @@ export default function SolarPowerTabs() {
           <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
           <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
         </div>
-        <GridButtons
-          isGrid={isGrid}
-          setIsGrid={setIsGrid}
-          className="hidden tab:flex laptop:hidden"
-        />
       </div>
     </div>
   );

@@ -33,11 +33,6 @@ export default function EssStation({ isGrid, setIsGrid }: EssStationProps) {
           {isGrid ? <EssWIthElectricity /> : <EssNoElectricity />}
         </div>
       </div>
-      <GridButtons
-        isGrid={isGrid}
-        setIsGrid={setIsGrid}
-        className="hidden tab:flex laptop:hidden tab:mt-8"
-      />
       <div className="tab:hidden flex justify-between max-w-[350px] mt-12">
         <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
         <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
