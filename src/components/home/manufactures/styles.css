@@ -102,7 +102,6 @@
 .swiper.manufacturesSlider {
   width: 312px !important;
   aspect-ratio: 1;
-  height: calc(100% + 40px) !important;
   padding-bottom: 40px !important;
   @media screen and (min-width: 768px) {
     width: 528px !important;
