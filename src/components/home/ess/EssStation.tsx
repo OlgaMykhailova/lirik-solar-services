@@ -1,7 +1,6 @@
 import Image from "next/image";
 import React, { Dispatch, SetStateAction } from "react";
 
-import GridButtons from "@/components/shared/buttons/gridButtons/GridButtons";
 import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
 import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 import ImageLegend from "@/components/shared/elecricityImageLegend/ImageLegend";
