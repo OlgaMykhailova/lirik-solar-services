@@ -6,7 +6,7 @@ import React from "react";
 import { useOnScreen } from "@/hooks/useOnScreen";
 
 export default function AnimatedSun() {
-  const isVisible = useOnScreen("about");
+  const { isVisible } = useOnScreen("about");
 
   return (
     <div

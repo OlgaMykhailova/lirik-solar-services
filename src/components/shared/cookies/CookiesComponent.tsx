@@ -31,7 +31,7 @@ export default function CookiesComponent() {
     <div
       className={`fixed z-[60] left-0 bottom-0 flex items-center justify-center w-full max-h-[300px] tablet:max-h-[168px] laptop:max-h-[155px]
        py-10 px-4 tab:px-9 laptop:px-[100px] bg-skyLight bg-cover ${
-         isAccepted ? "translate-y-[101%]" : "translate-y-0"
+         isAccepted ? "translate-y-[101%]" : "delay-[3000ms] translate-y-0"
        } 
        transition-[transform] duration-[1000ms] ease-out`}
     >

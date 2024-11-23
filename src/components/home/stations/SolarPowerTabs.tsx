@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
-import GridButtons from "@/components/shared/buttons/gridButtons/GridButtons";
 import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
 import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 import { TabType } from "@/types/tab";
@@ -112,11 +111,6 @@ export default function SolarPowerTabs() {
           <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
           <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
         </div>
-        <GridButtons
-          isGrid={isGrid}
-          setIsGrid={setIsGrid}
-          className="hidden tab:flex laptop:hidden"
-        />
       </div>
     </div>
   );
