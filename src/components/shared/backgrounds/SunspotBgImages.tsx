@@ -1,35 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React from "react";
+
+import { useOnScreen } from "@/hooks/useOnScreen";
 
 export default function SunspotBgImages() {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            setIsVisible(true);
-          }, 1000);
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    const element = document.getElementById("about");
-
-    if (element) {
-      observer.observe(element);
-    }
-
-    return () => {
-      if (element) {
-        observer.unobserve(element);
-      }
-    };
-  }, []);
+  const isVisible = useOnScreen("about");
 
   return (
     <div
