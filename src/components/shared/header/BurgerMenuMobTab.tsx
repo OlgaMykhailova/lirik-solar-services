@@ -4,7 +4,6 @@ import React from "react";
 import { Locale } from "@/types/locale";
 
 import Container from "../container/Container";
-
 import SocialLinksList from "../socialLinks/SocialLinksList";
 import CallUsButton from "./callUs/CallUsButton";
 import LocaleSwitcher from "./LocaleSwitcher";
