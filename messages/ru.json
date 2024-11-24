@@ -213,7 +213,7 @@
     "phone": "Телефон",
     "email": "Email",
     "comment": "Комментарий",
-    "namePlaceholder": "Федотенко Анна",
+    "namePlaceholder": "Введите имя",
     "emailPlaceholder": "example@mail.com",
     "phonePlaceholder": "__ ___-__-__",
     "commentPlaceholder": "Введите текст сообщения",
