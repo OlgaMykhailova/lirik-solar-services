@@ -12,7 +12,7 @@ import CustomizedInput from "./formComponents/CustomizedInput";
 import SubmitButton from "./formComponents/SubmitButton";
 import FormDescription from "./FormDescription";
 
-interface ValuesWriteUsFormType {
+export interface ValuesWriteUsFormType {
   name: string;
   email: string;
   phone: string;
@@ -44,8 +44,9 @@ export default function WriteUsForm({
     values: ValuesWriteUsFormType,
     formikHelpers: FormikHelpers<ValuesWriteUsFormType>
   ) => {
+    const applicationName = "Безкоштовна консультація";
     const data =
-      `<b>Заявка "Безкоштовна консультація"</b>\n` +
+      `<b>Заявка "${applicationName}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
       `Email: ${values.email.toLowerCase().trim()}\n` +
       `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
@@ -56,7 +57,9 @@ export default function WriteUsForm({
       setIsLoading,
       setIsError,
       setIsNotificationShown,
-      data
+      data,
+      values,
+      applicationName
     );
   };
 

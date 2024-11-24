@@ -12,7 +12,7 @@ import CustomizedInput from "./formComponents/CustomizedInput";
 import SubmitButton from "./formComponents/SubmitButton";
 import FormDescription from "./FormDescription";
 
-interface ValuesCallBackFormType {
+export interface ValuesCallBackFormType {
   name: string;
   phone: string;
 }
@@ -55,6 +55,8 @@ export default function CallBackForm({
       setIsError,
       setIsNotificationShown,
       data,
+      values,
+      applicationName,
       setIsPopUpShown
     );
   };

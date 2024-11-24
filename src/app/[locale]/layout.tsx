@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
@@ -69,6 +70,10 @@ export default function LocaleLayout({
     <html lang={locale} className="scroll-smooth">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <GoogleTagManager
+          gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
+          gtmScriptUrl={process.env.NEXT_PUBLIC_GTM_SCRIPT_URL}
+        />
       </head>
       <body
         className={`${gogh.variable} ${manrope.className} flex min-h-screen flex-col antialiased text-sm laptop:text-base`}
