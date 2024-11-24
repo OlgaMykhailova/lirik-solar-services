@@ -21,7 +21,8 @@ export default function BurgerMenuButton({
       onClick={toggleHeaderMenuOpen}
       className="group absolute top-2 right-4 z-[60] w-14 h-14 px-[10px] py-[15px] outline-none before:content-['']
        before:absolute before:z-50 before:top-2 before:left-2 before:rounded-full before:size-10 before:opacity-0 before:transition 
-       before:duration-300 before:ease-out active:before:opacity-100 focus-visible:before:opacity-100 laptop:hover:before:opacity-100 before:bg-whiteGradient"
+       before:duration-300 before:ease-out active:before:opacity-100 focus-visible:before:opacity-100 laptop:hover:before:opacity-100 before:bg-whiteGradient
+       before:blur-[10px]"
     >
       <div className="w-full h-full rotate-0 ">
         <span
