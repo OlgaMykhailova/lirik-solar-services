@@ -19,11 +19,14 @@ export default function BurgerMenuButton({
       aria-label="open menu button"
       type="button"
       onClick={toggleHeaderMenuOpen}
-      className="group relative w-14 h-14 px-[10px] py-[15px] outline-none"
+      className="group flex justify-center items-center absolute top-3 right-4 z-[60] w-14 h-14 px-[10px] py-[15px] outline-none before:content-[''] before:absolute 
+      before:z-50 before:top-0 before:left-0 before:rounded-full before:size-full 
+                before:opacity-0 before:transition before:duration-300 before:ease-out active:before:opacity-100 
+                focus-visible:before:opacity-100 laptop:hover:before:opacity-100 before:bg-whiteGradient"
     >
       <div className="w-full h-full rotate-0 ">
         <span
-          className={`block absolute w-full h-[1.8px] rounded-md bg-white active:bg-blue rotate-0 
+          className={`block absolute w-full h-[1.8px] rounded-md bg-white rotate-0 
               transition duration-[600ms] ease-out ${
                 isHeaderMenuOpened
                   ? firstLineTransformStyles
@@ -31,7 +34,7 @@ export default function BurgerMenuButton({
               }`}
         ></span>
         <span
-          className={`block absolute left-0 w-full h-[1.8px] rounded-md bg-white active:bg-blue rotate-0 
+          className={`block absolute left-0 w-full h-[1.8px] rounded-md bg-white rotate-0 
               transition duration-[600ms] ease-out ${
                 isHeaderMenuOpened
                   ? secondLineTransformStyles
@@ -39,7 +42,7 @@ export default function BurgerMenuButton({
               }`}
         ></span>
         <span
-          className={`block absolute left-0 w-full h-[1.8px] rounded-md bg-white active:bg-blue rotate-0  
+          className={`block absolute left-0 w-full h-[1.6px] rounded-md bg-white  rotate-0  
               transition duration-[600ms] ease-out ${
                 isHeaderMenuOpened
                   ? thirdLineTransformStyles
