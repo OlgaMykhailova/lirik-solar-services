@@ -9,7 +9,7 @@ import SolarPowerTabs from "./SolarPowerTabs";
 export default function Stations() {
   const t = useTranslations("stations");
   return (
-    <Section>
+    <Section className="mb-5 tab:mb-0">
       <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <SolarPowerTabs />
     </Section>

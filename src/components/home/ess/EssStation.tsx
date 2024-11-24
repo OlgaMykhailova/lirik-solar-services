@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React, { Dispatch, SetStateAction } from "react";
 
-import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
-import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 import ImageLegend from "@/components/shared/elecricityImageLegend/ImageLegend";
 
 import EssNoElectricity from "./energyPathsImages/EssNoElectricity";
@@ -31,10 +29,6 @@ export default function EssStation({ isGrid, setIsGrid }: EssStationProps) {
         <div className="absolute top-0 left-0 w-full h-full">
           {isGrid ? <EssWIthElectricity /> : <EssNoElectricity />}
         </div>
-      </div>
-      <div className="tab:hidden flex justify-between max-w-[350px] mt-12">
-        <WithGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
-        <NoGridButton isGrid={isGrid} setIsGrid={setIsGrid} />
       </div>
     </div>
   );

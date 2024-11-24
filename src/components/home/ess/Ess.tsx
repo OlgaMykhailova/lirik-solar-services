@@ -10,7 +10,7 @@ export default function Ess() {
   const t = useTranslations("ess");
 
   return (
-    <Section>
+    <Section className="mb-5 tab:mb-0">
       <SectionTitle className="after:top-[10px]">{t("title")}</SectionTitle>
       <EssInfo />
     </Section>
