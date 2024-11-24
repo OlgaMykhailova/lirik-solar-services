@@ -1,5 +1,6 @@
 import "./globals.css";
 
+import { GoogleTagManager } from "@next/third-parties/google";
 import { Manrope } from "next/font/google";
 import localFont from "next/font/local";
 import { notFound } from "next/navigation";
@@ -14,7 +15,6 @@ import Header from "@/components/shared/header/Header";
 import DelayedPromotionPopUp from "@/components/shared/pop-ups/DelayedPromotionPopUp";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 const gogh = localFont({
   src: [

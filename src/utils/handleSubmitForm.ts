@@ -1,7 +1,8 @@
+import { sendGTMEvent } from "@next/third-parties/google";
 import axios from "axios";
 import { FormikHelpers } from "formik";
 import { Dispatch, SetStateAction } from "react";
-import { sendGTMEvent } from "@next/third-parties/google";
+
 import { ValuesCallBackFormType } from "@/components/shared/forms/CallbackForm";
 import { ValuesWriteUsFormType } from "@/components/shared/forms/WriteUsForm";
 
