@@ -22,8 +22,8 @@ export default function BurgerMenuMobTab({
   return (
     <div
       className={`${
-        isHeaderMenuOpened ? "translate-x-0" : "-translate-x-full"
-      } absolute top-0 left-0 z-50 w-[100vw] h-[100dvh] tab:min-w-[360px] tab:max-h-[666px] tab:w-[40%] bg-heroGradient 
+        isHeaderMenuOpened ? "translate-x-0" : "translate-x-full"
+      } absolute top-0 right-0 z-50 w-[100vw] h-[100dvh] tab:min-w-[360px] tab:max-h-[666px] tab:w-[40%] bg-heroGradient 
       transition-transform duration-[600ms] overflow-y-auto`}
     >
       <Container>
