@@ -3,9 +3,8 @@
 import { useState } from "react";
 
 import Backdrop from "../backdrop/Backdrop";
-import IconButton from "../buttons/IconButton";
+import BurgerMenuButton from "../buttons/BurgerMenuButton";
 import Container from "../container/Container";
-import IconBurgerMenu from "../icons/IconBurger";
 import BurgerMenuMobTab from "./BurgerMenuMobTab";
 import CallUsButton from "./callUs/CallUsButton";
 import CallUsLinkMob from "./callUs/CallUsLinkMob";
@@ -13,6 +12,7 @@ import LogoLink from "./LogoLink";
 
 export default function HeaderMobTab() {
   const [isHeaderMenuOpened, setIsHeaderMenuOpened] = useState(false);
+  const toggleHeaderMenuOpen = () => setIsHeaderMenuOpened(!isHeaderMenuOpened);
 
   return (
     <header className="laptop:hidden fixed z-30 w-full bg-headerGradient">
@@ -21,9 +21,10 @@ export default function HeaderMobTab() {
         <div className="flex items-center justify-between min-w-[208px] w-[39%]">
           <CallUsButton className="hidden tab:block" />
           <CallUsLinkMob />
-          <IconButton handleClick={() => setIsHeaderMenuOpened(true)}>
-            {<IconBurgerMenu />}
-          </IconButton>
+          <BurgerMenuButton
+            isHeaderMenuOpened={isHeaderMenuOpened}
+            toggleHeaderMenuOpen={toggleHeaderMenuOpen}
+          />
           <BurgerMenuMobTab
             isHeaderMenuOpened={isHeaderMenuOpened}
             closeMenu={() => setIsHeaderMenuOpened(false)}
