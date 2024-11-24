@@ -3,7 +3,6 @@ import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 
 import GridButtons from "@/components/shared/buttons/gridButtons/GridButtons";
-
 import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
 import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 

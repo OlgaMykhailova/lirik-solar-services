@@ -1,10 +1,10 @@
 import React, { Dispatch, SetStateAction } from "react";
 
+import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
+import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 import SubTitle from "@/components/shared/titles/SubTitle";
 
 import GridButtons from "../../shared/buttons/gridButtons/GridButtons";
-import NoGridButton from "@/components/shared/buttons/gridButtons/NoGridButton";
-import WithGridButton from "@/components/shared/buttons/gridButtons/WithGridButton";
 
 interface SolarStationItemProps {
   title: string;
