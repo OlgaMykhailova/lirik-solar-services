@@ -1,6 +1,12 @@
 "use client";
 import { throttle } from "lodash";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 
 interface ScrollIndicatorProps {
   className?: string;
@@ -15,8 +21,9 @@ export default function ScrollIndicator({
   const parentRef = useRef<HTMLDivElement | null>(null);
   const yellowRef = useRef<HTMLDivElement | null>(null);
   const lastScrollY = useRef(0);
+  const animationFrameId = useRef<number | null>(null);
 
-  const updateSectionAfterStyles = useCallback(() => {
+  const updateElementsStyles = useCallback(() => {
     const titles = document.querySelectorAll<HTMLElement>("[data-label]");
     const buttons = document.querySelectorAll<HTMLElement>("[data-button]");
     const yellowElement = yellowRef.current;
@@ -26,32 +33,32 @@ export default function ScrollIndicator({
     }
 
     const yellowRect = yellowElement.getBoundingClientRect();
-    const yellowMiddle = yellowRect.top + yellowRect.height / 2;
+    const yellowTop = yellowRect.top;
+    const yellowBottom = yellowRect.bottom;
 
     buttons.forEach((button) => {
       const rect = button.getBoundingClientRect();
-      const sectionMiddle = rect.top + rect.height / 2;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
 
-      const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
+      const isWithinYellow =
+        elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isAligned) {
-        button.style.setProperty("--div-opacity", "100");
-      } else {
-        button.style.setProperty("--div-opacity", "0");
-      }
+      button.style.setProperty("--div-opacity", isWithinYellow ? "100" : "0");
     });
 
     titles.forEach((title) => {
       const rect = title.getBoundingClientRect();
-      const sectionMiddle = rect.top + rect.height / 2;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
 
-      const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
+      const isWithinYellow =
+        elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isAligned) {
-        title.style.setProperty("--after-color", "var(--yellow)");
-      } else {
-        title.style.setProperty("--after-color", "var(--blue)");
-      }
+      title.style.setProperty(
+        "--after-color",
+        isWithinYellow ? "var(--yellow)" : "var(--blue)"
+      );
     });
   }, []);
 
@@ -90,19 +97,30 @@ export default function ScrollIndicator({
     }
   }, [indicatorTop, isReachedEnd]);
 
-  useEffect(() => {
-    const throttledHandleScroll = throttle(() => {
-      updatePosition();
-      updateSectionAfterStyles();
-    }, 20);
+  const throttledUpdate = useMemo(
+    () =>
+      throttle(() => {
+        updatePosition();
+        updateElementsStyles();
+      }, 100),
+    [updatePosition, updateElementsStyles]
+  );
 
-    window.addEventListener("scroll", throttledHandleScroll);
-    throttledHandleScroll();
+  useEffect(() => {
+    // Use requestAnimationFrame for smooth position updates
+    const loop = () => {
+      throttledUpdate();
+      animationFrameId.current = requestAnimationFrame(loop);
+    };
+
+    animationFrameId.current = requestAnimationFrame(loop);
 
     return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
     };
-  }, [updatePosition, updateSectionAfterStyles]);
+  }, [throttledUpdate]);
 
   return (
     <div
