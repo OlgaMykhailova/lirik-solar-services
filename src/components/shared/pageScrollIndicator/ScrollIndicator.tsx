@@ -3,9 +3,9 @@ import { throttle } from "lodash";
 import React, {
   useCallback,
   useEffect,
+  useMemo,
   useRef,
   useState,
-  useMemo,
 } from "react";
 
 interface ScrollIndicatorProps {
