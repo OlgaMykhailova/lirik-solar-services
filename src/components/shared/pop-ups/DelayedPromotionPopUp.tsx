@@ -5,7 +5,7 @@ import React, { useEffect, useState } from "react";
 import Backdrop from "../backdrop/Backdrop";
 import OrderPopUp from "./OrderPopUp";
 
-const APPLICATION_NAME = "Акція -15%";
+const APPLICATION_NAME = "Спеціальна пропозиція -15%";
 
 export default function DelayedPromotionPopUp() {
   const [isPopUpShown, setIsPopUpShown] = useState(false);

@@ -6,6 +6,8 @@ import OpenPopupButton from "@/components/shared/buttons/OpenPopupButton";
 import Container from "@/components/shared/container/Container";
 import { useOnScreen } from "@/hooks/useOnScreen";
 
+const APPLICATION_NAME = "Почати свій шлях";
+
 export default function HeroInfo() {
   const t = useTranslations();
 
@@ -71,7 +73,7 @@ export default function HeroInfo() {
                 : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
             }`}
             buttonName={t("buttons.startPath")}
-            applicationName={t("buttons.startPath")}
+            applicationName={APPLICATION_NAME}
           />
         </div>
       </Container>
