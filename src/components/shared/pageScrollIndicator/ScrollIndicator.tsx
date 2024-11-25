@@ -1,6 +1,12 @@
 "use client";
 import { throttle } from "lodash";
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, {
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+  useMemo,
+} from "react";
 
 interface ScrollIndicatorProps {
   className?: string;
@@ -15,6 +21,7 @@ export default function ScrollIndicator({
   const parentRef = useRef<HTMLDivElement | null>(null);
   const yellowRef = useRef<HTMLDivElement | null>(null);
   const lastScrollY = useRef(0);
+  const animationFrameId = useRef<number | null>(null);
 
   const updateElementsStyles = useCallback(() => {
     const titles = document.querySelectorAll<HTMLElement>("[data-label]");
@@ -37,11 +44,7 @@ export default function ScrollIndicator({
       const isWithinYellow =
         elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isWithinYellow) {
-        button.style.setProperty("--div-opacity", "100");
-      } else {
-        button.style.setProperty("--div-opacity", "0");
-      }
+      button.style.setProperty("--div-opacity", isWithinYellow ? "100" : "0");
     });
 
     titles.forEach((title) => {
@@ -52,11 +55,10 @@ export default function ScrollIndicator({
       const isWithinYellow =
         elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isWithinYellow) {
-        title.style.setProperty("--after-color", "var(--yellow)");
-      } else {
-        title.style.setProperty("--after-color", "var(--blue)");
-      }
+      title.style.setProperty(
+        "--after-color",
+        isWithinYellow ? "var(--yellow)" : "var(--blue)"
+      );
     });
   }, []);
 
@@ -95,19 +97,30 @@ export default function ScrollIndicator({
     }
   }, [indicatorTop, isReachedEnd]);
 
-  useEffect(() => {
-    const throttledHandleScroll = throttle(async () => {
-      setTimeout(() => updatePosition(), 1200);
-      setTimeout(() => updateElementsStyles(), 1200);
-    }, 5);
+  const throttledUpdate = useMemo(
+    () =>
+      throttle(() => {
+        updatePosition();
+        updateElementsStyles();
+      }, 100),
+    [updatePosition, updateElementsStyles]
+  );
 
-    window.addEventListener("scroll", throttledHandleScroll);
-    throttledHandleScroll();
+  useEffect(() => {
+    // Use requestAnimationFrame for smooth position updates
+    const loop = () => {
+      throttledUpdate();
+      animationFrameId.current = requestAnimationFrame(loop);
+    };
+
+    animationFrameId.current = requestAnimationFrame(loop);
 
     return () => {
-      window.removeEventListener("scroll", throttledHandleScroll);
+      if (animationFrameId.current) {
+        cancelAnimationFrame(animationFrameId.current);
+      }
     };
-  }, [updatePosition, updateElementsStyles]);
+  }, [throttledUpdate]);
 
   return (
     <div
