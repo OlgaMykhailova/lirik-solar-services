@@ -16,7 +16,7 @@ export default function ScrollIndicator({
   const yellowRef = useRef<HTMLDivElement | null>(null);
   const lastScrollY = useRef(0);
 
-  const updateSectionAfterStyles = useCallback(() => {
+  const updateElementsStyles = useCallback(() => {
     const titles = document.querySelectorAll<HTMLElement>("[data-label]");
     const buttons = document.querySelectorAll<HTMLElement>("[data-button]");
     const yellowElement = yellowRef.current;
@@ -26,15 +26,18 @@ export default function ScrollIndicator({
     }
 
     const yellowRect = yellowElement.getBoundingClientRect();
-    const yellowMiddle = yellowRect.top + yellowRect.height / 2;
+    const yellowTop = yellowRect.top;
+    const yellowBottom = yellowRect.bottom;
 
     buttons.forEach((button) => {
       const rect = button.getBoundingClientRect();
-      const sectionMiddle = rect.top + rect.height / 2;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
 
-      const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
+      const isWithinYellow =
+        elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isAligned) {
+      if (isWithinYellow) {
         button.style.setProperty("--div-opacity", "100");
       } else {
         button.style.setProperty("--div-opacity", "0");
@@ -43,11 +46,13 @@ export default function ScrollIndicator({
 
     titles.forEach((title) => {
       const rect = title.getBoundingClientRect();
-      const sectionMiddle = rect.top + rect.height / 2;
+      const elementTop = rect.top;
+      const elementBottom = rect.bottom;
 
-      const isAligned = Math.abs(sectionMiddle - yellowMiddle) < 400;
+      const isWithinYellow =
+        elementBottom >= yellowTop && elementTop <= yellowBottom;
 
-      if (isAligned) {
+      if (isWithinYellow) {
         title.style.setProperty("--after-color", "var(--yellow)");
       } else {
         title.style.setProperty("--after-color", "var(--blue)");
@@ -91,10 +96,10 @@ export default function ScrollIndicator({
   }, [indicatorTop, isReachedEnd]);
 
   useEffect(() => {
-    const throttledHandleScroll = throttle(() => {
-      updatePosition();
-      updateSectionAfterStyles();
-    }, 20);
+    const throttledHandleScroll = throttle(async () => {
+      setTimeout(() => updatePosition(), 1200);
+      setTimeout(() => updateElementsStyles(), 1200);
+    }, 5);
 
     window.addEventListener("scroll", throttledHandleScroll);
     throttledHandleScroll();
@@ -102,7 +107,7 @@ export default function ScrollIndicator({
     return () => {
       window.removeEventListener("scroll", throttledHandleScroll);
     };
-  }, [updatePosition, updateSectionAfterStyles]);
+  }, [updatePosition, updateElementsStyles]);
 
   return (
     <div
