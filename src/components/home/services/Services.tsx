@@ -8,6 +8,8 @@ import SectionTitle from "@/components/shared/titles/SectionTitle";
 import ServicesDescription from "./ServicesDescription";
 import ServicesList from "./ServicesList";
 
+const APPLICATION_NAME = "Замовити послугу";
+
 export default function Services() {
   const t = useTranslations();
 
@@ -23,7 +25,7 @@ export default function Services() {
       <OpenPopupButton
         buttonName={t("buttons.orderService")}
         className="mt-10 laptop:mt-12"
-        applicationName={t("buttons.orderService")}
+        applicationName={APPLICATION_NAME}
       />
     </Section>
   );

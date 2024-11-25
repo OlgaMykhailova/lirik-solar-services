@@ -19,6 +19,8 @@ export interface ValuesWriteUsFormType {
   message: string;
 }
 
+const APPLICATION_NAME = "Безкоштовна консультація";
+
 interface WriteUsFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
@@ -44,9 +46,8 @@ export default function WriteUsForm({
     values: ValuesWriteUsFormType,
     formikHelpers: FormikHelpers<ValuesWriteUsFormType>
   ) => {
-    const applicationName = "Безкоштовна консультація";
     const data =
-      `<b>Заявка "${applicationName}"</b>\n` +
+      `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
       `Email: ${values.email.toLowerCase().trim()}\n` +
       `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
@@ -59,7 +60,7 @@ export default function WriteUsForm({
       setIsNotificationShown,
       data,
       values,
-      applicationName
+      APPLICATION_NAME
     );
   };
 
