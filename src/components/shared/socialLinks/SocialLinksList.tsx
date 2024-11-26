@@ -17,7 +17,7 @@ export default function SocialLinksList({
     {
       name: "facebook",
       icon: <IconFacebook />,
-      url: "https://www.facebook.com/liriksolarcom",
+      url: "https://www.facebook.com/liriksoIar",
     },
 
     {
