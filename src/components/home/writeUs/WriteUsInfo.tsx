@@ -14,8 +14,8 @@ export default function WriteUsInfo() {
       <Image
         src="/images/solarPanelExample.webp"
         alt="solar panel example"
-        width="528"
-        height="541"
+        width="1686"
+        height="1082"
         className="hidden tabxl:block object-cover object-center aspect-[528/541] w-full h-[541px]"
       />
     </div>
