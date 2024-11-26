@@ -25,9 +25,16 @@ export default function Manufactures() {
           <div className="flex flex-col laptop:flex-row gap-y-6">
             <div className="flex flex-col justify-between laptop:w-[48.9%]">
               <ManufacturesInfo />
-              <MainButton className="hidden laptop:flex mb-[45px] mr-auto">
-                {t("buttons.goToProducts")}
-              </MainButton>
+              <a
+                href={PRODUCTS_LINK}
+                target="_blank"
+                rel="noopener"
+                className="inline-block mt-2 tab:mt-0 outline-none"
+              >
+                <MainButton className="hidden laptop:flex mb-[45px] mr-auto">
+                  {t("buttons.goToProducts")}
+                </MainButton>
+              </a>
             </div>
             <ManufacturesSlider />
             <a
