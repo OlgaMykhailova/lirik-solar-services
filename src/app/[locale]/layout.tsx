@@ -48,6 +48,13 @@ export async function generateMetadata({
   const t = await getTranslations({ locale, namespace: "metadata" });
 
   return {
+    alternates: {
+      canonical: "/",
+      languages: {
+        uk: "/",
+        ru: "/ru",
+      },
+    },
     title: t("title"),
     description: t("description"),
   };
