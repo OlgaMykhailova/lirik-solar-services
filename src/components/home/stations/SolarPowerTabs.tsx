@@ -98,7 +98,7 @@ export default function SolarPowerTabs() {
             alt="building"
             width={472}
             height={398}
-            className="w-full h-full"
+            className="w-full aspect-[472/398]"
           />
           {renderElectricityComponent()}
           <ImageLegend
