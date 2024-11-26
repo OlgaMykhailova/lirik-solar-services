@@ -22,7 +22,7 @@ export default function EssStation({ isGrid, setIsGrid }: EssStationProps) {
           alt="building"
           width={472}
           height={398}
-          className="w-full h-full"
+          className="w-full aspect-[472/398]"
         />
         <ImageLegend
           activeTab="ess"
