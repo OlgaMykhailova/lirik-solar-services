@@ -1,38 +1,13 @@
-## ! The site is under development
+# Lirik Solar landing page
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Live page
 
-## Getting Started
+[https://liriksolar.com.ua/](https://liriksolar.com.ua/)
 
-First, run the development server:
+## Technical Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+This app is built using Next.js for server-side rendering and static site generation. TypeScript ensures type safety and better development workflows. For localization, Next-intl is integrated. For API requests Axios is used. For styling is used TailwindCSS. Form handling is powered by Formik, validation handled by Yup for reliable user input management. Responsive layout.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Description
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This is the landing page for Lirik Solar, a company specializing in the installation of solar panels and backup power systems. The homepage offers user-friendly navigation and incorporates animations to enhance the visual appeal. It includes forms for gathering user information, which are integrated with a Telegram channel to streamline processing by the company's managers. Additionally, the site features a custom 404 page to improve the user experience.
