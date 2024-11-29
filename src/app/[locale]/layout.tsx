@@ -74,13 +74,9 @@ export default function LocaleLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <GoogleTagManager
           gtmId={process.env.NEXT_PUBLIC_GTM_ID || ""}
-          gtmScriptUrl={process.env.NEXT_PUBLIC_GTM_SCRIPT_URL}
+          gtmScriptUrl={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
         />
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ""} />
-        <Script
-          strategy="afterInteractive"
-          src="https://connect.facebook.net/en_US/fbevents.js"
-        />
         <Script
           id="fb-pixel"
           strategy="afterInteractive"
