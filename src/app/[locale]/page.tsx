@@ -12,6 +12,7 @@ import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
 import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
 import ScrollIndicator from "@/components/shared/pageScrollIndicator/ScrollIndicator";
+import DelayedPromotionPopUp from "@/components/shared/pop-ups/DelayedPromotionPopUp";
 
 export default function Home() {
   return (
@@ -34,6 +35,7 @@ export default function Home() {
           <Contacts />
         </div>
       </div>
+      <DelayedPromotionPopUp />
     </div>
   );
 }
