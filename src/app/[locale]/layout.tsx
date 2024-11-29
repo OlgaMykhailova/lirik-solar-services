@@ -12,8 +12,6 @@ import { getTranslations } from "next-intl/server";
 
 import { ScrollToTopButton } from "@/components/shared/buttons/ScrollToTopButton";
 import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
-import Footer from "@/components/shared/footer/Footer";
-import Header from "@/components/shared/header/Header";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
@@ -108,9 +106,7 @@ export default function LocaleLayout({
         className={`${gogh.variable} ${manrope.className} flex min-h-screen flex-col antialiased text-sm laptop:text-base`}
       >
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          {children}
           <ScrollToTopButton />
           <CookiesComponent />
         </NextIntlClientProvider>
