@@ -21,7 +21,7 @@ export interface ValuesContactUsFormType {
   message: string;
 }
 
-const APPLICATION_NAME = "Контактна форма за посиланням";
+const APPLICATION_NAME = "Контактна форма з Facebook";
 
 interface ContactUsFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
