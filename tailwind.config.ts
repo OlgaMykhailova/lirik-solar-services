@@ -76,6 +76,7 @@ const config: Config = {
       },
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
+        radio: "0 0 0 1px #0B70BC",
       },
       transitionTimingFunction: {
         gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",

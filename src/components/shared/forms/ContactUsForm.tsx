@@ -9,6 +9,7 @@ import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
+import RadioButtonInput from "./formComponents/RadioButtonInput";
 import SubmitButton from "./formComponents/SubmitButton";
 import FormDescription from "./FormDescription";
 
@@ -100,6 +101,38 @@ export default function ContactUsForm({
             errors={errors}
             touched={touched}
           />
+          <div id="my-radio-group" className="text-inputLabel text-sm">
+            Де ви плануєте ставити обладнання?
+          </div>
+          <div aria-labelledby="my-radio-group" className="flex gap-x-4">
+            <RadioButtonInput
+              fieldName="equipment"
+              label="Квартира"
+              value="Квартира"
+              required={false}
+              placeholder={t("forms.cityPlaceholder")}
+              errors={errors}
+              touched={touched}
+            />
+            <RadioButtonInput
+              fieldName="equipment"
+              label="Будинок"
+              value="Будинок"
+              required={false}
+              placeholder={t("forms.cityPlaceholder")}
+              errors={errors}
+              touched={touched}
+            />
+            <RadioButtonInput
+              fieldName="equipment"
+              label="Підприємство"
+              value="Підприємство"
+              required={false}
+              placeholder={t("forms.cityPlaceholder")}
+              errors={errors}
+              touched={touched}
+            />
+          </div>
           <CustomizedInput
             fieldName="message"
             label={t("forms.comment")}
