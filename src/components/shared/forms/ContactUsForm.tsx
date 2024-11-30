@@ -15,12 +15,13 @@ import FormDescription from "./FormDescription";
 
 export interface ValuesContactUsFormType {
   name: string;
-  city: string;
   phone: string;
+  city: string;
+  equipment: string;
   message: string;
 }
 
-const APPLICATION_NAME = "Безкоштовна консультація";
+const APPLICATION_NAME = "Контактна форма за посиланням";
 
 interface ContactUsFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
@@ -36,8 +37,9 @@ export default function ContactUsForm({
 
   const initialValues = {
     name: "",
-    city: "",
     phone: "",
+    city: "",
+    equipment: "",
     message: "",
   };
 
@@ -50,8 +52,11 @@ export default function ContactUsForm({
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Наслений пункт: ${values.city.toLowerCase().trim()}\n` +
       `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Насeлений пункт: ${values.city.trim()}\n` +
+      `Де ви плануєте поставити обладнання?: ${
+        values.equipment?.trim() || ""
+      }\n` +
       `Повідомлення: ${values.message.trim()}\n`;
 
     await handleSubmitForm<ValuesContactUsFormType>(
