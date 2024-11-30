@@ -101,13 +101,17 @@ export default function ContactUsForm({
             errors={errors}
             touched={touched}
           />
-          <div id="my-radio-group" className="text-inputLabel text-sm">
-            Де ви плануєте ставити обладнання?
-          </div>
-          <div aria-labelledby="my-radio-group" className="flex gap-x-4">
+          <p id="radio-group" className="text-inputLabel text-sm">
+            {t("forms.equipment")}
+          </p>
+          <div
+            role="group"
+            aria-labelledby="radio-group"
+            className="flex gap-x-4"
+          >
             <RadioButtonInput
               fieldName="equipment"
-              label="Квартира"
+              label={t("forms.apartment")}
               value="Квартира"
               required={false}
               placeholder={t("forms.cityPlaceholder")}
@@ -116,7 +120,7 @@ export default function ContactUsForm({
             />
             <RadioButtonInput
               fieldName="equipment"
-              label="Будинок"
+              label={t("forms.house")}
               value="Будинок"
               required={false}
               placeholder={t("forms.cityPlaceholder")}
@@ -125,7 +129,7 @@ export default function ContactUsForm({
             />
             <RadioButtonInput
               fieldName="equipment"
-              label="Підприємство"
+              label={t("forms.company")}
               value="Підприємство"
               required={false}
               placeholder={t("forms.cityPlaceholder")}
