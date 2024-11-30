@@ -33,7 +33,7 @@ export default function HeroInfo() {
             {t("hero.path")}
           </p>
           <span
-            className={`relative z-10 inline-block px-4 tab:px-[38px] laptop:px-[50px] font-gogh text-lg tab:text-xxl laptop:text-xxxl text-blue before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1
+            className={`relative z-10 inline-block px-4 tab:px-[38px] laptop:px-[50px] font-gogh text-xlg tab:text-xxl laptop:text-xxxl text-blue before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1
          before:left-0 before:rounded-full before:w-full before:h-14 tab:before:h-[88px] laptop:before:h-[98px] before:bg-backgroundLight
          transition delay-700 duration-[1000ms] ease-gentle ${
            isVisible
@@ -41,10 +41,10 @@ export default function HeroInfo() {
              : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"
          }`}
           >
-            {t("hero.sunny")}
+            {t("contactUsPage.energy")}
           </span>
           <span
-            className={`absolute z-10 left-[142px] tab:left-[356px] laptop:left-[456px] top-[160px] tab:top-[259px] laptop:top-[300px] inline-block px-4 tab:px-[38px] laptop:px-[50px] align-text-top font-gogh text-lg tab:text-xxl laptop:text-xxxl text-blue 
+            className={`absolute z-10 left-[62px] tab:left-[126px] laptop:left-[206px] top-[160px] tab:top-[279px] laptop:top-[300px] inline-block px-4 tab:px-[38px] laptop:px-[50px] align-text-top font-gogh text-xlg tab:text-xxl laptop:text-xxxl text-blue 
       before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1 before:left-0 before:rounded-full before:w-full before:h-14 tab:before:h-[88px] laptop:before:h-[98px]
         before:bg-backgroundLight transition delay-700 duration-[1000ms] ease-gentle ${
           isVisible
@@ -52,7 +52,7 @@ export default function HeroInfo() {
             : "opacity-0 translate-x-[-45px] tab:translate-x-[-95px]"
         }}`}
           >
-            {t("hero.energy")}
+            {t("contactUsPage.independence")}
           </span>
         </h1>
       </Container>
