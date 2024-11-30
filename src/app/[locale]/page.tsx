@@ -11,6 +11,7 @@ import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
 import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
+import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
 import Footer from "@/components/shared/footer/Footer";
 import Header from "@/components/shared/header/Header";
 import ScrollIndicator from "@/components/shared/pageScrollIndicator/ScrollIndicator";
@@ -41,6 +42,7 @@ export default function Home() {
             </div>
           </div>
           <DelayedPromotionPopUp />
+          <CookiesComponent />
         </div>
       </main>
       <Footer />

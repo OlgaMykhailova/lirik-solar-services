@@ -11,7 +11,6 @@ import { useMessages } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
 import { ScrollToTopButton } from "@/components/shared/buttons/ScrollToTopButton";
-import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
 
@@ -108,7 +107,6 @@ export default function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           {children}
           <ScrollToTopButton />
-          <CookiesComponent />
         </NextIntlClientProvider>
       </body>
     </html>
