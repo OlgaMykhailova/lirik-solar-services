@@ -17,6 +17,7 @@ const config: Config = {
         tabxl: "1024px",
         laptop: "1280px",
         pc: "1440px",
+        desk: "1500px",
       },
       colors: {
         yellow: "#FDBD00",

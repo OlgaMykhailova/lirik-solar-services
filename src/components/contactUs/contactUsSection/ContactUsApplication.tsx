@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import NotificationPopUp from "@/components/shared/pop-ups/NotificationPopUp";
 
-import ContactUsForm from "../shared/forms/ContactUsForm";
+import ContactUsForm from "../../shared/forms/ContactUsForm";
 
 export default function ContactUsApplication() {
   const [isError, setIsError] = useState(false);

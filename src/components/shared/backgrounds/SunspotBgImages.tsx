@@ -5,8 +5,12 @@ import React from "react";
 
 import { useOnScreen } from "@/hooks/useOnScreen";
 
-export default function SunspotBgImages() {
-  const { isVisible } = useOnScreen("about");
+interface SunspotBgImagesProps {
+  id: string;
+}
+
+export default function SunspotBgImages({ id }: SunspotBgImagesProps) {
+  const { isVisible } = useOnScreen(id);
 
   return (
     <div
