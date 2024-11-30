@@ -7,7 +7,7 @@ export default function WriteUsInfo() {
 
   return (
     <div className="flex flex-col justify-between tab:w-[64%] tabxl:w-[47%] laptop:w-[49%]">
-      <div>
+      <div className="laptop:w-[529px]">
         <p>{t("description.partOne")}</p>
         <p>{t("description.partTwo")}</p>
       </div>
