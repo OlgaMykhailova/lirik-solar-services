@@ -211,10 +211,16 @@
   "forms": {
     "name": "Iм’я",
     "phone": "Телефон",
+    "city": "Населений пункт",
     "email": "Email",
     "comment": "Коментар",
+    "equipment": "Де ви плануєте ставити обладнання?",
+    "apartment": "Квартира",
+    "house": "Будинок",
+    "company": "Підприємство",
     "namePlaceholder": "Введіть ім'я",
     "emailPlaceholder": "example@mail.com",
+    "cityPlaceholder": "Введіть ваш населений пункт",
     "phonePlaceholder": "__ ___-__-__",
     "commentPlaceholder": "Введіть текст повідомлення",
     "requiredFields": "Поля, обов'язкові до заповнення",
@@ -223,6 +229,7 @@
     "errors": {
       "required": "Дане поле є обов'язковим до заповнення",
       "nameMinMaxSymbols": "Ім’я повинно містити від 2 до 30 символів",
+      "cityMinMaxSymbols": "Населений пункт повинен містити від 2 до 30 символів",
       "nameAllowedSymbols": "Допустимі літери та дефіс, апостроф, лапки",
       "wrongEmail": "Введіть валідний email",
       "messageMinMaxSymbols": "Поле повинно містити не більше 200 символів",
@@ -292,5 +299,6 @@
     "title": "Page not found",
     "oops": "Oops...",
     "description": "На жаль, сторінка, яку ви шукаєте, не існує або була переміщена. Будь ласка, перевірте адресу або скористайтеся навігацією, щоб знайти потрібну інформацію."
-  }
+  },
+  "contactUsPage": { "energy": "енергетичної", "independence": "незалежності" }
 }

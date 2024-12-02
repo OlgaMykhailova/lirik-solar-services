@@ -11,31 +11,41 @@ import Stages from "@/components/home/stages/Stages";
 import Stations from "@/components/home/stations/Stations";
 import WriteUs from "@/components/home/writeUs/WriteUs";
 import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
+import CookiesComponent from "@/components/shared/cookies/CookiesComponent";
+import Footer from "@/components/shared/footer/Footer";
+import Header from "@/components/shared/header/Header";
 import ScrollIndicator from "@/components/shared/pageScrollIndicator/ScrollIndicator";
 import DelayedPromotionPopUp from "@/components/shared/pop-ups/DelayedPromotionPopUp";
 
 export default function Home() {
   return (
-    <div className="pt-[72px]">
-      <Hero />
-      <div className="relative">
-        <ScrollIndicator className="top-[174px] tab:top-[74px] laptop:top-[96px] h-[calc(100%-168px)] tab:h-[calc(100%-64px)] laptop:h-[calc(100%-88px)]" />
-        <div className="relative">
-          <SunspotBgImages />
-          <About />
-          <Services />
-          <Stations />
-          <Ess />
-          <Benefits />
-          <Manufactures />
-          <Projects />
-          <Stages />
-          <Reviews />
-          <WriteUs />
-          <Contacts />
+    <>
+      <Header />
+      <main className="flex-1">
+        <div className="pt-[72px]">
+          <Hero />
+          <div className="relative">
+            <ScrollIndicator className="top-[174px] tab:top-[74px] laptop:top-[96px] h-[calc(100%-168px)] tab:h-[calc(100%-64px)] laptop:h-[calc(100%-88px)]" />
+            <div className="relative">
+              <SunspotBgImages id="about" />
+              <About />
+              <Services />
+              <Stations />
+              <Ess />
+              <Benefits />
+              <Manufactures />
+              <Projects />
+              <Stages />
+              <Reviews />
+              <WriteUs />
+              <Contacts />
+            </div>
+          </div>
+          <DelayedPromotionPopUp />
+          <CookiesComponent />
         </div>
-      </div>
-      <DelayedPromotionPopUp />
-    </div>
+      </main>
+      <Footer />
+    </>
   );
 }

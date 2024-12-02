@@ -5,8 +5,12 @@ import React from "react";
 
 import { useOnScreen } from "@/hooks/useOnScreen";
 
-export default function AnimatedSun() {
-  const { isVisible } = useOnScreen("about");
+interface AnimatedSunProps {
+  id: string;
+}
+
+export default function AnimatedSun({ id }: AnimatedSunProps) {
+  const { isVisible } = useOnScreen(id);
 
   return (
     <div

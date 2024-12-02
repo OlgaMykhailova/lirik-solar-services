@@ -17,6 +17,7 @@ const config: Config = {
         tabxl: "1024px",
         laptop: "1280px",
         pc: "1440px",
+        desk: "1500px",
       },
       colors: {
         yellow: "#FDBD00",
@@ -54,6 +55,7 @@ const config: Config = {
         xxmdb: ["28px", { lineHeight: "32px", fontWeight: "500" }],
         lgb: ["32px", { lineHeight: "40px", fontWeight: "500" }],
         lgbb: ["32px", { lineHeight: "40px", fontWeight: "800" }],
+        xlg: ["32px", { lineHeight: "50px", fontWeight: "400" }],
         lg: ["36px", { lineHeight: "50px", fontWeight: "400" }],
         largeb: ["40px", { lineHeight: "56px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
@@ -75,6 +77,7 @@ const config: Config = {
       },
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
+        radio: "0 0 0 1px #0B70BC",
       },
       transitionTimingFunction: {
         gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",
