@@ -302,6 +302,7 @@
   },
   "contactUsPage": {
     "energy": "энергетической",
-    "independence": "независимости"
+    "independence": "независимости",
+    "leaveRequest": "Оставьте заявку"
   }
 }

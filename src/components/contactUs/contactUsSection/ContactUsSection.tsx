@@ -7,13 +7,13 @@ import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
 export default function ContactUsSection() {
-  const t = useTranslations();
+  const t = useTranslations("contactUsPage");
 
   return (
     <Container>
       <section className="px-2 tab:px-0 pb-20 tab:pb-[100px] laptop:pb-[150px]">
         <SectionTitle className="after:top-[10px]">
-          {t("writeUs.title")}
+          {t("leaveRequest")}
         </SectionTitle>
         <div className="flex flex-col gap-y-8 tabxl:flex-row justify-between">
           <WriteUsInfo />
