@@ -7,9 +7,9 @@ import SunspotBgImages from "@/components/shared/backgrounds/SunspotBgImages";
 export default function ContactUs() {
   return (
     <main className="relative flex-1">
+      <ContactUsSection />
       <SunspotBgImages id="hero-contact-us" />
       <Hero />
-      <ContactUsSection />
     </main>
   );
 }
