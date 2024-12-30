@@ -12,7 +12,7 @@ export default function WriteUsInfo() {
         <p>{t("description.partTwo")}</p>
       </div>
       <Image
-        src="/images/solarPanelExample.webp"
+        src="/images/girlWithSolarPanel.webp"
         alt="solar panel example"
         width="1872"
         height="1082"
