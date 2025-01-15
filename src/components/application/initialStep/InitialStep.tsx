@@ -1,4 +1,5 @@
 import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
+import CompanyName from "@/components/shared/companyName/CompanyName";
 import Section from "@/components/shared/section/Section";
 import React from "react";
 
@@ -8,7 +9,7 @@ export default function InitialStep() {
   return (
     <Section
       id={SECTION_ID}
-      className="relative h-[100dvh] bg-heroGradient overflow-x-hidden"
+      className="relative h-[100dvh] pt-[200px] laptop:pt-[103px] bg-heroGradient overflow-x-hidden"
     >
       <AnimatedSun
         id={SECTION_ID}
@@ -17,6 +18,7 @@ export default function InitialStep() {
             before:size-[85%] before:rounded-full before:bg-yellow before:bg-opacity-15 before:blur-[30px] laptop:before:blur-[50px]
             `}
       />
+      <CompanyName id={SECTION_ID} />
     </Section>
   );
 }
