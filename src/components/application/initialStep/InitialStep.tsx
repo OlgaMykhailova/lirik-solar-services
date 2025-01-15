@@ -20,7 +20,7 @@ export default function InitialStep() {
   return (
     <section
       id={SECTION_ID}
-      className="relative h-screen pt-[200px] laptop:pt-[103px] pb-20 tab:pb-[100px] laptop:pb-[150px] bg-heroGradient overflow-hidden"
+      className="relative h-full min-h-screen pt-[200px] laptop:pt-[103px] pb-20 tab:pb-[100px] laptop:pb-[150px] bg-heroGradient overflow-hidden"
     >
       <AnimatedSun
         id={SECTION_ID}
