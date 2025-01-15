@@ -1,13 +1,15 @@
 "use client";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import React from "react";
+
 import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
 import MainButton from "@/components/shared/buttons/MainButton";
 import CompanyName from "@/components/shared/companyName/CompanyName";
-import React from "react";
-import { useTranslations } from "next-intl";
 import { useOnScreen } from "@/hooks/useOnScreen";
-import InitialStepTitle from "./InitialStepTitle";
-import Image from "next/image";
+
 import InitialStepEnergy from "./InitialStepEnergy";
+import InitialStepTitle from "./InitialStepTitle";
 
 const SECTION_ID = "application-page-initial-step";
 

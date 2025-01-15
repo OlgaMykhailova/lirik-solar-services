@@ -5,6 +5,7 @@ import React from "react";
 import OpenPopupButton from "@/components/shared/buttons/OpenPopupButton";
 import Container from "@/components/shared/container/Container";
 import { useOnScreen } from "@/hooks/useOnScreen";
+
 import CompanyName from "../../shared/companyName/CompanyName";
 
 interface HeroInfoProps {
