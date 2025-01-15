@@ -13,7 +13,7 @@ export default function HeaderDesktop() {
   const locale = useLocale();
 
   return (
-    <header className="hidden laptop:block fixed z-30 w-full bg-headerGradient">
+    <header className="hidden laptop:block fixed z-30 w-[100vw] bg-headerGradient">
       <Container className="flex justify-between items-center h-[72px]">
         <div className="flex justify-between items-center w-[13%]">
           <LogoLink />
