@@ -26,7 +26,7 @@ const labelStyles =
 const fieldStyles =
   "relative w-full h-full px-3 py-[14px] text-black placeholder-inputText border rounded-[12px] outline-none text-sm transition duration-300 ease-out";
 const fieldWrapperStyles =
-  "relative group before:content-[''] before:absolute before:top-0 before:left-0 before:rounded-[12px] before:w-full before:h-full before:blur-[3px] before:transition before:duration-300 before:ease-out ";
+  "relative group before:content-[''] before:absolute before:top-0 before:left-0 before:rounded-[12px] before:w-full before:h-full before:blur-[3px] before:transition before:duration-300 before:ease-out before:will-change-transform";
 const errorStyles = "absolute bottom-[-19px] right-0 text-xxs text-inputError";
 
 export default function CustomizedInput({
