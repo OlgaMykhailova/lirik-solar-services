@@ -9,6 +9,7 @@
   --yellow: #fdbd00;
   --blue: #0b70bc;
   --backgroundBlue: #d7e8f8;
+  scrollbar-gutter: stable;
 }
 
 :root:has(.no-doc-scroll) {
