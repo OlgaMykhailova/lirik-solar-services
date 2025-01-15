@@ -12,7 +12,7 @@ export default function CompanyName({ id }: CompanyNameProps) {
   const { isVisible } = useOnScreen(id);
 
   return (
-    <>
+    <div>
       <p
         className={`font-gogh text-white text-xlbb tab:text-xxxlb laptop:text-xxxxlb transition duration-[1100ms] ease-slow ${
           isVisible
@@ -31,6 +31,6 @@ export default function CompanyName({ id }: CompanyNameProps) {
       >
         {t("hero.path")}
       </p>
-    </>
+    </div>
   );
 }
