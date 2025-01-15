@@ -1,11 +1,18 @@
+"use client";
 import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
+import MainButton from "@/components/shared/buttons/MainButton";
 import CompanyName from "@/components/shared/companyName/CompanyName";
 import Section from "@/components/shared/section/Section";
 import React from "react";
+import { useTranslations } from "next-intl";
+import { useOnScreen } from "@/hooks/useOnScreen";
 
 const SECTION_ID = "application-page-initial-step";
 
 export default function InitialStep() {
+  const t = useTranslations();
+  const { isVisible } = useOnScreen(SECTION_ID);
+
   return (
     <Section
       id={SECTION_ID}
@@ -19,6 +26,15 @@ export default function InitialStep() {
             `}
       />
       <CompanyName id={SECTION_ID} />
+      <MainButton
+        className={`transition duration-[1100ms] ease-slow ${
+          isVisible
+            ? "opacity-100 translate-y-0"
+            : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
+        }`}
+      >
+        {t("buttons.getOffer")}
+      </MainButton>
     </Section>
   );
 }

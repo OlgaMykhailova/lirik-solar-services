@@ -55,7 +55,7 @@ export default function HeroInfo({ sectionId }: HeroInfoProps) {
         </h1>
         <div>
           <OpenPopupButton
-            className={`transition-all duration-[1100ms] ease-slow ${
+            className={`transition duration-[1100ms] ease-slow ${
               isVisible
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
