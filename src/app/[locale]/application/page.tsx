@@ -8,8 +8,6 @@ export default function page() {
   return (
     <main className="relative flex-1">
       <InitialStep />
-      <ApplicationForm />
-      <FinalStep />
     </main>
   );
 }
