@@ -5,15 +5,17 @@ import { useOnScreen } from "@/hooks/useOnScreen";
 
 import HeroInfo from "./HeroInfo";
 
+const SECTION_ID = "home-page-hero";
+
 export default function Hero() {
-  const { isVisible } = useOnScreen("hero");
+  const { isVisible } = useOnScreen(SECTION_ID);
 
   return (
     <section
-      id="hero"
+      id={SECTION_ID}
       className="relative h-[618px] tab:h-[728px] pt-6 laptop:pt-16 laptop:pb-[90px] bg-headerGradient overflow-hidden"
     >
-      <HeroInfo />
+      <HeroInfo sectionId={SECTION_ID} />
       <Image
         src="/images/solarPanels.webp"
         alt="solar panels"
