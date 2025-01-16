@@ -8,7 +8,10 @@ const SECTION_ID = "application-page";
 
 export default function page() {
   return (
-    <main id={SECTION_ID} className="relative flex-1 flex flex-col">
+    <main
+      id={SECTION_ID}
+      className="relative flex-1 flex flex-col overflow-clip"
+    >
       <AnimatedSun
         id={SECTION_ID}
         className={`absolute z-20 right-1 tab:right-4 top-1 tab:top-4 size-[191px] tab:size-[278px] laptop:size-[304px] 
@@ -17,7 +20,7 @@ export default function page() {
                   `}
       />
       <section className="flex-1 flex flex-col">
-        {/* <InitialStep /> */}
+        <InitialStep />
         <FinalStep />
       </section>
     </main>

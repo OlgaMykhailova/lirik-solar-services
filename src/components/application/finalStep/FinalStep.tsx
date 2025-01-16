@@ -5,6 +5,7 @@ import MainButton from "@/components/shared/buttons/MainButton";
 import { useOnScreen } from "@/hooks/useOnScreen";
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
+import FinalStepInfo from "./FinalStepInfo";
 
 const SECTION_ID = "application-page-final-step";
 
@@ -16,9 +17,10 @@ export default function FinalStep() {
   return (
     <div
       id={SECTION_ID}
-      className="relative flex-1 flex flex-col justify-end pt-[177px] tab:pt-[205px] laptop:pt-[78px] pb-8 tab:pb-20 laptop:pb-[50px] bg-heroGradient overflow-clip"
+      className="relative flex-1 flex flex-col justify-between min-h-[700px] pt-[177px] tab:pt-[205px] laptop:pt-[78px] pb-8 tab:pb-20 laptop:pb-[50px] bg-heroGradient"
     >
-      <div className="container max-w-[1920px]">
+      <div className="container flex-1 flex flex-col justify-between max-w-[1920px]">
+        <FinalStepInfo isVisible={isVisible} />
         <Link href="/" locale={locale} className="outline-none">
           <MainButton
             className={`w-fit transition duration-[1100ms] ease-slow ${
@@ -35,7 +37,11 @@ export default function FinalStep() {
           alt="panelInstallation"
           width="792"
           height="494"
-          className="w-[81%] tab:w-[77.9%] laptop:w-[61.7%] h-auto mx-auto laptop:mx-0 laptop:ml-auto"
+          className={`w-[81%] tab:w-[77.9%] laptop:w-[61.7%] h-auto mx-auto laptop:mx-0 laptop:ml-auto mt-auto transition duration-[1100ms] ease-slow ${
+            isVisible
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
+          }`}
         />
       </div>
     </div>
