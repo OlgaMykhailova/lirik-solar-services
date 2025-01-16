@@ -24,7 +24,11 @@ export default function FinalStep() {
     >
       <div className="container flex-1 flex flex-col justify-between max-w-[1920px]">
         <FinalStepInfo isVisible={isVisible} />
-        <Link href="/" locale={locale} className="laptop:mb-auto outline-none">
+        <Link
+          href="/"
+          locale={locale}
+          className="mb-8 tab:mb-6 laptop:mb-0 outline-none"
+        >
           <MainButton
             className={`w-fit transition duration-[1100ms] ease-slow ${
               isVisible
