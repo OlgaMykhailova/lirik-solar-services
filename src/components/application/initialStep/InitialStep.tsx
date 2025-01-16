@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React from "react";
 
-import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
 import MainButton from "@/components/shared/buttons/MainButton";
 import CompanyName from "@/components/shared/companyName/CompanyName";
 import { useOnScreen } from "@/hooks/useOnScreen";
@@ -23,13 +22,6 @@ export default function InitialStep() {
       className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[690px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[190px] 
       laptop:pt-[38px] pb-[60px] laptop:pb-[88px] bg-heroGradient overflow-clip"
     >
-      <AnimatedSun
-        id={SECTION_ID}
-        className={`absolute z-20 right-1 tab:right-4 top-1 tab:top-4 size-[191px] tab:size-[278px] laptop:size-[304px] 
-          before:content-[''] before:absolute before:top-[46px] laptop:before:top-[66px] before:left-[-4px] tab:before:left-2 before:z-[-10] 
-            before:size-[85%] before:rounded-full before:bg-yellow before:bg-opacity-15 before:blur-[30px] laptop:before:blur-[50px]
-            `}
-      />
       <div className="container flex flex-col justify-between max-w-[1920px] h-full">
         <CompanyName id={SECTION_ID} className="mb-4" />
         <InitialStepEnergy isVisible={isVisible} />
