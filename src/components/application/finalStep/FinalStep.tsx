@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useLocale,useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 import MainButton from "@/components/shared/buttons/MainButton";
@@ -41,9 +41,7 @@ export default function FinalStep() {
           height="494"
           priority
           className={`laptop:absolute laptop:bottom-[50px] laptop:right-[3.9%] w-[81%] tab:w-[77.9%] laptop:w-auto laptop:h-[61.6%] h-auto mx-auto laptop:mx-0 laptop:ml-auto mt-auto transition duration-[1100ms] ease-slow ${
-            isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
+            isVisible ? "opacity-100" : "opacity-0"
           }`}
         />
       </div>
