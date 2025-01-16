@@ -19,10 +19,10 @@ export default function FinalStep() {
   return (
     <div
       id={SECTION_ID}
-      className="relative flex-1 flex flex-col justify-between min-h-[700px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[177px] tab:pt-[205px] 
+      className="relative flex-1 flex flex-col justify-between pt-[177px] tab:pt-[205px] 
       laptop:pt-[78px] pb-8 tab:pb-20 laptop:pb-[50px] bg-heroGradient"
     >
-      <div className="container flex-1 flex flex-col justify-between max-w-[1920px]">
+      <div className="container flex-1 flex flex-col max-w-[1920px]">
         <FinalStepInfo isVisible={isVisible} />
         <Link
           href="/"
