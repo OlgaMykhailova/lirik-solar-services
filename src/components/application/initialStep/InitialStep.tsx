@@ -23,7 +23,7 @@ export default function InitialStep({ onClick }: InitialStepProps) {
   return (
     <div
       id={SECTION_ID}
-      className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[690px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[190px] 
+      className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[667px] tab:min-h-[1024px] laptop:min-h-[800px] pt-[190px] 
       laptop:pt-[58px] pb-[60px] laptop:pb-[68px] bg-heroGradient overflow-clip"
     >
       <div className="container flex flex-col justify-between max-w-[1920px] h-full">
@@ -49,7 +49,7 @@ export default function InitialStep({ onClick }: InitialStepProps) {
         width="1478"
         height="951"
         priority
-        className={`hidden tab:block absolute z-0 right-4 tab:-bottom-6 object-cover object-left tab:min-w-[615px] tab:w-[67%] laptop:w-[53%] 
+        className={`hidden tab:block absolute z-0 right-4 tab:-bottom-6 object-cover object-left tab:w-[64.2%] laptop:w-[53%] 
               laptop:max-w-[1030px] h-auto -rotate-[5deg] scale-x-[-1] transition delay-700 duration-[1000ms] ease-gentle ${
                 isVisible
                   ? "opacity-100  translate-y-0"

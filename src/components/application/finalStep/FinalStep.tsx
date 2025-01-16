@@ -45,7 +45,7 @@ export default function FinalStep() {
           width="792"
           height="494"
           priority
-          className={`laptop:absolute laptop:bottom-[50px] laptop:right-[3.9%] w-[89%] tab:w-[84.9%] laptop:w-auto laptop:h-[61.6%] h-auto mx-auto 
+          className={`laptop:absolute laptop:bottom-[50px] laptop:right-[3.9%] w-[76%] tab:w-[74.3%] laptop:w-auto laptop:h-[61.6%] h-auto mx-auto 
             laptop:mx-0 laptop:ml-auto mt-auto transition delay-[600ms] duration-[1100ms] ease-slow ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}

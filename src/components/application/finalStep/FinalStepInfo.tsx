@@ -16,7 +16,7 @@ export default function FinalStepInfo({ isVisible }: FinalStepInfo) {
           : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"
       }`}
     >
-      <p className="py-1 mb-0.5 font-gogh text-xlbb tab:text-xxxxlb">
+      <p className="py-1 mb-0.5 tab:mb-0 font-gogh text-xlbb tab:text-xxxxlb">
         {t("title.partOne")}
       </p>
       <p className="py-0.5 ml-[121px] tab:ml-[218px] font-gogh text-xxmdb tab:text-xxxmdb">
