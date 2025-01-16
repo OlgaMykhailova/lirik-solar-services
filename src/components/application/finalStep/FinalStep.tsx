@@ -37,6 +37,7 @@ export default function FinalStep() {
           alt="panelInstallation"
           width="792"
           height="494"
+          priority
           className={`w-[81%] tab:w-[77.9%] laptop:w-[61.7%] h-auto mx-auto laptop:mx-0 laptop:ml-auto mt-auto transition duration-[1100ms] ease-slow ${
             isVisible
               ? "opacity-100 translate-y-0"

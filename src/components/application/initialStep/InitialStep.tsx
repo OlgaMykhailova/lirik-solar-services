@@ -10,9 +10,13 @@ import { useOnScreen } from "@/hooks/useOnScreen";
 import InitialStepEnergy from "./InitialStepEnergy";
 import InitialStepTitle from "./InitialStepTitle";
 
+interface InitialStepProps {
+  onClick: () => void;
+}
+
 const SECTION_ID = "application-page-initial-step";
 
-export default function InitialStep() {
+export default function InitialStep({ onClick }: InitialStepProps) {
   const t = useTranslations();
   const { isVisible } = useOnScreen(SECTION_ID);
 
@@ -28,6 +32,7 @@ export default function InitialStep() {
         <InitialStepTitle isVisible={isVisible} />
 
         <MainButton
+          onClick={onClick}
           className={`w-fit transition duration-[1100ms] ease-slow ${
             isVisible
               ? "opacity-100 translate-y-0"

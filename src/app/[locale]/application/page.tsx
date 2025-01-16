@@ -1,8 +1,6 @@
 import React from "react";
-
-import InitialStep from "@/components/application/initialStep/InitialStep";
 import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
-import FinalStep from "@/components/application/finalStep/FinalStep";
+import Application from "@/components/application/Application";
 
 const SECTION_ID = "application-page";
 
@@ -19,10 +17,7 @@ export default function page() {
                   before:size-[85%] before:rounded-full before:bg-yellow before:bg-opacity-15 before:blur-[30px] laptop:before:blur-[50px]
                   `}
       />
-      <section className="flex-1 flex flex-col">
-        <InitialStep />
-        <FinalStep />
-      </section>
+      <Application />
     </main>
   );
 }
