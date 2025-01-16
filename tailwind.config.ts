@@ -64,6 +64,7 @@ const config: Config = {
         xxlbb: ["56px", { lineHeight: "77px", fontWeight: "800" }],
         xxl: ["64px", { lineHeight: "77px", fontWeight: "400" }],
         xxxl: ["72px", { lineHeight: "99px", fontWeight: "400" }],
+        xxxmdb: ["72px", { lineHeight: "99px", fontWeight: "500" }],
         xxxlb: ["72px", { lineHeight: "99px", fontWeight: "800" }],
         xxxxlb: ["80px", { lineHeight: "88px", fontWeight: "800" }],
       },
