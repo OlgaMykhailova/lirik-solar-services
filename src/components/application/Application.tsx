@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import InitialStep from "@/components/application/initialStep/InitialStep";
+
 import FinalStep from "@/components/application/finalStep/FinalStep";
+import InitialStep from "@/components/application/initialStep/InitialStep";
 
 export default function Application() {
   const [currentTab, setCurrentTab] = useState(1);

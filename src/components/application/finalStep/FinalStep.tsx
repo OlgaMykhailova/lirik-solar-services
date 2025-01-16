@@ -1,10 +1,12 @@
 "use client";
 import Image from "next/image";
+import { useLocale,useTranslations } from "next-intl";
 import React from "react";
+
 import MainButton from "@/components/shared/buttons/MainButton";
 import { useOnScreen } from "@/hooks/useOnScreen";
-import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/routing";
+
 import FinalStepInfo from "./FinalStepInfo";
 
 const SECTION_ID = "application-page-final-step";

@@ -1,6 +1,7 @@
 import React from "react";
-import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
+
 import Application from "@/components/application/Application";
+import AnimatedSun from "@/components/shared/animatedSun/AnimatedSun";
 
 const SECTION_ID = "application-page";
 
