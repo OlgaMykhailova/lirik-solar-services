@@ -17,7 +17,7 @@ export default function InitialStep() {
   const { isVisible } = useOnScreen(SECTION_ID);
 
   return (
-    <section
+    <div
       id={SECTION_ID}
       className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[690px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[190px] 
       laptop:pt-[58px] pb-[60px] laptop:pb-[68px] bg-heroGradient overflow-clip"
@@ -51,6 +51,6 @@ export default function InitialStep() {
                   : "opacity-0 translate-y-[75px] tab:translate-y-[95px]"
               }`}
       />
-    </section>
+    </div>
   );
 }
