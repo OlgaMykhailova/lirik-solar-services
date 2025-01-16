@@ -20,7 +20,7 @@ export default function InitialStep() {
     <section
       id={SECTION_ID}
       className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[690px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[190px] 
-      laptop:pt-[38px] pb-[60px] laptop:pb-[88px] bg-heroGradient overflow-clip"
+      laptop:pt-[58px] pb-[60px] laptop:pb-[68px] bg-heroGradient overflow-clip"
     >
       <div className="container flex flex-col justify-between max-w-[1920px] h-full">
         <CompanyName id={SECTION_ID} className="mb-4" />
