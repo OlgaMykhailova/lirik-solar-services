@@ -4,7 +4,7 @@ import React from "react";
 import Section from "@/components/shared/section/Section";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
 
-import AnimatedSun from "../../shared/animatedSun/AnimatedSun"; // Імпорт клієнтського компонента
+import AnimatedSun from "../../shared/animatedSun/AnimatedSun";
 
 export default function About() {
   const t = useTranslations("about");

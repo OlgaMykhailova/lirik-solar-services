@@ -15,7 +15,7 @@ export default function AnimatedSun({ id, className }: AnimatedSunProps) {
 
   return (
     <div
-      className={`transition duration-1000 ease-out ${
+      className={`transition-[translate, rotate] duration-1000 ease-out ${
         isVisible
           ? "translate-x-0 rotate-0"
           : "translate-x-[120%] rotate-[62deg]"
@@ -24,8 +24,8 @@ export default function AnimatedSun({ id, className }: AnimatedSunProps) {
       <Image
         src="/images/icons/logo.svg"
         alt="logo"
-        width="0"
-        height="0"
+        width="753"
+        height="753"
         className="w-full h-auto"
       />
     </div>
