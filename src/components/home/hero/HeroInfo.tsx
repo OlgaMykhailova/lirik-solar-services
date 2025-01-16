@@ -22,7 +22,7 @@ export default function HeroInfo({ sectionId }: HeroInfoProps) {
   return (
     <div>
       <Container className="relative">
-        <CompanyName id={sectionId} />
+        <CompanyName id={sectionId} className="mb-4 laptop:mb-6" />
         <span
           className={`relative z-10 inline-block px-4 tab:px-[38px] laptop:px-[50px] font-gogh text-lg tab:text-xxl laptop:text-xxxl text-blue before:content-[''] before:absolute before:-z-10 before:top-[-2px] laptop:before:top-1
          before:left-0 before:rounded-full before:w-full before:h-14 tab:before:h-[88px] laptop:before:h-[98px] before:bg-white before:opacity-30

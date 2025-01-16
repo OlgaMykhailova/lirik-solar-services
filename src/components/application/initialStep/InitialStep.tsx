@@ -20,7 +20,8 @@ export default function InitialStep() {
   return (
     <section
       id={SECTION_ID}
-      className="relative h-full min-h-screen pt-[200px] laptop:pt-[103px] pb-20 tab:pb-[100px] laptop:pb-[150px] bg-heroGradient overflow-hidden"
+      className="relative flex-1 flex flex-col justify-between w-full h-full min-h-[690px] tab:min-h-[1100px] laptop:min-h-[800px] pt-[190px] 
+      laptop:pt-[38px] pb-[60px] laptop:pb-[88px] bg-heroGradient overflow-hidden"
     >
       <AnimatedSun
         id={SECTION_ID}
@@ -29,8 +30,8 @@ export default function InitialStep() {
             before:size-[85%] before:rounded-full before:bg-yellow before:bg-opacity-15 before:blur-[30px] laptop:before:blur-[50px]
             `}
       />
-      <div className="container flex flex-col justify-between h-full">
-        <CompanyName id={SECTION_ID} />
+      <div className="container flex flex-col justify-between max-w-[1920px] h-full">
+        <CompanyName id={SECTION_ID} className="mb-4" />
         <InitialStepEnergy isVisible={isVisible} />
         <InitialStepTitle isVisible={isVisible} />
 
@@ -43,21 +44,21 @@ export default function InitialStep() {
         >
           {t("buttons.getOffer")}
         </MainButton>
+      </div>
 
-        <Image
-          src="/images/solarPanels.webp"
-          alt="solar panels"
-          width="1478"
-          height="951"
-          priority
-          className={`hidden tab:block absolute z-0 right-4 -bottom-6 object-cover object-left tab:min-w-[593px] w-[83%] tab:w-[67%] laptop:w-[57.7%] 
+      <Image
+        src="/images/solarPanels.webp"
+        alt="solar panels"
+        width="1478"
+        height="951"
+        priority
+        className={`hidden tab:block absolute z-0 right-4 tab:-bottom-6 object-cover object-left tab:min-w-[615px] tab:w-[67%] laptop:w-[53%] 
               laptop:max-w-[1030px] h-auto -rotate-[5deg] scale-x-[-1] transition delay-700 duration-[1000ms] ease-gentle ${
                 isVisible
                   ? "opacity-100  translate-y-0"
                   : "opacity-0 translate-y-[75px] tab:translate-y-[95px]"
               }`}
-        />
-      </div>
+      />
     </section>
   );
 }

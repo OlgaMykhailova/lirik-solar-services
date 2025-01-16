@@ -4,7 +4,7 @@ import InitialStep from "@/components/application/initialStep/InitialStep";
 
 export default function page() {
   return (
-    <main className="relative flex-1">
+    <main className="relative flex-1 flex flex-col">
       <InitialStep />
     </main>
   );
