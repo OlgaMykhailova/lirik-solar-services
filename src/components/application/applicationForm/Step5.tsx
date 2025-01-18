@@ -33,7 +33,7 @@ export default function Step5({
         {t("applicationPage.question5.subtitle")}
       </FormSubtitle>
       <PopUpTitle>{t("applicationPage.question5.title")}</PopUpTitle>
-      <div className="tab flex flex-wrap justify-between gap-y-4">
+      <div className="flex flex-col tab:flex-row tab:flex-wrap justify-between gap-y-4">
         <CustomizedInput
           fieldName="name"
           label={t("forms.name")}
@@ -41,7 +41,7 @@ export default function Step5({
           placeholder={t("forms.namePlaceholder")}
           errors={errors}
           touched={touched}
-          labelClassName="w-[48.7%]"
+          labelClassName="tab:w-[48.7%]"
         />
         <CustomizedInput
           fieldName="phone"
@@ -54,7 +54,7 @@ export default function Step5({
           image="/images/icons/phonePrefix.svg"
           fieldClassName="pl-[80px]"
           mask={PHONE_NUMBER_MASK}
-          labelClassName="w-[48.7%]"
+          labelClassName="tab:w-[48.7%]"
         />
         <CustomizedInput
           fieldName="region"
@@ -63,7 +63,7 @@ export default function Step5({
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
           touched={touched}
-          labelClassName="w-[48.7%]"
+          labelClassName="tab:w-[48.7%]"
         />
         <CustomizedInput
           fieldName="city"
@@ -72,7 +72,7 @@ export default function Step5({
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
           touched={touched}
-          labelClassName="w-[48.7%]"
+          labelClassName="tab:w-[48.7%]"
         />
         <CustomizedInput
           fieldName="message"
@@ -87,11 +87,11 @@ export default function Step5({
         />
       </div>
       <FormDescription title={t("buttons.send")} />
-      <div className="flex gap-x-6 mt-14 mr-auto">
+      <div className="flex gap-x-4 mt-14 mr-auto">
         <SecondaryButton
           onClick={() => setCurrentStep(1)}
           variant="ghost"
-          className="w-[163px]"
+          className="w-[156px]"
         >
           {t("buttons.back")}
         </SecondaryButton>
@@ -100,7 +100,7 @@ export default function Step5({
           isValid={isValid}
           isLoading={isLoading}
           variant="secondary"
-          className="w-[163px]"
+          className="w-[156px]"
         >
           {t("buttons.send")}
         </SubmitButton>
