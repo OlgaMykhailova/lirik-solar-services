@@ -6,7 +6,10 @@ interface ProgressbarProps {
 
 export default function Progressbar({ currentStep }: ProgressbarProps) {
   return (
-    <div className="relative flex items-center justify-center w-full xs:w-[448px] tab:w-[3px] h-[3px] tab:h-[328px] mx-auto mb-6 tab:mx-0 tab:my-auto bg-inputStroke">
+    <div
+      className="relative flex items-center justify-center w-full xs:w-[448px] tab:w-[3px] h-[3px] tab:h-[328px] mx-auto mb-6 tab:mx-0 
+    tab:my-auto bg-inputStroke"
+    >
       <span
         className={`absolute z-10 left-0 tab:left-auto tab:top-0 inline-block size-4 rounded-full transition duration-1000 ease-out ${
           currentStep === 2
@@ -15,8 +18,8 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
         } ${currentStep >= 2 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
       <span
-        className={`absolute left-0 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 3 ? "w-1/4" : "w-0"
+        className={`absolute left-0 tab:left-auto tab:top-0 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
+          currentStep >= 3 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
         }`}
       ></span>
       <span
@@ -27,8 +30,8 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
         } ${currentStep >= 3 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
       <span
-        className={`absolute left-1/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 4 ? "w-1/4" : "w-0"
+        className={`absolute left-1/4 tab:left-auto tab:top-1/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
+          currentStep >= 4 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
         }`}
       ></span>
       <span
@@ -39,8 +42,8 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
         } ${currentStep >= 4 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
       <span
-        className={`absolute left-1/2 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 5 ? "w-1/4" : "w-0"
+        className={`absolute left-1/2 tab:left-auto tab:top-1/2 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
+          currentStep >= 5 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
         }`}
       ></span>
       <span
@@ -51,8 +54,8 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
         } ${currentStep >= 5 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
       <span
-        className={`absolute left-3/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 6 ? "w-1/4" : "w-0"
+        className={`absolute left-3/4 tab:left-auto tab:top-3/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
+          currentStep >= 6 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
         }`}
       ></span>
       <span
