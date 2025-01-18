@@ -13,6 +13,7 @@ const config: Config = {
         manrope: ["var(--font-manrope)"],
       },
       screens: {
+        xs: "480px",
         tab: "768px",
         tabxl: "1024px",
         laptop: "1280px",
@@ -79,6 +80,7 @@ const config: Config = {
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
         radio: "0 0 0 1px #0B70BC",
+        progressBar: "0 0 0 1px #FDBD00",
       },
       transitionTimingFunction: {
         gentle: "cubic-bezier(0.47, 0, 0.23, 1.38)",
