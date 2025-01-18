@@ -2,6 +2,8 @@ import React from "react";
 
 import { ButtonProps } from "@/types/buttonProps";
 
+import IconLoader from "../icons/IconLoader";
+
 export default function SecondaryButton({
   children,
   ariaLabel = "",
@@ -10,6 +12,7 @@ export default function SecondaryButton({
   type = "button",
   onClick,
   disabled = false,
+  isLoading = false,
 }: ButtonProps) {
   return (
     <button
@@ -25,6 +28,7 @@ export default function SecondaryButton({
       enabled:active:scale-95 disabled:bg-inputStroke ${className}`}
     >
       {children}
+      {isLoading ? <IconLoader className="ml-1 animate-rotation" /> : null}
     </button>
   );
 }

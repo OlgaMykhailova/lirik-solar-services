@@ -91,7 +91,7 @@ export default function Step5({
         <SecondaryButton
           onClick={() => setCurrentStep(1)}
           variant="ghost"
-          className="w-[153px]"
+          className="w-[163px]"
         >
           {t("buttons.back")}
         </SecondaryButton>
@@ -100,7 +100,7 @@ export default function Step5({
           isValid={isValid}
           isLoading={isLoading}
           variant="secondary"
-          className="w-[153px]"
+          className="w-[163px]"
         >
           {t("buttons.send")}
         </SubmitButton>
