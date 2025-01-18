@@ -45,11 +45,14 @@ export default function Application({ sectionId }: ApplicationProps) {
         } absolute bottom-[66px] right-[90px] w-auto h-[65.8%]`}
       />
       {currentStep === 1 ? (
-        <InitialStep onClick={() => setCurrentStep(2)} />
+        <InitialStep onClick={() => setCurrentStep(6)} />
       ) : currentStep === 7 ? (
         <FinalStep />
       ) : (
-        <ApplicationFormWithNotifications setCurrentStep={setCurrentStep} currentStep={currentStep} />
+        <ApplicationFormWithNotifications
+          setCurrentStep={setCurrentStep}
+          currentStep={currentStep}
+        />
       )}
     </section>
   );
