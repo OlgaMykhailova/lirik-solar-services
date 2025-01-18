@@ -49,7 +49,7 @@ export default function Application({ sectionId }: ApplicationProps) {
       ) : currentStep === 7 ? (
         <FinalStep />
       ) : (
-        <ApplicationFormWithNotifications setCurrentStep={setCurrentStep} />
+        <ApplicationFormWithNotifications setCurrentStep={setCurrentStep} currentStep={currentStep} />
       )}
     </section>
   );
