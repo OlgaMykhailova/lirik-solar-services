@@ -1,5 +1,6 @@
 import { FormikProps } from "formik";
 import { useTranslations } from "next-intl";
+import { Dispatch, SetStateAction } from "react";
 import MaskedInput from "react-text-mask";
 
 import SecondaryButton from "@/components/shared/buttons/SecondaryButton";
@@ -15,9 +16,14 @@ import { ValuesApplicationFormType } from "./ApplicationForm";
 interface Step5Props {
   formProps: FormikProps<ValuesApplicationFormType>;
   isLoading: boolean;
+  setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
-export default function Step5({ formProps, isLoading }: Step5Props) {
+export default function Step5({
+  formProps,
+  isLoading,
+  setCurrentStep,
+}: Step5Props) {
   const t = useTranslations("");
   const { errors, touched, dirty, isValid } = formProps;
 
@@ -27,7 +33,7 @@ export default function Step5({ formProps, isLoading }: Step5Props) {
         {t("applicationPage.question5.subtitle")}
       </FormSubtitle>
       <PopUpTitle>{t("applicationPage.question5.title")}</PopUpTitle>
-      <div className="tab flex flex-wrap justify-between">
+      <div className="tab flex flex-wrap justify-between gap-y-4">
         <CustomizedInput
           fieldName="name"
           label={t("forms.name")}
@@ -82,7 +88,11 @@ export default function Step5({ formProps, isLoading }: Step5Props) {
       </div>
       <FormDescription title={t("buttons.send")} />
       <div className="flex gap-x-6 mt-4 tab:mt-6 mr-auto">
-        <SecondaryButton variant="ghost" className="w-[153px]">
+        <SecondaryButton
+          onClick={() => setCurrentStep(1)}
+          variant="ghost"
+          className="w-[153px]"
+        >
           {t("buttons.back")}
         </SecondaryButton>
         <SubmitButton

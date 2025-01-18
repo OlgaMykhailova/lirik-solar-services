@@ -75,7 +75,11 @@ export default function ApplicationForm({
       >
         {(props) => (
           <Form className="flex flex-col gap-y-4 w-full h-full">
-            <Step5 formProps={props} isLoading={isLoading} />
+            <Step5
+              formProps={props}
+              isLoading={isLoading}
+              setCurrentStep={setCurrentStep}
+            />
           </Form>
         )}
       </Formik>
