@@ -17,7 +17,7 @@ export default function FormDescription({ title }: FormDescriptionProps) {
         <span className="text-inputError">*</span>
         <p>{t("forms.requiredFields")}</p>
       </div>
-      <p>
+      <p className="text-xs tab:text-sm">
         {t("forms.agreement", { title })}
         <Link
           href={`policy`}

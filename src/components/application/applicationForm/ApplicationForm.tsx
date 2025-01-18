@@ -67,14 +67,14 @@ export default function ApplicationForm({
   };
 
   return (
-    <div className="container max-w-[1920px] pt-12 pb-14">
+    <div className="container laptop:w-[64.9%] max-w-[1920px] tab:pl-[100px] laptop:pl-[140px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 laptop:pt-20 laptop:ml-0 laptop:mr-auto">
       <Formik
         initialValues={initialValues}
         onSubmit={submitForm}
         validationSchema={validationSchema}
       >
         {(props) => (
-          <Form className="flex flex-col gap-y-4 w-full h-full tab:p-12">
+          <Form className="flex flex-col gap-y-4 w-full h-full">
             <Step5 formProps={props} isLoading={isLoading} />
           </Form>
         )}

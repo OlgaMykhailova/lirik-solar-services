@@ -18,10 +18,7 @@ export default function ApplicationFormWithNotifications({
   const [isNotificationShown, setIsNotificationShown] = useState(false);
 
   return (
-    <div
-      id={SECTION_ID}
-      className="relative tab:w-[74%] tabxl:w-[47%] laptop:w-[42%] mx-auto tabxl:mx-0"
-    >
+    <div id={SECTION_ID} className="relative">
       <ApplicationForm
         setIsError={setIsError}
         setIsNotificationShown={setIsNotificationShown}

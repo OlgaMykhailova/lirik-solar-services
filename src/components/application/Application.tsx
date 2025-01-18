@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState } from "react";
 
 import FinalStep from "@/components/application/finalStep/FinalStep";
@@ -16,7 +17,7 @@ export default function Application({ sectionId }: ApplicationProps) {
   const [currentStep, setCurrentStep] = useState(1);
 
   return (
-    <section className="flex-1 flex flex-col">
+    <section className="relative flex-1 flex flex-col">
       <AnimatedSun
         id={sectionId}
         className={`${
@@ -31,6 +32,17 @@ export default function Application({ sectionId }: ApplicationProps) {
         className={`${
           currentStep !== 1 && currentStep !== 7 ? "block" : "hidden"
         }`}
+      />
+      <Image
+        src="/images/bgImages/powerLinesRight.svg"
+        alt="power lines right side"
+        width="345"
+        height="720"
+        className={`${
+          currentStep !== 1 && currentStep !== 7
+            ? "hidden laptop:block"
+            : "hidden"
+        } absolute bottom-[66px] right-[90px]`}
       />
       {currentStep === 1 ? (
         <InitialStep onClick={() => setCurrentStep(2)} />
