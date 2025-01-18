@@ -31,7 +31,7 @@ export default function WriteUsForm({
   setIsNotificationShown,
 }: WriteUsFormProps) {
   const [isLoading, setIsLoading] = useState(false);
-  const t = useTranslations("");
+  const t = useTranslations();
 
   const initialValues = {
     name: "",
@@ -111,8 +111,10 @@ export default function WriteUsForm({
             wrapperClassName="h-[92px]"
             fieldClassName="min-h-[92px] resize-none"
           />
-          <FormDescription />
-          <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading} />
+          <FormDescription title={t("buttons.sendMessage")} />
+          <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading}>
+            {t("buttons.sendMessage")}
+          </SubmitButton>
         </Form>
       )}
     </Formik>

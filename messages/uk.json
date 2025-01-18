@@ -201,6 +201,7 @@
     "orderService": "Замовити послугу",
     "startProject": "Розпочати проєкт",
     "sendMessage": "Надіслати заявку",
+    "send": "Відправити",
     "acceptCookies": "Прийняти Cookies",
     "gridButtons": {
       "withElectricity": "Мережа є",
@@ -227,7 +228,7 @@
     "phonePlaceholder": "__ ___-__-__",
     "commentPlaceholder": "Введіть текст повідомлення",
     "requiredFields": "Поля, обов'язкові до заповнення",
-    "agreement": "Натискаючи на кнопку “Надіслати заявку“, ви погоджуєтеся з ",
+    "agreement": "Натискаючи на кнопку “{title}“, ви погоджуєтеся з ",
     "policy": "політикою конфіденційності",
     "errors": {
       "required": "Дане поле є обов'язковим до заповнення",

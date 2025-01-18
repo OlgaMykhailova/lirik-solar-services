@@ -7,12 +7,14 @@ interface SubmitButtonProps {
   dirty: boolean;
   isValid: boolean;
   isLoading: boolean;
+  children: string;
 }
 
 export default function SubmitButton({
   dirty,
   isValid,
   isLoading,
+  children,
 }: SubmitButtonProps) {
   const t = useTranslations();
   return (
@@ -22,7 +24,7 @@ export default function SubmitButton({
       isLoading={isLoading}
       className="mt-4 tab:mt-6 mr-auto"
     >
-      {t("buttons.sendMessage")}
+      {children}
     </MainButton>
   );
 }

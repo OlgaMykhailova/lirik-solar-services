@@ -73,8 +73,10 @@ export default function Step5({ formProps, isLoading }: Step5Props) {
         wrapperClassName="h-[92px]"
         fieldClassName="min-h-[92px] resize-none"
       />
-      <FormDescription />
-      <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading} />
+      <FormDescription title={t("buttons.send")}/>
+      <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading}>
+        {t("buttons.send")}
+      </SubmitButton>
     </>
   );
 }

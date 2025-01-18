@@ -89,8 +89,10 @@ export default function CallBackForm({
             fieldClassName="pl-[80px]"
             mask={PHONE_NUMBER_MASK}
           />
-          <FormDescription />
-          <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading} />
+          <FormDescription title={t("buttons.sendMessage")} />
+          <SubmitButton dirty={dirty} isValid={isValid} isLoading={isLoading}>
+            {t("buttons.sendMessage")}
+          </SubmitButton>
         </Form>
       )}
     </Formik>
