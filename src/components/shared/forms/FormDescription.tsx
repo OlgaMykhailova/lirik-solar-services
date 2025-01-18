@@ -3,7 +3,11 @@ import React from "react";
 
 import { Link } from "@/i18n/routing";
 
-export default function FormDescription() {
+interface FormDescriptionProps {
+  title: string;
+}
+
+export default function FormDescription({ title }: FormDescriptionProps) {
   const locale = useLocale();
   const t = useTranslations("");
 
@@ -13,8 +17,8 @@ export default function FormDescription() {
         <span className="text-inputError">*</span>
         <p>{t("forms.requiredFields")}</p>
       </div>
-      <p>
-        {t("forms.agreement")}
+      <p className="text-xs tab:text-sm">
+        {t("forms.agreement", { title })}
         <Link
           href={`policy`}
           target="_blank"

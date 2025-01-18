@@ -15,6 +15,7 @@ interface CustomizedInputProps {
   errors: FormikErrors<Values>;
   touched: FormikTouched<Values>;
   as?: string | typeof MaskedInput;
+  labelClassName?: string;
   wrapperClassName?: string;
   fieldClassName?: string;
   image?: string;
@@ -37,13 +38,14 @@ export default function CustomizedInput({
   required = false,
   placeholder = "",
   as,
+  labelClassName = "",
   wrapperClassName = "",
   fieldClassName = "",
   image,
   mask = "",
 }: CustomizedInputProps) {
   return (
-    <label className={labelStyles}>
+    <label className={`${labelStyles} ${labelClassName}`}>
       <p>
         {label}
         {required && <span className="text-inputError"> *</span>}

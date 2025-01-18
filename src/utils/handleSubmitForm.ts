@@ -14,7 +14,9 @@ export const handleSubmitForm = async <T>(
   data: string,
   values: ValuesCallBackFormType | ValuesWriteUsFormType,
   applicationName: string,
-  setIsPopUpShown?: Dispatch<SetStateAction<boolean>>
+  setIsPopUpShown?: Dispatch<SetStateAction<boolean>>,
+  setCurrentStep?: Dispatch<SetStateAction<number>>,
+  step?: number
 ) => {
   try {
     setIsLoading(true);
@@ -32,6 +34,9 @@ export const handleSubmitForm = async <T>(
 
     if (setIsPopUpShown) {
       setIsPopUpShown(false);
+    }
+    if (setCurrentStep && step) {
+      setCurrentStep(step);
     }
 
     sendGTMEvent({ event: applicationName.replaceAll(" ", "_"), ...values });
