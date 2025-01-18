@@ -37,12 +37,12 @@ export default function Application({ sectionId }: ApplicationProps) {
         src="/images/bgImages/powerLinesRight.svg"
         alt="power lines right side"
         width="345"
-        height="720"
+        height="526"
         className={`${
           currentStep !== 1 && currentStep !== 7
             ? "hidden laptop:block"
             : "hidden"
-        } absolute bottom-[66px] right-[90px]`}
+        } absolute bottom-[66px] right-[90px] w-auto h-[65.8%]`}
       />
       {currentStep === 1 ? (
         <InitialStep onClick={() => setCurrentStep(2)} />

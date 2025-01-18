@@ -87,7 +87,7 @@ export default function Step5({
         />
       </div>
       <FormDescription title={t("buttons.send")} />
-      <div className="flex gap-x-6 mt-4 tab:mt-6 mr-auto">
+      <div className="flex gap-x-6 mt-14 mr-auto">
         <SecondaryButton
           onClick={() => setCurrentStep(1)}
           variant="ghost"
