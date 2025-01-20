@@ -47,7 +47,7 @@ export default function CallBackForm({
     const data =
       `<b>Заявка "${applicationName}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n`;
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n`;
 
     await handleSubmitForm<ValuesCallBackFormType>(
       formikHelpers,
@@ -86,7 +86,7 @@ export default function CallBackForm({
             touched={touched}
             as={MaskedInput}
             image="/images/icons/phonePrefix.svg"
-            fieldClassName="pl-[80px]"
+            fieldClassName="pl-[70px]"
             mask={PHONE_NUMBER_MASK}
           />
           <FormDescription title={t("buttons.sendMessage")} />

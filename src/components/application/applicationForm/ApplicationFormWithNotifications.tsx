@@ -6,12 +6,14 @@ import NotificationPopUp from "@/components/shared/pop-ups/NotificationPopUp";
 import ApplicationForm from "./ApplicationForm";
 
 interface ApplicationFormWithNotificationsProps {
+  currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
 const SECTION_ID = "application-page-form";
 
 export default function ApplicationFormWithNotifications({
+  currentStep,
   setCurrentStep,
 }: ApplicationFormWithNotificationsProps) {
   const [isError, setIsError] = useState(false);
@@ -22,6 +24,7 @@ export default function ApplicationFormWithNotifications({
       <ApplicationForm
         setIsError={setIsError}
         setIsNotificationShown={setIsNotificationShown}
+        currentStep={currentStep}
         setCurrentStep={setCurrentStep}
       />
       <NotificationPopUp

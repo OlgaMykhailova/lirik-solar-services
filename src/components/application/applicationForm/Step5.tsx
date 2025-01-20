@@ -52,7 +52,7 @@ export default function Step5({
           touched={touched}
           as={MaskedInput}
           image="/images/icons/phonePrefix.svg"
-          fieldClassName="pl-[80px]"
+          fieldClassName="pl-[70px]"
           mask={PHONE_NUMBER_MASK}
           labelClassName="tab:w-[48.7%]"
         />
@@ -87,7 +87,7 @@ export default function Step5({
         />
       </div>
       <FormDescription title={t("buttons.send")} />
-      <div className="flex gap-x-4 mt-14 mr-auto">
+      <div className="flex gap-x-4 mt-14 mx-auto tab:mx-0 tab:mr-auto">
         <SecondaryButton
           onClick={() => setCurrentStep(1)}
           variant="ghost"

@@ -52,7 +52,7 @@ export default function ContactUsForm({
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
       `Насeлений пункт: ${values.city.trim()}\n` +
       `Де ви плануєте поставити обладнання?: ${
         values.equipment?.trim() || ""
@@ -95,7 +95,7 @@ export default function ContactUsForm({
             touched={touched}
             as={MaskedInput}
             image="/images/icons/phonePrefix.svg"
-            fieldClassName="pl-[80px]"
+            fieldClassName="pl-[70px]"
             mask={PHONE_NUMBER_MASK}
           />
           <CustomizedInput

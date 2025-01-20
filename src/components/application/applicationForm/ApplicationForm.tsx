@@ -5,6 +5,7 @@ import { Dispatch, SetStateAction, useState } from "react";
 import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
+import Progressbar from "./Progressbar";
 import Step5 from "./Step5";
 
 export interface ValuesApplicationFormType {
@@ -20,12 +21,15 @@ const APPLICATION_NAME = "Форма-опитувальник";
 interface ApplicationFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
+
+  currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
 export default function ApplicationForm({
   setIsError,
   setIsNotificationShown,
+  currentStep,
   setCurrentStep,
 }: ApplicationFormProps) {
   const [isLoading, setIsLoading] = useState(false);
@@ -47,7 +51,7 @@ export default function ApplicationForm({
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
       `Область: ${values.region.trim()}\n` +
       `Насeлений пункт: ${values.city.trim()}\n` +
       `Повідомлення: ${values.message.trim()}\n`;
@@ -67,7 +71,8 @@ export default function ApplicationForm({
   };
 
   return (
-    <div className="container laptop:w-[64.9%] max-w-[1920px] tab:pl-[100px] laptop:pl-[140px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 laptop:pt-20 laptop:ml-0 laptop:mr-auto">
+    <div className="container tab:flex tab:gap-x-10 laptop:gap-x-[76px] laptop:w-[64.9%] max-w-[1920px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 laptop:pt-20 laptop:ml-0 laptop:mr-auto">
+      <Progressbar currentStep={currentStep} />
       <Formik
         initialValues={initialValues}
         onSubmit={submitForm}
