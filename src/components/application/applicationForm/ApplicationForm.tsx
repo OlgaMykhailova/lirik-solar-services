@@ -50,7 +50,7 @@ export default function ApplicationForm({
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
       `Область: ${values.region.trim()}\n` +
       `Насeлений пункт: ${values.city.trim()}\n` +
       `Повідомлення: ${values.message.trim()}\n`;

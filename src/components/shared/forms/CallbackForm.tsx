@@ -47,7 +47,7 @@ export default function CallBackForm({
     const data =
       `<b>Заявка "${applicationName}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n`;
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n`;
 
     await handleSubmitForm<ValuesCallBackFormType>(
       formikHelpers,

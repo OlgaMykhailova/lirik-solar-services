@@ -52,7 +52,7 @@ export default function ContactUsForm({
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
       `Насeлений пункт: ${values.city.trim()}\n` +
       `Де ви плануєте поставити обладнання?: ${
         values.equipment?.trim() || ""
