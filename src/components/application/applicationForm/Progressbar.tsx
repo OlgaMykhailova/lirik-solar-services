@@ -18,8 +18,10 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
         } ${currentStep >= 2 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
       <span
-        className={`absolute left-0 tab:left-auto tab:top-0 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 3 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
+        className={`absolute left-0 tab:left-auto tab:top-0 tab:w-[3px] h-[3px] tab:h-1/4  delay-1000 transition-[width] duration-1000 ease-out ${
+          currentStep >= 3
+            ? "w-1/4 tab:h-1/4 bg-blueLight"
+            : "w-0 tab:h-0 bg-inputStroke"
         }`}
       ></span>
       <span
@@ -31,7 +33,9 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
       ></span>
       <span
         className={`absolute left-1/4 tab:left-auto tab:top-1/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 4 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
+          currentStep >= 4
+            ? "w-1/4 tab:h-1/4 bg-blueLight"
+            : "w-0 tab:h-0 bg-inputStroke"
         }`}
       ></span>
       <span
@@ -43,7 +47,9 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
       ></span>
       <span
         className={`absolute left-1/2 tab:left-auto tab:top-1/2 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 5 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
+          currentStep >= 5
+            ? "w-1/4 tab:h-1/4 bg-blueLight"
+            : "w-0 tab:h-0 bg-inputStroke"
         }`}
       ></span>
       <span
@@ -55,7 +61,9 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
       ></span>
       <span
         className={`absolute left-3/4 tab:left-auto tab:top-3/4 tab:w-[3px] h-[3px] tab:h-1/4 bg-blueLight delay-1000 transition-[width] duration-1000 ease-out ${
-          currentStep >= 6 ? "w-1/4 tab:h-1/4" : "w-0 tab:h-0"
+          currentStep >= 6
+            ? "w-1/4 tab:h-1/4 bg-blueLight"
+            : "w-0 tab:h-0 bg-inputStroke"
         }`}
       ></span>
       <span
