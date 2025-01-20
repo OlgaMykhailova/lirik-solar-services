@@ -13,6 +13,7 @@ import Step4 from "./Step4";
 import Step5 from "./Step5";
 
 export interface ValuesApplicationFormType {
+  placement: string;
   name: string;
   phone: string;
   region: string;
@@ -25,7 +26,6 @@ const APPLICATION_NAME = "Форма-опитувальник";
 interface ApplicationFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
-
   currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
 }
@@ -39,6 +39,7 @@ export default function ApplicationForm({
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
+    placement: "",
     name: "",
     phone: "",
     region: "",
@@ -84,15 +85,25 @@ export default function ApplicationForm({
       >
         {(props) => (
           <Form className="flex flex-col gap-y-4 w-full h-full">
-            <Step1 />
-            <Step2 />
-            <Step3 />
-            <Step4 />
-            <Step5
-              formProps={props}
-              isLoading={isLoading}
-              setCurrentStep={setCurrentStep}
-            />
+            {currentStep === 2 ? (
+              <Step1
+                formProps={props}
+                currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
+              />
+            ) : currentStep === 3 ? (
+              <Step2 />
+            ) : currentStep === 4 ? (
+              <Step3 />
+            ) : currentStep === 5 ? (
+              <Step4 />
+            ) : (
+              <Step5
+                formProps={props}
+                isLoading={isLoading}
+                setCurrentStep={setCurrentStep}
+              />
+            )}
           </Form>
         )}
       </Formik>

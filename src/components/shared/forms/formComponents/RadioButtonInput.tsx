@@ -17,7 +17,7 @@ interface CustomizedInputProps {
 }
 
 const labelStyles =
-  "relative cursor-pointer flex items-center gap-x-2 w-full px-3 py-[14px] rounded-[12px] text-inputText text-xs transition duration-300 ease-out";
+  "relative cursor-pointer flex items-center gap-x-2 w-full px-3 py-[14px] rounded-[12px] bg-white text-inputText text-xs transition duration-300 ease-out";
 const fieldStyles =
   "relative cursor-pointer appearance-none size-5 rounded-full placeholder-inputText outline-none text-sm transition duration-300 ease-out";
 const errorStyles = "absolute bottom-[-19px] right-0 text-xxs text-inputError";
