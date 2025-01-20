@@ -50,7 +50,7 @@ export default function WriteUsForm({
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
       `Ім'я: ${values.name.trim()}\n` +
       `Email: ${values.email.toLowerCase().trim()}\n` +
-      `Телефон: +380${values.phone.replace(/[^\d+]/g, "")}\n` +
+      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
       `Повідомлення: ${values.message.trim()}\n`;
 
     await handleSubmitForm<ValuesWriteUsFormType>(
@@ -89,7 +89,7 @@ export default function WriteUsForm({
             touched={touched}
             as={MaskedInput}
             image="/images/icons/phonePrefix.svg"
-            fieldClassName="pl-[80px]"
+            fieldClassName="pl-[70px]"
             mask={PHONE_NUMBER_MASK}
           />
           <CustomizedInput

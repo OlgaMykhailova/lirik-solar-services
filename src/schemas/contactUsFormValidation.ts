@@ -20,6 +20,11 @@ export const ContactUsValidation = () => {
       .matches(nameRegex, t("nameAllowedSymbols")),
     phone: yup
       .string()
+      .test(
+        "starts-with-zero",
+        t("startsWithZero"),
+        (value) => value?.startsWith("0") || false
+      )
       .matches(phoneRegex, t("wrongPhone"))
       .required(t("required")),
     message: yup.string().max(200, t("messageMinMaxSymbols")),

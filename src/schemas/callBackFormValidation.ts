@@ -15,6 +15,11 @@ export const CallBackValidation = () => {
       .required(t("required")),
     phone: yup
       .string()
+      .test(
+        "starts-with-zero",
+        t("startsWithZero"),
+        (value) => value?.startsWith("0") || false
+      )
       .matches(phoneRegex, t("wrongPhone"))
       .required(t("required")),
   });
