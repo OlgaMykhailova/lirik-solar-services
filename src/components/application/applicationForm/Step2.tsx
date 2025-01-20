@@ -26,9 +26,7 @@ export default function Step2({
 
   return (
     <>
-      <FormSubtitle className="tab:mb-2">
-        {t("applicationPage.question2.subtitle")}
-      </FormSubtitle>
+      <FormSubtitle>{t("applicationPage.question2.subtitle")}</FormSubtitle>
       <PopUpTitle>{t("applicationPage.question2.title")}</PopUpTitle>
       <div
         role="group"
@@ -38,7 +36,7 @@ export default function Step2({
         <RadioButtonInput
           fieldName="placementPanels"
           label={t("forms.onTheRoof")}
-          value="Квартира"
+          value="На даху"
           required={false}
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
@@ -47,7 +45,7 @@ export default function Step2({
         <RadioButtonInput
           fieldName="placementPanels"
           label={t("forms.onTheGround")}
-          value="Будинок"
+          value="На землі"
           required={false}
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
@@ -56,7 +54,7 @@ export default function Step2({
         <RadioButtonInput
           fieldName="placementPanels"
           label={t("forms.dontPlanToInstallPanels")}
-          value="Підприємство або офіс"
+          value="Не планую встановлювати"
           required={false}
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}

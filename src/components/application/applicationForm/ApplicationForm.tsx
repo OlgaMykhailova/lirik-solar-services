@@ -15,6 +15,7 @@ import Step5 from "./Step5";
 export interface ValuesApplicationFormType {
   placementEquipment: string;
   placementPanels: string;
+  autonomy: string;
   name: string;
   phone: string;
   region: string;
@@ -42,6 +43,7 @@ export default function ApplicationForm({
   const initialValues = {
     placementEquipment: "",
     placementPanels: "",
+    autonomy: "",
     name: "",
     phone: "",
     region: "",
@@ -100,7 +102,11 @@ export default function ApplicationForm({
                 setCurrentStep={setCurrentStep}
               />
             ) : currentStep === 4 ? (
-              <Step3 />
+              <Step3
+                formProps={props}
+                currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
+              />
             ) : currentStep === 5 ? (
               <Step4 />
             ) : (

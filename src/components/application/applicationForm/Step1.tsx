@@ -26,9 +26,7 @@ export default function Step1({
 
   return (
     <>
-      <FormSubtitle className="tab:mb-2">
-        {t("applicationPage.question1.subtitle")}
-      </FormSubtitle>
+      <FormSubtitle>{t("applicationPage.question1.subtitle")}</FormSubtitle>
       <PopUpTitle>{t("applicationPage.question1.title")}</PopUpTitle>
       <div
         role="group"
