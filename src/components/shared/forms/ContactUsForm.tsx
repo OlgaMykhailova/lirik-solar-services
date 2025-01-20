@@ -95,7 +95,7 @@ export default function ContactUsForm({
             touched={touched}
             as={MaskedInput}
             image="/images/icons/phonePrefix.svg"
-            fieldClassName="pl-[80px]"
+            fieldClassName="pl-[70px]"
             mask={PHONE_NUMBER_MASK}
           />
           <CustomizedInput
