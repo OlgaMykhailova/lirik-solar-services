@@ -6,6 +6,10 @@ import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import Progressbar from "./Progressbar";
+import Step1 from "./Step1";
+import Step2 from "./Step2";
+import Step3 from "./Step3";
+import Step4 from "./Step4";
 import Step5 from "./Step5";
 
 export interface ValuesApplicationFormType {
@@ -80,6 +84,10 @@ export default function ApplicationForm({
       >
         {(props) => (
           <Form className="flex flex-col gap-y-4 w-full h-full">
+            <Step1 />
+            <Step2 />
+            <Step3 />
+            <Step4 />
             <Step5
               formProps={props}
               isLoading={isLoading}
