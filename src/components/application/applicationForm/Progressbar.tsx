@@ -61,7 +61,7 @@ export default function Progressbar({ currentStep }: ProgressbarProps) {
       <span
         className={`absolute z-10 right-0 tab:right-auto tab:bottom-0 inline-block size-4 rounded-full transition duration-1000 ease-out ${
           currentStep === 6
-            ? "size-6 shadow-progressBar border-[5px] border-white "
+            ? "size-[20px] shadow-progressBar border-[3px] border-white "
             : ""
         } ${currentStep >= 6 ? "bg-blueLight" : "bg-inputStroke"}`}
       ></span>
