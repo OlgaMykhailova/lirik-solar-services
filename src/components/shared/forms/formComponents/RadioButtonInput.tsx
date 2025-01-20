@@ -17,9 +17,9 @@ interface CustomizedInputProps {
 }
 
 const labelStyles =
-  "relative cursor-pointer flex items-center gap-x-2 text-inputText text-xs";
+  "relative cursor-pointer flex items-center gap-x-2 w-full px-3 py-[14px] rounded-[12px] text-inputText text-xs";
 const fieldStyles =
-  "relative cursor-pointer appearance-none w-5 h-5 rounded-full placeholder-inputText outline-none text-sm transition duration-300 ease-out";
+  "relative cursor-pointer appearance-none size-5 rounded-full placeholder-inputText outline-none text-sm transition duration-300 ease-out";
 const errorStyles = "absolute bottom-[-19px] right-0 text-xxs text-inputError";
 
 export default function RadioButtonInput({
@@ -33,7 +33,9 @@ export default function RadioButtonInput({
   fieldClassName = "",
 }: CustomizedInputProps) {
   return (
-    <label className={labelStyles}>
+    <label
+      className={`shadow-radioBlue has-[:checked]:bg-backgroundLight ${labelStyles}`}
+    >
       <Field
         name={fieldName}
         type="radio"
@@ -43,7 +45,7 @@ export default function RadioButtonInput({
         className={`${fieldStyles} ${fieldClassName} ${
           errors[fieldName] && touched[fieldName]
             ? "border-inputErrorLight"
-            : "shadow-radio border-[5px] border-white bg-white checked:bg-blue"
+            : "shadow-inputStroke border-[6px] border-white checked:border-blueLight bg-white checked:shadow-blueLight"
         }`}
       ></Field>
       <p>

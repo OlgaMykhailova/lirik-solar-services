@@ -11,7 +11,7 @@ export default function ContactUsSection() {
 
   return (
     <Container>
-      <section className="px-2 tab:px-0 pt-10 pb-20 tab:pb-[100px] laptop:pb-[150px]">
+      <section className="pt-10 pb-20 tab:pb-[100px] laptop:pb-[150px]">
         <SectionTitle className="after:top-[10px]">
           {t("leaveRequest")}
         </SectionTitle>

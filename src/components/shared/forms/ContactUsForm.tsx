@@ -112,7 +112,7 @@ export default function ContactUsForm({
           <div
             role="group"
             aria-labelledby="radio-group"
-            className="flex gap-x-4"
+            className="flex flex-wrap gap-y-4"
           >
             <RadioButtonInput
               fieldName="equipment"
