@@ -108,7 +108,11 @@ export default function ApplicationForm({
                 setCurrentStep={setCurrentStep}
               />
             ) : currentStep === 5 ? (
-              <Step4 />
+              <Step4
+                formProps={props}
+                currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
+              />
             ) : (
               <Step5
                 formProps={props}
