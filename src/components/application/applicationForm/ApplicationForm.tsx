@@ -13,7 +13,8 @@ import Step4 from "./Step4";
 import Step5 from "./Step5";
 
 export interface ValuesApplicationFormType {
-  placement: string;
+  placementEquipment: string;
+  placementPanels: string;
   name: string;
   phone: string;
   region: string;
@@ -39,7 +40,8 @@ export default function ApplicationForm({
   const [isLoading, setIsLoading] = useState(false);
 
   const initialValues = {
-    placement: "",
+    placementEquipment: "",
+    placementPanels: "",
     name: "",
     phone: "",
     region: "",
@@ -84,7 +86,7 @@ export default function ApplicationForm({
         validationSchema={validationSchema}
       >
         {(props) => (
-          <Form className="flex flex-col gap-y-4 w-full h-full">
+          <Form className="flex flex-col gap-y-4 tab:gap-y-6 w-full h-full">
             {currentStep === 2 ? (
               <Step1
                 formProps={props}
@@ -92,7 +94,11 @@ export default function ApplicationForm({
                 setCurrentStep={setCurrentStep}
               />
             ) : currentStep === 3 ? (
-              <Step2 />
+              <Step2
+                formProps={props}
+                currentStep={currentStep}
+                setCurrentStep={setCurrentStep}
+              />
             ) : currentStep === 4 ? (
               <Step3 />
             ) : currentStep === 5 ? (

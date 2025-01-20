@@ -36,7 +36,7 @@ export default function Step1({
         className="flex flex-col gap-y-4 tab:gap-y-7"
       >
         <RadioButtonInput
-          fieldName="placement"
+          fieldName="placementEquipment"
           label={t("forms.apartment")}
           value="Квартира"
           required={false}
@@ -45,7 +45,7 @@ export default function Step1({
           touched={touched}
         />
         <RadioButtonInput
-          fieldName="placement"
+          fieldName="placementEquipment"
           label={t("forms.house")}
           value="Будинок"
           required={false}
@@ -54,7 +54,7 @@ export default function Step1({
           touched={touched}
         />
         <RadioButtonInput
-          fieldName="placement"
+          fieldName="placementEquipment"
           label={t("forms.companyOrOffice")}
           value="Підприємство або офіс"
           required={false}
@@ -63,7 +63,7 @@ export default function Step1({
           touched={touched}
         />
         <RadioButtonInput
-          fieldName="placement"
+          fieldName="placementEquipment"
           label={t("forms.yourOption")}
           value="Ваш варіант"
           required={false}
