@@ -9,7 +9,7 @@ import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
-import RadioButtonInput from "./formComponents/RadioButtonInput";
+import SecondaryRadioButtonInput from "./formComponents/SecondaryRadioButtonInput";
 import SubmitButton from "./formComponents/SubmitButton";
 import FormDescription from "./FormDescription";
 
@@ -112,9 +112,9 @@ export default function ContactUsForm({
           <div
             role="group"
             aria-labelledby="radio-group"
-            className="flex flex-wrap gap-y-4"
+            className="flex flex-wrap gap-4"
           >
-            <RadioButtonInput
+            <SecondaryRadioButtonInput
               fieldName="equipment"
               label={t("forms.apartment")}
               value="Квартира"
@@ -123,7 +123,7 @@ export default function ContactUsForm({
               errors={errors}
               touched={touched}
             />
-            <RadioButtonInput
+            <SecondaryRadioButtonInput
               fieldName="equipment"
               label={t("forms.house")}
               value="Будинок"
@@ -132,7 +132,7 @@ export default function ContactUsForm({
               errors={errors}
               touched={touched}
             />
-            <RadioButtonInput
+            <SecondaryRadioButtonInput
               fieldName="equipment"
               label={t("forms.company")}
               value="Підприємство"

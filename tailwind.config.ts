@@ -79,6 +79,7 @@ const config: Config = {
       },
       boxShadow: {
         base: "-7.67px 7.67px 17.25px 0px rgba(8, 63, 126, 0.15)",
+        radio: "0 0 0 1px #0B70BC",
         radioBlue: "-4px 4px 11px 0px rgba(8, 63, 126, 0.15)",
         inputStroke: "0 0 0 1px #C8C8C8",
         blueLight: "0 0 0 1px #8EC6F0",
