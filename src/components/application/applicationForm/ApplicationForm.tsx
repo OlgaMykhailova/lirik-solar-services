@@ -80,7 +80,10 @@ export default function ApplicationForm({
   };
 
   return (
-    <div className="container tab:flex tab:gap-x-10 laptop:gap-x-[76px] laptop:w-[64.9%] max-w-[1920px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 laptop:pt-20 laptop:ml-0 laptop:mr-auto">
+    <div
+      className="container tab:flex tab:gap-x-10 laptop:gap-x-[76px] laptop:w-[64.9%] max-w-[1920px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 
+    laptop:pt-20 tab:pl-[100px] laptop:pl-[140px] laptop:ml-0 laptop:mr-auto"
+    >
       <Progressbar currentStep={currentStep} />
       <Formik
         initialValues={initialValues}

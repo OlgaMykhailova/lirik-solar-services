@@ -27,7 +27,9 @@ export default function Step1({
   return (
     <>
       <FormSubtitle>{t("applicationPage.question1.subtitle")}</FormSubtitle>
-      <PopUpTitle>{t("applicationPage.question1.title")}</PopUpTitle>
+      <PopUpTitle className="tab:min-h-20">
+        {t("applicationPage.question1.title")}
+      </PopUpTitle>
       <div
         role="group"
         aria-labelledby="radio-group"
