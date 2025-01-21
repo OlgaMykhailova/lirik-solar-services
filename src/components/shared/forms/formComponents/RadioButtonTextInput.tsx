@@ -67,8 +67,12 @@ export default function RadioButtonTextInput({
     handleBlur(e);
   };
 
+  console.log(!customValue[fieldName]);
+  console.log(customInputVisible);
+
   return (
     <label
+      htmlFor={`custom${fieldName}`}
       className={`shadow-radioBlue has-[:checked]:bg-backgroundLight ${labelStyles}`}
     >
       <Field
@@ -84,20 +88,29 @@ export default function RadioButtonTextInput({
         }`}
       ></Field>
 
-      {customInputVisible || customValue[fieldName] ? (
-        <input
-          type="text"
-          value={customValue[fieldName]}
-          onChange={handleCustomInputChange}
-          onBlur={handleCustomInputBlur}
-          placeholder="Введіть своє значення"
-          className={`w-full px-1 rounded-[12px] bg-transparent outline-none`}
-        />
-      ) : (
-        <p onClick={() => setCustomInputVisible(true)} className="w-full">
-          {label}
-        </p>
-      )}
+      <input
+        id={`custom${fieldName}`}
+        type="text"
+        value={customValue[fieldName]}
+        onChange={handleCustomInputChange}
+        onBlur={handleCustomInputBlur}
+        placeholder={
+          customInputVisible || customValue[fieldName]
+            ? "Введіть своє значення"
+            : ""
+        }
+        className={`w-full px-1 rounded-[12px] bg-transparent outline-none`}
+      />
+
+      <p
+        onClick={() => setCustomInputVisible(true)}
+        className={`${
+          customInputVisible || customValue[fieldName] ? "hidden" : "block"
+        } absolute left-10 w-full`}
+      >
+        {label}
+      </p>
+
       <p>{required && <span className="text-inputError"> *</span>}</p>
 
       <ErrorMessage
