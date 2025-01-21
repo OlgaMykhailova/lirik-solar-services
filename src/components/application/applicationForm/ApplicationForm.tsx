@@ -2,7 +2,7 @@
 import { Form, Formik, FormikHelpers } from "formik";
 import { Dispatch, SetStateAction, useState } from "react";
 
-import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
+import { ApplicationValidation } from "@/schemas/applicationFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import Progressbar from "./Progressbar";
@@ -24,8 +24,6 @@ export interface ValuesApplicationFormType {
   message: string;
 }
 
-const APPLICATION_NAME = "Форма-опитувальник";
-
 interface ApplicationFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
@@ -34,6 +32,8 @@ interface ApplicationFormProps {
 }
 
 export type CustomValues = Record<string, string>;
+
+const APPLICATION_NAME = "Форма-опитувальник";
 
 export default function ApplicationForm({
   setIsError,
@@ -61,7 +61,7 @@ export default function ApplicationForm({
     message: "",
   };
 
-  const validationSchema = ContactUsValidation();
+  const validationSchema = ApplicationValidation();
 
   const submitForm = async (
     values: ValuesApplicationFormType,
