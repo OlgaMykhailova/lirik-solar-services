@@ -7,7 +7,7 @@ interface ProgressbarProps {
 export default function Progressbar({ currentStep }: ProgressbarProps) {
   return (
     <div
-      className="relative tab:absolute tab:top-[138px] laptop:top-[162px] tab:left-10 laptop:left-[76px] flex items-center justify-center w-full xs:w-[448px] tab:w-[3px] h-[3px] tab:h-[328px] mx-auto mb-6 tab:mx-0 
+      className="relative tab:absolute tab:top-[138px] laptop:top-[162px] tab:left-10 laptop:left-[76px] flex items-center justify-center w-full xs:w-[448px] tab:w-[3px] h-[3px] tab:h-[428px] mx-auto mb-6 tab:mx-0 
     tab:my-auto bg-inputStroke"
     >
       <span
