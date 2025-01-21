@@ -4,6 +4,7 @@ import React from "react";
 import { Dispatch, SetStateAction } from "react";
 
 import RadioButtonInput from "@/components/shared/forms/formComponents/RadioButtonInput";
+import RadioButtonTextInput from "@/components/shared/forms/formComponents/RadioButtonTextInput";
 import FormSubtitle from "@/components/shared/titles/FormSubtitle";
 import PopUpTitle from "@/components/shared/titles/PopUpTitle";
 
@@ -22,6 +23,8 @@ export default function Step4({
   formProps,
   currentStep,
   setCurrentStep,
+  customValue,
+  setCustomValue,
 }: Step4Props) {
   const t = useTranslations();
   const { errors, touched } = formProps;
@@ -55,7 +58,7 @@ export default function Step4({
           errors={errors}
           touched={touched}
         />
-        <RadioButtonInput
+        <RadioButtonTextInput
           fieldName="purpose"
           label={t("forms.yourOption")}
           value="Ваш варіант"
@@ -63,6 +66,8 @@ export default function Step4({
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
           touched={touched}
+          setCustomValue={setCustomValue}
+          customValue={customValue}
         />
       </div>
       <NavigationButtons

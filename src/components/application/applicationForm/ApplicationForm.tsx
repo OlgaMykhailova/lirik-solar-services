@@ -69,11 +69,15 @@ export default function ApplicationForm({
   ) => {
     const data =
       `<b>Заявка "${APPLICATION_NAME}"</b>\n` +
-      `Ім'я: ${values.name.trim()}\n` +
-      `Телефон: +38${values.phone.replace(/[^\d+]/g, "")}\n` +
-      `Область: ${values.region.trim()}\n` +
-      `Насeлений пункт: ${values.city.trim()}\n` +
-      `Повідомлення: ${values.message.trim()}\n`;
+      `Де планується встановити обладнання: <b>${values.placementEquipment.trim()}</b>\n` +
+      `Де ви плануєте встановити сонячні панелі: <b>${values.placementPanels.trim()}</b>\n` +
+      `Яка бажана орієнтовна робота станції на акумуляторах, без мережі: <b>${values.autonomy.trim()}</b>\n` +
+      `Яке призначення станції: <b>${values.purpose.trim()}</b>\n` +
+      `Ім'я: <b>${values.name.trim()}</b>\n` +
+      `Телефон: <b>+38${values.phone.replace(/[^\d+]/g, "")}</b>\n` +
+      `Область: <b>${values.region.trim()}</b>\n` +
+      `Насeлений пункт: <b>${values.city.trim()}</b>\n` +
+      `Повідомлення: <b>${values.message.trim()}</b>\n`;
 
     await handleSubmitForm<ValuesApplicationFormType>(
       formikHelpers,
