@@ -36,7 +36,6 @@ export default function SubmitButton({
           type="submit"
           disabled={!(dirty && isValid) || isLoading}
           isLoading={isLoading}
-          variant="ghost"
           className={className}
         >
           {children}
