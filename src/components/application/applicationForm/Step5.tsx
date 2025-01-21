@@ -29,10 +29,10 @@ export default function Step5({
 
   return (
     <>
-      <FormSubtitle className="tab:mb-2">
-        {t("applicationPage.question5.subtitle")}
-      </FormSubtitle>
-      <PopUpTitle>{t("applicationPage.question5.title")}</PopUpTitle>
+      <FormSubtitle>{t("applicationPage.question5.subtitle")}</FormSubtitle>
+      <PopUpTitle className="tab:min-h-20">
+        {t("applicationPage.question5.title")}
+      </PopUpTitle>
       <div className="flex flex-col tab:flex-row tab:flex-wrap justify-between gap-y-4">
         <CustomizedInput
           fieldName="name"
@@ -89,7 +89,7 @@ export default function Step5({
       <FormDescription title={t("buttons.send")} />
       <div className="flex gap-x-4 mt-14 mx-auto tab:mx-0 tab:mr-auto">
         <SecondaryButton
-          onClick={() => setCurrentStep(1)}
+          onClick={() => setCurrentStep(5)}
           variant="ghost"
           className="w-[156px]"
         >
