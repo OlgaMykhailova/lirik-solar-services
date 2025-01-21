@@ -29,9 +29,7 @@ export default function Step5({
 
   return (
     <>
-      <FormSubtitle className="tab:mb-2">
-        {t("applicationPage.question5.subtitle")}
-      </FormSubtitle>
+      <FormSubtitle>{t("applicationPage.question5.subtitle")}</FormSubtitle>
       <PopUpTitle className="tab:min-h-20">
         {t("applicationPage.question5.title")}
       </PopUpTitle>

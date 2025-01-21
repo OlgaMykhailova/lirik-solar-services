@@ -4,23 +4,28 @@ import React from "react";
 import { Dispatch, SetStateAction } from "react";
 
 import RadioButtonInput from "@/components/shared/forms/formComponents/RadioButtonInput";
+import RadioButtonTextInput from "@/components/shared/forms/formComponents/RadioButtonTextInput";
 import FormSubtitle from "@/components/shared/titles/FormSubtitle";
 import PopUpTitle from "@/components/shared/titles/PopUpTitle";
 
-import { ValuesApplicationFormType } from "./ApplicationForm";
+import { CustomValues, ValuesApplicationFormType } from "./ApplicationForm";
 import NavigationButtons from "./NavigationButtons";
 
-interface Step1Props {
+interface Step3Props {
   formProps: FormikProps<ValuesApplicationFormType>;
   currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
+  customValue: CustomValues;
+  setCustomValue: Dispatch<SetStateAction<CustomValues>>;
 }
 
 export default function Step3({
   formProps,
   currentStep,
   setCurrentStep,
-}: Step1Props) {
+  customValue,
+  setCustomValue,
+}: Step3Props) {
   const t = useTranslations();
   const { errors, touched } = formProps;
 
@@ -62,7 +67,7 @@ export default function Step3({
           errors={errors}
           touched={touched}
         />
-        <RadioButtonInput
+        <RadioButtonTextInput
           fieldName="autonomy"
           label={t("forms.yourOption")}
           value="Ваш варіант"
@@ -70,6 +75,8 @@ export default function Step3({
           placeholder={t("forms.cityPlaceholder")}
           errors={errors}
           touched={touched}
+          setCustomValue={setCustomValue}
+          customValue={customValue}
         />
       </div>
       <NavigationButtons

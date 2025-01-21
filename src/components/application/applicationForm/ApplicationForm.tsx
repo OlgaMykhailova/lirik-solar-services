@@ -16,6 +16,7 @@ export interface ValuesApplicationFormType {
   placementEquipment: string;
   placementPanels: string;
   autonomy: string;
+  purpose: string;
   name: string;
   phone: string;
   region: string;
@@ -32,6 +33,8 @@ interface ApplicationFormProps {
   setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
+export type CustomValues = Record<string, string>;
+
 export default function ApplicationForm({
   setIsError,
   setIsNotificationShown,
@@ -39,11 +42,18 @@ export default function ApplicationForm({
   setCurrentStep,
 }: ApplicationFormProps) {
   const [isLoading, setIsLoading] = useState(false);
+  const [customValue, setCustomValue] = useState<CustomValues>({
+    placementEquipment: "",
+    placementPanels: "",
+    autonomy: "",
+    purpose: "",
+  });
 
   const initialValues = {
     placementEquipment: "",
     placementPanels: "",
     autonomy: "",
+    purpose: "",
     name: "",
     phone: "",
     region: "",
@@ -97,24 +107,32 @@ export default function ApplicationForm({
                 formProps={props}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
+                setCustomValue={setCustomValue}
+                customValue={customValue}
               />
             ) : currentStep === 3 ? (
               <Step2
                 formProps={props}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
+                setCustomValue={setCustomValue}
+                customValue={customValue}
               />
             ) : currentStep === 4 ? (
               <Step3
                 formProps={props}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
+                setCustomValue={setCustomValue}
+                customValue={customValue}
               />
             ) : currentStep === 5 ? (
               <Step4
                 formProps={props}
                 currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
+                setCustomValue={setCustomValue}
+                customValue={customValue}
               />
             ) : (
               <Step5

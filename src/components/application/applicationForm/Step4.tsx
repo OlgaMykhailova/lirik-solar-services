@@ -7,20 +7,22 @@ import RadioButtonInput from "@/components/shared/forms/formComponents/RadioButt
 import FormSubtitle from "@/components/shared/titles/FormSubtitle";
 import PopUpTitle from "@/components/shared/titles/PopUpTitle";
 
-import { ValuesApplicationFormType } from "./ApplicationForm";
+import { CustomValues, ValuesApplicationFormType } from "./ApplicationForm";
 import NavigationButtons from "./NavigationButtons";
 
-interface Step1Props {
+interface Step4Props {
   formProps: FormikProps<ValuesApplicationFormType>;
   currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
+  customValue: CustomValues;
+  setCustomValue: Dispatch<SetStateAction<CustomValues>>;
 }
 
 export default function Step4({
   formProps,
   currentStep,
   setCurrentStep,
-}: Step1Props) {
+}: Step4Props) {
   const t = useTranslations();
   const { errors, touched } = formProps;
 
@@ -36,7 +38,7 @@ export default function Step4({
         className="flex flex-col gap-y-4 tab:gap-y-7"
       >
         <RadioButtonInput
-          fieldName="autonomy"
+          fieldName="purpose"
           label={t("forms.energyIndependence")}
           value="Енергетична незалежність будинку та економія"
           required={false}
@@ -45,7 +47,7 @@ export default function Step4({
           touched={touched}
         />
         <RadioButtonInput
-          fieldName="autonomy"
+          fieldName="purpose"
           label={t("forms.passiveIncome")}
           value="Пасивний дохід, можливість заробітку"
           required={false}
@@ -54,7 +56,7 @@ export default function Step4({
           touched={touched}
         />
         <RadioButtonInput
-          fieldName="autonomy"
+          fieldName="purpose"
           label={t("forms.yourOption")}
           value="Ваш варіант"
           required={false}
