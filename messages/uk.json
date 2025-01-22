@@ -237,6 +237,7 @@
     "namePlaceholder": "Введіть ім'я",
     "emailPlaceholder": "example@mail.com",
     "cityPlaceholder": "Введіть ваш населений пункт",
+    "regionPlaceholder": "Оберіть вашу область",
     "phonePlaceholder": "__ ___-__-__",
     "commentPlaceholder": "Введіть текст повідомлення",
     "requiredFields": "Поля, обов'язкові до заповнення",
@@ -344,7 +345,11 @@
     },
     "question5": {
       "subtitle": "Питання 5",
-      "title": "Як ми можемо зв'язатися з вами?"
+      "title": "Як ми можемо зв'язатися з вами?",
+      "regions": {
+        "kyivska": "Київська",
+        "another": "Інша"
+      }
     },
     "finalStep": {
       "title": { "partOne": "Дякуємо", "partTwo": "за заявку!" },

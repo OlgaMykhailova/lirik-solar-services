@@ -5,6 +5,7 @@ import MaskedInput from "react-text-mask";
 
 import SecondaryButton from "@/components/shared/buttons/SecondaryButton";
 import CustomizedInput from "@/components/shared/forms/formComponents/CustomizedInput";
+import SelectInput from "@/components/shared/forms/formComponents/SelectInput";
 import SubmitButton from "@/components/shared/forms/formComponents/SubmitButton";
 import FormDescription from "@/components/shared/forms/FormDescription";
 import FormSubtitle from "@/components/shared/titles/FormSubtitle";
@@ -26,6 +27,16 @@ export default function Step5({
 }: Step5Props) {
   const t = useTranslations("");
   const { errors, touched, dirty, isValid } = formProps;
+  const selectOptions = [
+    {
+      value: t("applicationPage.question5.regions.kyivska"),
+      label: t("applicationPage.question5.regions.kyivska"),
+    },
+    {
+      value: t("applicationPage.question5.regions.another"),
+      label: t("applicationPage.question5.regions.another"),
+    },
+  ];
 
   return (
     <>
@@ -56,13 +67,12 @@ export default function Step5({
           mask={PHONE_NUMBER_MASK}
           labelClassName="tab:w-[48.7%]"
         />
-        <CustomizedInput
+        <SelectInput
           fieldName="region"
           label={t("forms.region")}
+          options={selectOptions}
           required={false}
-          placeholder={t("forms.cityPlaceholder")}
-          errors={errors}
-          touched={touched}
+          placeholder={t("forms.regionPlaceholder")}
           labelClassName="tab:w-[48.7%]"
         />
         <CustomizedInput
