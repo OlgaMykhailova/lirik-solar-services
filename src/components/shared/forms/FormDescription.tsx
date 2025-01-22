@@ -5,14 +5,18 @@ import { Link } from "@/i18n/routing";
 
 interface FormDescriptionProps {
   title: string;
+  className?: string;
 }
 
-export default function FormDescription({ title }: FormDescriptionProps) {
+export default function FormDescription({
+  title,
+  className = "",
+}: FormDescriptionProps) {
   const locale = useLocale();
   const t = useTranslations("");
 
   return (
-    <div className="text-sm">
+    <div className={`text-sm ${className}`}>
       <div className="flex gap-x-2 w-full mb-1.5 text-xs">
         <span className="text-inputError">*</span>
         <p>{t("forms.requiredFields")}</p>

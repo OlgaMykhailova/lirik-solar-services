@@ -63,7 +63,7 @@ export default function CustomizedSelect({
         {required && <span className="text-inputError"> *</span>}
       </p>
       <div
-        className={`${fieldWrapperStyles} relative flex items-center ${wrapperClassName} ${
+        className={`${fieldWrapperStyles} relative flex items-center bg-white ${wrapperClassName} ${
           errors[fieldName] && touched[fieldName]
             ? "before:bg-inputError"
             : "before:bg-transparent group-hover:before:bg-blueLight focus-within:before:bg-blueLight"

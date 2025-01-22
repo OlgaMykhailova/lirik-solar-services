@@ -14,7 +14,7 @@ export default function NavigationButtons({
   const t = useTranslations();
 
   return (
-    <div className="flex gap-x-4 mt-14 mx-auto tab:mx-0 tab:mr-auto">
+    <div className="flex gap-x-4 mt-auto mx-auto tab:mx-0 tab:mr-auto">
       <SecondaryButton
         onClick={() => setCurrentStep((prev) => prev - 1)}
         variant="ghost"

@@ -35,6 +35,8 @@ export type CustomValues = Record<string, string>;
 
 const APPLICATION_NAME = "Форма-опитувальник";
 
+const SECTION_ID = "application-page-form";
+
 export default function ApplicationForm({
   setIsError,
   setIsNotificationShown,
@@ -96,8 +98,9 @@ export default function ApplicationForm({
 
   return (
     <div
-      className="container tab:flex tab:gap-x-10 laptop:gap-x-[76px] laptop:w-[64.9%] max-w-[1920px] pt-12 pb-14 tab:pt-[254px] tab:pb-20 
-    laptop:pt-20 tab:pl-[100px] laptop:pl-[140px] laptop:ml-0 laptop:mr-auto"
+      id={SECTION_ID}
+      className="relative flex-1 container flex flex-col tab:flex-row tab:gap-x-10 laptop:gap-x-[76px] laptop:w-[71.6%] max-w-[1920px] pt-12 pb-14 
+      tab:pt-[254px] tab:pb-20 laptop:pt-20 tab:pl-[100px] laptop:pl-[140px] laptop:ml-0 laptop:mr-auto"
     >
       <Progressbar currentStep={currentStep} />
       <Formik
@@ -106,7 +109,7 @@ export default function ApplicationForm({
         validationSchema={validationSchema}
       >
         {(props) => (
-          <Form className="flex flex-col gap-y-4 tab:gap-y-6 w-full h-full">
+          <Form className="flex-1 flex flex-col gap-y-4 tab:gap-y-6 w-full laptop:w-[95.11%] max-w-[700px]">
             {currentStep === 2 ? (
               <Step1
                 formProps={props}
