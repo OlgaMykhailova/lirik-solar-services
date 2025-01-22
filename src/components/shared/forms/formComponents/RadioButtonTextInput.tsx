@@ -67,9 +67,6 @@ export default function RadioButtonTextInput({
     handleBlur(e);
   };
 
-  console.log(!customValue[fieldName]);
-  console.log(customInputVisible);
-
   return (
     <label
       htmlFor={`custom${fieldName}`}

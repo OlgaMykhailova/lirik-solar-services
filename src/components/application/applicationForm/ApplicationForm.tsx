@@ -2,7 +2,7 @@
 import { Form, Formik, FormikHelpers } from "formik";
 import { Dispatch, SetStateAction, useState } from "react";
 
-import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
+import { ApplicationValidation } from "@/schemas/applicationFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
 
 import Progressbar from "./Progressbar";
@@ -24,8 +24,6 @@ export interface ValuesApplicationFormType {
   message: string;
 }
 
-const APPLICATION_NAME = "Форма-опитувальник";
-
 interface ApplicationFormProps {
   setIsError: Dispatch<SetStateAction<boolean>>;
   setIsNotificationShown: Dispatch<SetStateAction<boolean>>;
@@ -35,6 +33,8 @@ interface ApplicationFormProps {
 
 export type CustomValues = Record<string, string>;
 
+const APPLICATION_NAME = "Форма-опитувальник";
+
 export default function ApplicationForm({
   setIsError,
   setIsNotificationShown,
@@ -42,6 +42,7 @@ export default function ApplicationForm({
   setCurrentStep,
 }: ApplicationFormProps) {
   const [isLoading, setIsLoading] = useState(false);
+
   const [customValue, setCustomValue] = useState<CustomValues>({
     placementEquipment: "",
     placementPanels: "",
@@ -61,7 +62,7 @@ export default function ApplicationForm({
     message: "",
   };
 
-  const validationSchema = ContactUsValidation();
+  const validationSchema = ApplicationValidation();
 
   const submitForm = async (
     values: ValuesApplicationFormType,
@@ -109,7 +110,6 @@ export default function ApplicationForm({
             {currentStep === 2 ? (
               <Step1
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -117,7 +117,6 @@ export default function ApplicationForm({
             ) : currentStep === 3 ? (
               <Step2
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -125,7 +124,6 @@ export default function ApplicationForm({
             ) : currentStep === 4 ? (
               <Step3
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -133,7 +131,6 @@ export default function ApplicationForm({
             ) : currentStep === 5 ? (
               <Step4
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
