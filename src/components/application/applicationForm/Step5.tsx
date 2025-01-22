@@ -67,11 +67,8 @@ export default function Step5({
           options={selectOptions}
           required={false}
           placeholder={t("forms.regionPlaceholder")}
-          errors={errors}
-          touched={touched}
           labelClassName="tab:w-[48.7%]"
         />
-
         <CustomizedInput
           fieldName="city"
           label={t("forms.city")}
