@@ -12,6 +12,7 @@ import PopUpTitle from "@/components/shared/titles/PopUpTitle";
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
 
 import { ValuesApplicationFormType } from "./ApplicationForm";
+import SelectInput from "@/components/shared/forms/formComponents/SelectInput";
 
 interface Step5Props {
   formProps: FormikProps<ValuesApplicationFormType>;
@@ -26,6 +27,10 @@ export default function Step5({
 }: Step5Props) {
   const t = useTranslations("");
   const { errors, touched, dirty, isValid } = formProps;
+  const selectOptions = [
+    { value: "Київська", label: "Київська" },
+    { value: "Інша", label: "Інша" },
+  ];
 
   return (
     <>
@@ -56,15 +61,17 @@ export default function Step5({
           mask={PHONE_NUMBER_MASK}
           labelClassName="tab:w-[48.7%]"
         />
-        <CustomizedInput
+        <SelectInput
           fieldName="region"
           label={t("forms.region")}
+          options={selectOptions}
           required={false}
-          placeholder={t("forms.cityPlaceholder")}
+          placeholder={t("forms.regionPlaceholder")}
           errors={errors}
           touched={touched}
           labelClassName="tab:w-[48.7%]"
         />
+
         <CustomizedInput
           fieldName="city"
           label={t("forms.city")}

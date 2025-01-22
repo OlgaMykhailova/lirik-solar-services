@@ -237,6 +237,7 @@
     "namePlaceholder": "Введите имя",
     "emailPlaceholder": "example@mail.com",
     "cityPlaceholder": "Введите ваш населенный пункт",
+    "regionPlaceholder": "Выберите вашу область",
     "phonePlaceholder": "__ ___-__-__",
     "commentPlaceholder": "Введите текст сообщения",
     "requiredFields": "Поля, обязательные к заполнению",
