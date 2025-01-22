@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import { useFormikContext, ErrorMessage } from "formik";
+import { ErrorMessage, useFormikContext } from "formik";
 import Image from "next/image";
+import React, { useState } from "react";
 
 interface Option {
   value: string;
   label: string;
+}
+
+interface Values {
+  [fieldName: string]: string;
 }
 
 interface SelectProps {
@@ -37,7 +41,7 @@ export default function CustomizedSelect({
   fieldClassName = "",
 }: SelectProps) {
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  const { setFieldValue, values, errors, touched } = useFormikContext<any>();
+  const { setFieldValue, values, errors, touched } = useFormikContext<Values>();
 
   const toggleDropdown = () => {
     setIsDropDownOpen((prev) => !prev);
@@ -83,7 +87,7 @@ export default function CustomizedSelect({
         </div>
         <ul
           className={`${
-            isDropDownOpen ? "opacity-100" : "opacity-0"
+            isDropDownOpen ? "opacity-100" : "opacity-0 pointer-events-none"
           } absolute top-full left-0 w-full bg-white border border-inputStroke rounded-[12px] z-20 mt-0.5 overflow-hidden shadow-select
           transition duration-300 ease-out`}
         >

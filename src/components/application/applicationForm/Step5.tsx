@@ -5,6 +5,7 @@ import MaskedInput from "react-text-mask";
 
 import SecondaryButton from "@/components/shared/buttons/SecondaryButton";
 import CustomizedInput from "@/components/shared/forms/formComponents/CustomizedInput";
+import SelectInput from "@/components/shared/forms/formComponents/SelectInput";
 import SubmitButton from "@/components/shared/forms/formComponents/SubmitButton";
 import FormDescription from "@/components/shared/forms/FormDescription";
 import FormSubtitle from "@/components/shared/titles/FormSubtitle";
@@ -12,7 +13,6 @@ import PopUpTitle from "@/components/shared/titles/PopUpTitle";
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
 
 import { ValuesApplicationFormType } from "./ApplicationForm";
-import SelectInput from "@/components/shared/forms/formComponents/SelectInput";
 
 interface Step5Props {
   formProps: FormikProps<ValuesApplicationFormType>;
@@ -28,8 +28,14 @@ export default function Step5({
   const t = useTranslations("");
   const { errors, touched, dirty, isValid } = formProps;
   const selectOptions = [
-    { value: "Київська", label: "Київська" },
-    { value: "Інша", label: "Інша" },
+    {
+      value: t("applicationPage.question5.regions.kyivska"),
+      label: t("applicationPage.question5.regions.kyivska"),
+    },
+    {
+      value: t("applicationPage.question5.regions.another"),
+      label: t("applicationPage.question5.regions.another"),
+    },
   ];
 
   return (
