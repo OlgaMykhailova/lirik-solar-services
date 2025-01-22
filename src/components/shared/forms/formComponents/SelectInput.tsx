@@ -53,7 +53,9 @@ export default function CustomizedSelect({
 
   return (
     <label
+      tabIndex={0}
       onClick={toggleDropdown}
+      onBlur={() => setIsDropDownOpen(false)}
       className={`${labelStyles} ${labelClassName}`}
     >
       <p>

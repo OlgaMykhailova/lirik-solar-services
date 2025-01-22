@@ -41,9 +41,7 @@ export default function Step5({
   return (
     <>
       <FormSubtitle>{t("applicationPage.question5.subtitle")}</FormSubtitle>
-      <PopUpTitle className="tab:min-h-20">
-        {t("applicationPage.question5.title")}
-      </PopUpTitle>
+      <PopUpTitle>{t("applicationPage.question5.title")}</PopUpTitle>
       <div className="flex flex-col tab:flex-row tab:flex-wrap justify-between gap-y-4">
         <CustomizedInput
           fieldName="name"
