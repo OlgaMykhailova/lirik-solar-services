@@ -13,7 +13,6 @@ import NavigationButtons from "./NavigationButtons";
 
 interface Step2Props {
   formProps: FormikProps<ValuesApplicationFormType>;
-  currentStep: number;
   setCurrentStep: Dispatch<SetStateAction<number>>;
   customValue: CustomValues;
   setCustomValue: Dispatch<SetStateAction<CustomValues>>;
@@ -21,7 +20,6 @@ interface Step2Props {
 
 export default function Step2({
   formProps,
-  currentStep,
   setCurrentStep,
   customValue,
   setCustomValue,
@@ -79,10 +77,7 @@ export default function Step2({
           customValue={customValue}
         />
       </div>
-      <NavigationButtons
-        setCurrentStep={setCurrentStep}
-        currentStep={currentStep}
-      />
+      <NavigationButtons setCurrentStep={setCurrentStep} />
     </>
   );
 }

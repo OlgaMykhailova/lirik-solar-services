@@ -7,10 +7,10 @@ export const ApplicationValidation = () => {
   const t = useTranslations("forms.errors");
 
   const applicationFormValidationSchema = yup.object().shape({
-    placementEquipment: yup.string().required(t("required")),
-    placementPanels: yup.string().required(t("required")),
-    autonomy: yup.string().required(t("required")),
-    purpose: yup.string().required(t("required")),
+    placementEquipment: yup.string(),
+    placementPanels: yup.string(),
+    autonomy: yup.string(),
+    purpose: yup.string(),
     name: yup
       .string()
       .min(2, t("nameMinMaxSymbols"))

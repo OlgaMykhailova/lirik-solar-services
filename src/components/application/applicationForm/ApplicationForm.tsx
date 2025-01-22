@@ -42,6 +42,7 @@ export default function ApplicationForm({
   setCurrentStep,
 }: ApplicationFormProps) {
   const [isLoading, setIsLoading] = useState(false);
+
   const [customValue, setCustomValue] = useState<CustomValues>({
     placementEquipment: "",
     placementPanels: "",
@@ -109,7 +110,6 @@ export default function ApplicationForm({
             {currentStep === 2 ? (
               <Step1
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -117,7 +117,6 @@ export default function ApplicationForm({
             ) : currentStep === 3 ? (
               <Step2
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -125,7 +124,6 @@ export default function ApplicationForm({
             ) : currentStep === 4 ? (
               <Step3
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
@@ -133,7 +131,6 @@ export default function ApplicationForm({
             ) : currentStep === 5 ? (
               <Step4
                 formProps={props}
-                currentStep={currentStep}
                 setCurrentStep={setCurrentStep}
                 setCustomValue={setCustomValue}
                 customValue={customValue}
