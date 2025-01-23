@@ -10,8 +10,6 @@ interface ApplicationFormWithNotificationsProps {
   setCurrentStep: Dispatch<SetStateAction<number>>;
 }
 
-const SECTION_ID = "application-page-form";
-
 export default function ApplicationFormWithNotifications({
   currentStep,
   setCurrentStep,
@@ -20,7 +18,7 @@ export default function ApplicationFormWithNotifications({
   const [isNotificationShown, setIsNotificationShown] = useState(false);
 
   return (
-    <div id={SECTION_ID} className="relative">
+    <>
       <ApplicationForm
         setIsError={setIsError}
         setIsNotificationShown={setIsNotificationShown}
@@ -33,6 +31,6 @@ export default function ApplicationFormWithNotifications({
         setIsError={setIsError}
         setIsNotificationShown={setIsNotificationShown}
       />
-    </div>
+    </>
   );
 }

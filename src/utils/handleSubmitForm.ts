@@ -16,7 +16,8 @@ export const handleSubmitForm = async <T>(
   applicationName: string,
   setIsPopUpShown?: Dispatch<SetStateAction<boolean>>,
   setCurrentStep?: Dispatch<SetStateAction<number>>,
-  step?: number
+  step?: number,
+  scrollToTop?: boolean
 ) => {
   try {
     setIsLoading(true);
@@ -37,6 +38,12 @@ export const handleSubmitForm = async <T>(
     }
     if (setCurrentStep && step) {
       setCurrentStep(step);
+    }
+    if (scrollToTop) {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
     }
 
     sendGTMEvent({ event: applicationName.replaceAll(" ", "_"), ...values });

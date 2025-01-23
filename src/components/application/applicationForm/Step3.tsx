@@ -30,13 +30,14 @@ export default function Step3({
   return (
     <>
       <FormSubtitle>{t("applicationPage.question3.subtitle")}</FormSubtitle>
-      <PopUpTitle className="tab:min-h-20">
-        {t("applicationPage.question3.title")}
-      </PopUpTitle>
+      <PopUpTitle>{t("applicationPage.question3.title")}</PopUpTitle>
+      <p className="mb-6 tab:mb-14 laptop:mb-8">
+        {t("applicationPage.question3.description")}
+      </p>
       <div
         role="group"
         aria-labelledby="radio-group"
-        className="flex flex-col gap-y-4 tab:gap-y-7"
+        className="flex flex-col gap-y-4 tab:gap-y-7 mb-14 tab:mb-20 laptop:mb-14"
       >
         <RadioButtonInput
           fieldName="autonomy"

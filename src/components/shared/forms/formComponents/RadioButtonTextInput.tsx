@@ -85,7 +85,7 @@ export default function RadioButtonTextInput({
         }`}
       ></Field>
 
-      <input
+      <Field
         id={`custom${fieldName}`}
         type="text"
         value={customValue[fieldName]}
