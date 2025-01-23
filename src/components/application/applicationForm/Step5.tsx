@@ -94,8 +94,11 @@ export default function Step5({
           fieldClassName="min-h-[92px] resize-none"
         />
       </div>
-      <FormDescription title={t("buttons.send")} className="mb-14" />
-      <div className="flex gap-x-4 mt-auto mx-auto tab:mx-0 tab:mr-auto">
+      <FormDescription
+        title={t("buttons.send")}
+        className="mb-14 tab:mb-20 laptop:mb-14"
+      />
+      <div className="flex justify-between tab:justify-start gap-x-4 tab:mt-auto">
         <SecondaryButton
           onClick={() => setCurrentStep((prev) => prev - 1)}
           variant="ghost"

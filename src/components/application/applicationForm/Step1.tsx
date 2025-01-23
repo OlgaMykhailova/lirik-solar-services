@@ -37,7 +37,7 @@ export default function Step1({
       <div
         role="group"
         aria-labelledby="radio-group"
-        className="flex flex-col gap-y-4 tab:gap-y-7"
+        className="flex flex-col gap-y-4 tab:gap-y-7 mb-14 tab:mb-20 laptop:mb-14"
       >
         <RadioButtonInput
           fieldName="placementEquipment"

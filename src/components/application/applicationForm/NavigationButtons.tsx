@@ -30,7 +30,7 @@ export default function NavigationButtons({
   };
 
   return (
-    <div className="flex gap-x-4 mt-14 tab:mt-auto mx-auto tab:mx-0 tab:mr-auto">
+    <div className="flex justify-between tab:justify-start gap-x-4 w-full tab:mt-auto">
       <SecondaryButton
         onClick={handlePrevStep}
         variant="ghost"
