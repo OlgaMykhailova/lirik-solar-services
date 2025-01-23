@@ -13,19 +13,32 @@ export default function NavigationButtons({
 }: NavigationButtonsProps) {
   const t = useTranslations();
 
+  const handlePrevStep = () => {
+    setCurrentStep((prev) => prev - 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  const handleNextStep = () => {
+    setCurrentStep((prev) => prev + 1);
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="flex gap-x-4 mt-14 tab:mt-auto mx-auto tab:mx-0 tab:mr-auto">
       <SecondaryButton
-        onClick={() => setCurrentStep((prev) => prev - 1)}
+        onClick={handlePrevStep}
         variant="ghost"
         className="w-[156px]"
       >
         {t("buttons.back")}
       </SecondaryButton>
-      <SecondaryButton
-        onClick={() => setCurrentStep((prev) => prev + 1)}
-        className="w-[156px]"
-      >
+      <SecondaryButton onClick={handleNextStep} className="w-[156px]">
         {t("buttons.forward")}
       </SecondaryButton>
     </div>

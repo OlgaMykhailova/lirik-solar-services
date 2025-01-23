@@ -92,7 +92,8 @@ export default function ApplicationForm({
       APPLICATION_NAME,
       undefined,
       setCurrentStep,
-      7
+      7,
+      true
     );
   };
 
