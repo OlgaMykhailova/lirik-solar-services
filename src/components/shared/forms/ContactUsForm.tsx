@@ -1,5 +1,6 @@
 "use client";
 import { Form, Formik, FormikHelpers } from "formik";
+import { useSearchParams } from "next/navigation";
 import { useTranslations } from "next-intl";
 import { Dispatch, SetStateAction, useState } from "react";
 import MaskedInput from "react-text-mask";
@@ -7,6 +8,7 @@ import MaskedInput from "react-text-mask";
 import { PHONE_NUMBER_MASK } from "@/constants/constants";
 import { ContactUsValidation } from "@/schemas/contactUsFormValidation";
 import { handleSubmitForm } from "@/utils/handleSubmitForm";
+import { parseUtmParams } from "@/utils/parseUtmPatams";
 
 import CustomizedInput from "./formComponents/CustomizedInput";
 import SecondaryRadioButtonInput from "./formComponents/SecondaryRadioButtonInput";
@@ -34,6 +36,7 @@ export default function ContactUsForm({
 }: ContactUsFormProps) {
   const [isLoading, setIsLoading] = useState(false);
   const t = useTranslations();
+  const searchParams = useSearchParams().toString();
 
   const initialValues = {
     name: "",
@@ -44,6 +47,8 @@ export default function ContactUsForm({
   };
 
   const validationSchema = ContactUsValidation();
+
+  const utmParams = parseUtmParams(searchParams);
 
   const submitForm = async (
     values: ValuesContactUsFormType,
@@ -57,7 +62,9 @@ export default function ContactUsForm({
       `Де ви плануєте поставити обладнання?: ${
         values.equipment?.trim() || ""
       }\n` +
-      `Повідомлення: ${values.message.trim()}\n`;
+      `Повідомлення: ${values.message.trim()}\n` +
+      `\n` +
+      `${utmParams}`;
 
     await handleSubmitForm<ValuesContactUsFormType>(
       formikHelpers,
