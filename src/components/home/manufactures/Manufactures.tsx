@@ -41,6 +41,7 @@ export default function Manufactures() {
               href={PRODUCTS_LINK}
               target="_blank"
               rel="noopener"
+              aria-label={t("buttons.goToProducts")}
               className="inline-block mt-2 tab:mt-0 outline-none"
             >
               <MainButton className="laptop:hidden">
