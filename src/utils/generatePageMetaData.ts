@@ -16,13 +16,19 @@ export async function generatePageMetaData({
     locale,
     namespace,
   });
+
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+
+  const localizedCanonical =
+    locale === "uk" ? canonical : `/${locale}${canonical}`;
+
   return {
-    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || ""),
+    metadataBase: new URL(baseUrl),
     alternates: {
-      canonical,
+      canonical: localizedCanonical,
       languages: {
-        uk: canonical,
-        en: `/ru${canonical}`,
+        uk: `/`,
+        ru: `/ru`,
       },
     },
     title: t("title"),
