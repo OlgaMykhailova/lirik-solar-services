@@ -29,9 +29,10 @@ export default function Manufactures() {
                 href={PRODUCTS_LINK}
                 target="_blank"
                 rel="noopener"
-                className="inline-block mt-2 tab:mt-0 outline-none"
+                aria-label={t("buttons.goToProducts")}
+                className="hidden laptop:inline-block mt-2 tab:mt-0 outline-none"
               >
-                <MainButton className="hidden laptop:flex mb-[45px] mr-auto">
+                <MainButton className="laptop:flex mb-[45px] mr-auto">
                   {t("buttons.goToProducts")}
                 </MainButton>
               </a>
@@ -41,6 +42,7 @@ export default function Manufactures() {
               href={PRODUCTS_LINK}
               target="_blank"
               rel="noopener"
+              aria-label={t("buttons.goToProducts")}
               className="inline-block mt-2 tab:mt-0 outline-none"
             >
               <MainButton className="laptop:hidden">
