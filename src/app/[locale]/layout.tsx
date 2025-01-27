@@ -6,11 +6,11 @@ import localFont from "next/font/local";
 import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { useMessages } from "next-intl";
-import { getTranslations } from "next-intl/server";
 
 import { ScrollToTopButton } from "@/components/shared/buttons/ScrollToTopButton";
 import { routing } from "@/i18n/routing";
 import { Locale } from "@/types/locale";
+import { generatePageMetaData } from "@/utils/generatePageMetaData";
 
 const gogh = localFont({
   src: [
@@ -37,23 +37,16 @@ const manrope = Manrope({
 });
 
 export async function generateMetadata({
-  params: { locale },
+  params,
 }: {
   params: { locale: Locale };
 }) {
-  const t = await getTranslations({ locale, namespace: "metadata" });
-
-  return {
-    alternates: {
-      canonical: "/",
-      languages: {
-        uk: "/",
-        ru: "/ru",
-      },
-    },
-    title: t("title"),
-    description: t("description"),
-  };
+  const { locale } = params;
+  return generatePageMetaData({
+    locale,
+    namespace: "metadata",
+    canonical: "/",
+  });
 }
 
 export default function LocaleLayout({

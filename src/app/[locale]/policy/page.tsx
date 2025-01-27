@@ -13,9 +13,24 @@ import Footer from "@/components/shared/footer/Footer";
 import Header from "@/components/shared/header/Header";
 import ScrollIndicator from "@/components/shared/pageScrollIndicator/ScrollIndicator";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
+import { Locale } from "@/types/locale";
+import { generatePageMetaData } from "@/utils/generatePageMetaData";
+
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: { locale: Locale };
+}) {
+  return generatePageMetaData({
+    locale,
+    namespace: "metadata",
+    canonical: "/policy",
+  });
+}
 
 export default function Policy() {
   const t = useTranslations("policyPage");
+
   return (
     <>
       <Header />
