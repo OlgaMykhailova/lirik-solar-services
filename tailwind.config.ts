@@ -59,6 +59,7 @@ const config: Config = {
         xlg: ["32px", { lineHeight: "50px", fontWeight: "400" }],
         lg: ["36px", { lineHeight: "50px", fontWeight: "400" }],
         largeb: ["40px", { lineHeight: "56px", fontWeight: "500" }],
+        xlargeb: ["46px", { lineHeight: "54px", fontWeight: "500" }],
         xlb: ["48px", { lineHeight: "56px", fontWeight: "500" }],
         xlbb: ["48px", { lineHeight: "48px", fontWeight: "800" }],
         xxlb: ["56px", { lineHeight: "77px", fontWeight: "500" }],
