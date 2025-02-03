@@ -20,7 +20,7 @@ export async function generateMetadata({
 
 export default function ContactUs() {
   return (
-    <main className="relative flex-1">
+    <main className="relative flex-1 w-dvw overflow-x-hidden">
       <ContactUsSection />
       <SunspotBgImages id="hero-contact-us" />
       <Hero />
