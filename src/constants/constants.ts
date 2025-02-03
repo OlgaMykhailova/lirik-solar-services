@@ -2,7 +2,7 @@ export const EMAIL = "liriksolar@gmail.com";
 
 export const PHONE_FIRST = "077-445-66-77";
 
-export const ADDRESS_LINK = "http://surl.li/toxavx";
+export const ADDRESS_LINK = "https://maps.app.goo.gl/FgohhebqYmj6vcu38";
 
 export const TELEGRAM_LINK = "https://t.me/+380774456677";
 
