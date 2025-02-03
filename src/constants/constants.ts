@@ -1,4 +1,4 @@
-export const EMAIL = "liriksolarcompany@gmail.com";
+export const EMAIL = "liriksolar@gmail.com";
 
 export const PHONE_FIRST = "098-125-00-15";
 
