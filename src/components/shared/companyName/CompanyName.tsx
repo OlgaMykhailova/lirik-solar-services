@@ -16,7 +16,7 @@ export default function CompanyName({ id, className }: CompanyNameProps) {
   return (
     <div className={className}>
       <p
-        className={`font-gogh text-white text-xlbb tab:text-xxxlb laptop:text-xxxxlb transition duration-[1100ms] ease-slow ${
+        className={`font-gogh text-white text-xlargeb tab:text-xxxlb laptop:text-xxxxlb transition duration-[1100ms] ease-slow ${
           isVisible
             ? "opacity-100 translate-y-0"
             : "opacity-0 translate-y-[309px] tab:translate-y-[364px]"

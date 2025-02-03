@@ -1,16 +1,17 @@
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 import MainButton from "@/components/shared/buttons/MainButton";
 import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
-import { PRODUCTS_LINK } from "@/constants/constants";
+import { Link } from "@/i18n/routing";
 
 import ManufacturesInfo from "./ManufacturesInfo";
 import ManufacturesSlider from "./ManufacturesSlider";
 
 export default function Manufactures() {
   const t = useTranslations("");
+  const locale = useLocale();
 
   return (
     <div className="w-full relative bg-backgroundLight">
@@ -25,30 +26,26 @@ export default function Manufactures() {
           <div className="flex flex-col laptop:flex-row gap-y-6">
             <div className="flex flex-col justify-between laptop:w-[48.9%]">
               <ManufacturesInfo />
-              <a
-                href={PRODUCTS_LINK}
-                target="_blank"
-                rel="noopener"
-                aria-label={t("buttons.goToProducts")}
+              <Link
+                href="/contact-us"
+                locale={locale}
                 className="hidden laptop:inline-block mt-2 tab:mt-0 outline-none"
               >
                 <MainButton className="laptop:flex mb-[45px] mr-auto">
-                  {t("buttons.goToProducts")}
+                  {t("buttons.order")}
                 </MainButton>
-              </a>
+              </Link>
             </div>
             <ManufacturesSlider />
-            <a
-              href={PRODUCTS_LINK}
-              target="_blank"
-              rel="noopener"
-              aria-label={t("buttons.goToProducts")}
+            <Link
+              href="/contact-us"
+              locale={locale}
               className="inline-block mt-2 tab:mt-0 outline-none"
             >
               <MainButton className="laptop:hidden">
-                {t("buttons.goToProducts")}
+                {t("buttons.order")}
               </MainButton>
-            </a>
+            </Link>
           </div>
         </Container>
       </section>
