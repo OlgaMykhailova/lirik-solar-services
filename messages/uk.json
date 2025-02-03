@@ -211,7 +211,8 @@
     "getOffer": "Отримати пропозицію",
     "goToWebsite": "Перейти на сайт",
     "back": "Назад",
-    "forward": "Далі"
+    "forward": "Далі",
+    "order": "Замовити"
   },
   "forms": {
     "name": "Iм’я",
