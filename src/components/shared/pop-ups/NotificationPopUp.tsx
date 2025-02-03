@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import React, { Dispatch, SetStateAction } from "react";
 
-import { PHONE_THIRD } from "@/constants/constants";
+import { PHONE_FIRST } from "@/constants/constants";
 
 import Backdrop from "../backdrop/Backdrop";
 import Modal from "../modals/Modal";
@@ -41,7 +41,7 @@ export default function NotificationPopUp({
         <p className="text-xs tab:text-baseb">
           {t(`${isError ? "unsuccessful" : "successful"}.description`)}
           <a
-            href={`tel:+38${PHONE_THIRD.replace(/\D/g, "")}`}
+            href={`tel:+38${PHONE_FIRST.replace(/\D/g, "")}`}
             target="_blank"
             rel="noopener noreferrer nofollow"
             className={`${
@@ -50,7 +50,7 @@ export default function NotificationPopUp({
           active:text-blueLight laptop:hover:border-blueLight focus-visible:border-blueLight active:border-blueLight transition 
           duration-300 ease-out`}
           >
-            {PHONE_THIRD}.
+            {PHONE_FIRST}.
           </a>
         </p>
         <Image
