@@ -20,7 +20,7 @@ export default function MessengersList() {
   ];
 
   return (
-    <ul className="flex gap-4 text-blue">
+    <ul className="flex gap-2 text-blue">
       {messengersList.map((messenger, idx) => (
         <SocialLinkItem
           key={idx}

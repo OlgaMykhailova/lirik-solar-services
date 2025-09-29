@@ -4,7 +4,6 @@ import React from "react";
 import MainButton from "@/components/shared/buttons/MainButton";
 import Container from "@/components/shared/container/Container";
 import SectionTitle from "@/components/shared/titles/SectionTitle";
-import { Link } from "@/i18n/routing";
 
 import ManufacturesInfo from "./ManufacturesInfo";
 import ManufacturesSlider from "./ManufacturesSlider";
@@ -26,26 +25,28 @@ export default function Manufactures() {
           <div className="flex flex-col laptop:flex-row gap-y-6">
             <div className="flex flex-col justify-between laptop:w-[48.9%]">
               <ManufacturesInfo />
-              <Link
-                href="/contact-us"
-                locale={locale}
+              <a
+                href="https://liriksolar.com/catalogs"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="hidden laptop:inline-block mt-2 tab:mt-0 outline-none"
               >
                 <MainButton className="laptop:flex mb-[45px] mr-auto">
                   {t("buttons.order")}
                 </MainButton>
-              </Link>
+              </a>
             </div>
             <ManufacturesSlider />
-            <Link
-              href="/contact-us"
-              locale={locale}
+            <a
+              href="https://liriksolar.com/catalogs"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block mt-2 tab:mt-0 outline-none"
             >
               <MainButton className="laptop:hidden">
                 {t("buttons.order")}
               </MainButton>
-            </Link>
+            </a>
           </div>
         </Container>
       </section>
