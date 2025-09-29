@@ -39,7 +39,7 @@ export default function SocialLinksList({
 
   return (
     <ul
-      className={`flex justify-center tab:justify-between laptop:justify-end gap-4 text-blue ${className}`}
+      className={`flex justify-center tab:justify-between laptop:justify-end gap-2 text-blue ${className}`}
     >
       {socialLinksList.map((social, idx) => (
         <SocialLinkItem

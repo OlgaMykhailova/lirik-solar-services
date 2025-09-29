@@ -17,7 +17,7 @@ export default function SocialLinkItem({
         target="_blank"
         rel="noopener noreferrer nofollow"
         aria-label={name}
-        className="group outline-none"
+        className="group outline-none inline-block p-1"
       >
         {icon}
       </a>

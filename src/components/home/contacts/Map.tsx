@@ -13,20 +13,20 @@ export default function Map() {
         className="relative outline-none"
       >
         <Image
-          src="/images/map.png"
+          src="/images/map.jpg"
           alt="map"
           width="528"
           height="501"
-          className="w-full h-auto tab:h-[521px] aspect-[528/521] max-w-[528px] laptop:min-w-[528px] pc:min-w-[490px] object-cover tab:object-left"
+          className="w-full h-auto tab:h-[521px] aspect-[528/521] max-w-[528px] laptop:min-w-[528px] pc:min-w-[490px] object-cover"
         />
 
-        <Image
+        {/* <Image
           src="/images/icons/mapPin.svg"
           alt="map pin"
           width="38"
           height="38"
           className="absolute left-[11.2%] top-[23.5%] tab:left-[58px] tab:top-[134px]"
-        />
+        /> */}
       </a>
     </div>
   );
